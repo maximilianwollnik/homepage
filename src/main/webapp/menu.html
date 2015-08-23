@@ -4,9 +4,14 @@
             <img src=images/flat-avatar.png class="sidebar-img img-circle">
         </div> 
 
+        <div ng-controller="TranslateController" class="text-center">
+            <img src=images/de.png ng-click="changeLanguage('de')" class="menuFlag">
+            <img src=images/en.png ng-click="changeLanguage('en')" class="menuFlag">
+        </div>
+
         <ul class=snap-ul>
             <li ng-repeat="item in menuItems" ng-class="{active: $state.includes('{{item.name}}') }">
-                <a ui-sref={{item.name}}>{{item.text}}</a>
+                <a ui-sref={{item.name}} translate="{{item.text}}"></a>
             </li>
         </ul>
     </div>

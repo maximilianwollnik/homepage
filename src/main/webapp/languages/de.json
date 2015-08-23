@@ -1,0 +1,50 @@
+{
+    "BUTTON" : {
+        "TEXT_EN": "English",
+        "TEXT_DE": "Deutsch",
+        "BACK_TO_OVERVIEW": "Zurück zum Überblick",
+        "MENU_BASE": "Basis",
+        "MENU_LOGIN": "Login",
+        "MENU_DASHBOARD": "Dashboard",
+        "MENU_OVERVIEW": "Überblick",
+        "MENU_REPORTS": "Berichte",
+        "MENU_RESUME": "Lebenslauf",
+        "MENU_SAMPLES": "Muster",
+        "MENU_CONTACT": "Kontakt"
+    },
+    
+    "OVERVIEW": {
+        "HEADLINE": "Überblick",
+        "HEADLINE_SMALL": "Warum ist Versatile Theme so toll?",
+        "SUBHEADER": "Willkommen!",
+        "BODY": "Neue Plugins über bower installieren! Lass uns hier sauber bleiben!"
+    },
+    
+    "CONTACT": {
+        "HEADLINE": "Kontaktiere",
+        "HEADLINE_SMALL": "mich!",
+        "SUBHEADER": "Schreiben Sie mir eine Mail",
+        "BODY": "oder etwas anderes!"
+    },
+    
+    "REPORTS": {
+        "HEADLINE": "Berichte",
+        "HEADLINE_SMALL": "Arbeits mit Chart.js und D3",
+        "SUBHEADER": "Fügen Sie Ihre Charts hier ein",
+        "BODY": "Sie können C3.js oder Chart.js nutzen"
+    },
+    
+    "RESUME": {
+        "HEADLINE": "Lebenslauf",
+        "HEADLINE_SMALL": "Das bin ich!",
+        "SUBHEADER": "Schritt 1",
+        "BODY": " "
+    },
+    
+    "SAMPLES": {
+        "HEADLINE": "Muster",
+        "HEADLINE_SMALL": "Das sind meine Muster!",
+        "SUBHEADER": "CBA",
+        "BODY": "Kartenlos"
+    }
+}

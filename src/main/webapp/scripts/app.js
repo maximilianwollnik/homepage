@@ -1,32 +1,36 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name yapp
- * @description
- * # yapp
- *
- * Main module of the application.
- */
 var states = [
-        { name: 'base', state: { abstract: true, url: '', templateUrl: 'views/base.html', data: {text: "Base", visible: false } } },
-        { name: 'login', state: { url: '/login', parent: 'base', templateUrl: 'views/login.html', controller: 'LoginCtrl', data: {text: "Login", visible: false } } },
-        { name: 'dashboard', state: { url: '/dashboard', parent: 'base', templateUrl: 'views/dashboard.html', controller: 'DashboardCtrl', data: {text: "Dashboard", visible: false } } },
-        { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "Overview", visible: true } } },
-        { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
-        { name: 'logout', state: { url: '/login', data: {text: "Logout", visible: true }} }
+        { name: 'base', state: { abstract: true, url: '', templateUrl: 'views/base.html', data: {text: "BUTTON.MENU_BASE", visible: false } } },
+        { name: 'login', state: { url: '/login', parent: 'base', templateUrl: 'views/login.html', controller: 'LoginCtrl', data: {text: "BUTTON.MENU_LOGIN", visible: false } } },
+        { name: 'dashboard', state: { url: '/dashboard', parent: 'base', templateUrl: 'views/dashboard.html', controller: 'DashboardCtrl', data: {text: "BUTTON.MENU_DASHBOARD", visible: false } } },
+        { name: 'overview', state: { url: '/overview', parent: 'dashboard', templateUrl: 'views/dashboard/overview.html', data: {text: "BUTTON.MENU_OVERVIEW", visible: true } } },
+        { name: 'reports', state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "BUTTON.MENU_REPORTS", visible: false } } },
+        { name: 'resume', state: { url: '/resume', parent: 'dashboard', templateUrl: 'views/dashboard/resume.html', data: {text: "BUTTON.MENU_RESUME", visible: true } } },
+        { name: 'samples', state: { url: '/samples', parent: 'dashboard', templateUrl: 'views/dashboard/samples.html', data: {text: "BUTTON.MENU_SAMPLES", visible: true } } },
+        { name: 'contact', state: { url: '/contact', parent: 'dashboard', templateUrl: 'views/dashboard/contact.html', data: {text: "BUTTON.MENU_CONTACT", visible: true } } },
     ];
    
-angular.module('yapp', [
+angular.module('homepage', [
                 'ui.router',
                 'snap',
-                'ngAnimate'
+                'ngAnimate',
+                'pascalprecht.translate'
             ])
         .config(function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.when('/dashboard', '/dashboard/overview');
-            $urlRouterProvider.otherwise('/login');
+            $urlRouterProvider.otherwise('/dashboard');
             
             angular.forEach(states, function (state) {
                 $stateProvider.state(state.name, state.state);
             });
-        });
+        })
+        .config(['$translateProvider', function ($translateProvider) {
+            $translateProvider.useStaticFilesLoader({
+                prefix: 'languages/',
+                suffix: '.json'
+            });
+            $translateProvider.use('en');
+            $translateProvider.preferredLanguage('en');
+        }]);
+

@@ -2,7 +2,6 @@
 	<div ng-include="'menu.html'"></div>
 	<snap-dragger></snap-dragger>
 	<snap-content snap-opt-tap-to-close="false">
-
 		<a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
 			<span class="menutoggle">
 				<i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
@@ -10,13 +9,16 @@
 			</span>
 		</a>
 
-		<div class="fr">
-		<h2 translate="OVERVIEW.HEADLINE"></h2><small translate="OVERVIEW.HEADLINE_SMALL"></small>
+        <div class="fr">
+		<h2 translate="SAMPLES.HEADLINE"></h2><small translate="SAMPLES.HEADLINE_SMALL"></small>
 		</div>
 		<div class="jumbotron">
 			<div class="container">
-				<h1 translate="OVERVIEW.SUBHEADER"></h1>
-				<span translate="OVERVIEW.BODY"></span>
+				<h1 translate="SAMPLES.SUBHEADER"></h1>
+				<span translate="SAMPLES.BODY"></span>
+                <p>
+					<a class="btn btn-primary btn-lg btn-white" ui-sref="overview" translate="BUTTON.BACK_TO_OVERVIEW"></a>
+				</p>
 			</div>
 		</div>
 	</snap-content>	

@@ -83,8 +83,8 @@ gulp.task('connect', ['styles'], function() {
     .use(serveStatic('target/.tmp'))
     .use(serveStatic('src/main/webapp'))
     // paths to bower_components should be relative to the current file
-    // e.g. in src/main/webapp/index.html you should use ../bower_components
-    .use('src/main/webapp/bower_components', serveStatic('bower_components'))
+    // e.g. in app/index.html you should use ../bower_components
+    .use('/bower_components', serveStatic('bower_components'))
     .use(serveIndex('src/main/webapp'));
 
   require('http').createServer(app)
@@ -139,7 +139,8 @@ gulp.task('watch', ['connect'], function() {
     'src/main/webapp/**/*.html',
     'target/.tmp/styles/**/*.css',
     'src/main/webapp/scripts/**/*.js',
-    'src/main/webapp/images/**/*'
+    'src/main/webapp/images/**/*',
+    'src/main/webapp/languages/**/*.json',
   ]).on('change', $.livereload.changed);
 
   gulp.watch('src/main/webapp/styles/**/*.less', ['styles']);
