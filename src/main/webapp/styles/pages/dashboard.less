@@ -52,7 +52,6 @@
       overflow-x: hidden;
       overflow-y: auto;
       .jumbotron {
-        background: inherit;
         margin-top: 20px;
     }
 }
@@ -65,8 +64,6 @@
 .main .page-header {
   margin-top: 0;
 }
-
-
     /*
      * Placeholder dashboard ideas
      */
@@ -96,9 +93,6 @@
         overflow: hidden;
     }
 
-  .jumbotron {
-      background: @brand-primary;
-  }
   .fr {
     padding-left: 60px;
 }
@@ -118,8 +112,13 @@
 .snap-content, snap-content {
     overflow-x: hidden;
 }
+
+//Main
 snap-content {
-    background: @brand-primary;
+    .gradient (@brand-primary, white, @brand-primary);
+}
+
+snap-content {
     a {
         color: white;
         &:hover,&:active,&:focus {
@@ -134,12 +133,17 @@ snap-content {
         }
     }
 }
+
+// Menu
 snap-drawer {
-    background: darken(@brand-primary, 4%);
+    .gradient (white, white, white);
+}
+
+snap-drawer {
     a {
-        color: white;
+        color: black;
         &:hover,&:active,&:focus {
-            color: white;
+            color: black;
         }
     }
     .sidebar-header {
@@ -178,7 +182,7 @@ snap-drawer {
     }
 }
 .bg-dark {
-    background:#34495e;
+    .gradient (@gray-darker, @gray-lighter, @gray-lighter);
 }
 
 * {

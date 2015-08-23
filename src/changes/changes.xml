@@ -7,6 +7,9 @@
 	</properties>
 	<body>
 		<release version="0.1.0" date="2015-10-01" description="Initial setup">
+            <action dev="maximilian" type="change">
+				First css adaptions
+			</action>
             <action dev="maximilian" type="add">
 				Adding translations
 			</action>
