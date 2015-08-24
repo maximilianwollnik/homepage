@@ -7,7 +7,7 @@
 	bottom: 0;
 
     background: @brand-primary;
-    color: white;
+    color: black;
 
     /*
      * Base structure
@@ -99,15 +99,25 @@
 
 }
 .btn-white {
-  border-color: white;
-  border-radius: 0 !important;
-  border: 3px solid;
-  background: none;
-  &:hover, &:focus {
-    border-color: white;
-    color: #797979;
-    background: white;
+    border-radius: 0 !important;
+    border: 3px solid white;
+    background: none;
+    &:hover, &:focus {
+        border-color: white;
+        color: black;
+        background: white;
+    }
 }
+.btn-black {
+    color: black;
+    border-radius: 0 !important;
+    border: 3px solid black;
+    background: none;
+    &:hover, &:focus {
+        border-color: black;
+        color: white;
+        background: black;
+    }
 }
 .snap-content, snap-content {
     overflow-x: hidden;
@@ -115,10 +125,7 @@
 
 //Main
 snap-content {
-    .gradient (@brand-primary, white, @brand-primary);
-}
-
-snap-content {
+    background: @brand-primary;
     a {
         color: white;
         &:hover,&:active,&:focus {
@@ -126,6 +133,7 @@ snap-content {
         }
     }
     .menutoggle {
+        color: black;
         .fa {
             position: absolute;
             left: 15px;
@@ -134,12 +142,19 @@ snap-content {
     }
 }
 
-// Menu
-snap-drawer {
-    .gradient (white, white, white);
+.bg-dark {
+    color: white;
+    background: darken(@brand-primary, 50%);
+    .menutoggle {
+        color: white;
+    }
 }
 
+// Menu
 snap-drawer {
+    background: @gray-darker;
+}
+.menu {
     a {
         color: black;
         &:hover,&:active,&:focus {
@@ -181,8 +196,17 @@ snap-drawer {
         }
     }
 }
-.bg-dark {
-    .gradient (@gray-darker, @gray-lighter, @gray-lighter);
+.menu-dark {
+    ul.snap-ul {
+        li.active {
+             background: darken(@brand-primary, 50%);
+        }
+        li {
+            &:hover {
+                background: darken(@brand-primary, 50%);
+            }
+        }
+    }
 }
 
 * {
