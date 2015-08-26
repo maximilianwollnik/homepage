@@ -153,6 +153,7 @@ snap-content {
 // Menu
 snap-drawer {
     background: @gray-darker;
+    width: 266px !important;
 }
 .menu {
     a {
@@ -218,4 +219,18 @@ snap-drawer {
 .menuFlag {
     width: 100px;
     padding: 30px 10px 0px 10px;
+}
+
+@-webkit-keyframes pulse_animation {
+	0% { -webkit-transform: scale(1); }
+	50% { -webkit-transform: scale(0.8); }
+	100% { -webkit-transform: scale(1); }
+}
+
+.pulse {
+	-webkit-animation-name: 'pulse_animation';
+	-webkit-animation-duration: 5000ms;
+	-webkit-transform-origin:70% 70%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
 }
