@@ -15,7 +15,8 @@ angular.module('homepage', [
                 'ui.router',
                 'snap',
                 'ngAnimate',
-                'pascalprecht.translate'
+                'pascalprecht.translate',
+                'ngSanitize'
             ])
         .config(function($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.when('/dashboard', '/dashboard/overview');
@@ -32,5 +33,7 @@ angular.module('homepage', [
             });
             $translateProvider.use('en');
             $translateProvider.preferredLanguage('en');
+            $translateProvider.useSanitizeValueStrategy('sanitize');
+            //$translateProvider.useSanitizeValueStrategy('escape');
         }]);
 
