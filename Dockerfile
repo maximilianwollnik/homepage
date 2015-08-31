@@ -9,4 +9,4 @@ ENV HOME /root
 
 CMD java -jar $HOME/*.jar
 
-ADD ../target/*.jar $HOME/
+ADD target/*.jar $HOME/
