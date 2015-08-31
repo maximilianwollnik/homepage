@@ -1,5 +1,5 @@
 spring:
-  build: docker/
+  build: .
   ports:
   - "9000:8080"
   volumes:
