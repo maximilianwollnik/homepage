@@ -63,7 +63,7 @@
 						<id>exec-gulp</id>
 						<phase>generate-resources</phase>
 						<configuration>
-							<executable>gulp</executable>
+							<executable>./node_modules/.bin/gulp</executable>
 							<arguments>
 								<argument>build</argument>
 							</arguments>
