@@ -73,6 +73,14 @@ gulp.task('extras', function() {
   }).pipe(gulp.dest('target/dist/static'));
 });
 
+gulp.task('languages', function() {
+  return gulp.src([
+    'src/main/webapp/languages/*'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('target/dist/static/languages'));
+});
+
 gulp.task('clean', require('del').bind(null, ['target/.tmp', 'target/dist']));
 
 gulp.task('connect', ['styles'], function() {
@@ -147,7 +155,7 @@ gulp.task('watch', ['connect'], function() {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('builddist', ['jshint', 'html', 'images', 'fonts', 'extras'],
+gulp.task('builddist', ['jshint', 'html', 'images', 'fonts', 'extras', 'languages'],
   function() {
   return gulp.src('target/dist/static/**/*').pipe($.size({title: 'build', gzip: true}));
 });
