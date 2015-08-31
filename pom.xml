@@ -35,17 +35,6 @@
 				<version>${version-plugin-frontend-maven-plugin}</version>
 				<executions>
 					<execution>
-						<id>install node and npm</id>
-						<goals>
-							<goal>install-node-and-npm</goal>
-						</goals>
-						<phase>generate-resources</phase>
-						<configuration>
-							<nodeVersion>${version-node}</nodeVersion>
-							<npmVersion>${version-npm}</npmVersion>
-						</configuration>
-					</execution>
-					<execution>
 						<id>npm install</id>
 						<goals>
 							<goal>npm</goal>
