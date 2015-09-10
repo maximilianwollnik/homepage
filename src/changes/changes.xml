@@ -6,8 +6,20 @@
 		<author email="maximilian@maximilianwollnik.de">Maximilian Wollnik</author>
 	</properties>
 	<body>
+    <release version="0.2.0" date="2015-10-01" description="Design change">
+			<action dev="maximilian" type="change">
+				Changing design
+			</action>
+      <action dev="maximilian" type="change">
+				adding unit tests
+			</action>
+      <action dev="maximilian" type="change">
+				adding e2e tests
+			</action>
+		</release>
+
 		<release version="0.1.0" date="2015-09-11" description="Initial setup">
-            <action dev="maximilian" type="change">
+      <action dev="maximilian" type="change">
 				First css adaptions
 			</action>
             <action dev="maximilian" type="add">

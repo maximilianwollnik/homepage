@@ -1,25 +1,41 @@
 {
   "name": "homepage",
-  "version": "0.1.0",
+  "description": "My homepage project written in AngularJS",
+  "homepage": "https://github.com/maximilianwollnik/homepage.git",
+  "license": "private",
+  "private": true,
   "dependencies": {
-    "angular": "1.3.18",
-    "json3": "^3.3.0",
-    "es5-shim": "^4.0.0",
-    "bootstrap": "^3.2.0",
-    "angular-mocks": "~1.3.14",
-    "ui-router": "~0.2.13",
-    "bootstrap-btn-outline-rounded": "~0.0.3",
-    "angular-animate": "~1.3.15",
-    "fontawesome": "~4.3.0",
-    "angular-snap": "~1.8.1",
-    "angular-translate": "2.7.2",
-    "angular-translate-loader-static-files": "2.7.2",
-    "angular-sanitize": "1.3.18"
+    "angular": "~1.4.5",
+    "angular-mocks": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "angular-sanitize": "~1.4.5",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-static-files": "~2.7.2",
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "jasmine-jquery": "~2.1.0"
   },
-  "devDependencies": {
-    "angular-mocks": "~1.3.0"
-  },
-  "resolutions": {
-    "angular": "1.3.18"
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "fontawesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    }
   }
 }
