@@ -10,6 +10,9 @@ describe('homepage.module', function () {
     $httpBackend.whenGET('assets/i18n/de_DE.json').respond(
         getJSONFixture('de_DE.json')
     );
+    $httpBackend.whenGET('assets/i18n/C.json').respond(
+        getJSONFixture('de_DE.json')
+    );
     $httpBackend.flush();
   }));
 
