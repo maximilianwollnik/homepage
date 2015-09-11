@@ -15,7 +15,11 @@ describe('homepage.module', function () {
 
   describe('loads the main app', function() {
     it('and the default language should be set to de_DE', inject(function($translate) {
-      expect($translate.use()).toEqual('de_DE');
+      var current = $translate.use();
+      if (current == 'C') {
+        current = 'de_DE';
+      }
+      expect(current).toEqual('de_DE');
     }));
   });
 

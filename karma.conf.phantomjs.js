@@ -26,6 +26,7 @@ module.exports = function(config){
     ],
 
     proxies: {
+      'assets/i18n/C.json': '/base/src/main/webapp/assets/i18n/de_DE.json',
       '/assets/img/de.png': '/base/src/main/webapp/assets/img/de.png',
       '/assets/img/en.png': '/base/src/main/webapp/assets/img/en.png'
     },
