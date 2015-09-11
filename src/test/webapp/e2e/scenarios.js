@@ -9,15 +9,21 @@ describe('homepage', function() {
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
-  it('should render home when user navigates to /home', function() {
+  it('should render home when user navigates to /home in German', function() {
     expect(element.all(by.css('#headerwrap')).getText()).
-      toMatch('DEVELOPER');
+      toMatch('Entwickler');
+  });
+
+  it('should render home when user navigates to /home in English', function() {
+    element(by.css('img[src*="assets/img/en.png"]')).click();
+    expect(element.all(by.css('#headerwrap')).getText()).
+      toMatch('Developer');
   });
 
   describe('should render about when user navigates to /about', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/about');
+      element(by.css('a[href*="#/about"]')).click();
     });
 
     it('and the correct header must be available', function() {
@@ -35,12 +41,19 @@ describe('homepage', function() {
   describe('should render work when user navigates to /work', function() {
 
     beforeEach(function() {
-      browser.get('index.html#/work');
+      element(by.css('a[href*="#/work"]')).click();
     });
 
-    it('and the correct header text must be available', function() {
+    it('and the correct header text must be available in German', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
       expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('NEW WEBSITE');
+        toMatch('Muster');
+    });
+
+    it('and the correct header text must be available in English', function() {
+      element(by.css('img[src*="assets/img/en.png"]')).click();
+      expect(element.all(by.css('#workwrap')).getText()).
+        toMatch('Samples');
     });
 
   });

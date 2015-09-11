@@ -21,8 +21,14 @@ module.exports = function(config){
       'src/test/webapp/unit/app/**/*.js',
 
       // fixtures
-      {pattern: 'src/main/webapp/assets/i18n/*.json', watched: true, served: true, included: false}
+      {pattern: 'src/main/webapp/assets/i18n/*.json', watched: true, served: true, included: false},
+      {pattern: 'src/main/webapp/assets/img/*.png', watched: false, included: false, served: true}
     ],
+
+    proxies: {
+      '/assets/img/de.png': '/base/src/main/webapp/assets/img/de.png',
+      '/assets/img/en.png': '/base/src/main/webapp/assets/img/en.png'
+    },
 
     preprocessors: {
         'src/main/webapp/app/**/*.html': 'ng-html2js'
