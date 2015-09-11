@@ -10,6 +10,7 @@ describe('homepage', function() {
   });
 
   it('should render home when user navigates to /home in German', function() {
+    element(by.css('img[src*="assets/img/de.png"]')).click();
     expect(element.all(by.css('#headerwrap')).getText()).
       toMatch('Entwickler');
   });

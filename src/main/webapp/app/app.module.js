@@ -17,6 +17,7 @@ homepage.config(['$translateProvider', function ($translateProvider) {
       prefix: 'assets/i18n/',
       suffix: '.json'
   });
-  $translateProvider.determinePreferredLanguage();
+  $translateProvider.determinePreferredLanguage()
+  $translateProvider.fallbackLanguage('de_DE');
   $translateProvider.useSanitizeValueStrategy('sanitize');
 }]);
