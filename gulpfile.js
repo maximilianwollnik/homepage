@@ -112,8 +112,15 @@ gulp.task('wiredep', function() {
  
 gulp.task('test', ['wiredep'], function(done) {
   karma.start({
-    configFile: __dirname + '/' + pathTest + '/karma.conf.js',
+    configFile: __dirname + '/' + pathTest + '/karma.conf.chrome.js',
     singleRun: false
+  }, done);
+});
+
+gulp.task('testBuild', ['wiredep'], function(done) {
+  karma.start({
+    configFile: __dirname + '/' + pathTest + '/karma.conf.phantomjs.js',
+    singleRun: true
   }, done);
 });
 
@@ -157,6 +164,10 @@ gulp.task('builddist', ['jshint', 'html', 'fonts', 'images', 'icos', 'extras', '
   return gulp.src(pathFinal + '/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
+gulp.task('testDist', ['builddist'], function() {
+  gulp.start('testBuild');
+});
+
 gulp.task('build', ['clean'], function() {
-  gulp.start('builddist');
+  gulp.start('testDist');
 });
