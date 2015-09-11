@@ -2,20 +2,20 @@
 	<div class="container">
 		<div class="row centered">
 			<div class="col-lg-4">
-				<p><b>WEB DESIGNER, DEVELOPER & GAME ADDICT</b></p>
+				<p ng-bind-html="'FOOTER.LIST.ONE' | translate"></p>
 			</div>
 		
 			<div class="col-lg-4">
-				<p>Living in the amazing London.</p>
+				<p ng-bind-html="'FOOTER.LIST.TWO' | translate"></p>
 			</div>
 			<div class="col-lg-4">
-				<p>hello@instant.com</p>
+				<p ng-bind-html="'FOOTER.LIST.THREE' | translate"></p>
 			</div>
 		
 		</div>
 
     <div class="row centered">
-		  <p>Version: <b>{{ test }}</b></p>
+		  <p><span ng-bind-html="'FOOTER.VERSION' | translate"></span> <span><b>{{ version }}</b></span></p>
 		</div>
 	
 	</div>

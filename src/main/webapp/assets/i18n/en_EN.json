@@ -1,5 +1,7 @@
 {
     "AUTHOR": "Maximilian Wollnik",
+    "EMAIL": "maximilian@maximilianwollnik.de",
+    "TITLE": "@:AUTHOR",
 
     "BUTTON" : {
         "TEXT_EN": "English",
@@ -49,5 +51,18 @@
           "P2": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "P3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
         }
+    }, 
+
+    "FOOTER": {
+        "LIST": { 
+          "ONE": "Web Designer, Developer & Game Addict",
+          "TWO": "Living in the amazing London.",
+          "THREE": "@:EMAIL"
+        },
+        "VERSION": "Version:"
+    }, 
+
+    "NAVIGATION": {
+        "TOOGLE": "Toggle navigation"
     }
 }

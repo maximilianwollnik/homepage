@@ -9,7 +9,7 @@ angular.module('homepage.footer.directive', [])
     templateUrl: "app/shared/footer/footerDirectiveView.html",
     controller: ['$scope', function ($scope) {
       footerVersion.async().then(function(d) {
-        $scope.test = d;
+        $scope.version = d;
       });
     }]
   };
