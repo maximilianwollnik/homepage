@@ -16,6 +16,9 @@
       <action dev="maximilian" type="change">
 				adding e2e tests
 			</action>
+      <action dev="maximilian" type="add">
+				adding version tag into the footer with the version from the pom
+			</action>
 		</release>
 
 		<release version="0.1.0" date="2015-09-11" description="Initial setup">

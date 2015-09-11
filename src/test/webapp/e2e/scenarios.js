@@ -14,26 +14,31 @@ describe('homepage', function() {
       toMatch('DEVELOPER');
   });
 
-  describe('about', function() {
+  describe('should render about when user navigates to /about', function() {
 
     beforeEach(function() {
       browser.get('index.html#/about');
     });
 
-    it('should render about when user navigates to /about', function() {
+    it('and the correct header must be available', function() {
       expect(element.all(by.css('#aboutwrap')).getText()).
         toContain('');
     });
 
+    it('and the footer must contain a version information', function() {
+      expect(element.all(by.css('#footerwrap')).getText()).
+        toMatch('Version:');
+    });
+
   });
 
-  describe('work', function() {
+  describe('should render work when user navigates to /work', function() {
 
     beforeEach(function() {
       browser.get('index.html#/work');
     });
 
-    it('should render work when user navigates to /work', function() {
+    it('and the correct header text must be available', function() {
       expect(element.all(by.css('#workwrap')).getText()).
         toMatch('NEW WEBSITE');
     });
