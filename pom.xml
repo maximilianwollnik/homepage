@@ -15,12 +15,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<java.version>1.8</java.version>
 		<start-class>de.maximilianwollnik.homepage.Application</start-class>
 		<version-plugin-changes>2.11</version-plugin-changes>
 		<version-plugin-javadoc>2.10.3</version-plugin-javadoc>
 		<version-plugin-frontend-maven-plugin>0.0.25</version-plugin-frontend-maven-plugin>
-    <version-plugin-maven-resources-plugin>2.6</version-plugin-maven-resources-plugin>
+		<version-plugin-maven-resources-plugin>2.6</version-plugin-maven-resources-plugin>
 		<version-node>v0.10.26</version-node>
 		<version-npm>1.4.3</version-npm>
 	</properties>

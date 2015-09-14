@@ -8,11 +8,11 @@ angular.module('homepage.footer.service', [])
       // $http returns a promise, which has a then function, which also returns a promise
       var promise = $http.get('info').then(function (response) {
         // The return value gets picked up by the then in the controller.
-        return response.data.build.version;
+        return response.data.build;
       }, function(response) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
-        return 'default';
+        return JSON.parse("{\"version\":\"default\",\"timestamp\":\"today\"}");
       });
       // Return the promise to the controller
       return promise;

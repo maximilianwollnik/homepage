@@ -112,6 +112,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a4a4a;
 }
 
+a {
+	color: #1abc9c;
+}
+
+#footerwrap a {
+	color: white;
+}
 
 .navbar-brand {
 	font-weight: 700;
@@ -199,6 +206,10 @@ h1, h2, h3, h4, h5, h6 {
 #footerwrap p {
 	color: #f2f2f2;
 	margin-left: 10px;
+}
+
+#footerwrap span {
+	font-size: 12px;
 }
 
 #workwrap {	

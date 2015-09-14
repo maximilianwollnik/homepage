@@ -33,9 +33,9 @@
         },
         "BODY": { 
           "HEADER": "@:AUTHOR",
-          "P1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-          "P2": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "P3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+          "P1": "Ich bin ein IT Berater und Software Entwickler aus Deutschland mit über acht Jahren Berufserfahrung. Derzeit arbeite ich für <a href='http://www.wincor-nixdorf.com' target='_blank'>Wincor Nixdorf International GmbH</a>.",
+          "P2": "Hier bin ich verantwortlich für die Software auf Geldautomaten und liefere projektspezifisiche Erweiterungen für Kunden weltweit. Je nach Anforderungen entwickele ich Java und Web-Komponenten, um eine hersteller unabhängige Anwendung zu erweitern. Die Kunden legen dabei einen großen Wert auf eine neue Generation von grafischen Obeflächen, Multikanalstrategie (mobil, Internet) und Konzepten für eine Filiale der Zukunft.",
+          "P3": "Momentan lege ich meinen Focus auf den Softwarelieferprozess rund um das Thema <b>kontinuierliche Integration</b>."
         }
     },
 
@@ -55,11 +55,12 @@
 
     "FOOTER": {
         "LIST": { 
-          "ONE": "Web Designer, Developer &amp; Game Addict",
-          "TWO": "Lebe im tollen London.",
-          "THREE": "@:EMAIL"
+          "ONE": "IT Berater & Software Entwickler",
+          "TWO": "Lebe in Paderborn",
+          "THREE": "<a href='mailto:maximilian@maximilianwollnik.de'>maximilian@maximilianwollnik.de</a>"
         },
-        "VERSION": "Version:"
+        "VERSION": "Version:",
+		"TIMESTAMP": "Copyright &copy;"
     }, 
 
     "NAVIGATION": {

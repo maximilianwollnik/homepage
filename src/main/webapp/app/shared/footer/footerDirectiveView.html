@@ -11,12 +11,14 @@
 			<div class="col-lg-4">
 				<p ng-bind-html="'FOOTER.LIST.THREE' | translate"></p>
 			</div>
+		</div>
 		
+		<div class="row centered">
+			<p>
+			  <span ng-bind-html="'FOOTER.VERSION' | translate"></span> <span><b>{{ version }}</b></span>
+			  <br>
+			  <span ng-bind-html="'FOOTER.TIMESTAMP' | translate"></span> <span><b>{{ timestamp }}</b></span> <span ng-bind-html="'AUTHOR' | translate">
+			</p>
 		</div>
-
-    <div class="row centered">
-		  <p><span ng-bind-html="'FOOTER.VERSION' | translate"></span> <span><b>{{ version }}</b></span></p>
-		</div>
-	
 	</div>
 </div><! --/footerwrap -->

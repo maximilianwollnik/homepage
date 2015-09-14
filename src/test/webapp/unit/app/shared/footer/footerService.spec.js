@@ -23,10 +23,11 @@ describe('homepage.footer.service module', function() {
     
     it('and reads the correct version from the real respond', function() {
       $httpBackend.whenGET('info').respond(
-          {'build': {'version': 'test'}}
+          {'build': {'version': 'test', 'timestamp': 'tomorrow'}}
       );
       version.async().then(function(d) {
-        expect(d).toBe('test');
+        expect(d.version).toBe('test');
+		expect(d.timestamp).toBe('tomorrow');
       });
       $httpBackend.flush();
     });
@@ -36,7 +37,8 @@ describe('homepage.footer.service module', function() {
           404
       );
       version.async().then(function(d) {
-        expect(d).toBe('default');
+        expect(d.version).toBe('default');
+		expect(d.timestamp).toBe('today');
       });
       $httpBackend.flush();
     });
