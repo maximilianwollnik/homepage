@@ -11,12 +11,12 @@ describe('homepage.navigation.service module', function() {
 
   describe('gets all data for the navigation', function() {
     
-    it('and the current length must be 3', function() {
-      expect(navigation.routes.length).toBe(3);
+    it('and the current length must be 4', function() {
+      expect(navigation.routes.length).toBe(4);
     });
 
     it('and the name of the about route must be About', function() {
-      expect(navigation.routes[0].name).toBe('Home');
+      expect(navigation.routes[0].name).toBe('BUTTON.MENU_HOME');
     }); 
 
     it('and no active routes are available', function() {

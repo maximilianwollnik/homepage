@@ -14,10 +14,10 @@ gulp.task('clean', require('del').bind(null, [pathDist]));
 
 gulp.task('jshint', function() {
   return gulp.src(pathApp + '/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
-    .pipe($.jshint.reporter('fail'))
-    .pipe(gulp.dest(pathFinal + '/'));
+    .pipe($.jshint());
+    //.pipe($.jshint.reporter('jshint-stylish'))
+    //.pipe($.jshint.reporter('fail'))
+    //.pipe(gulp.dest(pathFinal + '/'));
 });
 
 gulp.task('html', ['styles'], function() {
@@ -26,7 +26,7 @@ gulp.task('html', ['styles'], function() {
     .pipe($.csso)
     .pipe($.replace, 'bower_components/bootstrap/fonts', 'fonts');
 
-  var assets = $.useref.assets({searchPath: '{src/main/webapp}'});
+  var assets = $.useref.assets({searchPath: '{target/.tmp,src/main/webapp}'});
 
   return gulp.src(pathApp + '/**/*.html')
     .pipe(assets)
@@ -153,7 +153,7 @@ gulp.task('watch', ['connect'], function() {
   gulp.watch('bower.json', ['wiredep']);
 });
 
-gulp.task('serve', ['watch'], function() {
+gulp.task('serve', ['wiredep', 'connect', 'watch'], function() {
   if (argv.open) {
     require('opn')('http://localhost:8000');
   }
