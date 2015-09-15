@@ -1,21 +1,26 @@
 'use strict';
 
-homepage.config(['$routeProvider', function($routeProvider) {
+angular.module('homepage').config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/home', {
     templateUrl: 'app/components/home/homeView.html',
     controller: 'HomeCtrl',
-    name: "Home"
+    name: "BUTTON.MENU_HOME"
   })
   .when('/about', {
     templateUrl: 'app/components/about/aboutView.html',
     controller: 'AboutCtrl',
-    name: "About"
+    name: "BUTTON.MENU_ABOUT"
   })
   .when('/work', {
     templateUrl: 'app/components/work/workView.html',
     controller: 'WorkCtrl',
-    name: "Work"
+    name: "BUTTON.MENU_WORK"
+  })
+  .when('/cv', {
+    templateUrl: 'app/components/cv/cvView.html',
+    controller: 'CvCtrl',
+    name: "BUTTON.MENU_CV"
   })
   .otherwise({redirectTo: '/home'});
 }]);

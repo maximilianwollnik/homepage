@@ -11,6 +11,7 @@
     "angular-sanitize": "~1.4.5",
     "angular-translate": "~2.7.2",
     "angular-translate-loader-static-files": "~2.7.2",
+    "angular-timeline": "~1.5.2",
     "bootstrap": "~3.3.5",
     "fontawesome": "~4.4.0",
     "jasmine-jquery": "~2.1.0"
@@ -37,5 +38,9 @@
         "fonts/fontawesome-webfont.woff2"
       ]
     }
+  },
+  "resolutions": {
+    "angular-sanitize": "~1.4.5",
+    "angular": "~1.4.5"
   }
 }

@@ -15,8 +15,8 @@ gulp.task('clean', require('del').bind(null, [pathDist]));
 gulp.task('jshint', function() {
   return gulp.src(pathApp + '/**/*.js')
     .pipe($.jshint())
-    //.pipe($.jshint.reporter('jshint-stylish'))
-    //.pipe($.jshint.reporter('fail'));
+    .pipe($.jshint.reporter('jshint-stylish'))
+    .pipe($.jshint.reporter('fail'))
     .pipe(gulp.dest(pathFinal + '/'));
 });
 

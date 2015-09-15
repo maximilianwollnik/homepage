@@ -7,6 +7,7 @@ var homepage = angular.module('homepage', ['ngRoute',
   'homepage.home',
   'homepage.about',
   'homepage.work',
+  'homepage.cv',
   'homepage.navigation',
   'homepage.social',
   'homepage.footer'
@@ -17,7 +18,7 @@ homepage.config(['$translateProvider', function ($translateProvider) {
       prefix: 'assets/i18n/',
       suffix: '.json'
   });
-  $translateProvider.determinePreferredLanguage()
+  $translateProvider.determinePreferredLanguage();
   $translateProvider.fallbackLanguage('de_DE');
   $translateProvider.useSanitizeValueStrategy('sanitize');
 }]);

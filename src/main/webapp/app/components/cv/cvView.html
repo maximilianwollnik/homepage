@@ -1,0 +1,25 @@
+<div id="cvwrap">
+    <div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h4 ng-bind-html="'CV.HEADLINE.ONE' | translate"></h4>
+				<h1 ng-bind-html="'CV.HEADLINE.TWO' | translate"></h1>
+				<h4 ng-bind-html="'CV.HEADLINE.THREE' | translate"></h4>
+			</div>
+		</div><! --/row -->
+    </div> <!-- /container -->
+</div><! --/cvwrap -->
+
+<timeline>
+  <timeline-event ng-repeat="event in events">
+	<timeline-badge class="{{event.badgeClass}}">
+	  <i class="glyphicon {{event.badgeIconClass}}"></i>
+	</timeline-badge>
+	<timeline-panel class="{{event.badgeClass}}">
+	  <timeline-heading>
+		<h4 translate="{{event.title}}"></h4>
+	  </timeline-heading>
+	  <p translate="{{event.content}}"></p>
+	</timeline-panel>
+  </timeline-event>
+</timeline>
