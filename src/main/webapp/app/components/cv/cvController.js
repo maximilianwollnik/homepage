@@ -5,9 +5,9 @@ angular.module('homepage.cv', ['angular-timeline'])
 .controller('CvCtrl', ['$scope', function($scope) {
   $scope.events = [{
     badgeClass: 'info',
-    badgeIconClass: 'glyphicon-edit',
-    title: 'CV.EVENTS.HSBC.TITLE',
-    content: 'CV.EVENTS.HSBC.CONTENT'
+    badgeIconClass: 'glyphicon-check',
+    title: 'CV.EVENTS.ABN.TITLE',
+    content: 'CV.EVENTS.ABN.CONTENT'
   }, {
     badgeClass: 'info',
     badgeIconClass: 'glyphicon-edit',
@@ -16,13 +16,13 @@ angular.module('homepage.cv', ['angular-timeline'])
   }, {
     badgeClass: 'info',
     badgeIconClass: 'glyphicon-check',
-    title: 'CV.EVENTS.ABN.TITLE',
-    content: 'CV.EVENTS.ABN.CONTENT'
-  }, {
-    badgeClass: 'info',
-    badgeIconClass: 'glyphicon-check',
     title: 'CV.EVENTS.BANKDATA.TITLE',
     content: 'CV.EVENTS.BANKDATA.CONTENT'
+  }, {
+    badgeClass: 'info',
+    badgeIconClass: 'glyphicon-edit',
+    title: 'CV.EVENTS.HSBC.TITLE',
+    content: 'CV.EVENTS.HSBC.CONTENT'
   }, {
     badgeClass: 'info',
     badgeIconClass: 'glyphicon-check',
