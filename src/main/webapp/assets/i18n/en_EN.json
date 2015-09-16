@@ -9,7 +9,7 @@
         "MENU_HOME": "Home",
         "MENU_ABOUT": "About",
         "MENU_WORK": "Work",
-        "MENU_CV": "CV"
+        "MENU_CV": "Experience"
     },
     
     "HOME": {
@@ -56,25 +56,73 @@
     
     "CV": {
         "HEADLINE": { 
-          "ONE": "CV",
+          "ONE": "",
           "TWO": "",
           "THREE": ""
         },
         "EVENTS": { 
-          "ONE": {
-			"TITLE": "First heading",
-			"CONTENT": "Some awesome content."
+		  "HEADLINE": "Experience",
+          "WELLSFARGO": {
+			"TITLE": "04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
+			"CONTENT": "IT Consultant"
           },
-          "TWO": {
-			"TITLE": "Second heading",
-			"CONTENT": "Some awesome content."
+          "HSBC": {
+			"TITLE": "05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
+			"CONTENT": "IT Consultant"
+          },
+          "BANKDATA": {
+			"TITLE": "01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
+			"CONTENT": "IT Consultant"
+          },
+          "CBA": {
+			"TITLE": "03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+			"CONTENT": "IT Consultant"
+          },
+          "ABN": {
+			"TITLE": "01/2015 - Today: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
+			"CONTENT": "IT Consultant"
+          },
+          "WINCORNIXDORF": {
+			"TITLE": "2007 - Today: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
+			"CONTENT": "IT Consultant & Software Developer"
+          },
+          "PIGAL": {
+			"TITLE": "11/2001 - 05/2002: Pigal e.V.",
+			"CONTENT": "Instructor of Internet Application"
+          },
+          "ZIKON": {
+			"TITLE": "07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung",
+			"CONTENT": "Maintenance of networks, software applications and hardware systems of small and medium-sized enterprises"
+          },
+          "THUNE": {
+			"TITLE": "10/2004 - 09/2005: Thune Pharmacy",
+			"CONTENT": "Installation and maintenance of an online shop<br>Development of a pharmaceutical database"
+          }
+        },
+        "EXPLANATIONS": { 
+		  "HEADLINE": "Explanations",
+          "JOB_FINISHED": {
+			"TITLE": "Job finished",
+			"CONTENT": ""
+          },
+          "JOB_CURRENT": {
+			"TITLE": "Current Job",
+			"CONTENT": ""
+          },
+          "PROJECT_FINISHED": {
+			"TITLE": "Project finished",
+			"CONTENT": ""
+          },
+          "PROJECT_CURRENT": {
+			"TITLE": "Current project",
+			"CONTENT": ""
           }
         }
     }, 
 
     "FOOTER": {
         "LIST": { 
-          "ONE": "IT consultant & software developer",
+          "ONE": "IT Consultant & Software Developer",
           "TWO": "Living in Paderborn",
           "THREE": "Ready for the next challenge"
         },

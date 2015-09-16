@@ -9,7 +9,7 @@
         "MENU_HOME": "Home",
         "MENU_ABOUT": "Über",
         "MENU_WORK": "Arbeit",
-        "MENU_CV": "Lebenslauf"
+        "MENU_CV": "Erfahrung"
     },
     
     "HOME": {
@@ -56,18 +56,66 @@
     
     "CV": {
         "HEADLINE": { 
-          "ONE": "Lebenslauf",
+          "ONE": "",
           "TWO": "",
           "THREE": ""
         },
         "EVENTS": { 
-          "ONE": {
-			"TITLE": "Erstes Event",
-			"CONTENT": "Some awesome content."
+		  "HEADLINE": "Erfahrung",
+          "WELLS_FARGO": {
+			"TITLE": "04/2007 - 08/2007: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
+			"CONTENT": "IT Berater"
           },
-          "TWO": {
-			"TITLE": "Zweites Event",
-			"CONTENT": "Some awesome content."
+          "HSBC": {
+			"TITLE": "07/2008 - 10/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
+			"CONTENT": "IT Berater"
+          },
+          "BANKDATA": {
+			"TITLE": "01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
+			"CONTENT": "IT Berater"
+          },
+          "CBA": {
+			"TITLE": "03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+			"CONTENT": "IT Berater"
+          },
+          "ABN": {
+			"TITLE": "01/2015 - Today: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
+			"CONTENT": "IT Berater"
+          },
+          "WINCOR_NIXDORF": {
+			"TITLE": "2007 - Today: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
+			"CONTENT": "IT Berater & Software Entwickler"
+          },
+          "PIGAL": {
+			"TITLE": "11/2001 - 05/2002: Pigal e.V.",
+			"CONTENT": "Dozententätigkeit im Bereich Internetanwendungen"
+          },
+          "ZIKON": {
+			"TITLE": "07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung",
+			"CONTENT": "Wartung und Betreuung von Netzwerken, Soft- und Hardwaresystemen kleinerer und mittelständischer Unternehmen"
+          },
+          "THUNE": {
+			"TITLE": "10/2004 - 09/2005: Thune Apotheke",
+			"CONTENT": "Installation und Wartung eines Onlineshops, Erstellung und Wartung einer pharmazeutischen Datenbank"
+          }
+        },
+        "EXPLANATIONS": { 
+		  "HEADLINE": "Legende",
+          "JOB_FINISHED": {
+			"TITLE": "Job beendet",
+			"CONTENT": ""
+          },
+          "JOB_CURRENT": {
+			"TITLE": "Aktueller Job",
+			"CONTENT": ""
+          },
+          "PROJECT_FINISHED": {
+			"TITLE": "Projekt beendet",
+			"CONTENT": ""
+          },
+          "PROJECT_CURRENT": {
+			"TITLE": "Aktuelles Projekt",
+			"CONTENT": ""
           }
         }
     }, 

@@ -12,15 +12,15 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     controller: 'AboutCtrl',
     name: "BUTTON.MENU_ABOUT"
   })
-  .when('/work', {
-    templateUrl: 'app/components/work/workView.html',
-    controller: 'WorkCtrl',
-    name: "BUTTON.MENU_WORK"
-  })
   .when('/cv', {
     templateUrl: 'app/components/cv/cvView.html',
     controller: 'CvCtrl',
     name: "BUTTON.MENU_CV"
+  })
+  .when('/work', {
+    templateUrl: 'app/components/work/workView.html',
+    controller: 'WorkCtrl',
+    name: "BUTTON.MENU_WORK"
   })
   .otherwise({redirectTo: '/home'});
 }]);

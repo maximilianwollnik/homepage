@@ -30,7 +30,7 @@ describe('homepage.navigation.directive module', function() {
       expect(element.html()).toContain("<a href=\"#/about\" translate=\"BUTTON.MENU_ABOUT\" class=\"ng-scope\">Über</a>");
       expect(element.html()).toContain("<a href=\"#/work\" translate=\"BUTTON.MENU_WORK\" class=\"ng-scope\">Arbeit</a>");
 	  expect(element.html()).toContain("<a href=\"#/home\" translate=\"BUTTON.MENU_HOME\" class=\"ng-scope\">Home</a>");
-	  expect(element.html()).toContain("<a href=\"#/cv\" translate=\"BUTTON.MENU_CV\" class=\"ng-scope\">Lebenslauf</a>");
+	  expect(element.html()).toContain("<a href=\"#/cv\" translate=\"BUTTON.MENU_CV\" class=\"ng-scope\">Erfahrung</a>");
     });
   });
 });

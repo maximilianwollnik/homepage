@@ -97,6 +97,39 @@ describe('homepage', function() {
       footer();
     });
   });
+  
+  describe('should render work when user navigates to /cv', function() {
+
+    beforeEach(function() {
+      element(by.css('a[href*="#/cv"]')).click();
+    });
+
+    it('and the correct header text must be available in German', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
+      expect(element.all(by.css('#cvwrap')).getText()).
+        toMatch('');
+    });
+	
+	it('and the timeline tag must contain experience in German', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
+      expect(element.all(by.css('timeline')).getText()).
+        toMatch('Erfahrung');
+    });
+	
+	it('and the timeline tag must contain experience in English', function() {
+      element(by.css('img[src*="assets/img/en.png"]')).click();
+      expect(element.all(by.css('timeline')).getText()).
+        toMatch('Experience');
+    });
+
+	it('should render social when user navigates to /work', function() {
+	  social();
+	});
+	
+	it('and the footer must be available', function() {
+      footer();
+    });
+  });
 
   describe('should hide the navigation into a toggle object', function() {
 

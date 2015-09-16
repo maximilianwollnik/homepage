@@ -35,9 +35,14 @@ describe('homepage.navigation.service module', function() {
       expect(navigation.activeRoute(navigation.routes[1])).toEqual(true);
     });
 
-    it('and work route is after navigation active', function() {
-      location.path('work');
+    it('and cv route is after navigation active', function() {
+      location.path('cv');
       expect(navigation.activeRoute(navigation.routes[2])).toEqual(true);
+    });
+	
+	it('and work route is after navigation active', function() {
+      location.path('work');
+      expect(navigation.activeRoute(navigation.routes[3])).toEqual(true);
     });
   });
 });
