@@ -70,33 +70,6 @@ describe('homepage', function() {
 	});
 
   });
-
-  describe('should render work when user navigates to /work', function() {
-
-    beforeEach(function() {
-      element(by.css('a[href*="#/work"]')).click();
-    });
-
-    it('and the correct header text must be available in German', function() {
-      element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Muster');
-    });
-
-    it('and the correct header text must be available in English', function() {
-      element(by.css('img[src*="assets/img/en.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Samples');
-    });
-
-	it('should render social when user navigates to /work', function() {
-	  social();
-	});
-	
-	it('and the footer must be available', function() {
-      footer();
-    });
-  });
   
   describe('should render work when user navigates to /cv', function() {
 

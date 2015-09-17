@@ -41,16 +41,19 @@
     },
 
     "WORK": {
-        "HEADLINE": { 
-          "ONE": "Muster",
-          "TWO": "Das sind meine Muster",
-          "THREE": ""
-        },
+        "HEADLINE": "Muster",
+        "TEXT": "Hier ist eine Auswahl von fertig gestellten Projekte",
         "BODY": { 
-          "HEADER": "CBA - Kartenlos",
-          "P1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-          "P2": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "P3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+		  "CBA": {
+			"CARDLESS": {
+			  "HEADER": "CBA - Kartenlos",
+			  "TEXT": "Über die Bank eigene Handy App kann eine Auszahlung angelegt werden. An einem beliebigen CBA Automaten kann dann ohne eine Karte das Geld abgehoben werden. Im Notfall kann eine Drittperson berechtigt werden, dass Geld abzuheben."
+			},
+			"DEPOSIT": {
+			  "HEADER": "CBA - Einzahlung",
+			  "TEXT": "Geld oder Checks können einzelnd oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gut geschrieben."
+			}
+		  }
         }
     }, 
     

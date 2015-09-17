@@ -2,9 +2,8 @@
     <div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h4 ng-bind-html="'WORK.HEADLINE.ONE' | translate"></h4>
-				<h1 ng-bind-html="'WORK.HEADLINE.TWO' | translate"></h1>
-				<h4 ng-bind-html="'WORK.HEADLINE.THREE' | translate"></h4>
+				<h1 ng-bind-html="'WORK.HEADLINE' | translate"></h4>
+				<h4 ng-bind-html="'WORK.TEXT' | translate"></h1>
 			</div>
 		</div><! --/row -->
     </div> <!-- /container -->
@@ -12,18 +11,15 @@
 
 <section id="works"></section>
 <div class="container">
-	<div class="row centered mt mb">
+	<div class="row centered mt mb" ng-repeat="sample in samples">
 		<div class="col-lg-8 col-lg-offset-2">
-			<h2 ng-bind-html="'WORK.BODY.HEADER' | translate"></h2>
-			<p ng-bind-html="'WORK.BODY.P1' | translate"></p>
-			<p ng-bind-html="'WORK.BODY.P2' | translate"></p>
-			<p ng-bind-html="'WORK.BODY.P3' | translate"></p>
+			<h2 translate="{{sample.header}}"></h2>
+			<p translate="{{sample.text}}"></p>
 		</div>
 		<div class="col-lg-10 col-lg-offset-1 mt">
-			<img class="img-responsive" src="assets/img/pr01.jpg">
-			<br>
-			<img class="img-responsive" src="assets/img/pr02.jpg">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="{{trustSrc(sample.src)}}" frameborder="0" allowfullscreen></iframe>
+			</div>
 		</div>
-
 	</div><! --/row -->
 </div><! --/container -->

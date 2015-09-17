@@ -41,16 +41,19 @@
     },
 
     "WORK": {
-        "HEADLINE": { 
-          "ONE": "Samples",
-          "TWO": "That are my work samples",
-          "THREE": ""
-        },
+        "HEADLINE": "Samples",
+        "TEXT": "Here you can find a collection of finished projects",
         "BODY": { 
-          "HEADER": "CBA - Cardless",
-          "P1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-          "P2": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "P3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+		  "CBA": {
+			"CARDLESS": {
+			  "HEADER": "CBA - Cardless",
+			  "TEXT": "With Cardless Cash a customer is able to make ATM cash withdrawals from eligible accounts without the need for a card, simply by using the CommBank app. In emergencies, he can even arrange for someone else to collect the money on his behalf by nominating them through the app."
+			},
+			"DEPOSIT": {
+			  "HEADER": "CBA - Deposit",
+			  "TEXT": "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him. He can deposit both cash and cheques without an envelope 24/7, and cash is credited to his account instantly."
+			}
+		  }
         }
     }, 
     
