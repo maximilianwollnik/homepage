@@ -2,7 +2,7 @@
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
 
-describe('homepage work', function() {
+describe('homepage about', function() {
   
   function social() {
 	expect(element(by.css('.fa-xing')).isPresent()).toBe(true);
@@ -29,35 +29,25 @@ describe('homepage work', function() {
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
-  describe('should render work when user navigates to /work', function() {
+  describe('should render about when user navigates to /about', function() {
 
     beforeEach(function() {
-      element(by.css('a[href*="#/work"]')).click();
+      element(by.css('a[href*="#/about"]')).click();
+      browser.waitForAngular();
     });
 
-    it('and the correct header text must be available in German', function() {
-      element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Muster');
+    it('and the correct header must be available', function() {
+      expect(element.all(by.css('#aboutwrap')).getText()).
+        toContain('');
     });
 
-    it('and the correct header text must be available in English', function() {
-      element(by.css('img[src*="assets/img/en.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Samples');
-    });
-
-	it('should render social when user navigates to /work', function() {
-	  social();
-	});
-	
-	it('and the footer must be available', function() {
+    it('and the footer must be available', function() {
       footer();
     });
 	
-	it('and 2 samples must be available', function() {
-	  expect(element.all(by.css('.embed-responsive-16by9')).count()).toEqual(2);
-    });
+	it('should render social when user navigates to /about', function() {
+	  social();
+	});
+
   });
-  
 });
