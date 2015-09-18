@@ -7,11 +7,6 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     controller: 'HomeCtrl',
     name: "BUTTON.MENU_HOME"
   })
-  .when('/about', {
-    templateUrl: 'app/components/about/aboutView.html',
-    controller: 'AboutCtrl',
-    name: "BUTTON.MENU_ABOUT"
-  })
   .when('/cv', {
     templateUrl: 'app/components/cv/cvView.html',
     controller: 'CvCtrl',
@@ -21,6 +16,11 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     templateUrl: 'app/components/work/workView.html',
     controller: 'WorkCtrl',
     name: "BUTTON.MENU_WORK"
+  })
+  .when('/disclaimer', {
+    templateUrl: 'app/components/disclaimer/disclaimerView.html',
+    controller: 'DisclaimerCtrl',
+    name: "BUTTON.MENU_DISCLAIMER"
   })
   .otherwise({redirectTo: '/home'});
 }]);

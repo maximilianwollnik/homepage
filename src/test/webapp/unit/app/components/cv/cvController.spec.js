@@ -5,9 +5,9 @@ describe('homepage.cv', function() {
   beforeEach(module('homepage.cv'));
   
   beforeEach(inject(function($controller,_$rootScope_){
-      scope = _$rootScope_.$new();
-      cvCtrl = $controller('CvCtrl',{$scope: scope});
-    }));
+	scope = _$rootScope_.$new();
+	cvCtrl = $controller('CvCtrl',{$scope: scope});
+  }));
 
   describe('provides the cv controller', function(){
 

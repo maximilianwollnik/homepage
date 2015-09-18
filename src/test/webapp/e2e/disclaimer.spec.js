@@ -31,22 +31,26 @@ describe('homepage about', function() {
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
-  describe('should render about when user navigates to /about', function() {
+  describe('should render disclaimer when user navigates to /disclaimer', function() {
 
     beforeEach(function() {
-      element(by.css('a[href*="#/about"]')).click();
+      element(by.css('a[href*="#/disclaimer"]')).click();
     });
 
     it('and the correct header must be available', function() {
-      expect(element.all(by.css('#aboutwrap')).getText()).
+      expect(element.all(by.css('#disclaimerwrap')).getText()).
         toContain('');
+    });
+	
+	it('and 4 disclaimers + 2 containers must be available', function() {
+	  expect(element.all(by.css('.col-lg-offset-2')).count()).toEqual(6);
     });
 
     it('and the footer must be available', function() {
       footer();
     });
 	
-	it('should render social when user navigates to /about', function() {
+	it('should render social when user navigates to /disclaimer', function() {
 	  social();
 	});
 

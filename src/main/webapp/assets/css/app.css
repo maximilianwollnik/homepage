@@ -280,7 +280,7 @@ timeline {
 	color: #ffffff
 }
 
-#aboutwrap {	
+#disclaimerwrap {	
 	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
@@ -300,9 +300,6 @@ timeline {
     -o-background-size: cover;
     background-size: cover;
 }
-
-
-
 
 /* Gallery */
 .gallery {

@@ -7,7 +7,7 @@
         "TEXT_EN": "English",
         "TEXT_DE": "Deutsch",
         "MENU_HOME": "Home",
-        "MENU_ABOUT": "About",
+        "MENU_DISCLAIMER": "Disclaimer",
         "MENU_WORK": "Work",
         "MENU_CV": "Experience"
     },
@@ -25,17 +25,30 @@
         }
     },
     
-    "ABOUT": {
+    "DISCLAIMER": {
         "HEADLINE": { 
-          "ONE": "",
-          "TWO": "",
-          "THREE": ""
+          "PRE": "",
+          "TITLE": "Legal Notice",
+          "INSTRUCTION": ""
         },
         "BODY": { 
-          "HEADER": "@:AUTHOR",
-          "P1": "I am an IT consultant and software developer from Germany with over eight years of professional experience. Currently I am working for <a href='http://www.wincor-nixdorf.com' target='_blank'>Wincor Nixdorf International GmbH</a>.",
-          "P2": "I am responsible for ATM application globally and I deliver project specific extensions for customers worldwide. Depending on the requirements I develop Java and web components to enhance a multi-vendor platform. The customers are very interested to create a next generation user interface, branch of the future and multi-channel (Mobile, Internet) capabilities.",
-          "P3": "Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>."
+          "LIMITATION_INTERNAL": {
+			"TITLE": "1. Limitation of liability for internal content",
+			"TEXT": "The content of our website has been compiled with meticulous care and to the best of our knowledge. However, we cannot assume any liability for the up-to-dateness, completeness or accuracy of any of the pages. Pursuant to section 7, para. 1 of the TMG (Telemediengesetz –  Tele Media Act by German law), we as service providers are liable for our own content on these pages in accordance with general laws. However, pursuant to sections 8 to 10 of the TMG, we as service providers are not under obligation to monitor external information provided or stored on our website. Once we have become aware of a specific infringement of the law, we will immediately remove the content in question. Any liability concerning this matter can only be assumed from the point in time at which the infringement becomes known to us."
+          },
+          "LIMITATION_EXTERNAL": {
+			"TITLE": "2. Limitation of liability for external links",
+			"TEXT": "Our website contains links to the websites of third parties (\"external links\"). As the content of these websites is not under our control, we cannot assume any liability for such external content. In all cases, the provider of information of the linked websites is liable for the content and accuracy of the information provided. At the point in time when the links were placed, no infringements of the law were recognisable to us. As soon as an infringement of the law becomes known to us, we will immediately remove the link in question."
+          },
+          "COPYRIGHT": {
+			"TITLE": "3. Copyright",
+			"TEXT": "The content and works published on this website are governed by the copyright laws of Germany. Any duplication, processing, distribution or any form of utilisation beyond the scope of copyright law shall require the prior written consent of the author or authors in question."
+          },
+          "PROTECTION": {
+			"TITLE": "4. Data protection",
+			"TEXT": "Durch den Besuch des Internetauftritts können Informationen (Datum, Uhrzeit, aufgerufene Seite) über den Zugriff auf dem Server gespeichert werden. Es werden keine personenbezogenenen (z. B. Name, Anschrift oder E-Mail-Adresse) Daten, gespeichert. Sofern personenbezogene Daten erhoben werden, erfolgt dies, sofern möglich, nur mit dem vorherigen Einverständnis des Nutzers der Webseite. Eine Weitergabe der Daten an Dritte findet ohne ausdrückliche Zustimmung des Nutzers nicht statt. Der Anbieter weist darauf hin, dass die Übertragung von Daten im Internet (z. B. per E-Mail) Sicherheitslücken aufweisen und ein lückenloser Schutz der Daten vor dem Zugriff Dritter nicht gewährleistet werden kann. Der Anbieter übernimmt keine Haftung für die durch solche Sicherheitslücken entstandenen Schäden. Der Verwendung der Kontaktdaten durch Dritte zur gewerblichen Nutzung wird ausdrücklich widersprochen. Es sei denn, der Anbieter hat zuvor seine schriftliche Einwilligung erteilt. Der Anbieter behält sich rechtliche Schritte für den Fall der unverlangten Zusendung von Werbeinformationen, z. B. durch Spam-Mails, vor."
+          },
+          "SOURCE": "<strong>Source</strong>: <a href=\"http://www.mustervorlage.net/homepage-kostenlos\" target=\"_blank\">English Disclaimer on Mustervorlage.net</a>"
         }
     },
 

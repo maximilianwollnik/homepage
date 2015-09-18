@@ -27,7 +27,7 @@ describe('homepage.navigation.directive module', function() {
       var element = $compile("<navigation></navigation>")($rootScope);
       // fire all the watches, so the scope expression {{1 + 1}} will be evaluated
       $rootScope.$digest();
-      expect(element.html()).toContain("<a href=\"#/about\" translate=\"BUTTON.MENU_ABOUT\" class=\"ng-scope\">Über</a>");
+      expect(element.html()).toContain("<a href=\"#/disclaimer\" translate=\"BUTTON.MENU_DISCLAIMER\" class=\"ng-scope\">Impressum</a>");
       expect(element.html()).toContain("<a href=\"#/work\" translate=\"BUTTON.MENU_WORK\" class=\"ng-scope\">Arbeit</a>");
 	  expect(element.html()).toContain("<a href=\"#/home\" translate=\"BUTTON.MENU_HOME\" class=\"ng-scope\">Home</a>");
 	  expect(element.html()).toContain("<a href=\"#/cv\" translate=\"BUTTON.MENU_CV\" class=\"ng-scope\">Erfahrung</a>");

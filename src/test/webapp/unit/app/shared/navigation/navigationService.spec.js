@@ -15,7 +15,7 @@ describe('homepage.navigation.service module', function() {
       expect(navigation.routes.length).toBe(4);
     });
 
-    it('and the name of the about route must be About', function() {
+    it('and the name of the home route must be Home', function() {
       expect(navigation.routes[0].name).toBe('BUTTON.MENU_HOME');
     }); 
 
@@ -30,18 +30,18 @@ describe('homepage.navigation.service module', function() {
       expect(navigation.activeRoute(navigation.routes[0])).toEqual(true);
     });
 
-    it('and about route is after navigation active', function() {
-      location.path('about');
-      expect(navigation.activeRoute(navigation.routes[1])).toEqual(true);
-    });
-
     it('and cv route is after navigation active', function() {
       location.path('cv');
-      expect(navigation.activeRoute(navigation.routes[2])).toEqual(true);
+      expect(navigation.activeRoute(navigation.routes[1])).toEqual(true);
     });
 	
 	it('and work route is after navigation active', function() {
       location.path('work');
+      expect(navigation.activeRoute(navigation.routes[2])).toEqual(true);
+    });
+	
+	it('and disclaimer route is after navigation active', function() {
+      location.path('disclaimer');
       expect(navigation.activeRoute(navigation.routes[3])).toEqual(true);
     });
   });
