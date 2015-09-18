@@ -1,16 +1,13 @@
-<div id="workwrap">
-    <div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1 ng-bind-html="'WORK.HEADLINE' | translate"></h4>
-				<h4 ng-bind-html="'WORK.TEXT' | translate"></h1>
-			</div>
-		</div><! --/row -->
-    </div> <!-- /container -->
-</div><! --/workwrap -->
+<div id="workwrap" />
 
-<section id="works"></section>
 <div class="container">
+	<div class="row centered mt mb">
+		<div class="col-lg-8 col-lg-offset-2">
+			<h4 ng-bind-html="'WORK.HEADLINE.PRE' | translate"></h4>
+			<h1 ng-bind-html="'WORK.HEADLINE.TITLE' | translate"></h1>
+			<h4 ng-bind-html="'WORK.HEADLINE.INSTRUCTION' | translate"></h4>
+		</div>
+	</div>
 	<div class="row centered mt mb" ng-repeat="sample in samples">
 		<div class="col-lg-8 col-lg-offset-2">
 			<h2 translate="{{sample.header}}"></h2>

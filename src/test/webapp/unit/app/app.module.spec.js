@@ -38,7 +38,7 @@ describe('homepage.module', function () {
       scope = $rootScope.$new();
       // prepare scope in which your directive should be used
       // ...
-      element = angular.element('<h2 translate="HOME.HEADLINE.ONE"></h2><small translate="HOME.HEADLINE.TWO"></small>');
+      element = angular.element('<h4 ng-bind-html="\'HOME.HEADLINE.PRE\' | translate"></h4><h1 ng-bind-html="\'HOME.HEADLINE.TITLE\' | translate"></h1>');
       $compile(element)(scope);
       scope = element.scope();
       return scope.$apply();

@@ -31,7 +31,7 @@ describe('homepage cv', function() {
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
-  describe('should render work when user navigates to /cv', function() {
+  describe('should render cv when user navigates to /cv', function() {
 
     beforeEach(function() {
       element(by.css('a[href*="#/cv"]')).click();
@@ -39,20 +39,21 @@ describe('homepage cv', function() {
 
     it('and the correct header text must be available in German', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('#cvwrap')).getText()).
-        toMatch('');
+	  expect(element(by.css('#cvwrap')).isPresent()).toBe(true);
     });
 	
 	it('and the timeline tag must contain experience in German', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('timeline')).getText()).
-        toMatch('Erfahrung');
+	  expect(element.all(by.css('.container')).getText()).toMatch('Erfahrung');
     });
 	
 	it('and the timeline tag must contain experience in English', function() {
       element(by.css('img[src*="assets/img/en.png"]')).click();
-      expect(element.all(by.css('timeline')).getText()).
-        toMatch('Experience');
+	  expect(element.all(by.css('.container')).getText()).toMatch('Experience');
+    });
+	
+	it('and 13 events must be available', function() {
+	  expect(element.all(by.css('timeline-event')).count()).toEqual(13);
     });
 
 	it('should render social when user navigates to /work', function() {

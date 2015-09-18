@@ -110,6 +110,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
     color: #4a4a4a;
+	margin-bottom: 20px;
 }
 
 a {
@@ -148,7 +149,7 @@ a {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/back.jpg) no-repeat center top;
+	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
@@ -213,7 +214,7 @@ a {
 }
 
 #cvwrap {	
-	background: url(../img/work.jpg) no-repeat center top;
+	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	margin-bottom: 20px;
@@ -245,7 +246,7 @@ timeline {
 }
 
 #workwrap {	
-	background: url(../img/work.jpg) no-repeat center top;
+	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
 	text-align:center;
@@ -286,7 +287,7 @@ timeline {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 550px;
+	min-height: 650px;
 	width: 100%;
 	
     -webkit-background-size: 100%;

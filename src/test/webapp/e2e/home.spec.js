@@ -33,14 +33,14 @@ describe('homepage home', function() {
 
   it('should render home when user navigates to /home in German', function() {
     element(by.css('img[src*="assets/img/de.png"]')).click();
-    expect(element.all(by.css('#headerwrap')).getText()).
-      toMatch('Entwickler');
+	expect(element.all(by.css('.container')).getText()).toMatch('Entwickler');
+	expect(element(by.css('#headerwrap')).isPresent()).toBe(true);
   });
 
   it('should render home when user navigates to /home in English', function() {
     element(by.css('img[src*="assets/img/en.png"]')).click();
-    expect(element.all(by.css('#headerwrap')).getText()).
-      toMatch('Developer');
+	expect(element.all(by.css('.container')).getText()).toMatch('Developer');
+	expect(element(by.css('#headerwrap')).isPresent()).toBe(true);
   });
   
   it('should render social when user navigates to /home', function() {

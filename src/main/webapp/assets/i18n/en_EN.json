@@ -14,12 +14,11 @@
     
     "HOME": {
         "HEADLINE": { 
-          "ONE": "Hi, my name is",
-          "TWO": "@:AUTHOR",
-          "THREE": "IT Consultant & Developer"
+          "PRE": "Hi, my name is",
+          "TITLE": "@:AUTHOR",
+          "INSTRUCTION": "IT Consultant & Developer"
         },
         "BODY": { 
-          "HEADER": "@:AUTHOR",
           "P1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
           "P2": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "P3": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
@@ -41,8 +40,11 @@
     },
 
     "WORK": {
-        "HEADLINE": "Samples",
-        "TEXT": "Here you can find a collection of finished projects",
+		"HEADLINE": { 
+          "PRE": "",
+          "TITLE": "Samples",
+          "INSTRUCTION": "Here you can find a collection of finished projects"
+        },
         "BODY": { 
 		  "CBA": {
 			"CARDLESS": {
@@ -59,9 +61,9 @@
     
     "CV": {
         "HEADLINE": { 
-          "ONE": "",
-          "TWO": "",
-          "THREE": ""
+          "PRE": "",
+          "TITLE": "That is what I've done so far",
+          "INSTRUCTION": ""
         },
         "EVENTS": { 
 		  "HEADLINE": "Experience",

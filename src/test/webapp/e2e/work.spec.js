@@ -40,14 +40,14 @@ describe('homepage work', function() {
 
     it('and the correct header text must be available in German', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Muster');
+	  expect(element.all(by.css('.container')).getText()).toMatch('Muster');
+	  expect(element(by.css('#workwrap')).isPresent()).toBe(true);
     });
 
     it('and the correct header text must be available in English', function() {
       element(by.css('img[src*="assets/img/en.png"]')).click();
-      expect(element.all(by.css('#workwrap')).getText()).
-        toMatch('Samples');
+      expect(element.all(by.css('.container')).getText()).toMatch('Samples');
+	  expect(element(by.css('#workwrap')).isPresent()).toBe(true);
     });
 
 	it('should render social when user navigates to /work', function() {
@@ -59,6 +59,7 @@ describe('homepage work', function() {
     });
 	
 	it('and 2 samples must be available', function() {
+	  browser.waitForAngular();
 	  expect(element.all(by.css('.embed-responsive-16by9')).count()).toEqual(2);
     });
   });

@@ -1,18 +1,16 @@
-<div id="cvwrap">
-    <div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h4 ng-bind-html="'CV.HEADLINE.ONE' | translate"></h4>
-				<h1 ng-bind-html="'CV.HEADLINE.TWO' | translate"></h1>
-				<h4 ng-bind-html="'CV.HEADLINE.THREE' | translate"></h4>
-			</div>
-		</div><! --/row -->
-    </div> <!-- /container -->
-</div><! --/cvwrap -->
+<div id="cvwrap"/>
+
+<div class="container">
+	<div class="row centered mt mb">
+		<div class="col-lg-8 col-lg-offset-2">
+			<h4 ng-bind-html="'CV.HEADLINE.PRE' | translate"></h4>
+			<h1 ng-bind-html="'CV.HEADLINE.TITLE' | translate"></h1>
+			<h4 ng-bind-html="'CV.HEADLINE.INSTRUCTION' | translate"></h4>
+		</div>
+	</div>
+</div>
 
 <timeline>
-  
-  <h1 ng-bind-html="'CV.EVENTS.HEADLINE' | translate"></h1>
   
   <timeline-event ng-repeat="event in events">
 	<timeline-badge class="{{event.badgeClass}}">
