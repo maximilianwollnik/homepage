@@ -19,6 +19,9 @@ describe('homepage work', function() {
   }
 
   beforeEach(function() {
+	browser.ignoreSynchronization = true; 
+	browser.get('index.html'); 
+	browser.waitForAngular();
     browser.driver.manage().window().setSize(1280, 1024);
   });
   

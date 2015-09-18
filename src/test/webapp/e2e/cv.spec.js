@@ -19,13 +19,15 @@ describe('homepage cv', function() {
   }
 
   beforeEach(function() {
+	browser.ignoreSynchronization = true; 
+	browser.get('index.html'); 
+	browser.waitForAngular();
     browser.driver.manage().window().setSize(1280, 1024);
   });
   
   it('should automatically redirect to /home when location hash/fragment is empty', function() {beforeEach(function() {
         browser.driver.manage().window().setSize(1280, 1024);
     });
-    browser.get('index.html');
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
