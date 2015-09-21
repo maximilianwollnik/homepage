@@ -156,8 +156,8 @@ a {
 #cvwrap,
 #workwrap,
 #disclaimerwrap,
-#skillwrap
- {
+#skillwrap, 
+#educationwrap {
 	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;

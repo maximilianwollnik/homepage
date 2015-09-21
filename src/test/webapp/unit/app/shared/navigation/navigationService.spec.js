@@ -6,7 +6,8 @@ describe('homepage.navigation.service module', function() {
   var posCv = 1;
   var posWork = 2;
   var posSkill = 3;
-  var posDisclaimer = 4;
+  var posEducation = 4;
+  var posDisclaimer = 5;
   beforeEach(module('homepage'));
   beforeEach(module('homepage.navigation'));
   beforeEach(inject(function($injector, $location) {
@@ -16,8 +17,8 @@ describe('homepage.navigation.service module', function() {
 
   describe('gets all data for the navigation', function() {
     
-    it('and the current length must be 5', function() {
-      expect(navigation.routes.length).toBe(5);
+    it('and the current length must be 6', function() {
+      expect(navigation.routes.length).toBe(6);
     });
 
     it('and the name of the home route must be Home', function() {
@@ -45,9 +46,14 @@ describe('homepage.navigation.service module', function() {
       expect(navigation.activeRoute(navigation.routes[posWork])).toEqual(true);
     });
 
-    it('and work route is after navigation active', function() {
+    it('and skill route is after navigation active', function() {
       location.path('skill');
       expect(navigation.activeRoute(navigation.routes[posSkill])).toEqual(true);
+    });
+
+    it('and education route is after navigation active', function() {
+      location.path('education');
+      expect(navigation.activeRoute(navigation.routes[posEducation])).toEqual(true);
     });
 	
 	  it('and disclaimer route is after navigation active', function() {

@@ -10,7 +10,8 @@
         "MENU_DISCLAIMER": "Impressum",
         "MENU_WORK": "Berufliche Praxis",
         "MENU_CV": "Lebenslauf",
-        "MENU_SKILL": "Fähigkeiten"
+        "MENU_SKILL": "Fähigkeiten",
+        "MENU_EDUCATION": "Ausbildung"
     },
     
     "HOME": {
@@ -155,6 +156,19 @@
       "CI": "CI",
       "AGILE": "Agil",
       "WATERFALL": "Wasserfall"
+    },
+
+    "EDUCATION": {
+        "HEADLINE": { 
+          "PRE": "",
+          "TITLE": "Meine Ausbildung",
+          "INSTRUCTION": "Hier habe ich mir mein Wissen angeeignet"
+        },
+        "BODY": { 
+          "P1": "01/2004 - 12/2006",
+          "P2": "FHDW Paderborn",
+          "P3": "Wirtschaftsinformatik"
+        }
     },
 
     "FOOTER": {

@@ -22,6 +22,11 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     controller: 'SkillCtrl',
     name: "BUTTON.MENU_SKILL"
   })
+  .when('/education', {
+    templateUrl: 'app/components/education/educationView.html',
+    controller: 'EducationCtrl',
+    name: "BUTTON.MENU_EDUCATION"
+  })
   .when('/disclaimer', {
     templateUrl: 'app/components/disclaimer/disclaimerView.html',
     controller: 'DisclaimerCtrl',

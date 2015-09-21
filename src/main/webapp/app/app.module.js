@@ -11,7 +11,8 @@ var homepage = angular.module('homepage', ['ngRoute',
   'homepage.navigation',
   'homepage.social',
   'homepage.footer',
-  'homepage.skill'
+  'homepage.skill',
+  'homepage.education'
 ]);
 
 homepage.config(['$translateProvider', function ($translateProvider) {

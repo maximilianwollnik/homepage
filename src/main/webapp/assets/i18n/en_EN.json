@@ -10,7 +10,8 @@
         "MENU_DISCLAIMER": "Disclaimer",
         "MENU_WORK": "Work",
         "MENU_CV": "Experience",
-        "MENU_SKILL": "Skills"
+        "MENU_SKILL": "Skills",
+        "MENU_EDUCATION": "Education"
     },
     
     "HOME": {
@@ -155,6 +156,19 @@
       "CI": "CI",
       "AGILE": "Agile",
       "WATERFALL": "Waterfall"
+    }, 
+
+    "EDUCATION": {
+        "HEADLINE": { 
+          "PRE": "",
+          "TITLE": "My Education",
+          "INSTRUCTION": "Here I gained my knowledge"
+        },
+        "BODY": { 
+          "P1": "01/2004 - 12/2006",
+          "P2": "FHDW Paderborn",
+          "P3": "Economic computer science"
+        }
     }, 
 
     "FOOTER": {
