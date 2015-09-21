@@ -40,6 +40,9 @@
     <action dev="maximilian" type="add">
 		Adding active profile to version
 	  </action>
+    <action dev="maximilian" type="add">
+		Adding skill view
+	  </action>
 	</release>
 
 	<release version="0.1.0" date="2015-09-11" description="Initial setup">

@@ -44,7 +44,7 @@ describe('homepage cv', function() {
 	
 	it('and the timeline tag must contain experience in German', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
-	  expect(element.all(by.css('.container')).getText()).toMatch('Erfahrung');
+	  expect(element.all(by.css('.container')).getText()).toMatch('Berufliche Praxis');
     });
 	
 	it('and the timeline tag must contain experience in English', function() {

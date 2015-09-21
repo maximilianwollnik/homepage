@@ -8,8 +8,9 @@
         "TEXT_DE": "Deutsch",
         "MENU_HOME": "Home",
         "MENU_DISCLAIMER": "Impressum",
-        "MENU_WORK": "Arbeit",
-        "MENU_CV": "Erfahrung"
+        "MENU_WORK": "Berufliche Praxis",
+        "MENU_CV": "Lebenslauf",
+        "MENU_SKILL": "Fähigkeiten"
     },
     
     "HOME": {
@@ -137,6 +138,24 @@
           }
         }
     }, 
+    
+    "SKILL": {
+      "HEADLINE": { 
+        "PRE": "",
+        "TITLE": "Fähigkeiten",
+        "INSTRUCTION": ""
+      },
+      "JAVA": "Java",
+      "ANGULAR": "Angular",
+      "SOA": "SOA",
+      "REST": "Rest",
+      "SPRING": "Spring",
+      "DOCKER": "Docker",
+      "VAGRANT": "Vagrant",
+      "CI": "CI",
+      "AGILE": "Agil",
+      "WATERFALL": "Wasserfall"
+    },
 
     "FOOTER": {
         "LIST": { 

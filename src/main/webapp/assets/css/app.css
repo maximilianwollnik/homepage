@@ -148,7 +148,12 @@ a {
    Wrap Sections
    ========================================================================== */
 
-#headerwrap {
+#headerwrap,
+#cvwrap,
+#workwrap,
+#disclaimerwrap,
+#skillwrap
+ {
 	background: url(../img/about.jpg) no-repeat center top;
 	margin-top: -70px;
 	padding-top: 250px;
@@ -169,7 +174,11 @@ a {
     background-size: cover;
 }
 
-#headerwrap h1 {
+#headerwrap h1,
+#cvwrap h1,
+#workwrap h1,
+#disclaimerwrap h1,
+#skillwrap h1 {
 	color:#ffffff;
 	padding-top: 10px;
 	padding-bottom: 20px;
@@ -178,7 +187,11 @@ a {
 	font-weight: bold;
 }
 
-#headerwrap h4 {
+#headerwrap h4,
+#cvwrap h4,
+#workwrap h4,
+#disclaimerwrap h4,
+#skillwrap h4 {
 	font-weight: 400;
 	color: #ffffff
 }
@@ -213,28 +226,6 @@ a {
 	font-size: 12px;
 }
 
-#cvwrap {	
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	margin-bottom: 20px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 #cvwrap h4 {
 	font-weight: 400;
 	color: #ffffff
@@ -245,60 +236,28 @@ timeline {
   margin-bottom: 50px;
 }
 
-#workwrap {	
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.slick-slider {
+  padding-top: 15px;
 }
 
-#workwrap h1 {
-	color:#ffffff;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	letter-spacing: 4px;
-	font-size: 80px;
-	font-weight: bold;
+.slick-prev:before, .slick-next:before {
+  color: black;
+  font-size: 40px;
 }
 
-#workwrap h4 {
-	font-weight: 400;
-	color: #ffffff
+.slick-prev {
+  left: -45px;
 }
 
-#disclaimerwrap {	
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+.slick-slide {
+  width: 200px;
+  margin-left: 20px;
+}
 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.slick-bubble {
+  border: 5px solid black;
+  border-radius: 100px;
+  line-height: 200px;
 }
 
 /* Gallery */

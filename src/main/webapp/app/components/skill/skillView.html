@@ -1,0 +1,21 @@
+<div id="skillwrap"/>
+
+<div class="container">
+  <div class="row centered mt mb">
+		<div class="col-lg-8 col-lg-offset-2">
+			<h4 ng-bind-html="'SKILL.HEADLINE.PRE' | translate"></h4>
+			<h1 ng-bind-html="'SKILL.HEADLINE.TITLE' | translate"></h1>
+			<h4 ng-bind-html="'SKILL.HEADLINE.INSTRUCTION' | translate"></h4>
+		</div>
+	</div>
+  <div class="row centered mt mb">
+    <div class="col-lg-8 col-lg-offset-2">
+      <slick infinite="true" slides-to-show="3" slides-to-scroll="1" autoplay="true" center-Mode="true" variable-Width="true">
+        <div ng-repeat="skill in skills">
+          <h3 translate="{{skill.title}}"class="slick-bubble"/>
+        </div>
+      </slick>
+	  </div>
+  </div>
+</div>
+

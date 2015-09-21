@@ -17,6 +17,11 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     controller: 'WorkCtrl',
     name: "BUTTON.MENU_WORK"
   })
+  .when('/skill', {
+    templateUrl: 'app/components/skill/skillView.html',
+    controller: 'SkillCtrl',
+    name: "BUTTON.MENU_SKILL"
+  })
   .when('/disclaimer', {
     templateUrl: 'app/components/disclaimer/disclaimerView.html',
     controller: 'DisclaimerCtrl',

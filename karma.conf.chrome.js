@@ -16,6 +16,8 @@ module.exports = function(config){
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/jasmine/lib/jasmine-core/jasmine.js',
       'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+      'bower_components/slick-carousel/slick/slick.min.js',
+      'bower_components/angular-slick/dist/slick.js',
       // endbower
       'src/main/webapp/app/**/*.js',
       'src/main/webapp/app/**/*.html',
