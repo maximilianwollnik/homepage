@@ -30,7 +30,7 @@ describe('homepage.social.directive module', function() {
     it('and our social container must be available', function() {
       var element = $compile("<social></social>")($rootScope);
       $rootScope.$digest();
-      expect(element.html()).toContain("div class=\"container\"");
+      expect(element.html()).toContain("div class=\"container-fluid\"");
     });
   });
 });
