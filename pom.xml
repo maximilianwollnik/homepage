@@ -7,6 +7,12 @@
 	<name>Homepage</name>
   <description>This is the homepage of Maximilian Wollnik created with Spring Boot and Angular</description>
 
+  <scm>
+		<connection>scm:git:https://github.com/maximilianwollnik/homepage.git</connection>
+		<developerConnection>scm:git:https://github.com/maximilianwollnik/homepage.git</developerConnection>
+		<url>https://github.com/maximilianwollnik/homepage</url>
+	</scm>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -23,6 +29,7 @@
 		<version-plugin-javadoc>2.10.3</version-plugin-javadoc>
 		<version-plugin-frontend-maven-plugin>0.0.25</version-plugin-frontend-maven-plugin>
 		<version-plugin-maven-resources-plugin>2.6</version-plugin-maven-resources-plugin>
+		<version-plugin-maven-release-plugin>2.5.2</version-plugin-maven-release-plugin>
 		<version-node>v0.10.26</version-node>
 		<version-npm>1.4.3</version-npm>
 	</properties>
@@ -147,6 +154,11 @@
                 <delimiter>@</delimiter>
             </delimiters>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>${version-plugin-maven-release-plugin}</version>
       </plugin>
 		</plugins>
 		<resources>
