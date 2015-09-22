@@ -53,7 +53,7 @@ describe('homepage skill', function() {
     });
 	
 	  it('and 10 skills must be available', function() {
-	    expect(element.all(by.css('h3')).count()).toEqual(10);
+	    expect(element.all(by.repeater('skill in skills')).count()).toBeGreaterThan(9);
     });
 
 	  it('should render social when user navigates to /skill', function() {
