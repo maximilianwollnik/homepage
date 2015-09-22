@@ -142,6 +142,24 @@ gulp.task('connect', ['wiredep'], function() {
     });
 });
 
+gulp.task('connectStatic', ['wiredep'], function() {
+  var serveStatic = require('serve-static');
+  var serveIndex = require('serve-index');
+  var app = require('connect')()
+    .use(require('connect-livereload')({port: 35730}))
+    .use(serveStatic(pathFinal))
+    // paths to bower_components should be relative to the current file
+    // e.g. in app/index.html you should use ../bower_components
+    .use('/bower_components', serveStatic('bower_components'))
+    .use(serveIndex(pathFinal));
+
+  require('http').createServer(app)
+    .listen(9000)
+    .on('listening', function() {
+      console.log('Started connect web server on http://localhost:9000');
+    });
+});
+
 gulp.task('watch', ['connect'], function() {
   $.livereload.listen();
 
@@ -153,9 +171,26 @@ gulp.task('watch', ['connect'], function() {
   gulp.watch('bower.json', ['wiredep']);
 });
 
+gulp.task('watchStatic', ['connectStatic'], function() {
+  $.livereload.listen();
+
+  // watch for changes
+  gulp.watch([
+    pathFinal + '/**/*'
+  ]).on('change', $.livereload.changed);
+
+  gulp.watch('bower.json', ['wiredep']);
+});
+
 gulp.task('serve', ['wiredep', 'connect', 'watch'], function() {
   if (argv.open) {
     require('opn')('http://localhost:8000');
+  }
+});
+
+gulp.task('serveStatic', ['wiredep', 'connectStatic', 'watchStatic'], function() {
+  if (argv.open) {
+    require('opn')('http://localhost:9000');
   }
 });
 
