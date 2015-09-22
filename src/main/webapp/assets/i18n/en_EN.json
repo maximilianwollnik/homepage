@@ -164,10 +164,10 @@
           "TITLE": "My Education",
           "INSTRUCTION": "Here I gained my knowledge"
         },
-        "BODY": { 
-          "P1": "01/2004 - 12/2006",
-          "P2": "FHDW Paderborn",
-          "P3": "Economic computer science"
+        "FHDW": { 
+          "PRE": "01/2004 - 12/2006",
+          "TITLE": "FHDW Paderborn",
+          "CONTENT": "Dual-mode degree course of business informatics, university of applied science, Paderborn"
         }
     }, 
 

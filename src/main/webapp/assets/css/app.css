@@ -264,6 +264,10 @@ timeline {
   line-height: 200px;
 }
 
+.img-responsive {
+  background-color: grey;
+}
+
 /* Gallery */
 .gallery {
 	margin-top: 30px;

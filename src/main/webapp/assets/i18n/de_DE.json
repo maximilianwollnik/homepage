@@ -164,10 +164,10 @@
           "TITLE": "Meine Ausbildung",
           "INSTRUCTION": "Hier habe ich mir mein Wissen angeeignet"
         },
-        "BODY": { 
-          "P1": "01/2004 - 12/2006",
-          "P2": "FHDW Paderborn",
-          "P3": "Wirtschaftsinformatik"
+        "FHDW": { 
+          "PRE": "01/2004 - 12/2006",
+          "TITLE": "FHDW Paderborn",
+          "CONTENT": "duales Studium der Wirtschaftsinformatik, Fachhochschule der Wirtschaft, Paderborn"
         }
     },
 

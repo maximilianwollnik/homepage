@@ -50,6 +50,12 @@ describe('homepage education', function() {
 	    expect(element(by.css('#educationwrap')).isPresent()).toBe(true);
     });
 
+    it('and the education must be listed', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
+      expect(element.all(by.css('.featurette')).count()).toEqual(1);
+      expect(element.all(by.css('.col-md-7')).getText()).toMatch('FHDW');
+    });
+
 	  it('should render social when user navigates to /education', function() {
 	    social();
 	  });
