@@ -83,20 +83,6 @@
 							<goal>exec</goal>
 						</goals>
 					</execution>
-          <execution>
-						<id>exec-npm-preprotractor</id>
-						<phase>integration-test</phase>
-						<configuration>
-							<executable>npm</executable>
-							<arguments>
-								<argument>run</argument>
-                <argument>preprotractor</argument>
-							</arguments>
-						</configuration>
-						<goals>
-							<goal>verify</goal>
-						</goals>
-					</execution>  
 				</executions>
 			</plugin>
       <plugin>
