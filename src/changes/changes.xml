@@ -6,6 +6,11 @@
 	<author email="maximilian@maximilianwollnik.de">Maximilian Wollnik</author>
   </properties>
   <body>
+  <release version="0.3.0" date="2015-09-26" description="Bug fixing">
+	  <action dev="maximilian" type="change">
+		wrong english text in home
+	  </action>
+	</release>
 	<release version="0.2.0" date="2015-09-23" description="Design change">
 	  <action dev="maximilian" type="change">
 		Changing design

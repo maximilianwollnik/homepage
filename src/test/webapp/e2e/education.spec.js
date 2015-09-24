@@ -16,19 +16,13 @@ describe('homepage education', function() {
   function footer() {
 	  expect(element.all(by.css('#footerwrap')).getText()).toMatch('Version:');
 	  expect(element.all(by.css('#footerwrap')).getText()).toMatch('Copyright');
-  }
+  }  
 
-  beforeEach(function() {
-	  browser.ignoreSynchronization = true; 
+  it('should automatically redirect to /home when location hash/fragment is empty', function() {
+    browser.ignoreSynchronization = true; 
 	  browser.get('index.html'); 
 	  browser.waitForAngular();
     browser.driver.manage().window().setSize(1280, 1024);
-  });
-  
-  it('should automatically redirect to /home when location hash/fragment is empty', function() {beforeEach(function() {
-      browser.driver.manage().window().setSize(1280, 1024);
-    });
-    browser.get('index.html');
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
@@ -40,18 +34,37 @@ describe('homepage education', function() {
 
     it('and the correct header text must be available in German', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
-	    expect(element.all(by.css('.container')).getText()).toMatch('Ausbildung');
+      var ele = element.all(by.css('.container'));
+      browser.waitForAngular();
+	    expect(ele.getText()).toMatch('Ausbildung');
 	    expect(element(by.css('#educationwrap')).isPresent()).toBe(true);
     });
 
     it('and the correct header text must be available in English', function() {
       element(by.css('img[src*="assets/img/en.png"]')).click();
-      expect(element.all(by.css('.container')).getText()).toMatch('Education');
+      var ele = element.all(by.css('.container'));
+      browser.waitForAngular();
+      expect(ele.getText()).toMatch('Education');
 	    expect(element(by.css('#educationwrap')).isPresent()).toBe(true);
+    });
+
+    it('and the lorem ipsum text must not be available in German', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
+      var ele = element.all(by.css('.container'));
+      browser.waitForAngular();
+  	  expect(ele.getText()).not.toMatch('Lorem Ipsum');
+    });
+
+    it('and the lorem ipsum text must not be available in English', function() {
+      element(by.css('img[src*="assets/img/en.png"]')).click();
+      var ele = element.all(by.css('.container'));
+      browser.waitForAngular();
+  	  expect(ele.getText()).not.toMatch('Lorem Ipsum');
     });
 
     it('and the education must be listed', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
+      browser.waitForAngular();
       expect(element.all(by.css('.featurette')).count()).toEqual(1);
       expect(element.all(by.css('.col-md-7')).getText()).toMatch('FHDW');
     });

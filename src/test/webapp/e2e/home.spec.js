@@ -18,16 +18,11 @@ describe('homepage home', function() {
 	  expect(element.all(by.css('#footerwrap')).getText()).toMatch('Copyright');
   }
 
-  beforeEach(function() {
-	  browser.ignoreSynchronization = true; 
+  it('should automatically redirect to /home when location hash/fragment is empty', function() {
+    browser.ignoreSynchronization = true; 
 	  browser.get('index.html'); 
 	  browser.waitForAngular();
     browser.driver.manage().window().setSize(1280, 1024);
-  });
-
-  it('should automatically redirect to /home when location hash/fragment is empty', function() {beforeEach(function() {
-      browser.driver.manage().window().setSize(1280, 1024);
-    });
     expect(browser.getLocationAbsUrl()).toMatch("/home");
   });
 
@@ -41,6 +36,20 @@ describe('homepage home', function() {
     element(by.css('img[src*="assets/img/en.png"]')).click();
 	  expect(element.all(by.css('.container')).getText()).toMatch('Developer');
 	  expect(element(by.css('#headerwrap')).isPresent()).toBe(true);
+  });
+
+  it('and the lorem ipsum text must not be available in German', function() {
+    element(by.css('img[src*="assets/img/de.png"]')).click();
+    var ele = element.all(by.css('.container'));
+    browser.waitForAngular();
+    expect(ele.getText()).not.toMatch('Lorem Ipsum');
+  });
+
+  it('and the lorem ipsum text must not be available in English', function() {
+    element(by.css('img[src*="assets/img/en.png"]')).click();
+    var ele = element.all(by.css('.container'));
+    browser.waitForAngular();
+   expect(ele.getText()).not.toMatch('Lorem Ipsum');
   });
   
   it('should render social when user navigates to /home', function() {
