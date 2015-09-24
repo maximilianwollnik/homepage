@@ -12,6 +12,19 @@
 		<url>https://github.com/maximilianwollnik/homepage</url>
 	  <tag>HEAD</tag>
   </scm>
+  
+  <distributionManagement>
+	  <repository>
+	     <id>nexus</id>
+	     <name>Releases</name>
+	     <url>http://maximilianwollnik.de:8084/content/repositories/releases/</url>
+	  </repository>
+	  <snapshotRepository>
+	     <id>nexus</id>
+	     <name>Snapshots</name>
+	     <url>http://maximilianwollnik.de:8084/content/repositories/snapshots/</url>
+	  </snapshotRepository>
+</distributionManagement>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
