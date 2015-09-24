@@ -8,8 +8,8 @@
   <description>This is the homepage of Maximilian Wollnik created with Spring Boot and Angular</description>
 
   <scm>
-		<connection>scm:git:https://github.com/maximilianwollnik/homepage.git</connection>
-		<developerConnection>scm:git:https://github.com/maximilianwollnik/homepage.git</developerConnection>
+		<connection>scm:git:git@github.com:maximilianwollnik/homepage.git</connection>
+		<developerConnection>scm:git:git@github.com:maximilianwollnik/homepage.git</developerConnection>
 		<url>https://github.com/maximilianwollnik/homepage</url>
 	</scm>
 
