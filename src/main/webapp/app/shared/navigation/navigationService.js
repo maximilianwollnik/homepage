@@ -7,7 +7,7 @@ angular.module('homepage.navigation.service', [])
   angular.forEach($route.routes, function (route, path) {
     if (route.name) {
       routes.push({
-        path: path,
+        path: path + '?scrollTo=content',
         name: route.name
       });
     }

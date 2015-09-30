@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('homepage').config(['$routeProvider', function($routeProvider) {
+angular.module('homepage')
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider
   .when('/home', {
     templateUrl: 'app/components/home/homeView.html',
     controller: 'HomeCtrl',
-    name: "BUTTON.MENU_HOME"
+    name: "BUTTON.MENU_HOME",
   })
   .when('/cv', {
     templateUrl: 'app/components/cv/cvView.html',
@@ -32,5 +33,11 @@ angular.module('homepage').config(['$routeProvider', function($routeProvider) {
     controller: 'DisclaimerCtrl',
     name: "BUTTON.MENU_DISCLAIMER"
   })
-  .otherwise({redirectTo: '/home'});
+  .otherwise({redirectTo: 'home'});
+}])
+.run(['$rootScope', '$location', '$anchorScroll', '$routeParams', function($rootScope, $location, $anchorScroll, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $location.hash($routeParams.scrollTo);
+    $anchorScroll();  
+  });
 }]);

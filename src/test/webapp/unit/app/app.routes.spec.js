@@ -15,7 +15,7 @@ describe('homepage.routes', function() {
       expect($route.routes['/work'].templateUrl).toEqual('app/components/work/workView.html');
       expect($route.routes['/home'].templateUrl).toEqual('app/components/home/homeView.html');
 
-      expect($route.routes[null].redirectTo).toEqual('/home')
+      expect($route.routes[null].redirectTo).toMatch('home')
     }));
   });
 });
