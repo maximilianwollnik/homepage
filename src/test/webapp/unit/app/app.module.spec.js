@@ -45,7 +45,7 @@ describe('homepage.module', function () {
     }));
 
     it('and the english translation should be loaded', inject(function($compile) {
-      expect(element.text()).toBe('Hi, mein Name istMaximilian Wollnik');
+      expect(element.text()).toBe('Hallo, mein Name istMaximilian Wollnik');
     }));
 
   }); 
