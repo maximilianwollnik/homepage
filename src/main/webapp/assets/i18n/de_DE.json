@@ -11,7 +11,9 @@
         "MENU_WORK": "Berufliche Praxis",
         "MENU_CV": "Lebenslauf",
         "MENU_SKILL": "Fähigkeiten",
-        "MENU_EDUCATION": "Ausbildung"
+        "MENU_EDUCATION": "Ausbildung",
+        "MAIL_CLOSE": "Schließen",
+        "MAIL_SEND": "Abschicken"
     },
     
     "HOME": {
@@ -183,5 +185,19 @@
 
     "NAVIGATION": {
         "TOOGLE": "Navigation umschalten"
+    },
+
+    "SOCIAL": {
+        "MAIL": {
+          "HEADER": "Schreiben Sie mir eine Mail",
+          "NAME": "Ihr Name",
+          "ADDRESS": "Ihre E-Mail Adresse",
+          "BODY": "Ihre Nachricht",
+          "REQUIRED": "Bitte ausfüllen!",
+          "INVALID_MAIL": "E-Mail Adresse ist falsch!",
+          "SUCCESS": "Vielen Dank! Ihre Nachricht wurde versendet!",
+          "ERROR_SERVER": "Leider konnte Ihre Mail aufgrund eines internen Fehlers nicht versendet werden!",
+          "ERROR_NETWORK": "Der Mail-Server ist momentan nicht erreichbar!"
+        }
     }
 }

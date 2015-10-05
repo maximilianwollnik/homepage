@@ -11,7 +11,9 @@
         "MENU_WORK": "Work",
         "MENU_CV": "Experience",
         "MENU_SKILL": "Skills",
-        "MENU_EDUCATION": "Education"
+        "MENU_EDUCATION": "Education",
+        "MAIL_CLOSE": "Close",
+        "MAIL_SEND": "Send"
     },
     
     "HOME": {
@@ -183,5 +185,19 @@
 
     "NAVIGATION": {
         "TOOGLE": "Toggle navigation"
+    },
+
+    "SOCIAL": {
+        "MAIL": {
+          "HEADER": "Send me a mail",
+          "NAME": "Your Name",
+          "ADDRESS": "Your E-mail address",
+          "BODY": "Your Message",
+          "REQUIRED": "Please fill out!",
+          "INVALID_MAIL": "Invalid E-Mail address!",
+          "SUCCESS": "Thank you! Your message has been sent!",
+          "ERROR_SERVER": "A server error occurred, so your messages could not be sent!",
+          "ERROR_NETWORK": "The mail server is not reachable!"
+        }
     }
 }
