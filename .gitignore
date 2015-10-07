@@ -3,3 +3,6 @@ node
 node_modules
 target
 phantomjsdriver.log
+.classpath
+.project
+.settings

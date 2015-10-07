@@ -18,18 +18,15 @@ angular.module('homepage.social.controller', ['ajoslin.promise-tracker'])
 
     // Default values for the request.
     var config = {
-      params : {
-        'callback' : 'JSON_CALLBACK',
-        'name' : $scope.name,
-        'email' : $scope.email,
-        'body' : $scope.body
-      },
+      'name' : $scope.name,
+      'email' : $scope.email,
+      'body' : $scope.body
     };
 
     // Perform JSONP request.
-    var $promise = $http.jsonp('response.json', config)
+    var $promise = $http.post('/send-mail', config)
       .success(function(data, status, headers, config) {
-        if (data.status == 'OK') {
+        if (data == 'OK') {
           $scope.name = null;
           $scope.email = null;
           $scope.subjectList = null;

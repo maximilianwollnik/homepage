@@ -1,30 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.maximilianwollnik</groupId>
 	<artifactId>homepage</artifactId>
 	<version>0.4.0-SNAPSHOT</version>
 	<name>Homepage</name>
-  <description>This is the homepage of Maximilian Wollnik created with Spring Boot and Angular</description>
+	<description>This is the homepage of Maximilian Wollnik created with Spring Boot and Angular</description>
 
-  <scm>
+	<scm>
 		<connection>scm:git:git@github.com:maximilianwollnik/homepage.git</connection>
 		<developerConnection>scm:git:git@github.com:maximilianwollnik/homepage.git</developerConnection>
 		<url>https://github.com/maximilianwollnik/homepage</url>
-	  <tag>HEAD</tag>
-  </scm>
-  
-  <distributionManagement>
-	  <repository>
-	     <id>nexus</id>
-	     <name>Releases</name>
-	     <url>http://maximilianwollnik.de:8084/content/repositories/releases/</url>
-	  </repository>
-	  <snapshotRepository>
-	     <id>nexus</id>
-	     <name>Snapshots</name>
-	     <url>http://maximilianwollnik.de:8084/content/repositories/snapshots/</url>
-	  </snapshotRepository>
-</distributionManagement>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Releases</name>
+			<url>http://maximilianwollnik.de:8084/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Snapshots</name>
+			<url>http://maximilianwollnik.de:8084/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -98,33 +99,33 @@
 					</execution>
 				</executions>
 			</plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.18.1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-          <execution>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.18.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+					<execution>
 						<id>exec-npm-protractor</id>
 						<phase>integration-test</phase>
 						<configuration>
 							<executable>npm</executable>
 							<arguments>
 								<argument>run</argument>
-                <argument>protractor-phantomjs</argument>
+								<argument>protractor-phantomjs</argument>
 							</arguments>
 						</configuration>
 						<goals>
 							<goal>integration-test</goal>
 						</goals>
 					</execution>
-        </executions>
-      </plugin>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-changes-plugin</artifactId>
@@ -144,29 +145,29 @@
 					</execution>
 				</executions>
 			</plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${version-plugin-maven-resources-plugin}</version>
-        <configuration>
-            <delimiters>
-                <delimiter>@</delimiter>
-            </delimiters>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>${version-plugin-maven-release-plugin}</version>
-      </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>${version-plugin-maven-resources-plugin}</version>
+				<configuration>
+					<delimiters>
+						<delimiter>@</delimiter>
+					</delimiters>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${version-plugin-maven-release-plugin}</version>
+			</plugin>
 		</plugins>
 		<resources>
 			<resource>
 				<directory>${basedir}/target/dist/</directory>
 			</resource>
-      <resource>
+			<resource>
 				<directory>${project.basedir}/src/main/resources</directory>
-        <filtering>true</filtering>
+				<filtering>true</filtering>
 			</resource>
 		</resources>
 	</build>
@@ -176,12 +177,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-    <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-ws</artifactId>
+		</dependency>
 	</dependencies>
-	
+
 	<reporting>
 		<plugins>
 			<plugin>

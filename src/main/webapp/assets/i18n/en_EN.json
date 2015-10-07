@@ -189,6 +189,7 @@
 
     "SOCIAL": {
         "MAIL": {
+          "SENDING": "Sending...",
           "HEADER": "Send me a mail",
           "NAME": "Your Name",
           "ADDRESS": "Your E-mail address",
