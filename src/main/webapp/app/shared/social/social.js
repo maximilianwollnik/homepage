@@ -1,6 +1,4 @@
 'use strict';
 
-angular.module('homepage.social', [
-  'homepage.social.directive',
-  'homepage.social.controller'
-]);
+angular.module('homepage.social', [ 'homepage.social.directive',
+    'homepage.social.controller' ]);

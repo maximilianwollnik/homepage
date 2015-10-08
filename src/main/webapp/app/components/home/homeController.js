@@ -2,6 +2,6 @@
 
 angular.module('homepage.home', [])
 
-.controller('HomeCtrl', [function() {
+.controller('HomeCtrl', [ function() {
 
-}]);
+} ]);

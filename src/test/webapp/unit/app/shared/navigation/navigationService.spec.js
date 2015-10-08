@@ -16,17 +16,17 @@ describe('homepage.navigation.service module', function() {
   }));
 
   describe('gets all data for the navigation', function() {
-    
+
     it('and the current length must be 6', function() {
       expect(navigation.routes.length).toBe(6);
     });
 
     it('and the name of the home route must be Home', function() {
       expect(navigation.routes[0].name).toBe('BUTTON.MENU_HOME');
-    }); 
+    });
 
     it('and no active routes are available', function() {
-      angular.forEach(navigation.routes, function (route) {
+      angular.forEach(navigation.routes, function(route) {
         expect(navigation.activeRoute(route)).toEqual(false);
       });
     });
@@ -40,25 +40,29 @@ describe('homepage.navigation.service module', function() {
       location.path('cv?scrollTo=content');
       expect(navigation.activeRoute(navigation.routes[posCv])).toEqual(true);
     });
-	
-	  it('and work route is after navigation active', function() {
+
+    it('and work route is after navigation active', function() {
       location.path('work?scrollTo=content');
       expect(navigation.activeRoute(navigation.routes[posWork])).toEqual(true);
     });
 
-    it('and skill route is after navigation active', function() {
-      location.path('skill?scrollTo=content');
-      expect(navigation.activeRoute(navigation.routes[posSkill])).toEqual(true);
-    });
+    it('and skill route is after navigation active',
+        function() {
+          location.path('skill?scrollTo=content');
+          expect(navigation.activeRoute(navigation.routes[posSkill])).toEqual(
+              true);
+        });
 
     it('and education route is after navigation active', function() {
       location.path('education?scrollTo=content');
-      expect(navigation.activeRoute(navigation.routes[posEducation])).toEqual(true);
+      expect(navigation.activeRoute(navigation.routes[posEducation])).toEqual(
+          true);
     });
-	
-	  it('and disclaimer route is after navigation active', function() {
+
+    it('and disclaimer route is after navigation active', function() {
       location.path('disclaimer?scrollTo=content');
-      expect(navigation.activeRoute(navigation.routes[posDisclaimer])).toEqual(true);
+      expect(navigation.activeRoute(navigation.routes[posDisclaimer])).toEqual(
+          true);
     });
   });
 });

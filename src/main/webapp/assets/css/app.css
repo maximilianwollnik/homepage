@@ -1,5 +1,4 @@
 /* app css stylesheet */
-
 .row {
   margin-right: 0px;
 }
@@ -23,16 +22,16 @@
   content: "]";
 }
 
-.menu > li {
+.menu>li {
   display: inline;
 }
 
-.menu > li:before {
+.menu>li:before {
   content: "|";
   padding-right: 0.3em;
 }
 
-.menu > li:nth-child(1):before {
+.menu>li:nth-child(1):before {
   content: "";
   padding: 0;
 }
@@ -52,187 +51,165 @@
  * URL: 
  */
 
-
 /* ==========================================================================
    Base Styles, Bootstrap Modifications & Fonts Import
    ========================================================================== */
-
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-
 ::-moz-selection {
-    background: #f2c2c9;
-    color: #a4003a;
-    text-shadow: none;
+  background: #f2c2c9;
+  color: #a4003a;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #16a085;
-    color: #a4003a;
-    text-shadow: none;
+  background: #16a085;
+  color: #a4003a;
+  text-shadow: none;
 }
 
 /*
  * A better looking default horizontal rule
  */
-
- hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 .centered {
-	text-align: center
+  text-align: center
 }
 
 .mt {
-	margin-top: 80px;
+  margin-top: 80px;
 }
 
 .mb {
-	margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 /* ==========================================================================
    General styles
    ========================================================================== */
-
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-    color: #4a4a4a;
-	margin-bottom: 20px;
+  font-weight: 700;
+  color: #4a4a4a;
+  margin-bottom: 20px;
 }
 
 a {
-	color: #1abc9c;
+  color: #1abc9c;
 }
 
 #footerwrap a {
-	color: white;
+  color: white;
 }
 
 .navbar-brand {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .navbar-default .navbar-brand {
-	color: #1abc9c;
+  color: #1abc9c;
 }
 
 .navbar-default {
-	background-color: transparent;
-	border-color: transparent;
+  background-color: transparent;
+  border-color: transparent;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #1abc9c;
-	background-color: transparent;
-	border-bottom: 2px solid #1abc9c
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
+  .navbar-default .navbar-nav>.active>a:focus {
+  color: #1abc9c;
+  background-color: transparent;
+  border-bottom: 2px solid #1abc9c
 }
 
-.navbar-default .navbar-nav > li > a {
-	color: #1abc9c;
+.navbar-default .navbar-nav>li>a {
+  color: #1abc9c;
 }
 
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
-
-#headerwrap,
-#cvwrap,
-#workwrap,
-#disclaimerwrap,
-#skillwrap, 
-#educationwrap {
-	background: url(../img/about.jpg) no-repeat center top;
-	margin-top: -70px;
-	padding-top: 250px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 650px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+#headerwrap, #cvwrap, #workwrap, #disclaimerwrap, #skillwrap, #educationwrap {
+  background: url(../img/about.jpg) no-repeat center top;
+  margin-top: -70px;
+  padding-top: 250px;
+  text-align: center;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 650px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-#headerwrap h1,
-#cvwrap h1,
-#workwrap h1,
-#disclaimerwrap h1,
-#skillwrap h1 {
-	color:#ffffff;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	letter-spacing: 4px;
-	font-size: 80px;
-	font-weight: bold;
+#headerwrap h1, #cvwrap h1, #workwrap h1, #disclaimerwrap h1, #skillwrap h1 {
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 4px;
+  font-size: 80px;
+  font-weight: bold;
 }
 
-#headerwrap h4,
-#cvwrap h4,
-#workwrap h4,
-#disclaimerwrap h4,
-#skillwrap h4 {
-	font-weight: 400;
-	color: #ffffff
+#headerwrap h4, #cvwrap h4, #workwrap h4, #disclaimerwrap h4, #skillwrap h4 {
+  font-weight: 400;
+  color: #ffffff
 }
 
 #social {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #f2f2f2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f2f2f2;
 }
 
 #social i {
-	font-size: 40px;
-	color: #4a4a4a
+  font-size: 40px;
+  color: #4a4a4a
 }
 
 #social i:hover {
-	color: #1abc9c
+  color: #1abc9c
 }
 
 #footerwrap {
-	padding-top: 70px;
-	padding-bottom: 50px;
-	background-color: #2f2f2f;
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color: #2f2f2f;
 }
 
 #footerwrap p {
-	color: #f2f2f2;
-	margin-left: 10px;
+  color: #f2f2f2;
+  margin-left: 10px;
 }
 
 #footerwrap span {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 #cvwrap h4 {
-	font-weight: 400;
-	color: #ffffff
+  font-weight: 400;
+  color: #ffffff
 }
 
 timeline {
@@ -273,9 +250,9 @@ timeline {
 }
 /* Gallery */
 .gallery {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .gallery img:hover {
-	opacity: 0.4;
+  opacity: 0.4;
 }

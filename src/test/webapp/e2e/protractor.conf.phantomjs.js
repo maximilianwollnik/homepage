@@ -1,19 +1,17 @@
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout : 11000,
 
-  specs: [
-    '*.spec.js'
-  ],
+  specs : [ '*.spec.js' ],
 
-  capabilities: {
-    'browserName': 'phantomjs'
+  capabilities : {
+    'browserName' : 'phantomjs'
   },
 
-  baseUrl: 'http://maximilianwollnik.de:9001/',
+  baseUrl : 'http://maximilianwollnik.de:9001/',
 
-  framework: 'jasmine',
+  framework : 'jasmine',
 
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
+  jasmineNodeOpts : {
+    defaultTimeoutInterval : 30000
   }
 };

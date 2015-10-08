@@ -2,6 +2,6 @@
 
 angular.module('homepage.education', [])
 
-.controller('EducationCtrl', [function() {
+.controller('EducationCtrl', [ function() {
 
-}]);
+} ]);

@@ -2,40 +2,31 @@
 
 <div id="content"></div>
 <div class="container">
-	<div class="row centered mt mb">
-		<div class="col-lg-8 col-lg-offset-2">
-			<h4 ng-bind-html="'CV.HEADLINE.PRE' | translate"></h4>
-			<h1 ng-bind-html="'CV.HEADLINE.TITLE' | translate"></h1>
-			<h4 ng-bind-html="'CV.HEADLINE.INSTRUCTION' | translate"></h4>
-		</div>
-	</div>
+  <div class="row centered mt mb">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h4 ng-bind-html="'CV.HEADLINE.PRE' | translate"></h4>
+      <h1 ng-bind-html="'CV.HEADLINE.TITLE' | translate"></h1>
+      <h4 ng-bind-html="'CV.HEADLINE.INSTRUCTION' | translate"></h4>
+    </div>
+  </div>
 </div>
 
-<timeline>
-  
-  <timeline-event ng-repeat="event in events">
-	<timeline-badge class="{{event.badgeClass}}">
-	  <i class="glyphicon {{event.badgeIconClass}}"></i>
-	</timeline-badge>
-	<timeline-panel class="{{event.badgeClass}}">
-	  <timeline-heading>
-		<h4 translate="{{event.title}}"></h4>
-	  </timeline-heading>
-	  <p translate="{{event.content}}"></p>
-	</timeline-panel>
-  </timeline-event>
-  
-  <h1 ng-bind-html="'CV.EXPLANATIONS.HEADLINE' | translate"></h1>
-  
-  <timeline-event ng-repeat="explanation in explanations">
-	<timeline-badge class="{{explanation.badgeClass}}">
-	  <i class="glyphicon {{explanation.badgeIconClass}}"></i>
-	</timeline-badge>
-	<timeline-panel class="{{explanation.badgeClass}}">
-	  <timeline-heading>
-		<h4 translate="{{explanation.title}}"></h4>
-	  </timeline-heading>
-	  <p translate="{{explanation.content}}"></p>
-	</timeline-panel>
-  </timeline-event>
-</timeline>
+<timeline> <timeline-event ng-repeat="event in events">
+<timeline-badge class="{{event.badgeClass}}"> <i
+  class="glyphicon {{event.badgeIconClass}}"></i> </timeline-badge> <timeline-panel
+  class="{{event.badgeClass}}"> <timeline-heading>
+<h4 translate="{{event.title}}"></h4>
+</timeline-heading>
+<p translate="{{event.content}}"></p>
+</timeline-panel> </timeline-event>
+
+<h1 ng-bind-html="'CV.EXPLANATIONS.HEADLINE' | translate"></h1>
+
+<timeline-event ng-repeat="explanation in explanations"> <timeline-badge
+  class="{{explanation.badgeClass}}"> <i
+  class="glyphicon {{explanation.badgeIconClass}}"></i> </timeline-badge> <timeline-panel
+  class="{{explanation.badgeClass}}"> <timeline-heading>
+<h4 translate="{{explanation.title}}"></h4>
+</timeline-heading>
+<p translate="{{explanation.content}}"></p>
+</timeline-panel> </timeline-event> </timeline>

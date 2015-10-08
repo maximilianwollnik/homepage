@@ -1,27 +1,27 @@
 exports.config = {
-  allScriptsTimeout: 11000,
+  allScriptsTimeout : 11000,
 
-  specs: [
-    '*.spec.js'
-  ],
+  specs : [ '*.spec.js' ],
 
-  capabilities: {
-    'browserName': 'chrome',
-    chromeOptions: {
+  capabilities : {
+    'browserName' : 'chrome',
+    chromeOptions : {
       // How to set browser language (menus & so on)
-      args: [ 'lang=en-EN' ],
+      args : [ 'lang=en-EN' ],
       // How to set Accept-Language header
-      prefs: {
-        intl: { accept_languages: "en-EN" },
+      prefs : {
+        intl : {
+          accept_languages : "en-EN"
+        },
       },
     },
   },
 
-  baseUrl: 'http://localhost:8000/',
+  baseUrl : 'http://localhost:8000/',
 
-  framework: 'jasmine',
+  framework : 'jasmine',
 
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
+  jasmineNodeOpts : {
+    defaultTimeoutInterval : 30000
   }
 };
