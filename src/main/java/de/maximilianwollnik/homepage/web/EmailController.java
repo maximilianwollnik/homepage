@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.mail.MailAuthenticationException;
-import org.springframework.mail.MailException;
 import org.springframework.mail.MailSendException;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -55,8 +54,6 @@ public class EmailController {
       result = HttpStatus.UNAUTHORIZED;
     } catch (MailSendException mse) {
       result = HttpStatus.REQUEST_TIMEOUT;
-    } catch (MailException me2) {
-      result = HttpStatus.CONFLICT;
     }
 
     log.info("<< sendMail() returns {}", result);
