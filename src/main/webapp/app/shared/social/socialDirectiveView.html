@@ -1,20 +1,17 @@
 <div id="social">
   <div class="container-fluid">
     <div class="row centered">
-      <a href="https://www.xing.com/profile/Maximilian_Wollnik2?sc_o=mxb_p"
-        target="_blank"><i class="col-xs-2 col-md-2 col-lg-2 fa fa-xing"></i></a>
-      <a href="https://www.facebook.com/maximilian.wollnik.3" target="_blank"><i
-        class="col-xs-2 col-md-2 col-lg-2 fa fa-facebook"></i></a> <a
+      <a href="https://www.xing.com/profile/Maximilian_Wollnik2?sc_o=mxb_p" target="_blank"><i
+        class="col-xs-2 col-md-2 col-lg-2 fa fa-xing"></i></a> <a href="https://www.facebook.com/maximilian.wollnik.3"
+        target="_blank"><i class="col-xs-2 col-md-2 col-lg-2 fa fa-facebook"></i></a> <a
         href="https://github.com/maximilianwollnik" target="_blank"><i
         class="col-xs-2 col-md-2 col-lg-2 fa fa-github"></i></a> <a
-        href="http://stackoverflow.com/users/5158269/maximilian-wollnik"
-        target="_blank"><i
+        href="http://stackoverflow.com/users/5158269/maximilian-wollnik" target="_blank"><i
         class="col-xs-2 col-md-2 col-lg-2 fa fa-stack-overflow"></i></a> <a
-        href="https://plus.google.com/u/0/107552914748905701970/posts"
-        target="_blank"><i
+        href="https://plus.google.com/u/0/107552914748905701970/posts" target="_blank"><i
         class="col-xs-2 col-md-2 col-lg-2 fa fa-google-plus"></i></a> <a
         href="https://de.linkedin.com/pub/maximilian-wollnik/107/669/b20"><i
-        class="col-xs-2 col-md-2 col-lg-2 fa fa-linkedin"></i></a>
+        class="col-xs-2 col-md-2 col-lg-2 fa fa-linkedin" target="_blank"></i></a>
     </div>
   </div>
   <div class="container-fluid">
@@ -23,62 +20,47 @@
         class="col-xs-12 col-md-12 col-lg-12 fa fa-envelope-square"></i></a>
     </div>
   </div>
-  <div class="modal fade" id="mail" tabindex="-1" role="dialog"
-    aria-labelledby="mailModalLabel" data-ng-controller="SocialCtrl">
-    <div id="messages" class="alert alert-success" data-ng-show="messages"
-      data-ng-bind="messages"></div>
-    <div data-ng-show="progress.active()" class="alert alert-success"
-      ng-bind-html="'SOCIAL.MAIL.SENDING' | translate"></div>
+  <div class="modal fade" id="mail" tabindex="-1" role="dialog" aria-labelledby="mailModalLabel"
+    data-ng-controller="SocialCtrl">
+    <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+    <div data-ng-show="progress.active()" class="alert alert-success" ng-bind-html="'SOCIAL.MAIL.SENDING' | translate"></div>
     <form name="mailForm" novalidate role="form">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"
-              aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="modal-title" id="mailModalLabel"
-              ng-bind-html="'SOCIAL.MAIL.HEADER' | translate"></h4>
+            <h4 class="modal-title" id="mailModalLabel" ng-bind-html="'SOCIAL.MAIL.HEADER' | translate"></h4>
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <label for="name" ng-bind-html="'SOCIAL.MAIL.NAME' | translate"></label>
-              <span class="label label-danger"
+              <label for="name" ng-bind-html="'SOCIAL.MAIL.NAME' | translate"></label> <span class="label label-danger"
                 data-ng-show="submitted && mailForm.name.$error.required"
-                ng-bind-html="'SOCIAL.MAIL.REQUIRED' | translate"></span> <input
-                type="text" name="name" data-ng-model="name"
-                class="form-control" required />
+                ng-bind-html="'SOCIAL.MAIL.REQUIRED' | translate"></span> <input type="text" name="name"
+                data-ng-model="name" class="form-control" required />
             </div>
 
             <div class="form-group">
-              <label for="email"
-                ng-bind-html="'SOCIAL.MAIL.ADDRESS' | translate"></label> <span
-                class="label label-danger"
-                data-ng-show="submitted && mailForm.email.$error.required"
-                ng-bind-html="'SOCIAL.MAIL.REQUIRED' | translate"></span> <span
-                class="label label-danger"
-                data-ng-show="submitted && mailForm.$error.email"
-                ng-bind-html="'SOCIAL.MAIL.INVALID_MAIL' | translate"></span> <input
-                type="email" name="email" data-ng-model="email"
-                class="form-control" required />
+              <label for="email" ng-bind-html="'SOCIAL.MAIL.ADDRESS' | translate"></label> <span
+                class="label label-danger" data-ng-show="submitted && mailForm.email.$error.required"
+                ng-bind-html="'SOCIAL.MAIL.REQUIRED' | translate"></span> <span class="label label-danger"
+                data-ng-show="submitted && mailForm.$error.email" ng-bind-html="'SOCIAL.MAIL.INVALID_MAIL' | translate"></span>
+              <input type="email" name="email" data-ng-model="email" class="form-control" required />
             </div>
 
             <div class="form-group">
-              <label for="body" ng-bind-html="'SOCIAL.MAIL.BODY' | translate"></label>
-              <span class="label label-danger"
+              <label for="body" ng-bind-html="'SOCIAL.MAIL.BODY' | translate"></label> <span class="label label-danger"
                 data-ng-show="submitted && mailForm.body.$error.required"
                 ng-bind-html="'SOCIAL.MAIL.REQUIRED' | translate"></span>
-              <textarea name="body" data-ng-model="body" class="form-control"
-                required rows="8"></textarea>
+              <textarea name="body" data-ng-model="body" class="form-control" required rows="8"></textarea>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal"
               ng-bind-html="'BUTTON.MAIL_CLOSE' | translate"></button>
-            <button type="submit" class="btn btn-primary"
-              ng-bind-html="'BUTTON.MAIL_SEND' | translate"
-              data-ng-disabled="progress.active()"
-              data-ng-click="submit(mailForm)"></button>
+            <button type="submit" class="btn btn-primary" ng-bind-html="'BUTTON.MAIL_SEND' | translate"
+              data-ng-disabled="progress.active()" data-ng-click="submit(mailForm)"></button>
           </div>
         </div>
       </div>
