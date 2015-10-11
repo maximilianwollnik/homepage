@@ -7,7 +7,7 @@ describe('homepage.social', function() {
   // load the templates
   beforeEach(module('templates'));
 
-  beforeEach(inject(function($controller, _$httpBackend_, _$compile_, _$rootScope_, $templateCache) {
+  beforeEach(inject(function($controller, _$httpBackend_, _$compile_, _$rootScope_, _$templateCache_) {
     $compile = _$compile_;
     $rootScope = _$rootScope_;
     $httpBackend = _$httpBackend_;
@@ -18,18 +18,16 @@ describe('homepage.social', function() {
     $httpBackend.whenGET('assets/i18n/C.json').respond(
         getJSONFixture('de_DE.json'));
     
-    scope = $rootScope.$new();
+    scope = $rootScope;
     ctrl = $controller('SocialCtrl', {
       $scope : scope
     });
     
-    formElem = $compile("<form name=\"mailForm\" role=\"form\"></form>")(scope);
+    var element = angular.element(_$templateCache_.get('app/shared/social/socialDirectiveView.html'));
+    $compile(element)(scope);
+    formElem = element.find('form');
+    $compile(formElem)(scope);
     form = scope.mailForm;
-    dirElementInput = $compile("<input type=\"email\" name=\"email\" data-ng-model=\"email\" class=\"form-control\" required />")(scope);
-    alert(dirElementInput.$valid);
-    
-    $rootScope.$digest();
-    scope.$apply();
   }));
 
   describe('provides the social controller', function() {
@@ -38,11 +36,16 @@ describe('homepage.social', function() {
       expect(ctrl).toBeDefined();
     });
     
-    it('should not allow an invalid `width`', function() {
-      scope.email = "name";
+    it('and the form must be valid, when the correct entries are included', function() {
+
+      form.name.$setViewValue('name');
+      form.email.$setViewValue('name@domain.de');
+      form.body.$setViewValue('text');
+      scope.$apply();
+      $rootScope.$digest();      
       
 //      angular.element(dirElementInput).val('name@domain.de').trigger('input');
-      scope.submit(form);
+      //scope.submit(form);
 //      expect(dirElementInput.hasClass('ng-valid')).toEqual(true);
 //      alert(form);
       expect(form.$valid).toEqual(true);
