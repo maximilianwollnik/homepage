@@ -6,6 +6,17 @@ angular.module('homepage.social.controller', ['ajoslin.promise-tracker'])
   // Inititate the promise tracker to track form submissions.
   $scope.progress = promiseTracker();
 
+  $scope.reset = function(form) {
+    if (form) {
+      form.$setPristine();
+      form.$setUntouched();
+    }
+    $scope.submitted = false;
+    $scope.name = null;
+    $scope.email = null;
+    $scope.body = null;
+  }
+  
   // Form submit handler.
   $scope.submit = function(form) {
     // Trigger validation flag.

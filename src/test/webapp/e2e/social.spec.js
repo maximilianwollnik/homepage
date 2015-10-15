@@ -76,7 +76,39 @@ describe('homepage social', function() {
             closeModal();
           });
     });
-    
+
+    it('and the mail modal must be resetted after closed invalid', function() {
+      element(by.css('img[src*="assets/img/de.png"]')).click();
+      browser.executeScript('window.scrollTo(0,10000);').then(
+          function() {
+            openModal();
+
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.name.$error.required"]')).isDisplayed())
+                .toBe(false);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.email.$error.required"]')).isDisplayed())
+                .toBe(false);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.body.$error.required"]')).isDisplayed())
+                .toBe(false);
+            element(by.css('button[class*="btn btn-primary"]')).click();
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.name.$error.required"]')).isDisplayed())
+                .toBe(true);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.email.$error.required"]')).isDisplayed())
+                .toBe(true);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.body.$error.required"]')).isDisplayed())
+                .toBe(true);
+
+            closeModal();
+            openModal();
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.name.$error.required"]')).isDisplayed())
+                .toBe(false);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.email.$error.required"]')).isDisplayed())
+                .toBe(false);
+            expect(element(by.css('span[data-ng-show*="submitted && mailForm.body.$error.required"]')).isDisplayed())
+                .toBe(false);
+            closeModal();
+          });
+    });
+
     it('and the mail modal must be invalid when it is submitted with wrong email', function() {
       element(by.css('img[src*="assets/img/de.png"]')).click();
       browser.executeScript('window.scrollTo(0,10000);').then(
@@ -86,7 +118,7 @@ describe('homepage social', function() {
             element(by.css('input[name*="name"]')).sendKeys('name');
             element(by.css('input[name*="email"]')).sendKeys('name');
             element(by.css('textarea[name*="body"]')).sendKeys('name');
-            
+
             element(by.css('button[class*="btn btn-primary"]')).click();
             expect(element(by.css('span[data-ng-show*="submitted && mailForm.name.$error.required"]')).isDisplayed())
                 .toBe(false);

@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal"
+            <button type="button" class="btn btn-default" data-dismiss="modal" data-ng-click="reset(mailForm)"
               ng-bind-html="'BUTTON.MAIL_CLOSE' | translate"></button>
             <button type="submit" class="btn btn-primary" ng-bind-html="'BUTTON.MAIL_SEND' | translate"
               data-ng-disabled="progress.active()" data-ng-click="submit(mailForm)"></button>
