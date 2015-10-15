@@ -82,23 +82,23 @@
       "HEADLINE":"Erfahrung",
       "WELLS_FARGO":{
         "TITLE":"04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
-        "CONTENT":"IT Berater"
+        "CONTENT":"IT Berater<br>Entwicklung eines neuen UIs, Transaktionsabläufe wurden durch die bediente Selbstbedienung erweitert"
       },
       "HSBC":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
-        "CONTENT":"IT Berater"
+        "CONTENT":"IT Berater<br>Kartenlose Einzahlungen für hohe Münzbeträge"
       },
       "BANKDATA":{
         "TITLE":"01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
-        "CONTENT":"IT Berater"
+        "CONTENT":"IT Berater<br>Anbindung eines Geldautomaten an ein spezifisches Bankennetz"
       },
       "CBA":{
         "TITLE":"03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
-        "CONTENT":"IT Berater"
+        "CONTENT":"IT Berater<br>Entwicklung eines neuen UIs, Erweiterung einer bestehenden Hostkommunikation, Kartenlose Auszahlung, Einzahlungen auf ein Fremdkonto"
       },
       "ABN":{
         "TITLE":"01/2015 - Heute: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
-        "CONTENT":"IT Berater"
+        "CONTENT":"IT Berater<br>Neue Hostkommunikation, Entwicklung eines neuen UIs, Automatisierter Entwicklungsprozess"
       },
       "WINCOR_NIXDORF":{
         "TITLE":"2007 - Heute: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
@@ -162,7 +162,7 @@
     },
     "FHDW":{
       "PRE":"01/2004 - 12/2006",
-      "TITLE":"FHDW Paderborn",
+      "TITLE":"Diplom Wirtschaftsinformatiker",
       "CONTENT":"duales Studium der Wirtschaftsinformatik, Fachhochschule der Wirtschaft, Paderborn"
     }
   },

@@ -82,23 +82,23 @@
       "HEADLINE":"Experience",
       "WELLS_FARGO":{
         "TITLE":"04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
-        "CONTENT":"IT Consultant"
+        "CONTENT":"IT Consultant<br>Development of a new UI, Businessflows extended with the concept of assissted selfservice"
       },
       "HSBC":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
-        "CONTENT":"IT Consultant"
+        "CONTENT":"IT Consultant<br>Cardless deposit for high amount of coins"
       },
       "BANKDATA":{
         "TITLE":"01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
-        "CONTENT":"IT Consultant"
+        "CONTENT":"IT Consultant<br>ATM connection to a specific bank host"
       },
       "CBA":{
         "TITLE":"03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
-        "CONTENT":"IT Consultant"
+        "CONTENT":"IT Consultant<br>Development of a new UI, Extension of the host communication, Cardless withdrawal, 3rd party deposit"
       },
       "ABN":{
         "TITLE":"01/2015 - Today: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
-        "CONTENT":"IT Consultant"
+        "CONTENT":"IT Consultant<br>Development of a new host communication, Development of a new UI, Setup of a continious integration development process"
       },
       "WINCORNIXDORF":{
         "TITLE":"2007 - Today: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
@@ -162,7 +162,7 @@
     },
     "FHDW":{
       "PRE":"01/2004 - 12/2006",
-      "TITLE":"FHDW Paderborn",
+      "TITLE":"Diploma Business Informatics",
       "CONTENT":"Dual-mode degree course of business informatics, university of applied science, Paderborn"
     }
   },
