@@ -80,7 +80,7 @@ describe(
               browser.waitForAngular();
               expect(element.all(by.css('.featurette')).count()).toEqual(1);
               expect(element.all(by.css('.col-md-7')).getText())
-                  .toMatch('FHDW');
+                  .toMatch('Fachhochschule der Wirtschaft');
             });
 
             it('should render social when user navigates to /education',
