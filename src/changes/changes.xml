@@ -17,6 +17,9 @@
       <action dev="maximilian" type="change">
 				adapted e2e test for education
 			</action>
+      <action dev="maximilian" type="change">
+				changed jenkins build
+			</action>
 		</release>
 		<release version="0.4.0" date="2015-10-09" description="Design improvement">
 			<action dev="maximilian" type="change">
