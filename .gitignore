@@ -6,3 +6,4 @@ phantomjsdriver.log
 .classpath
 .project
 .settings
+*.log

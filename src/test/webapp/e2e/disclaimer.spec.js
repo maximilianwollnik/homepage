@@ -40,6 +40,7 @@ describe(
             });
 
             it('and the correct header must be available', function() {
+              browser.waitForAngular();
               expect(element.all(by.css('#disclaimerwrap')).getText())
                   .toContain('');
             });

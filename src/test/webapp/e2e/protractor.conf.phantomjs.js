@@ -18,6 +18,7 @@ exports.config = {
   },
 
   baseUrl : 'http://maximilianwollnik.de:9001/',
+  directConnect : true,
 
   framework : 'jasmine',
 
