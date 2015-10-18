@@ -12,9 +12,9 @@ exports.config = {
       prefs : {
         intl : {
           accept_languages : "en-EN"
-        },
-      },
-    },
+        }
+      }
+    }
   },
 
   baseUrl : 'http://localhost:8000/',

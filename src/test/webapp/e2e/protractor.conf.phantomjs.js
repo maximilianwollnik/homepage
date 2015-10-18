@@ -4,7 +4,17 @@ exports.config = {
   specs : [ '*.spec.js' ],
 
   capabilities : {
-    'browserName' : 'phantomjs'
+    'browserName' : 'chrome',
+    chromeOptions : {
+      // How to set browser language (menus & so on)
+      args : [ 'lang=en-EN' ],
+      // How to set Accept-Language header
+      prefs : {
+        intl : {
+          accept_languages : "en-EN"
+        }
+      }
+    }
   },
 
   baseUrl : 'http://maximilianwollnik.de:9001/',
