@@ -59,8 +59,8 @@
     "test": "karma start src/test/webapp/unit/karma.conf.js",
     "test-single-run": "karma start src/test/webapp/unit/karma.conf.js  --single-run",
     "preupdate-webdriver": "npm install",
-    "update-webdriver": "webdriver-manager update --standalone",
-    "preprotractor": "webdriver-manager start --standalone",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
     "protractor-chrome": "protractor src/test/webapp/e2e/protractor.conf.chrome.js",
     "protractor-phantomjs": "protractor src/test/webapp/e2e/protractor.conf.phantomjs.js"
   }
