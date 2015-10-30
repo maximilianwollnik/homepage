@@ -4,16 +4,21 @@
 package de.maximilianwollnik.homepage;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.*;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 
 /**
  * Main class for spring boot
+ * <p>
+ * Sinc version 1.1 schedule has been enabled
+ * 
  * @author maximilian
- * @version 1.0
+ * @version 1.1
  * @since 0.1.0
  */
 @SpringBootApplication
+@EnableScheduling
 public class Application {
 
   /**
