@@ -11,4 +11,4 @@ CMD java -jar $HOME/*.jar
 
 RUN mkdir $HOME/conf
 ADD target/*.jar $HOME/
-ADD *.conf $HOME/conf
+ADD logstash*.conf $HOME/conf
