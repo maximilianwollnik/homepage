@@ -48,6 +48,6 @@ output {
     host => "maximilianwollnik.de"
     protocol => "http"
     user => "%SECURITY_USER%"
-    password => "%SECURITY_PASSWORD"
+    password => "%SECURITY_PASSWORD%"
   }
 }
