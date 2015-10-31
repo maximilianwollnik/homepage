@@ -6,6 +6,14 @@
 		<author email="maximilian@maximilianwollnik.de">Maximilian Wollnik</author>
 	</properties>
 	<body>
+		<release version="1.2.0" date="2015-11-07" description="Configserver">
+			<action dev="maximilian" type="change">
+				exporting configuration to configserver
+			</action>
+			<action dev="maximilian" type="add">
+				adding conf files to conf folder
+			</action>
+		</release>
 		<release version="1.1.0" date="2015-11-01" description="ELK">
 			<action dev="maximilian" type="change">
 				exporting metrics to the log for ELK
