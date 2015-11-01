@@ -10,6 +10,9 @@
 			<action dev="maximilian" type="change">
 				exporting configuration to configserver
 			</action>
+			<action dev="maximilian" type="change">
+				fixed text bug
+			</action>
 			<action dev="maximilian" type="add">
 				adding conf files to conf folder
 			</action>
