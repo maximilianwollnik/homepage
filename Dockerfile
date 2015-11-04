@@ -7,7 +7,7 @@ ENV LANGUAGE de_DE:de
 ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 
-CMD java -jar $HOME/*.jar
+CMD java -Djava.security.egd=file:/dev/./urandom -jar $HOME/*.jar
 
 RUN mkdir $HOME/conf
 ADD target/*.jar $HOME/

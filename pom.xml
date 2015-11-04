@@ -40,7 +40,6 @@
 		<start-class>de.maximilianwollnik.homepage.Application</start-class>
 		<version-plugin-changes>2.11</version-plugin-changes>
 		<version-plugin-javadoc>2.10.3</version-plugin-javadoc>
-		<version-plugin-frontend-maven-plugin>0.0.25</version-plugin-frontend-maven-plugin>
 		<version-plugin-maven-release-plugin>2.5.2</version-plugin-maven-release-plugin>
 		<version-node>v0.10.26</version-node>
 		<version-npm>1.4.3</version-npm>
