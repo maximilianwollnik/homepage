@@ -5,6 +5,7 @@ package de.maximilianwollnik.homepage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 
@@ -18,6 +19,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @since 0.1.0
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 @EnableScheduling
 public class Application {
 

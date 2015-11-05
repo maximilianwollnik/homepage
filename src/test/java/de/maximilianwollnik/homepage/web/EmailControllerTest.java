@@ -27,7 +27,7 @@ import de.maximilianwollnik.homepage.model.Mail;
 @SpringApplicationConfiguration(classes = Application.class)
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@IntegrationTest
+@IntegrationTest("server.port=0")
 public class EmailControllerTest {
   @Mock
   private SmtpMailSender smtpMailSender;

@@ -16,6 +16,9 @@
 			<action dev="maximilian" type="add">
 				adding conf files to conf folder
 			</action>
+			<action dev="maximilian" type="add">
+                adding eureka
+            </action>
 		</release>
 		<release version="1.1.0" date="2015-11-01" description="ELK">
 			<action dev="maximilian" type="change">

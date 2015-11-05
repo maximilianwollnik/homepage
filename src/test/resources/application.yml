@@ -1,0 +1,26 @@
+server:
+  port: 1234
+
+spring:
+  mail:
+    host: localhost
+    username: user
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 123
+            fallback: false
+
+security:
+  basic:
+    enabled: false
+  user:
+    name: user
+    password: password
+
+eureka:
+  client:
+    enabled: false
