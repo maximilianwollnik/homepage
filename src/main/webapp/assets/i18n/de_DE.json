@@ -62,11 +62,11 @@
       "CBA":{
         "CARDLESS":{
           "HEADER":"CBA - Kartenlos",
-          "TEXT":"Über die Bank eigene Handy App kann eine Auszahlung angelegt werden. An einem beliebigen CBA Automaten kann dann ohne eine Karte das Geld abgehoben werden. Im Notfall kann eine Drittperson berechtigt werden, dass Geld abzuheben."
+          "TEXT":"Über die Bankeigene Handy App kann eine Auszahlung angelegt werden. An einem beliebigen CBA Automaten kann dann ohne eine Karte das Geld abgehoben werden. Im Notfall kann eine Drittperson berechtigt werden, das Geld abzuheben."
         },
         "DEPOSIT":{
           "HEADER":"CBA - Einzahlung",
-          "TEXT":"Geld oder Checks können einzelnd oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gut geschrieben."
+          "TEXT":"Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gutgeschrieben."
         }
         
       }
