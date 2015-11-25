@@ -7,3 +7,4 @@ phantomjsdriver.log
 .project
 .settings
 *.log
+dist

@@ -55,26 +55,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>exec-gulp</id>
-						<phase>generate-resources</phase>
-						<configuration>
-							<executable>${basedir}/node_modules/.bin/gulp</executable>
-							<workingDirectory>${basedir}</workingDirectory>
-							<arguments>
-								<argument>build</argument>
-							</arguments>
-						</configuration>
-						<goals>
-							<goal>exec</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<executions>
@@ -136,7 +116,7 @@
 		</plugins>
 		<resources>
 			<resource>
-				<directory>${basedir}/target/dist/</directory>
+				<directory>${basedir}/dist/</directory>
 			</resource>
 			<resource>
 				<directory>${project.basedir}/src/main/resources</directory>

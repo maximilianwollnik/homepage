@@ -7,7 +7,7 @@ var $ = require('gulp-load-plugins')();
 var argv = require('yargs').argv;
 var pathApp = 'src/main/webapp';
 var pathTest = '.';
-var pathDist = 'target/dist';
+var pathDist = 'dist';
 var pathFinal = pathDist + '/static';
 
 gulp.task('clean', require('del').bind(null, [pathDist]));
