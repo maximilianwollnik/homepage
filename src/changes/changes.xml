@@ -6,17 +6,24 @@
 		<author email="maximilian@maximilianwollnik.de">Maximilian Wollnik</author>
 	</properties>
 	<body>
-    <release version="1.3.0" date="2015-11-29" description="ELK">
+	    <release version="1.4.0" date="2016-01-09" description="Polish">
+			<action dev="maximilian" type="change">
+				reducing size of loggings by removing metrics from package gauge.servo
+			</action>
+		</release>
+		<release version="1.3.0" date="2015-11-29" description="ELK">
 			<action dev="maximilian" type="change">
 				setting up ELK
-		  </action>
-      <action dev="maximilian" type="change">
-				removed node commands as those are causing leaks on the vm
-		  </action>
+			</action>
+			<action dev="maximilian" type="change">
+				removed node commands as those
+				are causing leaks on the vm
+			</action>
 		</release>
 		<release version="1.2.0" date="2015-11-07" description="Configserver">
 			<action dev="maximilian" type="change">
-				exporting configuration to configserver
+				exporting configuration to
+				configserver
 			</action>
 			<action dev="maximilian" type="change">
 				fixed text bug
@@ -25,18 +32,21 @@
 				adding conf files to conf folder
 			</action>
 			<action dev="maximilian" type="add">
-                adding eureka
-            </action>
+				adding eureka
+			</action>
 		</release>
 		<release version="1.1.0" date="2015-11-01" description="ELK">
 			<action dev="maximilian" type="change">
-				exporting metrics to the log for ELK
+				exporting metrics to the log for
+				ELK
 			</action>
 			<action dev="maximilian" type="add">
-				exporting traces to the log for ELK
+				exporting traces to the log for
+				ELK
 			</action>
 			<action dev="maximilian" type="add">
-				adding security dependency for management endpoints
+				adding security dependency for
+				management endpoints
 			</action>
 		</release>
 		<release version="1.0.0" date="2015-10-18" description="Form improvement">
