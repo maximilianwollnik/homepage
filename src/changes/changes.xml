@@ -7,6 +7,9 @@
 	</properties>
 	<body>
 	    <release version="1.4.0" date="2016-01-09" description="Polish">
+	        <action dev="maximilian" type="change">
+				adapting text for start of career
+			</action>
 			<action dev="maximilian" type="change">
 				reducing size of loggings by removing metrics from package gauge.servo
 			</action>
