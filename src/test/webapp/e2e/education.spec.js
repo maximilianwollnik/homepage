@@ -41,12 +41,16 @@ describe(
 
             it('and the correct header text must be available in German',
                 function() {
-                  element(by.css('img[src*="assets/img/de.png"]')).click();
-                  var ele = element.all(by.css('.container'));
-                  browser.waitForAngular();
-                  expect(ele.getText()).toMatch('Ausbildung');
-                  expect(element(by.css('#educationwrap')).isPresent()).toBe(
-                      true);
+                  expect(element(by.css('#educationwrap')).isPresent()).toBe(false);
+                  browser.sleep(500);
+                  browser.executeScript('window.scrollTo(0,0);').then(function () {
+                      element(by.css('img[src*="assets/img/de.png"]')).click();
+                      var ele = element.all(by.css('.container'));
+                      browser.waitForAngular();
+                      expect(ele.getText()).toMatch('Ausbildung');
+                      expect(element(by.css('#educationwrap')).isPresent()).toBe(
+                          true);
+                      })   
                 });
 
             it('and the correct header text must be available in English',
