@@ -4,3 +4,6 @@ spring:
   cloud:
     config:
       uri: ${CONFIGPROTOCOL}://${CONFIGUSER}:${CONFIGPASSWORD}@${CONFIGURI}:${CONFIGPORT}
+
+logging:
+    file: /root/logs/application.log

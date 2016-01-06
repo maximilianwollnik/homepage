@@ -8,6 +8,9 @@
 	<body>
 	  <release version="1.4.0" date="2016-01-09" description="Polish">
       <action dev="maximilian" type="change">
+				add logging configuration directly into bootstrap phase
+			</action>
+      <action dev="maximilian" type="change">
 				corrected test cases to scroll up
 			</action>
 	    <action dev="maximilian" type="change">
