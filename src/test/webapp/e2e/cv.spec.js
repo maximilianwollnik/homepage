@@ -40,8 +40,12 @@ describe(
 
         it('and the correct header text must be available in German',
             function() {
-              element(by.css('img[src*="assets/img/de.png"]')).click();
-              expect(element(by.css('#cvwrap')).isPresent()).toBe(true);
+              expect(element(by.css('#cvwrap')).isPresent()).toBe(false);
+              browser.sleep(500);
+              browser.executeScript('window.scrollTo(0,0);').then(function () {
+                  element(by.css('img[src*="assets/img/de.png"]')).click();
+                  expect(element(by.css('#cvwrap')).isPresent()).toBe(true);
+              })     
             });
 
         it('and the timeline tag must contain experience in German',

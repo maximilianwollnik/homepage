@@ -33,9 +33,13 @@ describe('homepage work', function() {
     });
 
     it('and the correct header text must be available in German', function() {
-      element(by.css('img[src*="assets/img/de.png"]')).click();
-      expect(element.all(by.css('.container')).getText()).toMatch('Muster');
-      expect(element(by.css('#workwrap')).isPresent()).toBe(true);
+      expect(element(by.css('#workwrap')).isPresent()).toBe(false);
+      browser.sleep(500);
+      browser.executeScript('window.scrollTo(0,0);').then(function () {
+        element(by.css('img[src*="assets/img/de.png"]')).click();
+        expect(element.all(by.css('.container')).getText()).toMatch('Muster');
+        expect(element(by.css('#workwrap')).isPresent()).toBe(true);
+      }) 
     });
 
     it('and the correct header text must be available in English', function() {

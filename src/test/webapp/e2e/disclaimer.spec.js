@@ -40,9 +40,11 @@ describe(
             });
 
             it('and the correct header must be available', function() {
-              browser.waitForAngular();
-              expect(element.all(by.css('#disclaimerwrap')).getText())
-                  .toContain('');
+              expect(element(by.css('#disclaimerwrap')).isPresent()).toBe(false);
+              browser.sleep(1000);
+              browser.executeScript('window.scrollTo(0,0);').then(function () {
+                  expect(element.all(by.css('#disclaimerwrap')).getText()).toContain('');
+              })
             });
 
             it('and the lorem ipsum text must not be available in German',
