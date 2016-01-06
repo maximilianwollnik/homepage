@@ -24,3 +24,6 @@ security:
 eureka:
   client:
     enabled: false
+
+logging:
+  file: /tmp/homepage.log
