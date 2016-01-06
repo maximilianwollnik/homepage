@@ -21,8 +21,10 @@ import org.springframework.stereotype.Service;
  * This service exports the current metrics, so that it can be grabbed by elk.
  * <p>
  * Since version 1.1 every metric from the package "gauge.servo" is not logged anymore.
+ * <p>
+ * Since version 1.2 every metric from the package "gauge.counter" is not logged anymore.
  * @author maximilain
- * @version 1.1
+ * @version 1.2
  * @since 1.1.0
  */
 @Service
@@ -35,6 +37,7 @@ public class MetricExporterService {
 
     {
       add("gauge.servo");
+      add("gauge.counter");
     }
   };
 
@@ -63,6 +66,7 @@ public class MetricExporterService {
       String string = (String) iterator.next();
       if (m.getName().indexOf(string) > -1) {
         proceed = false;
+        break;
       }
     }
     if (proceed) {

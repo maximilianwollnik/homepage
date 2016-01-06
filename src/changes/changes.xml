@@ -5,7 +5,12 @@
     <author email="maximilian@maximilianwollnik.de">Maximilian Wollnik</author>
   </properties>
   <body>
-    <release version="1.4.0" date="2016-01-09" description="Polish">
+    <release version="1.5.0" date="2016-01-06" description="Polish">
+      <action dev="maximilian" type="change">
+        reducing size of loggings by removing metrics from package gauge.counter
+      </action>
+    </release>
+    <release version="1.4.0" date="2016-01-06" description="Polish">
       <action dev="maximilian" type="change">
         corrected name of logback.xml
       </action>
