@@ -1,0 +1,3 @@
+{new|chg|fix}: subject {!minor}
+
+- detailed information
