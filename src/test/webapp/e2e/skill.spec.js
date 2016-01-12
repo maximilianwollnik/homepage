@@ -40,7 +40,6 @@ describe(
 
         it('and the correct header text must be available in German',
             function() {
-              expect(element(by.css('#skillwrap')).isPresent()).toBe(false);
               browser.sleep(500);
               browser.executeScript('window.scrollTo(0,0);').then(function () {
                   browser.sleep(500);

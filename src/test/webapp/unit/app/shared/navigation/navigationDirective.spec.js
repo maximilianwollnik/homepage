@@ -35,16 +35,16 @@ describe(
                   $rootScope.$digest();
                   expect(element.html())
                       .toContain(
-                          "<a href=\"#/disclaimer?scrollTo=content\" translate=\"BUTTON.MENU_DISCLAIMER\" class=\"ng-scope\">Impressum</a>");
+                          "<a href=\"#/disclaimer#content\" translate=\"BUTTON.MENU_DISCLAIMER\" class=\"ng-scope\">Impressum</a>");
                   expect(element.html())
                       .toContain(
-                          "<a href=\"#/work?scrollTo=content\" translate=\"BUTTON.MENU_WORK\" class=\"ng-scope\">Berufliche Praxis</a>");
+                          "<a href=\"#/work#content\" translate=\"BUTTON.MENU_WORK\" class=\"ng-scope\">Berufliche Praxis</a>");
                   expect(element.html())
                       .toContain(
-                          "<a href=\"#/home?scrollTo=content\" translate=\"BUTTON.MENU_HOME\" class=\"ng-scope\">Home</a>");
+                          "<a href=\"#/home#content\" translate=\"BUTTON.MENU_HOME\" class=\"ng-scope\">Home</a>");
                   expect(element.html())
                       .toContain(
-                          "<a href=\"#/cv?scrollTo=content\" translate=\"BUTTON.MENU_CV\" class=\"ng-scope\">Lebenslauf</a>");
+                          "<a href=\"#/cv#content\" translate=\"BUTTON.MENU_CV\" class=\"ng-scope\">Lebenslauf</a>");
                 });
           });
     });

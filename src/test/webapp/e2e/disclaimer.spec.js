@@ -40,7 +40,6 @@ describe(
             });
 
             it('and the correct header must be available', function() {
-              expect(element(by.css('#disclaimerwrap')).isPresent()).toBe(false);
               browser.sleep(1000);
               browser.executeScript('window.scrollTo(0,0);').then(function () {
                   browser.sleep(500);

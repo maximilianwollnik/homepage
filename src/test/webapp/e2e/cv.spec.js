@@ -25,8 +25,7 @@ describe(
       it(
           'should automatically redirect to /home when location hash/fragment is empty',
           function() {
-            browser.ignoreSynchronization = true;
-            browser.get('index.html');
+            browser.get('/');
             browser.waitForAngular();
             browser.driver.manage().window().setSize(1280, 1024);
             expect(browser.getLocationAbsUrl()).toMatch("/home");
@@ -35,17 +34,16 @@ describe(
       describe('should render cv when user navigates to /cv', function() {
 
         beforeEach(function() {
-          element(by.css('a[href*="#/cv"]')).click();
+          element(by.css('a[href*="#/cv#content"]')).click();      
         });
 
         it('and the correct header text must be available in German',
             function() {
-              expect(element(by.css('#cvwrap')).isPresent()).toBe(false);
               browser.sleep(500);
               browser.executeScript('window.scrollTo(0,0);').then(function () {
                   browser.sleep(500);
                   element(by.css('img[src*="assets/img/de.png"]')).click();
-                  expect(element(by.css('#cvwrap')).isPresent()).toBe(true);
+                  expect(element(by.css('#cvwrap')).isDisplayed()).toBe(true);
               })     
             });
 

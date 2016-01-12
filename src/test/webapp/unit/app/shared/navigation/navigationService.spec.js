@@ -32,35 +32,35 @@ describe('homepage.navigation.service module', function() {
     });
 
     it('and home route is after navigation active', function() {
-      location.path('home?scrollTo=content');
+      location.path('home#content');
       expect(navigation.activeRoute(navigation.routes[posHome])).toEqual(true);
     });
 
     it('and cv route is after navigation active', function() {
-      location.path('cv?scrollTo=content');
+      location.path('cv#content');
       expect(navigation.activeRoute(navigation.routes[posCv])).toEqual(true);
     });
 
     it('and work route is after navigation active', function() {
-      location.path('work?scrollTo=content');
+      location.path('work#content');
       expect(navigation.activeRoute(navigation.routes[posWork])).toEqual(true);
     });
 
     it('and skill route is after navigation active',
         function() {
-          location.path('skill?scrollTo=content');
+          location.path('skill#content');
           expect(navigation.activeRoute(navigation.routes[posSkill])).toEqual(
               true);
         });
 
     it('and education route is after navigation active', function() {
-      location.path('education?scrollTo=content');
+      location.path('education#content');
       expect(navigation.activeRoute(navigation.routes[posEducation])).toEqual(
           true);
     });
 
     it('and disclaimer route is after navigation active', function() {
-      location.path('disclaimer?scrollTo=content');
+      location.path('disclaimer#content');
       expect(navigation.activeRoute(navigation.routes[posDisclaimer])).toEqual(
           true);
     });
