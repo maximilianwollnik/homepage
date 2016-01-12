@@ -43,6 +43,7 @@ describe(
               expect(element(by.css('#disclaimerwrap')).isPresent()).toBe(false);
               browser.sleep(1000);
               browser.executeScript('window.scrollTo(0,0);').then(function () {
+                  browser.sleep(500);
                   expect(element.all(by.css('#disclaimerwrap')).getText()).toContain('');
               })
             });

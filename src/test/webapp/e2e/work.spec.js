@@ -36,6 +36,7 @@ describe('homepage work', function() {
       expect(element(by.css('#workwrap')).isPresent()).toBe(false);
       browser.sleep(500);
       browser.executeScript('window.scrollTo(0,0);').then(function () {
+        browser.sleep(500);
         element(by.css('img[src*="assets/img/de.png"]')).click();
         expect(element.all(by.css('.container')).getText()).toMatch('Muster');
         expect(element(by.css('#workwrap')).isPresent()).toBe(true);

@@ -44,6 +44,7 @@ describe(
                   expect(element(by.css('#educationwrap')).isPresent()).toBe(false);
                   browser.sleep(500);
                   browser.executeScript('window.scrollTo(0,0);').then(function () {
+                      browser.sleep(500);
                       element(by.css('img[src*="assets/img/de.png"]')).click();
                       var ele = element.all(by.css('.container'));
                       browser.waitForAngular();
