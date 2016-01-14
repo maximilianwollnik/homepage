@@ -2,7 +2,7 @@
 'use strict';
 
 var gulp = require('gulp');
-var karma = require('karma').server;
+var Server = require('karma').Server;
 var $ = require('gulp-load-plugins')();
 var argv = require('yargs').argv;
 var pathApp = 'src/main/webapp';
@@ -118,10 +118,10 @@ gulp.task('test', ['wiredep'], function(done) {
 });
 
 gulp.task('testBuild', ['wiredep'], function(done) {
-  karma.start({
+  new Server({
     configFile: __dirname + '/' + pathTest + '/karma.conf.phantomjs.js',
     singleRun: true
-  }, done);
+  }, done).start();
 });
 
 gulp.task('connect', ['wiredep'], function() {

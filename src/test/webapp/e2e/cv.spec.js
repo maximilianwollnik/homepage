@@ -1,7 +1,5 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
-
 describe(
     'homepage cv',
     function() {
@@ -34,17 +32,24 @@ describe(
       describe('should render cv when user navigates to /cv', function() {
 
         beforeEach(function() {
-          element(by.css('a[href*="#/cv#content"]')).click();      
+          element(by.css('a[href*="#/cv#content"]')).click();
         });
 
         it('and the correct header text must be available in German',
             function() {
               browser.sleep(500);
-              browser.executeScript('window.scrollTo(0,0);').then(function () {
-                  browser.sleep(500);
-                  element(by.css('img[src*="assets/img/de.png"]')).click();
-                  expect(element(by.css('#cvwrap')).isDisplayed()).toBe(true);
-              })     
+              browser.executeScript('window.scrollTo(0,0);')
+                  .then(
+                      function() {
+                        browser.sleep(500);
+                        expect(element(
+                            by.css('div[class*="row centered mt mb"]'))
+                            .getText()).not.toMatch('CV.HEADLINE.PRE');
+                        element(by.css('img[src*="assets/img/de.png"]'))
+                            .click();
+                        expect(element(by.css('#cvwrap')).isDisplayed()).toBe(
+                            true);
+                      })
             });
 
         it('and the timeline tag must contain experience in German',

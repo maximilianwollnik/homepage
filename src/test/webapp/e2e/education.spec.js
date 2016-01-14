@@ -1,7 +1,5 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
-
 describe(
     'homepage education',
     function() {
@@ -42,15 +40,20 @@ describe(
             it('and the correct header text must be available in German',
                 function() {
                   browser.sleep(500);
-                  browser.executeScript('window.scrollTo(0,0);').then(function () {
-                      browser.sleep(500);
-                      element(by.css('img[src*="assets/img/de.png"]')).click();
-                      var ele = element.all(by.css('.container'));
-                      browser.waitForAngular();
-                      expect(ele.getText()).toMatch('Ausbildung');
-                      expect(element(by.css('#educationwrap')).isPresent()).toBe(
-                          true);
-                      })   
+                  browser.executeScript('window.scrollTo(0,0);').then(
+                      function() {
+                        browser.sleep(500);
+                        expect(element(
+                            by.css('div[class*="row centered mt mb"]'))
+                            .getText()).not.toMatch('EDUCATION.HEADLINE.PRE');
+                        element(by.css('img[src*="assets/img/de.png"]'))
+                            .click();
+                        var ele = element.all(by.css('.container'));
+                        browser.waitForAngular();
+                        expect(ele.getText()).toMatch('Ausbildung');
+                        expect(element(by.css('#educationwrap')).isPresent())
+                            .toBe(true);
+                      })
                 });
 
             it('and the correct header text must be available in English',
@@ -83,8 +86,8 @@ describe(
               element(by.css('img[src*="assets/img/de.png"]')).click();
               browser.waitForAngular();
               expect(element.all(by.css('.featurette')).count()).toEqual(1);
-              expect(element.all(by.css('.col-md-7')).getText())
-                  .toMatch('Fachhochschule der Wirtschaft');
+              expect(element.all(by.css('.col-md-7')).getText()).toMatch(
+                  'Fachhochschule der Wirtschaft');
             });
 
             it('should render social when user navigates to /education',

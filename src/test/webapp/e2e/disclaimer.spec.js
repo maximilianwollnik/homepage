@@ -1,7 +1,5 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
-
 describe(
     'homepage about',
     function() {
@@ -41,10 +39,14 @@ describe(
 
             it('and the correct header must be available', function() {
               browser.sleep(1000);
-              browser.executeScript('window.scrollTo(0,0);').then(function () {
-                  browser.sleep(500);
-                  expect(element.all(by.css('#disclaimerwrap')).getText()).toContain('');
-              })
+              browser.executeScript('window.scrollTo(0,0);').then(
+                  function() {
+                    browser.sleep(500);
+                    expect(element(by.css('div[class*="row centered mt mb"]'))
+                        .getText()).not.toMatch('DISCLAIMER.HEADLINE.PRE');
+                    expect(element.all(by.css('#disclaimerwrap')).getText())
+                        .toContain('');
+                  })
             });
 
             it('and the lorem ipsum text must not be available in German',
