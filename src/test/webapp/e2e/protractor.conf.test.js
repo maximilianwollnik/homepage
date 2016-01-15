@@ -3,7 +3,10 @@ exports.config = {
 
   specs : [ '*.spec.js' ],
 
-  capabilities : {
+  multiCapabilities: [{
+    'browserName': 'firefox',
+     exclude: ['social.spec.js']
+  }, {
     'browserName' : 'chrome',
     chromeOptions : {
       // How to set browser language (menus & so on)
@@ -15,7 +18,7 @@ exports.config = {
         }
       }
     }
-  },
+  }],
 
   baseUrl : 'http://maximilianwollnik.de:9001/',
   directConnect : true,

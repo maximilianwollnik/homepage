@@ -61,7 +61,7 @@
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
-    "protractor-chrome": "protractor src/test/webapp/e2e/protractor.conf.chrome.js",
-    "protractor-phantomjs": "protractor src/test/webapp/e2e/protractor.conf.phantomjs.js"
+    "protractor-development": "protractor src/test/webapp/e2e/protractor.conf.development.js",
+    "protractor-test": "protractor src/test/webapp/e2e/protractor.conf.test.js"
   }
 }
