@@ -43,7 +43,7 @@ describe(
                       function() {
                         browser.sleep(500);
                         expect(element(
-                            by.css('div[class*="row centered mt mb"]'))
+                            by.css('div[class*="header col-lg-8 col-lg-offset-2"]'))
                             .getText()).not.toMatch('CV.HEADLINE.PRE');
                         element(by.css('img[src*="assets/img/de.png"]'))
                             .click();
@@ -92,6 +92,18 @@ describe(
 
         it('and the footer must be available', function() {
           footer();
+        });
+
+	it('and the back button must bring us bring back to cv after navigating to skill', function() {
+          element(by.css('a[href*="#/skill#content"]')).click();
+	  browser.sleep(500);
+          expect(element(by.xpath("//div[@class='header col-lg-8 col-lg-offset-2']")).getText()).not.toMatch('SKILL.HEADLINE.PRE');
+          expect(element(by.css('#skillwrap')).isPresent()).toBe(true);
+	  browser.navigate().back();
+          browser.sleep(500);
+          expect(element(by.css('div[class*="header col-lg-8 col-lg-offset-2"]')).getText()).not.toMatch('CV.HEADLINE.PRE');
+          element(by.css('img[src*="assets/img/de.png"]')).click();
+          expect(element(by.css('#cvwrap')).isPresent()).toBe(true);
         });
       });
     });
