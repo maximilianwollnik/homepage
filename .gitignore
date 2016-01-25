@@ -8,3 +8,5 @@ phantomjsdriver.log
 .settings
 *.log
 dist
+COMMIT_FILE
+NEW_FILE
