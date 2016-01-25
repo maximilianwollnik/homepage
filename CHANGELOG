@@ -1,28 +1,11 @@
 ### 1.8.0 - 15/01/2016
 
-NEW
-===
-    ---------------------
-    chg: corrected jenkins jobs
-    - increased memory on jenkins server
-    - aligned mvn directories on master and slave
-
-
 CHANGE
 ======
     ---------------------
     corrected jenkins jobs
     - increased memory on jenkins server
     - aligned mvn directories on master and slave
-
-
-FIX
-===
-    ---------------------
-    chg: corrected jenkins jobs
-    - increased memory on jenkins server
-    - aligned mvn directories on master and slave
-
 
 ### 1.7.0 - 15/01/2016
 
@@ -33,25 +16,6 @@ NEW
     - e2e tests executed with firefox
     - currently the bootstrap mail modal does not open with protractor
     - but the mail modal works when used manually
-
-
-CHANGE
-======
-    ---------------------
-    new: enabled firefox tests
-    - e2e tests executed with firefox
-    - currently the bootstrap mail modal does not open with protractor
-    - but the mail modal works when used manually
-
-
-FIX
-===
-    ---------------------
-    new: enabled firefox tests
-    - e2e tests executed with firefox
-    - currently the bootstrap mail modal does not open with protractor
-    - but the mail modal works when used manually
-
 
 ### 1.6.0 - 13/01/2016
 
