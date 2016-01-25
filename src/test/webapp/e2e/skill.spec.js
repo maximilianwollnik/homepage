@@ -42,7 +42,7 @@ describe(
               browser.executeScript('window.scrollTo(0,0);').then(
                   function() {
                     browser.sleep(500);
-                    expect(element(by.css('div[class*="row centered mt mb"]'))
+                    expect(element(by.xpath("//div[@class='header col-lg-8 col-lg-offset-2']"))
                         .getText()).not.toMatch('SKILL.HEADLINE.PRE');
                     element(by.css('img[src*="assets/img/de.png"]')).click();
                     expect(element(by.css('#skillwrap')).isPresent())
