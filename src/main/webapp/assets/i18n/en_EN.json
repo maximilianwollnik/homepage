@@ -82,39 +82,113 @@
       "HEADLINE":"Experience",
       "WELLS_FARGO":{
         "TITLE":"04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
-        "CONTENT":"IT Consultant<br>Development of a new UI, Businessflows extended with the concept of assissted selfservice"
+        "CONTENT":{
+          "ROLE":"Developer",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- Development of a new UI<br>- Businessflows extended with the concept of assissted selfservice<br>- Performance improvement",
+          "DEV_ENV":"Visual Studio 6",
+          "COMPONENT":"MKS",
+          "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
       },
       "HSBC":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
-        "CONTENT":"IT Consultant<br>Cardless deposit for high amount of coins"
+        "CONTENT":{
+          "ROLE":"Developer",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of new components for an existing self service application:<br>- Cardless deposit for high amount of coins",
+          "DEV_ENV":"Visual Studio 2005",
+          "COMPONENT":"MKS",
+          "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
       },
       "BANKDATA":{
         "TITLE":"01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
-        "CONTENT":"IT Consultant<br>ATM connection to a specific bank host"
+        "CONTENT":{
+          "ROLE":"Developer",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- ATM connection to a specific bank host<br>- Customizing of existing transactions",
+          "DEV_ENV":"Eclipse 3.5, Visual Studio 2008",
+          "COMPONENT":"MKS, ANT",
+          "TECHNOLOGY":"JSE, C++, HTML, CSS, Axis"
+        }
       },
-      "CBA":{
+      "CBA_1":{
         "TITLE":"03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
-        "CONTENT":"IT Consultant<br>Development of a new UI, Extension of the host communication, Cardless withdrawal, 3rd party deposit"
+        "CONTENT":{
+          "ROLE":"Developer/Architect",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- Development of a new UI<br>- Extension of the host communication<br>- Cardless withdrawal<br>- 3rd party deposit",
+          "DEV_ENV":"Eclipse 3.6, Visual Studio 2010",
+          "COMPONENT":"SVN, MKS",
+          "TECHNOLOGY":"JSE, C++, HTML, CSS, JQuery, Axis2"
+        }
+      },
+      "CBA_2":{
+        "TITLE":"10/2015 - Today: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+        "CONTENT":{
+          "ROLE":"IT Consultant/Architect",
+          "ACTIVITY":"Software integration",
+          "TASK":"Development of an automated buildprocess with the following topics:<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests",
+          "DEV_ENV":"Eclipse 4.3, Webstorm 11",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, Docker, Vagrant",
+          "TECHNOLOGY":"JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO"
+        }
       },
       "ABN":{
-        "TITLE":"01/2015 - Today: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
-        "CONTENT":"IT Consultant<br>Development of a new host communication, Development of a new UI, Setup of a continious integration development process"
+        "TITLE":"01/2015 - 09/2015: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
+        "CONTENT":{
+          "ROLE":"Developer/Architect",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of a new host communication<br>- Development of a new UI<br>- Setup of a continious integration development process",
+          "DEV_ENV":"Eclipse 4.3, Webstorm 10",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven",
+          "TECHNOLOGY":"JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"
+        }
       },
       "WINCORNIXDORF":{
         "TITLE":"2007 - Today: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
-        "CONTENT":"IT Consultant & Software Developer"
+        "CONTENT":{
+          "ROLE":"Developer/Architect/IT Consultant",
+          "ACTIVITY":"Software development, Software integration",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of new transactions<br>- Development of new UIs<br>- Continous integration<br>- Consultant<br>- Maintenance<br>- Training",
+          "DEV_ENV":"Eclipse, Webstorm, Visual Studio",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, MKS, SVN, Docker, Vagrant",
+          "TECHNOLOGY":"JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO"
+        }
       },
       "PIGAL":{
         "TITLE":"11/2001 - 05/2002: Pigal e.V.",
-        "CONTENT":"Instructor of Internet Application"
+        "CONTENT":{
+          "ROLE":"Instructor",
+          "ACTIVITY":"Training",
+          "TASK":"Instructor of Internet Application:<br>- First steps<br>- E-Mail<br>- Security",
+          "DEV_ENV":"",
+          "COMPONENT":"",
+          "TECHNOLOGY":"HTML"
+        }
       },
       "ZIKON":{
         "TITLE":"07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung",
-        "CONTENT":"Maintenance of networks, software applications and hardware systems of small and medium-sized enterprises"
+        "CONTENT":{
+          "ROLE":"Developer/IT Consultant",
+          "ACTIVITY":"Software development, Software integration, Maintenance",
+          "TASK":"Maintenance of networks, software applications and hardware systems of small and medium-sized enterprises:<br>- Server administration<br>- Maintenance of an eCommerce platform<br>- Hardware assembly",
+          "DEV_ENV":"Adobe Dreamweaver",
+          "COMPONENT":"Windows Server, SUSE Linux Enterprise, Apache, MySQL, osCommerce",
+          "TECHNOLOGY":"PHP, HTML, CSS, Javascript"
+        }
       },
       "THUNE":{
         "TITLE":"10/2004 - 09/2005: Thune Pharmacy",
-        "CONTENT":"Installation and maintenance of an online shop<br>Development of a pharmaceutical database"
+        "CONTENT":{
+          "ROLE":"Developer",
+          "ACTIVITY":"Software development",
+          "TASK":"Development of a web site:<br>- Installation and maintenance of an online shop<br>- Development of a pharmaceutical database",
+          "DEV_ENV":"Adobe Dreamweaver",
+          "COMPONENT":"SUSE Linux Enterprise, Apache, MySQL, osCommerce",
+          "TECHNOLOGY":"PHP, HTML, CSS, Javascript"
+        }
       }
     },
     "EXPLANATIONS":{

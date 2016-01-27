@@ -82,8 +82,8 @@ describe(
               expect(ele.getText()).not.toMatch('Lorem Ipsum');
             });
 
-        it('and 13 events must be available', function() {
-          expect(element.all(by.css('timeline-event')).count()).toEqual(13);
+        it('and 14 events must be available', function() {
+          expect(element.all(by.css('timeline-event')).count()).toEqual(14);
         });
 
         it('should render social when user navigates to /work', function() {

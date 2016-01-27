@@ -80,41 +80,120 @@
     },
     "EVENTS":{
       "HEADLINE":"Erfahrung",
+      "ROLE":"Rolle:",
+      "ACTIVITY":"Tätigkeiten:",
+      "DEV_ENV":"Entwicklungsumgebung:",
+      "COMPONENT":"Systemkomponenten:",
+      "TECHNOLOGY":"Technologien:",
       "WELLS_FARGO":{
         "TITLE":"04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
-        "CONTENT":"IT Berater<br>Entwicklung eines neuen UIs, Transaktionsabläufe wurden durch die bediente Selbstbedienung erweitert"
+        "CONTENT":{
+          "ROLE":"Softwareentwickler",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Neue grafische Oberfläche<br>- Ablaufanpassungen von Transaktionen<br>- Performanceoptimierungen",
+          "DEV_ENV":"Visual Studio 6",
+          "COMPONENT":"MKS",
+          "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
       },
       "HSBC":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
-        "CONTENT":"IT Berater<br>Kartenlose Einzahlungen für hohe Münzbeträge"
+        "CONTENT":{
+          "ROLE":"Softwareentwickler",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Kartenlose Einzahlungen für Münzen",
+          "DEV_ENV":"Visual Studio 2005",
+          "COMPONENT":"MKS",
+          "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
       },
       "BANKDATA":{
         "TITLE":"01/2009 - 02/2011: <a href=\"https://bankdata.dk/da\" target=\"_blank\">Bankdata</a>",
-        "CONTENT":"IT Berater<br>Anbindung eines Geldautomaten an ein spezifisches Bankennetz"
+        "CONTENT":{
+          "ROLE":"Softwareentwickler",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Neue Hostkommunikation<br>- Ablaufanpassungen von Transaktionen",
+          "DEV_ENV":"Eclipse 3.5, Visual Studio 2008",
+          "COMPONENT":"MKS, ANT",
+          "TECHNOLOGY":"JSE, C++, HTML, CSS, Axis"
+        }
       },
-      "CBA":{
+      "CBA_1":{
         "TITLE":"03/2011 - 12/2014: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
-        "CONTENT":"IT Berater<br>Entwicklung eines neuen UIs, Erweiterung einer bestehenden Hostkommunikation, Kartenlose Auszahlung, Einzahlungen auf ein Fremdkonto"
+        "CONTENT":{
+          "ROLE":"Softwareentwickler/Architekt",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Neue grafische Oberfläche<br>- Erweiterungen einer bestehenden Hostkommunikation<br>- Kartenlose Transaktion und Einzahlung auf ein Fremdkonto als neue Transaktion",
+          "DEV_ENV":"Eclipse 3.6, Visual Studio 2010",
+          "COMPONENT":"SVN, MKS",
+          "TECHNOLOGY":"JSE, C++, HTML, CSS, JQuery, Axis2"
+        }
+      },
+	    "CBA_2":{
+        "TITLE":"10/2015 - Heute: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+        "CONTENT":{
+          "ROLE":"IT Berater/Architekt",
+          "ACTIVITY":"Softwareintegration",
+          "TASK":"Erstellung eines kompletten automatisierten Entwicklungsprozesses mit den Schwerpunkten:<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests",
+          "DEV_ENV":"Eclipse 4.3, Webstorm 11",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, Docker, Vagrant",
+          "TECHNOLOGY":"JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO"
+        }
       },
       "ABN":{
-        "TITLE":"01/2015 - Heute: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>",
-        "CONTENT":"IT Berater<br>Neue Hostkommunikation, Entwicklung eines neuen UIs, Automatisierter Entwicklungsprozess"
+        "TITLE":"01/2015 - 09/2015: <a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amro</a>",
+        "CONTENT":{
+          "ROLE":"Softwareenwickler/Architekt",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Ablaufanpassungen von Transaktionen<br>- Neue Hostkommunikation<br>- Neue grafische Oberfläche<br>- Automatisierter Entwicklungsprozess",
+          "DEV_ENV":"Eclipse 4.3, Webstorm 10",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven",
+          "TECHNOLOGY":"JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"
+        }
       },
       "WINCOR_NIXDORF":{
         "TITLE":"2007 - Heute: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
-        "CONTENT":"IT Berater & Software Entwickler"
+        "CONTENT":{
+          "ROLE":"Softwareenwickler/Architekt/IT Berater",
+          "ACTIVITY":"Softwareentwicklung, Softwareintegration",
+          "TASK":"Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Ablaufanpassungen von Transaktionen<br>- Neuentwicklung von Transaktionen<br>- Neue grafische Oberfläche<br>- Automatisierter Entwicklungsprozess<br>- Beratung<br>- Wartung<br>- Schulung",
+          "DEV_ENV":"Eclipse, Webstorm, Visual Studio",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, MKS, SVN, Docker, Vagrant",
+          "TECHNOLOGY":"JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO"
+        }
       },
       "PIGAL":{
         "TITLE":"11/2001 - 05/2002: Pigal e.V.",
-        "CONTENT":"Dozententätigkeit im Bereich Internetanwendungen"
+        "CONTENT":{
+          "ROLE":"Dozent",
+          "ACTIVITY":"Schulung",
+          "TASK":"Dozententätigkeit im Bereich Internetanwendungen:<br>- Erste Schritte<br>- E-Mail<br>- Sicherheit",
+          "DEV_ENV":"",
+          "COMPONENT":"",
+          "TECHNOLOGY":"HTML"
+        }
       },
       "ZIKON":{
         "TITLE":"07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung",
-        "CONTENT":"Wartung und Betreuung von Netzwerken, Soft- und Hardwaresystemen kleinerer und mittelständischer Unternehmen"
+        "CONTENT":{
+          "ROLE":"Softwareenwickler/IT Berater",
+          "ACTIVITY":"Softwareentwicklung, Softwareintegration, Wartung",
+          "TASK":"Wartung und Betreuung von Netzwerken, Soft- und Hardwaresystemen kleinerer und mittelständischer Unternehmen:<br>- Serveradministration<br>- Wartung eines Onlineshops<br>- Rechner Zusammenbau",
+          "DEV_ENV":"Adobe Dreamweaver",
+          "COMPONENT":"Windows Server, SUSE Linux Enterprise, Apache, MySQL, osCommerce",
+          "TECHNOLOGY":"PHP, HTML, CSS, Javascript"
+        }
       },
       "THUNE":{
         "TITLE":"10/2004 - 09/2005: Thune Apotheke",
-        "CONTENT":"Installation und Wartung eines Onlineshops, Erstellung und Wartung einer pharmazeutischen Datenbank"
+        "CONTENT":{
+          "ROLE":"Softwareenwickler",
+          "ACTIVITY":"Softwareentwicklung",
+          "TASK":"Erstellung einer Webpräsenz:<br>- Installation und Wartung eines Onlineshops<br>- Erstellung und Wartung einer pharmazeutischen Datenbank",
+          "DEV_ENV":"Adobe Dreamweaver",
+          "COMPONENT":"SUSE Linux Enterprise, Apache, MySQL, osCommerce",
+          "TECHNOLOGY":"PHP, HTML, CSS, Javascript"
+        }
       }
     },
     "EXPLANATIONS":{
