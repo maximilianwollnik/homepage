@@ -10,3 +10,4 @@ phantomjsdriver.log
 dist
 COMMIT_FILE
 NEW_FILE
+/LOG_FILE_IS_UNDEFINED
