@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.maximilianwollnik</groupId>
 	<artifactId>homepage</artifactId>
-	<version>1.9.0-SNAPSHOT</version>
+	<version>1.9.0</version>
 	<name>Homepage</name>
 	<description>This is the homepage of Maximilian Wollnik created with Spring Boot and Angular</description>
 
@@ -10,7 +10,7 @@
 		<connection>scm:git:git@github.com:maximilianwollnik/homepage.git</connection>
 		<developerConnection>scm:git:git@github.com:maximilianwollnik/homepage.git</developerConnection>
 		<url>https://github.com/maximilianwollnik/homepage</url>
-		<tag>HEAD</tag>
+		<tag>homepage-1.9.0</tag>
 	</scm>
 
 	<distributionManagement>
