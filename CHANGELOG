@@ -1,3 +1,36 @@
+### 1.9.0 - 01/02/2016
+
+NEW
+===
+    ---------------------
+    speeding up docker build
+    - adding .dockerignore to send only important files to docker engine
+    
+    ---------------------
+    add test for back browsing
+    - added a test to check if back browsing works
+    - previously back navigation refreshed the same page
+
+
+CHANGE
+======
+    ---------------------
+    updated spring cloud
+    - trying to use latest clout starter pom angel.sr6
+    - jenkins still makes problems although mvn works on a commandline
+    
+    ---------------------
+    providing more information about my cv
+    - added a detailed description of my life so far
+
+
+FIX
+===
+    ---------------------
+    new: speeding up docker build
+    - adding .dockerignore to send only important files to docker engine
+
+
 ### 1.8.0 - 15/01/2016
 
 CHANGE
