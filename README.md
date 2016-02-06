@@ -3,14 +3,7 @@ All source files for my private homepage
 
 # Version
 
-### 1.9.0 - 02/02/2016
-
-NEW
-===
-    ---------------------
-    chg: building node modules from maven
-    - as all jenkins problems could be solved, the whole build is done via maven
-
+### 1.10.0 - 02/02/2016
 
 CHANGE
 ======
@@ -22,13 +15,6 @@ CHANGE
     changed favicon
     - using background image as new favicon
     - previous one was not recognizable
-
-
-FIX
-===
-    ---------------------
-    chg: building node modules from maven
-    - as all jenkins problems could be solved, the whole build is done via maven
 
 
 ### 1.9.0 - 01/02/2016
