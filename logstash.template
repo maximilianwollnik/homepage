@@ -3,29 +3,20 @@ input {
     type => "%TYPE%"
     # Logstash insists on absolute paths...
     path => "%PATH%"
-    codec => multiline {
-      pattern => "^%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{TIME}.*"
-      negate => "true"
-      what => "previous"
-    }
     start_position => "beginning"
   }
 }
-
+filter{
+    json{
+        source => "message"
+    }
+}
 output {
   if [type] == "%TYPE%" {
-    # Print each event to stdout, useful for debugging. Should be commented out in production.
-    # Enabling 'rubydebug' codec on the stdout output will make logstash
-    # pretty-print the entire event as something similar to a JSON representation.
-    stdout {
-      codec => rubydebug
-    }
 
     # Sending properly parsed log events to elasticsearch
     elasticsearch {
-      host => "127.0.0.1"
-      cluster => "logstash"
-      # protocol => "http"
+      hosts => [ "127.0.0.1" ]
       # user => "%SECURITY_USER%"
       # password => "%SECURITY_PASSWORD%"
     }
