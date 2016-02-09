@@ -5,12 +5,6 @@ All source files for my private homepage
 
 ### 1.11.0 - 08/02/2016
 
-NEW
-===
-    ---------------------
-    chg: updated elk stack
-    - using json output for elk
-
 
 CHANGE
 ======
@@ -21,13 +15,6 @@ CHANGE
     ---------------------
     using json as logging output
     - with json it should be easier to use ELK
-
-
-FIX
-===
-    ---------------------
-    chg: updated elk stack
-    - using json output for elk
 
 
 ### 1.10.0 - 02/02/2016
