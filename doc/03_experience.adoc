@@ -1,0 +1,148 @@
+== Berufliche Laufbahn
+
+=== Projekte
+
+[options="header"]
+|===
+2+|10/2015 - Heute: Commonwealth Bank of Australia
+|Rolle | IT Berater / Architekt
+|Tätigkeiten | Softwareintegration
+2+|Erstellung eines kompletten automatisierten Entwicklungsprozesses mit den Schwerpunkten: +
+- Buildprozess +
+- Distribution +
+- Mocking +
+- Unit Tests +
+- End-2-End Tests
+|Entwicklungsumgebung | Eclipse 4.3, Webstorm 11
+|Systemkomponenten | Jenkins, Git, Nexus, Sonarqube, Maven, Docker, Vagrant
+|Technologien | JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO
+|===
+
+[options="header"]
+|===
+2+|01/2015 - 09/2015: ABN Amro
+|Rolle | Softwareenwickler/Architekt
+|Tätigkeiten | Softwareentwicklung
+2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Ablaufanpassungen von Transaktionen +
+- Neue Hostkommunikation +
+- Neue grafische Oberfläche +
+- Automatisierter Entwicklungsprozess +
+|Entwicklungsumgebung | Eclipse 4.3, Webstorm 10
+|Systemkomponenten | Jenkins, Git, Nexus, Sonarqube, Maven
+|Technologien | JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype
+|===
+
+[options="header"]
+|===
+2+|03/2011 - 12/2014: Commonwealth Bank of Australia
+|Rolle | Softwareenwickler/Architekt
+|Tätigkeiten | Softwareentwicklung
+2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Neue grafische Oberfläche +
+- Erweiterungen einer bestehenden Hostkommunikation +
+- Kartenlose Transaktion und Einzahlung auf ein Fremdkonto als neue Transaktion +
+|Entwicklungsumgebung | Eclipse 3.6, Visual Studio 2010
+|Systemkomponenten | SVN, MKS
+|Technologien | JSE, C++, HTML, CSS, JQuery, Axis2
+|===
+
+[options="header"]
+|===
+2+|01/2009 - 02/2011: Bankdata
+|Rolle | Softwareentwickler
+|Tätigkeiten | Softwareentwicklung
+2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Neue Hostkommunikation +
+- Ablaufanpassungen von Transaktionen +
+|Entwicklungsumgebung | Eclipse 3.5, Visual Studio 2008
+|Systemkomponenten | MKS, ANT
+|Technologien | JSE, C++, HTML, CSS, Axis
+|===
+
+[options="header"]
+|===
+2+|05/2008 - 12/2008: HSBC Mexiko
+|Rolle | Softwareenwickler
+|Tätigkeiten | Softwareentwicklung
+2+|Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Kartenlose Einzahlungen für Münzen
+|Entwicklungsumgebung | Visual Studio 2005
+|Systemkomponenten | MKS
+|Technologien | C++, HTML, CSS, JQuery
+|===
+
+[options="header"]
+|===
+2+|04/2007 - 04/2008: Wells Fargo
+|Rolle | Softwareenwickler
+|Tätigkeiten | Softwareentwicklung
+2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Neue grafische Oberfläche +
+- Ablaufanpassungen von Transaktionen +
+- Performanceoptimierungen +
+|Entwicklungsumgebung | Visual Studio 6
+|Systemkomponenten | MKS
+|Technologien | C++, HTML, CSS, JQuery
+|===
+
+=== Arbeitgeber
+
+[options="header"]
+|===
+2+|2007 - Heute: Wincor Nixdorf International GmbH
+|Rolle | Softwareenwickler/Architekt/IT Berater
+|Tätigkeiten | Softwareentwicklung, Softwareintegration
+2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Ablaufanpassungen von Transaktionen +
+- Neuentwicklung von Transaktionen +
+- Neue grafische Oberfläche +
+- Automatisierter Entwicklungsprozess + 
+- Beratung + 
+- Wartung + 
+- Schulung + 
+|Entwicklungsumgebung | Eclipse, Webstorm, Visual Studio
+|Systemkomponenten | Jenkins, Git, Nexus, Sonarqube, Maven, MKS, SVN, Docker, Vagrant
+|Technologien | JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO
+|===
+
+[options="header"]
+|===
+2+|10/2004 - 09/2005: Thune Apotheke
+|Rolle | Softwareenwickler
+|Tätigkeiten | Softwareentwicklung
+2+|Erstellung einer Webpräsenz: +
+- Installation und Wartung eines Onlineshops +
+- Erstellung und Wartung einer pharmazeutischen Datenbank +
+|Entwicklungsumgebung | Adobe Dreamweaver
+|Systemkomponenten | SUSE Linux Enterprise, Apache, MySQL, osCommerce
+|Technologien | PHP, HTML, CSS, Javascript
+|===
+
+[options="header"]
+|===
+2+|07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung
+|Rolle | Softwareenwickler/IT Berater
+|Tätigkeiten | Softwareentwicklung, Softwareintegration, Wartung
+2+|Wartung und Betreuung von Netzwerken, Soft- und Hardwaresystemen kleinerer und mittelständischer Unternehmen: +
+- Serveradministration +
+- Wartung eines Onlineshops +
+- Rechner Zusammenbau +
+|Entwicklungsumgebung | Adobe Dreamweaver
+|Systemkomponenten | Windows Server, SUSE Linux Enterprise, Apache, MySQL, osCommerce
+|Technologien | PHP, HTML, CSS, Javascript
+|===
+
+[options="header"]
+|===
+2+|11/2001 - 05/2002: Pigal e.V.
+|Rolle | Dozent
+|Tätigkeiten | Schulung
+2+|Dozententätigkeit im Bereich Internetanwendungen: +
+- Erste Schritte +
+- E-Mail +
+- Sicherheit + 
+|Entwicklungsumgebung | 
+|Systemkomponenten | 
+|Technologien | HTML
+|===

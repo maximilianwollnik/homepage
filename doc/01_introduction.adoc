@@ -1,0 +1,43 @@
+== Persönliche Daten
+
+[grid="none",cols="2,4",frame="none", options="", style="monospaced"]
+|===
+|Nachname 
+|Wollnik
+
+|Vorname
+|Maximilian
+
+|Nationalität
+|Deutsch
+
+|Anschrift
+|Kleine Penzlinger Str. 26, 33102 Paderborn
+
+|Telefon
+|+49 (5251) 966 80 89
+
+|Mobil
+|+49 (173) 71 42 111
+
+|E-Mail
+|maximilian@maximilianwollnik.de
+
+|Geburtstag
+|07.02.1983
+
+|Geburtstort
+|Bad Neustadt a. d. Saale
+
+|Familienstand
+|Ledig
+
+|Interessen
+|EDV, Fußball, Wirtschaft
+
+|Fremdsprachen
+|Englisch + 
+Verhandlungssicher in Wort und Schrift
+
+|===
+image:../src/main/webapp/assets/img/about.jpg[about, 500]

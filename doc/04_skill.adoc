@@ -1,0 +1,97 @@
+== Technisches Qualifikationsprofil
+
+=== Programmierung
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Java 
+|10 Jahre
+|\+++
+
+|C/C++ 
+|10 Jahre
+|+
+
+|Skriptsprachen: Batch, Shell, Bash 
+|8 Jahre
+|++
+|===
+
+=== Web Technologien
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|HTML 
+|10 Jahre
+|\+++
+
+|Java Script
+|10 Jahre
+|\+++
+
+|CSS
+|8 Jahre
+|++
+
+|JQuery
+|4 Jahre
+|++
+
+|Knockout
+|4 Jahre
+|++
+
+|Angular
+|2 Jahre
+|++
+|===
+
+=== Datenbanken
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|MySQL 
+|5 Jahre
+|+
+
+|PostgreSQL 
+|5 Jahre
+|+
+|===
+
+=== Sonstiges
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Git, SVN, MKS 
+|8 Jahre
+|++
+
+|Docker 
+|3 Jahre
+|+
+
+|Maven 
+|4 Jahre
+|++
+
+|Nodejs 
+|4 Jahre
+|++
+
+|Jenkins 
+|4 Jahre
+|++
+
+|Selenium
+|1 Jahre
+|+
+
+|Eclipse
+|10 Jahre
+|\+++
+
+|Visual Studio
+|8 Jahre
+|+
+|===
