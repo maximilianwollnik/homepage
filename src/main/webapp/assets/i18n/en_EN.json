@@ -23,7 +23,8 @@
     "BODY":{
       "P1":"I am an IT consultant and software developer from Germany with over nine years of professional experience. Currently I am working for <a href='http://www.wincor-nixdorf.com' target='_blank'>Wincor Nixdorf International GmbH</a>.",
       "P2":"I am responsible for ATM application globally and I deliver project specific extensions for customers worldwide. Depending on the requirements I develop Java and web components to enhance a multi-vendor platform. The customers are very interested to create a next generation user interface, branch of the future and multi-channel (Mobile, Internet) capabilities.",
-      "P3":"Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>."
+      "P3":"Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>.",
+      "P4":"My latest profile can be downloaded from <a href='../assets/doc/profile.pdf' target='_blank'>here</a>."
     }
   },
   "DISCLAIMER":{
@@ -80,6 +81,11 @@
     },
     "EVENTS":{
       "HEADLINE":"Experience",
+      "ROLE":"Role:",
+      "ACTIVITY":"Activities:",
+      "DEV_ENV":"Development Environment:",
+      "COMPONENT":"Components:",
+      "TECHNOLOGY":"Technologies:",
       "WELLS_FARGO":{
         "TITLE":"04/2007 - 04/2008: <a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>",
         "CONTENT":{
