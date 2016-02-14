@@ -9,6 +9,4 @@ ENV HOME /root
 
 CMD java -Djava.security.egd=file:/dev/./urandom -jar $HOME/*.jar
 
-RUN mkdir $HOME/conf
-ADD target/*.jar $HOME/
-ADD logstash*.conf $HOME/conf/
+ADD *.jar $HOME/
