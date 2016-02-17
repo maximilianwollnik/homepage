@@ -2,9 +2,9 @@
 
 === Projekte
 
-[options="header"]
+[big]**10/2015 - Heute: Commonwealth Bank of Australia**
+[frame="topbot"]
 |===
-2+|10/2015 - Heute: Commonwealth Bank of Australia
 |Rolle | IT Berater / Architekt
 |Tätigkeiten | Softwareintegration
 2+|Erstellung eines kompletten automatisierten Entwicklungsprozesses mit den Schwerpunkten: +
@@ -18,9 +18,9 @@
 |Technologien | JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO
 |===
 
-[options="header"]
+[big]**01/2015 - 09/2015: ABN Amro**
+[frame="topbot"]
 |===
-2+|01/2015 - 09/2015: ABN Amro
 |Rolle | Softwareenwickler/Architekt
 |Tätigkeiten | Softwareentwicklung
 2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
@@ -33,9 +33,9 @@
 |Technologien | JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype
 |===
 
-[options="header"]
+[big]**03/2011 - 12/2014: Commonwealth Bank of Australia**
+[frame="topbot"]
 |===
-2+|03/2011 - 12/2014: Commonwealth Bank of Australia
 |Rolle | Softwareenwickler/Architekt
 |Tätigkeiten | Softwareentwicklung
 2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
@@ -47,22 +47,22 @@
 |Technologien | JSE, C++, HTML, CSS, JQuery, Axis2
 |===
 
-[options="header"]
+[big]**01/2009 - 02/2011: Bankdata**
+[frame="topbot"]
 |===
-2+|01/2009 - 02/2011: Bankdata
 |Rolle | Softwareentwickler
 |Tätigkeiten | Softwareentwicklung
 2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
 - Neue Hostkommunikation +
 - Ablaufanpassungen von Transaktionen +
-|Entwicklungsumgebung | Eclipse 3.5, Visual Studio 2008
+|Entwicklungsumgebung | Eclipse 3.5, Visual Studio 2008 
 |Systemkomponenten | MKS, ANT
 |Technologien | JSE, C++, HTML, CSS, Axis
 |===
 
-[options="header"]
+[big]**05/2008 - 12/2008: HSBC Mexiko**
+[frame="topbot"]
 |===
-2+|05/2008 - 12/2008: HSBC Mexiko
 |Rolle | Softwareenwickler
 |Tätigkeiten | Softwareentwicklung
 2+|Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
@@ -72,9 +72,9 @@
 |Technologien | C++, HTML, CSS, JQuery
 |===
 
-[options="header"]
+[big]**04/2007 - 04/2008: Wells Fargo**
+[frame="topbot"]
 |===
-2+|04/2007 - 04/2008: Wells Fargo
 |Rolle | Softwareenwickler
 |Tätigkeiten | Softwareentwicklung
 2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
@@ -88,9 +88,9 @@
 
 === Arbeitgeber
 
-[options="header"]
+[big]**2007 - Heute: Wincor Nixdorf International GmbH**
+[frame="topbot"]
 |===
-2+|2007 - Heute: Wincor Nixdorf International GmbH
 |Rolle | Softwareenwickler/Architekt/IT Berater
 |Tätigkeiten | Softwareentwicklung, Softwareintegration
 2+|Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
@@ -106,9 +106,9 @@
 |Technologien | JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO
 |===
 
-[options="header"]
+[big]**10/2004 - 09/2005: Thune Apotheke**
+[frame="topbot"]
 |===
-2+|10/2004 - 09/2005: Thune Apotheke
 |Rolle | Softwareenwickler
 |Tätigkeiten | Softwareentwicklung
 2+|Erstellung einer Webpräsenz: +
@@ -119,9 +119,9 @@
 |Technologien | PHP, HTML, CSS, Javascript
 |===
 
-[options="header"]
+[big]**07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung**
+[frame="topbot"]
 |===
-2+|07/2003 - 09/2004: ZIKON - Konzepte und Entwicklung
 |Rolle | Softwareenwickler/IT Berater
 |Tätigkeiten | Softwareentwicklung, Softwareintegration, Wartung
 2+|Wartung und Betreuung von Netzwerken, Soft- und Hardwaresystemen kleinerer und mittelständischer Unternehmen: +
@@ -133,9 +133,9 @@
 |Technologien | PHP, HTML, CSS, Javascript
 |===
 
-[options="header"]
+[big]**11/2001 - 05/2002: Pigal e.V.**
+[frame="topbot"]
 |===
-2+|11/2001 - 05/2002: Pigal e.V.
 |Rolle | Dozent
 |Tätigkeiten | Schulung
 2+|Dozententätigkeit im Bereich Internetanwendungen: +

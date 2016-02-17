@@ -4,16 +4,20 @@
 
 [grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
 |===
-|Java 
-|10 Jahre
+|Java (JSE)
+|seit 2006
 |\+++
 
+|Java (Spring Boot, Spring Cloud)
+|seit 2004
+|+
+
 |C/C++ 
-|10 Jahre
+|seit 2006
 |+
 
 |Skriptsprachen: Batch, Shell, Bash 
-|8 Jahre
+|seit 2008
 |++
 |===
 
@@ -22,27 +26,35 @@
 [grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
 |===
 |HTML 
-|10 Jahre
+|seit 2006
 |\+++
 
 |Java Script
-|10 Jahre
+|seit 2006
 |\+++
 
 |CSS
-|8 Jahre
+|seit 2008
 |++
 
 |JQuery
-|4 Jahre
+|seit 2010
+|++
+
+|RequireJS
+|seit 2012
 |++
 
 |Knockout
-|4 Jahre
+|seit 20012
 |++
 
+|Durandal
+|seit 20014
+|+
+
 |Angular
-|2 Jahre
+|seit 2014
 |++
 |===
 
@@ -51,12 +63,25 @@
 [grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
 |===
 |MySQL 
-|5 Jahre
+|seit 2011
 |+
 
 |PostgreSQL 
-|5 Jahre
+|seit 2011
 |+
+|===
+
+=== Methodik
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Wasserfall
+|seit 2010
+|\+++
+
+|Scrum
+|seit 2014
+|++
 |===
 
 === Sonstiges
@@ -64,34 +89,38 @@
 [grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
 |===
 |Git, SVN, MKS 
-|8 Jahre
+|seit 2008
 |++
 
 |Docker 
-|3 Jahre
+|seit 2013
 |+
 
 |Maven 
-|4 Jahre
+|seit 2012
 |++
 
 |Nodejs 
-|4 Jahre
+|seit 2012
 |++
 
 |Jenkins 
-|4 Jahre
+|seit 2012
 |++
 
 |Selenium
-|1 Jahre
+|seit 2015
 |+
 
 |Eclipse
-|10 Jahre
+|seit 2006
 |\+++
 
 |Visual Studio
-|8 Jahre
+|seit 2008
+|+
+
+|Asciidoctor
+|seit 2015
 |+
 |===
