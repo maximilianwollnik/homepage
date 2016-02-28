@@ -6,7 +6,7 @@ var Server = require('karma').Server;
 var $ = require('gulp-load-plugins')();
 var argv = require('yargs').argv;
 var pathApp = 'src/main/webapp';
-var pathTest = '.';
+var pathTest = 'src/test/webapp/unit';
 var pathDist = 'target/dist';
 var pathFinal = pathDist + '/static';
 

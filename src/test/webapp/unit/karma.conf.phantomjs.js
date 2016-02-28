@@ -1,24 +1,24 @@
 module.exports = function(config){
   config.set({
 
-    basePath : './',
+    basePath : '../../../../',
 
     files : [
       // bower:js
-      'bower_components/jquery/dist/jquery.js',
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-sanitize/angular-sanitize.js',
-      'bower_components/slick-carousel/slick/slick.min.js',
-      'bower_components/angular-slick/dist/slick.js',
-      'bower_components/angular-timeline/dist/angular-timeline.js',
-      'bower_components/angular-translate/angular-translate.js',
-      'bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-      'bower_components/bootstrap/dist/js/bootstrap.js',
-      'bower_components/jasmine/lib/jasmine-core/jasmine.js',
-      'bower_components/jasmine-jquery/lib/jasmine-jquery.js',
-      'bower_components/promise-tracker/promise-tracker.js',
+      '../../../../bower_components/jquery/dist/jquery.js',
+      '../../../../bower_components/angular/angular.js',
+      '../../../../bower_components/angular-mocks/angular-mocks.js',
+      '../../../../bower_components/angular-route/angular-route.js',
+      '../../../../bower_components/angular-sanitize/angular-sanitize.js',
+      '../../../../bower_components/slick-carousel/slick/slick.min.js',
+      '../../../../bower_components/angular-slick/dist/slick.js',
+      '../../../../bower_components/angular-timeline/dist/angular-timeline.js',
+      '../../../../bower_components/angular-translate/angular-translate.js',
+      '../../../../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+      '../../../../bower_components/bootstrap/dist/js/bootstrap.js',
+      '../../../../bower_components/jasmine/lib/jasmine-core/jasmine.js',
+      '../../../../bower_components/jasmine-jquery/lib/jasmine-jquery.js',
+      '../../../../bower_components/promise-tracker/promise-tracker.js',
       // endbower
       'src/main/webapp/app/**/*.js',
       'src/main/webapp/app/**/*.html',
@@ -30,6 +30,7 @@ module.exports = function(config){
     ],
 
     proxies: {
+      'assets/i18n/C.json': '/base/src/main/webapp/assets/i18n/de_DE.json',
       '/assets/img/de.png': '/base/src/main/webapp/assets/img/de.png',
       '/assets/img/en.png': '/base/src/main/webapp/assets/img/en.png'
     },
@@ -50,7 +51,7 @@ module.exports = function(config){
 
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : ['PhantomJS'],
 
     plugins : [
             'karma-chrome-launcher',

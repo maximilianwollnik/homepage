@@ -1,6 +1,0 @@
-spring:
-  build: .
-  ports:
-  - "9000:8080"
-  volumes:
-    - /etc/localtime:/etc/localtime:ro
