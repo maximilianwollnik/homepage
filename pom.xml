@@ -71,13 +71,12 @@
     <deployFileUrl>${project.distributionManagement.snapshotRepository.url} </deployFileUrl>
     <java.version>1.8</java.version>
     <start-class>de.maximilianwollnik.homepage.Application</start-class>
-    <version-plugin-changes>2.11</version-plugin-changes>
     <version-plugin-javadoc>2.10.3</version-plugin-javadoc>
-    <version-plugin-maven-release-plugin>2.5.2</version-plugin-maven-release-plugin>
     <version-node>v0.10.26</version-node>
     <version-npm>1.4.3</version-npm>
     <version-subethasmtp>3.1.7</version-subethasmtp>
     <logstash-logback-encoder.version>3.4</logstash-logback-encoder.version>
+    <cukedoctor-converter.version>0.7.0</cukedoctor-converter.version>
   </properties>
 
   <build>
@@ -126,10 +125,10 @@
               <workingDirectory>${basedir}</workingDirectory>
               <arguments>
                 <argument>-a</argument>
-                <argument>pdf-stylesdir=doc/resources/themes</argument>
+                <argument>pdf-stylesdir=src/doc/profile/resources/themes</argument>
                 <argument>-a</argument>
                 <argument>pdf-style=profile</argument>
-                <argument>doc/profile.adoc</argument>
+                <argument>src/doc/profile/profile.adoc</argument>
                 <argument>-o</argument>
                 <argument>target/dist/static/assets/doc/profile.pdf</argument>
               </arguments>
@@ -142,36 +141,12 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-changes-plugin</artifactId>
-        <version>${version-plugin-changes}</version>
-        <executions>
-          <execution>
-            <id>validate-changes</id>
-            <phase>pre-site</phase>
-            <goals>
-              <goal>changes-validate</goal>
-            </goals>
-            <configuration>
-              <!-- if set to true the build will fail if the changes file is invalid, 
-                if set to false warnings will be logged. -->
-              <failOnError>true</failOnError>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <configuration>
           <delimiters>
             <delimiter>@</delimiter>
           </delimiters>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>${version-plugin-maven-release-plugin}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -280,22 +255,16 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.github.cukedoctor</groupId>
+      <artifactId>cukedoctor-converter</artifactId>
+      <version>${cukedoctor-converter.version}</version>
+      <scope>test</scope>
+  </dependency>
   </dependencies>
 
   <reporting>
     <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-changes-plugin</artifactId>
-        <version>${version-plugin-changes}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>changes-report</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
