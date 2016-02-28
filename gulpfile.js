@@ -27,6 +27,7 @@ gulp.task('html', ['styles'], function() {
     .pipe($.replace, 'bower_components/bootstrap/fonts', 'fonts');
 
   var assets = $.useref.assets({searchPath: '{target/.tmp,src/main/webapp}'});
+  var htmlmin = require('gulp-htmlmin');
 
   return gulp.src(pathApp + '/**/*.html')
     .pipe(assets)
@@ -35,7 +36,7 @@ gulp.task('html', ['styles'], function() {
     .pipe($.if('*.css', cssChannel()))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
+    .pipe($.if('*.html', htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest(pathFinal));
 });
 
