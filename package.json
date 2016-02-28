@@ -58,10 +58,6 @@
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1",
-    "pretest": "npm install",
-    "test": "karma start src/test/webapp/unit/karma.conf.js",
-    "test-single-run": "karma start src/test/webapp/unit/karma.conf.js  --single-run",
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
