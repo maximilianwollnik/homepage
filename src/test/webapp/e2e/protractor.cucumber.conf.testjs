@@ -1,11 +1,9 @@
 exports.config = {
-  allScriptsTimeout : 11000,
-
-  specs : [ '*.spec.js' ],
+  specs : [ '*.feature' 
+  ],
 
   multiCapabilities: [{
-    'browserName': 'firefox',
-     exclude: ['social.spec.js']
+    'browserName': 'firefox'
   }, {
     'browserName' : 'chrome',
     chromeOptions : {
@@ -23,9 +21,14 @@ exports.config = {
   baseUrl : 'http://maximilianwollnik.de:9001/',
   directConnect : true,
 
-  framework : 'jasmine',
+  framework : 'custom',
+  frameworkPath: require.resolve('protractor-cucumber-framework'),
 
-  jasmineNodeOpts : {
-    defaultTimeoutInterval : 30000
+  cucumberOpts: {
+    require: './step_definitions/**/*.js',
+    tags: '@ALL',
+    format: 'json:target/json-files/result.json',
+    profile: false,
+    'no-source': true
   }
 };
