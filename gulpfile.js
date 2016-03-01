@@ -107,7 +107,7 @@ gulp.task('wiredep', function() {
     .pipe(gulp.dest(pathApp));
 
   gulp.src(pathTest + '/*.js')
-    .pipe(wiredep())
+    .pipe(wiredep({ignorePath: '../../../../'}))
     .pipe(gulp.dest(pathTest));
 });
  
