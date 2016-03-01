@@ -6,4 +6,4 @@ _01/2004 - 12/2006_
 
 duales Studium der Wirtschaftsinformatik, Fachhochschule der Wirtschaft, Paderborn
 
-image:../src/main/webapp/assets/img/fhdw.png[fhdw, 150]
+image:../../main/webapp/assets/img/fhdw.png[fhdw, 150]

@@ -40,4 +40,4 @@
 Verhandlungssicher in Wort und Schrift
 
 |===
-image:../src/main/webapp/assets/img/about.jpg[about, 500]
+image:../../main/webapp/assets/img/about.jpg[about, 500]
