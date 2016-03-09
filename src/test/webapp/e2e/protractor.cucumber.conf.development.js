@@ -30,7 +30,7 @@ exports.config = {
 
   cucumberOpts: {
     require: './step_definitions/**/*.js',
-    tags: '@ALL',
+    tags:  ['@ALL', '~@ignore'],
     //format: 'json:result.json',
     profile: false,
     'no-source': true

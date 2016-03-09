@@ -45,3 +45,8 @@ Feature: Homepage main entry
     
   Scenario: Mobile Version
     Then the navigation should be changed into a toggle object
+    
+  @ignore
+  Scenario: Unknown link
+    When I navigate to "/a/b/c"
+    Then the title should equal "Maximilian Wollnik"
