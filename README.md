@@ -3,8 +3,62 @@ All source files for my private homepage
 
 # Version
 
-### 1.11.0 - 08/02/2016
+### 1.12.0 - 23/02/2016
 
+NEW
+===
+    ---------------------
+    added robots.txt
+    - for allowing search engines to check my homepage
+    - currently i don't have anything to hide
+    
+    ---------------------
+    pdf profile
+    - added link to download
+    
+    ---------------------
+    added files to create a pdf profile
+    - using asciidoctor-pdf to create pdf
+
+
+CHANGE
+======
+    ---------------------
+    new pdf profile layout
+    - adding different table style
+    - completed skill list
+    
+    ---------------------
+    removing profile from version
+    - the new version name contains the profile now
+    
+    ---------------------
+    creating new build process with jenkins
+    - using nexus for all artifacts
+    
+    ---------------------
+    moving conf-files to elk repository
+    - don't provide conf-file per build
+    
+    ---------------------
+    added background
+    - previously the image had a transparent layer
+    - added a grey background for pdf profile
+    
+    ---------------------
+    remove unneeded image
+    - only using own background image
+
+
+FIX
+===
+    ---------------------
+    new: added robots.txt
+    - for allowing search engines to check my homepage
+    - currently i don't have anything to hide
+
+
+### 1.11.0 - 08/02/2016
 
 CHANGE
 ======
