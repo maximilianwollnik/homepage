@@ -13,6 +13,7 @@ module.exports = function() {
         //    expect(result).to.have.lengthOf(3);    
         //    expect(result[2].getText()).to.eventually.contain(text).and.notify(callback);            
         //});
+        browser.sleep(500);
         expect(browser.getLocationAbsUrl()).to.eventually.contain('/home').and.notify(callback);
     });
     
@@ -36,6 +37,7 @@ module.exports = function() {
        
     this.When(/^the (.*) flag is clicked$/, function (flag, callback) {
         element(by.css('img[src*="assets/img/'+flag+'.png"]')).click();
+        browser.sleep(500);
         callback();
     });
     

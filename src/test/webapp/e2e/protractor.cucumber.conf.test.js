@@ -27,7 +27,7 @@ exports.config = {
   cucumberOpts: {
     require: './step_definitions/**/*.js',
     tags: '@ALL',
-    format: 'json:target/json-files/result.json',
+    format: 'json:cucumber-result.json',
     profile: false,
     'no-source': true
   }
