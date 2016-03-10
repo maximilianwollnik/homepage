@@ -11,3 +11,4 @@ dist
 COMMIT_FILE
 NEW_FILE
 /LOG_FILE_IS_UNDEFINE*
+/cucumber-result.json

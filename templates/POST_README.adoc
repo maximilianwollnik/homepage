@@ -1,2 +1,2 @@
 
-Copyright 2015 Maximilian Wollnik
+Copyright 2016 Maximilian Wollnik

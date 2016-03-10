@@ -1,5 +1,16 @@
-= homepage
+:toc: right
+:backend: html5
+:doctitle: Homepage
+:doctype: book
+:icons: font
+:!numbered:
+:!linkcss:
+:sectanchors:
+:sectlink:
+:docinfo:
+:toclevels: 2
+
+= Homepage
 All source files for my private homepage
 
-== Version
-
+== *Version*
