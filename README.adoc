@@ -1,7 +1,67 @@
-= homepage
+:toc: right
+:backend: html5
+:doctitle: Homepage
+:doctype: book
+:icons: font
+:!numbered:
+:!linkcss:
+:sectanchors:
+:sectlink:
+:docinfo:
+:toclevels: 2
+
+= Homepage
 All source files for my private homepage
 
-== Version
+== *Version*
+=== 1.12.0 - 11/03/2016
+
+==== NEW
+    ---------------------
+    http-status "not found" causes a redirect
+    - if an invalid url is executed the user is redirected to the main page
+
+
+==== CHANGE
+    ---------------------
+    finalizing new readme
+    - including cukedoctor into the final readme-file
+    
+    ---------------------
+    changing format from md to adoc
+    - preparing to use cukedoctor for cucumber report
+    
+    ---------------------
+    added cucumber testcases for 404
+    - testing unknown links
+    
+    ---------------------
+    using cucumber for e2e tests
+    - e2e tests changed to work with cucumber and features
+    
+    ---------------------
+    changes.xml not needed anymore
+    - changelog is handled via the commit messages
+    
+    ---------------------
+    restructured
+    - moving all source files to src
+
+
+==== FIX
+    ---------------------
+    redirecting 404 back to main entry
+    - adding own 404.html which redirects to /
+    
+    ---------------------
+    corrected bower folder
+    - need to ignore a certain string
+    - basePath is used to find components
+    
+    ---------------------
+    resetting mail form
+    - form was not resetted when the "x" button was pressed
+
 
 === 1.12.0 - 23/02/2016
 
@@ -96,7 +156,7 @@ All source files for my private homepage
     providing more information about my cv
     - added a detailed description of my life so far
 
-    
+
 ==== FIX
     ---------------------
     new: speeding up docker build
@@ -169,4 +229,1702 @@ All source files for my private homepage
 
 === 0.1.0 - 11/09/2015
 
-Copyright 2015 Maximilian Wollnik
+== *Summary*
+[cols="12*^m", options="header,footer"]
+|===
+3+|Scenarios 7+|Steps 2+|Features: 7
+
+|[green]#*Passed*#
+|[red]#*Failed*#
+|Total
+|[green]#*Passed*#
+|[red]#*Failed*#
+|[purple]#*Skipped*#
+|[maroon]#*Pending*#
+|[yellow]#*Undefined*#
+|[blue]#*Missing*#
+|Total
+|Duration
+|Status
+
+12+^|*<<Homepage-work-entry>>*
+|15
+|1
+|16
+|55
+|0
+|0
+|0
+|0
+|2
+|57
+|01m 31s 893ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-social-block>>*
+|12
+|1
+|13
+|54
+|0
+|0
+|0
+|0
+|2
+|56
+|51s 199ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-cv-entry>>*
+|15
+|2
+|17
+|54
+|1
+|5
+|0
+|0
+|2
+|62
+|01m 13s 996ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-disclaimer-entry>>*
+|13
+|1
+|14
+|47
+|0
+|0
+|0
+|0
+|2
+|49
+|46s 089ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-education-entry>>*
+|15
+|1
+|16
+|55
+|0
+|0
+|0
+|0
+|2
+|57
+|53s 823ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-skill-entry>>*
+|15
+|1
+|16
+|55
+|0
+|0
+|0
+|0
+|2
+|57
+|01m 16s 375ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-main-entry>>*
+|13
+|2
+|15
+|33
+|1
+|1
+|0
+|0
+|1
+|36
+|50s 389ms
+|[red]#*failed*#
+12+^|*Totals*
+|98|9|107|353|2|6|0|0|13|374 2+|07m 23s 766ms
+|===
+
+== *Features*
+
+[[Homepage-work-entry, Homepage work entry]]
+=== *Homepage work entry*
+
+minmax::Homepage-work-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see my work  +
+which gives an impression of some samples
+****
+
+==== Background
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "work" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: Work view
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 817ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(981ms)#
+And ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 762ms)#
+And ::
+"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(082ms)#
+****
+
+==== Scenario: Work view
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 217ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 186ms)#
+And ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 702ms)#
+And ::
+"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(053ms)#
+****
+
+==== Scenario: Basic work elements
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 055ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Muster should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 608ms)#
+****
+
+==== Scenario: Basic work elements
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 762ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Samples should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 573ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 243ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 078ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 856ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 532ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 605ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 276ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 529ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 988ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 131ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 671ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 996ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 313ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 649ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 060ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 458ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 634ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 466ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 737ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 683ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 559ms)#
+****
+
+==== Scenario: Samples is listed
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 153ms)#
+And ::
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+2 samples must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 422ms)#
+****
+
+[[Homepage-social-block, Homepage social block]]
+=== *Homepage social block*
+
+minmax::Homepage-social-block[]
+****
+As a visitor of the Homepage +
+I should be able to see my socials  +
+which shows all plattforms
+****
+
+==== Background
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "home" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: Social block
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 524ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+And ::
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+And ::
+I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 609ms)#
+Then ::
+Schreiben Sie mir eine Mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(076ms)#
+And ::
+I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+****
+
+==== Scenario: Social block
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 877ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+And ::
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+And ::
+I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 879ms)#
+Then ::
+Send me a mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(109ms)#
+And ::
+I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+****
+
+==== Scenario: Empty form
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 366ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+And ::
+I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 054ms)#
+And ::
+I click on the submit button icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+all form errors are shown icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 235ms)#
+And ::
+I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+****
+
+==== Scenario: Reset form
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 492ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+When ::
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+all form errors are resetted after reopening icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 980ms)#
+And ::
+I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+****
+
+==== Scenario: Wrong email
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 791ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+And ::
+I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 996ms)#
+And ::
+I enter an invalid email address icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+only email error is shown icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 230ms)#
+And ::
+I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 259ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 014ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 997ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(958ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 122ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 042ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 837ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(901ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 578ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 001ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 282ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 063ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 979ms)#
+And ::
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(887ms)#
+****
+
+[[Homepage-cv-entry, Homepage cv entry]]
+=== *Homepage cv entry*
+
+minmax::Homepage-cv-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see my cv  +
+which gives an overview of my life
+****
+
+==== Background
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "cv" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: CV view
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 008ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+And ::
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+When ::
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+And ::
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+Then ::
+CV.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+And ::
+"cvwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+****
+
+==== Scenario: CV view
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 480ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 160ms)#
+And ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+CV.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 066ms)#
+And ::
+"cvwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(152ms)#
+****
+
+==== Scenario: Timeline content
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 118ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 029ms)#
+****
+
+==== Scenario: Timeline content
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 626ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+That is should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 373ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 066ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 252ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 672ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 954ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 895ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 134ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 900ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 606ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 345ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(007ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 823ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 144ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 130ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 156ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 496ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 491ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 043ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 790ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 051ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 841ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 861ms)#
+****
+
+==== Scenario: Amount of experiences
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 808ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+Then ::
+"14" entries must be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 263ms)#
+****
+
+==== Scenario: Back navigation
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 669ms)#
+And ::
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+I click on the back button icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 516ms)#
+****
+
+[[Homepage-disclaimer-entry, Homepage disclaimer entry]]
+=== *Homepage disclaimer entry*
+
+minmax::Homepage-disclaimer-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see my disclaimer  +
+which gives an overview of the legal stuff
+****
+
+==== Background
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "disclaimer" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: Disclaimer view
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 795ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(011ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(524ms)#
+And ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 846ms)#
+And ::
+"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(057ms)#
+****
+
+==== Scenario: Disclaimer view
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 789ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(651ms)#
+And ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+Then ::
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 696ms)#
+And ::
+"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(080ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 816ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 437ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 839ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 145ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 804ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 164ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 088ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 296ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 922ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 253ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 607ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 005ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 223ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 192ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 985ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 170ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 596ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 287ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 997ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 188ms)#
+****
+
+==== Scenario: Amount of paragraphs
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 080ms)#
+And ::
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+"6" entries must be visible in the disclaimer icon:thumbs-up[role="green",title="Passed"] [small right]#(482ms)#
+****
+
+[[Homepage-education-entry, Homepage education entry]]
+=== *Homepage education entry*
+
+minmax::Homepage-education-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see my education  +
+which gives an overview of my education
+****
+
+==== Background
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "education" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: Education view
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 768ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(561ms)#
+And ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+Then ::
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 150ms)#
+And ::
+"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(088ms)#
+****
+
+==== Scenario: Education view
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 496ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(673ms)#
+And ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 562ms)#
+And ::
+"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(046ms)#
+****
+
+==== Scenario: Basic education elements
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 880ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Ausbildung should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 536ms)#
+****
+
+==== Scenario: Basic education elements
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 365ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+Then ::
+Education should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 305ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 686ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 794ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 265ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 975ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 978ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 086ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 644ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 025ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 715ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 031ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 300ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 138ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 577ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 164ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 158ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 267ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 244ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 531ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 922ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 315ms)#
+****
+
+==== Scenario: Education is listed
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 922ms)#
+And ::
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+FHDW must be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(597ms)#
+****
+
+[[Homepage-skill-entry, Homepage skill entry]]
+=== *Homepage skill entry*
+
+minmax::Homepage-skill-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see my skills  +
+which gives a first impression
+****
+
+==== Background
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+And ::
+I select "skill" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: Work view
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 933ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 272ms)#
+And ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 002ms)#
+And ::
+"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(079ms)#
+****
+
+==== Scenario: Work view
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 100ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+When ::
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 735ms)#
+And ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+Then ::
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 912ms)#
+And ::
+"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(059ms)#
+****
+
+==== Scenario: Basic skill elements
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 124ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 198ms)#
+****
+
+==== Scenario: Basic skill elements
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 088ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 427ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 691ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 384ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 059ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 472ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 704ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 177ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 512ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 937ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 986ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 626ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 814ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 589ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 023ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 834ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 086ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 413ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 913ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 532ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 078ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 429ms)#
+****
+
+==== Scenario: Samples is listed
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 523ms)#
+And ::
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+10 skills must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(601ms)#
+****
+
+[[Homepage-main-entry, Homepage main entry]]
+=== *Homepage main entry*
+
+minmax::Homepage-main-entry[]
+****
+As a visitor of the Homepage +
+I should be able to see a welcome screen  +
+which gives a first impression
+****
+
+==== Background
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+****
+
+==== Scenario: First View
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 524ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(951ms)#
+And ::
+Entwickler should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(456ms)#
+****
+
+==== Scenario: First View
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 680ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+Then ::
+the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(783ms)#
+And ::
+Developer should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(233ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 882ms)#
+When ::
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 775ms)#
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 456ms)#
+When ::
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+Then ::
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 613ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 297ms)#
+Then ::
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(557ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 034ms)#
+Then ::
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(582ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 914ms)#
+Then ::
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(651ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 200ms)#
+Then ::
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 430ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 806ms)#
+Then ::
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(593ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 383ms)#
+Then ::
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(608ms)#
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 896ms)#
+Then ::
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(581ms)#
+****
+
+==== Scenario: Footer information
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 789ms)#
+Then ::
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(587ms)#
+****
+
+==== Scenario: Mobile Version
+[small]#tags: @ALL,@HOME#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 713ms)#
+Then ::
+the navigation should be changed into a toggle object icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 182ms)#
+****
+
+==== Scenario: Unknown link
+[small]#tags: @ALL,@HOME,@ignore#
+
+
+****
+Given ::
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 208ms)#
+When ::
+I navigate to "/a/b/c" icon:thumbs-down[role="red",title="Failed"] [small right]#(03s)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at new bot.Error (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/error.js:108:18)
+    at Object.bot.response.checkResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/response.js:109:9)
+    at /var/jenkins_home/sharedspace/node_modules/protractor/node_mo...
+
+Then ::
+the title should equal "Maximilian Wollnik" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+****
+
+
+Copyright 2016 Maximilian Wollnik

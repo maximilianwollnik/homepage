@@ -1,3 +1,52 @@
+=== 1.12.0 - 11/03/2016
+
+==== NEW
+    ---------------------
+    http-status "not found" causes a redirect
+    - if an invalid url is executed the user is redirected to the main page
+
+
+==== CHANGE
+    ---------------------
+    finalizing new readme
+    - including cukedoctor into the final readme-file
+    
+    ---------------------
+    changing format from md to adoc
+    - preparing to use cukedoctor for cucumber report
+    
+    ---------------------
+    added cucumber testcases for 404
+    - testing unknown links
+    
+    ---------------------
+    using cucumber for e2e tests
+    - e2e tests changed to work with cucumber and features
+    
+    ---------------------
+    changes.xml not needed anymore
+    - changelog is handled via the commit messages
+    
+    ---------------------
+    restructured
+    - moving all source files to src
+
+
+==== FIX
+    ---------------------
+    redirecting 404 back to main entry
+    - adding own 404.html which redirects to /
+    
+    ---------------------
+    corrected bower folder
+    - need to ignore a certain string
+    - basePath is used to find components
+    
+    ---------------------
+    resetting mail form
+    - form was not resetted when the "x" button was pressed
+
+
 === 1.12.0 - 23/02/2016
 
 ==== NEW
