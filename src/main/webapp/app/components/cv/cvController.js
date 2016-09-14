@@ -66,6 +66,16 @@ angular.module('homepage.cv', [ 'angular-timeline' ])
   }, {
     badgeClass : 'primary',
     badgeIconClass : 'glyphicon-edit',
+    title : 'CV.EVENTS.DIEBOLD_NIXDORF.TITLE',
+    role : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE',
+    activity : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ACTIVITY',
+    task : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.TASK',
+    dev_env : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.DEV_ENV',
+    component : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.COMPONENT',
+    technology : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.TECHNOLOGY'
+  }, {
+    badgeClass : 'primary',
+    badgeIconClass : 'glyphicon-check',
     title : 'CV.EVENTS.WINCOR_NIXDORF.TITLE',
     role : 'CV.EVENTS.WINCOR_NIXDORF.CONTENT.ROLE',
     activity : 'CV.EVENTS.WINCOR_NIXDORF.CONTENT.ACTIVITY',
