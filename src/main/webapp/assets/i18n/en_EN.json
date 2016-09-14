@@ -152,8 +152,19 @@
           "TECHNOLOGY":"JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"
         }
       },
-      "WINCORNIXDORF":{
-        "TITLE":"2007 - Today: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
+      "DIEBOLD_NIXDORF":{
+        "TITLE":"09/2016 - Today: <a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>",
+        "CONTENT":{
+          "ROLE":"Developer/Architect/IT Consultant",
+          "ACTIVITY":"Software development, Software integration",
+          "TASK":"Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of new transactions<br>- Development of new UIs<br>- Continous integration<br>- Consultant<br>- Maintenance<br>- Training",
+          "DEV_ENV":"Eclipse, Webstorm, Visual Studio",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, MKS, SVN, Docker, Vagrant",
+          "TECHNOLOGY":"JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO"
+        }
+      },
+      "WINCOR_NIXDORF":{
+        "TITLE":"03/2007 - 08/2016: <a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>",
         "CONTENT":{
           "ROLE":"Developer/Architect/IT Consultant",
           "ACTIVITY":"Software development, Software integration",

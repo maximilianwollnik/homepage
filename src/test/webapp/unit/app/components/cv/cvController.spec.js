@@ -21,8 +21,8 @@ describe('homepage.cv', function() {
       expect(scope.explanations.length).toBe(4);
     });
 
-    it('and the event array must have the length 10', function() {
-      expect(scope.events.length).toBe(10);
+    it('and the event array must have the length 11', function() {
+      expect(scope.events.length).toBe(11);
     });
 
   });

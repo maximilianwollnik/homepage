@@ -55,7 +55,7 @@ Feature: Homepage cv entry
     Then a footer must be available
   
   Scenario: Amount of experiences
-    Then "14" entries must be visible in the timeline
+    Then "15" entries must be visible in the timeline
     
   Scenario Outline: Back navigation
     And I select "skill"
