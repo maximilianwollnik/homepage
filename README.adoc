@@ -14,6 +14,14 @@
 All source files for my private homepage
 
 == *Version*
+=== 1.14.0 - 14/09/2016
+
+==== NEW
+    ---------------------
+    updated CV
+    - added Diebold Nixdorf
+
+
 === 1.12.0 - 11/03/2016
 
 ==== NEW
@@ -229,6 +237,8 @@ All source files for my private homepage
 
 === 0.1.0 - 11/09/2015
 
+= *Living Documentation*
+
 == *Summary*
 [cols="12*^m", options="header,footer"]
 |===
@@ -247,812 +257,580 @@ All source files for my private homepage
 |Duration
 |Status
 
-12+^|*<<Homepage-work-entry>>*
-|15
-|1
-|16
-|55
-|0
-|0
-|0
-|0
-|2
-|57
-|01m 31s 893ms
-|[red]#*failed*#
-
-12+^|*<<Homepage-social-block>>*
-|12
-|1
-|13
-|54
-|0
-|0
-|0
-|0
-|2
-|56
-|51s 199ms
-|[red]#*failed*#
-
 12+^|*<<Homepage-cv-entry>>*
-|15
-|2
+|0
 |17
-|54
-|1
-|5
+|17
+|0
+|16
+|44
 |0
 |0
 |2
 |62
-|01m 13s 996ms
+|13s 327ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-disclaimer-entry>>*
-|13
-|1
+|0
 |14
-|47
+|14
 |0
-|0
+|13
+|34
 |0
 |0
 |2
 |49
-|46s 089ms
+|10s 510ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-education-entry>>*
-|15
-|1
+|0
 |16
-|55
+|16
 |0
-|0
+|15
+|40
 |0
 |0
 |2
 |57
-|53s 823ms
-|[red]#*failed*#
-
-12+^|*<<Homepage-skill-entry>>*
-|15
-|1
-|16
-|55
-|0
-|0
-|0
-|0
-|2
-|57
-|01m 16s 375ms
+|12s 109ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-main-entry>>*
-|13
-|2
+|0
 |15
-|33
-|1
-|1
+|15
+|0
+|14
+|21
 |0
 |0
 |1
 |36
-|50s 389ms
+|10s 990ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-skill-entry>>*
+|0
+|16
+|16
+|0
+|15
+|40
+|0
+|0
+|2
+|57
+|12s 683ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-social-block>>*
+|0
+|13
+|13
+|0
+|12
+|42
+|0
+|0
+|2
+|56
+|08s 804ms
+|[red]#*failed*#
+
+12+^|*<<Homepage-work-entry>>*
+|0
+|16
+|16
+|0
+|15
+|40
+|0
+|0
+|2
+|57
+|11s 095ms
 |[red]#*failed*#
 12+^|*Totals*
-|98|9|107|353|2|6|0|0|13|374 2+|07m 23s 766ms
+|0|107|107|0|100|261|0|0|13|374 2+|01m 19s 522ms
 |===
 
 == *Features*
-
-[[Homepage-work-entry, Homepage work entry]]
-=== *Homepage work entry*
-
-minmax::Homepage-work-entry[]
-****
-As a visitor of the Homepage +
-I should be able to see my work  +
-which gives an impression of some samples
-****
-
-==== Background
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
-And ::
-I select "work" icon:thumbs-down[role="blue",title="Missing"]
-****
-
-==== Scenario: Work view
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 817ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(981ms)#
-And ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 762ms)#
-And ::
-"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(082ms)#
-****
-
-==== Scenario: Work view
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 217ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 186ms)#
-And ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 702ms)#
-And ::
-"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(053ms)#
-****
-
-==== Scenario: Basic work elements
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 055ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Muster should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 608ms)#
-****
-
-==== Scenario: Basic work elements
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 762ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Samples should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 573ms)#
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 243ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 078ms)#
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 856ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 532ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 605ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
-Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 276ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 529ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 988ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 131ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 671ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 996ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 313ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 649ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 060ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 458ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 634ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 466ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 737ms)#
-****
-
-==== Scenario: Footer information
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 683ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 559ms)#
-****
-
-==== Scenario: Samples is listed
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 153ms)#
-And ::
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-2 samples must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 422ms)#
-****
-
-[[Homepage-social-block, Homepage social block]]
-=== *Homepage social block*
-
-minmax::Homepage-social-block[]
-****
-As a visitor of the Homepage +
-I should be able to see my socials  +
-which shows all plattforms
-****
-
-==== Background
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
-And ::
-I select "home" icon:thumbs-down[role="blue",title="Missing"]
-****
-
-==== Scenario: Social block
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 524ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-And ::
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-And ::
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 609ms)#
-Then ::
-Schreiben Sie mir eine Mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(076ms)#
-And ::
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-****
-
-==== Scenario: Social block
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 877ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-And ::
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-And ::
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 879ms)#
-Then ::
-Send me a mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(109ms)#
-And ::
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-****
-
-==== Scenario: Empty form
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 366ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-And ::
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 054ms)#
-And ::
-I click on the submit button icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-Then ::
-all form errors are shown icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 235ms)#
-And ::
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-****
-
-==== Scenario: Reset form
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 492ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-When ::
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-all form errors are resetted after reopening icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 980ms)#
-And ::
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-****
-
-==== Scenario: Wrong email
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 791ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-When ::
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-And ::
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 996ms)#
-And ::
-I enter an invalid email address icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-Then ::
-only email error is shown icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 230ms)#
-And ::
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 259ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 014ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 997ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(958ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 122ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 042ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 837ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(901ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 578ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 001ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 282ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 063ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 979ms)#
-And ::
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(887ms)#
-****
 
 [[Homepage-cv-entry, Homepage cv entry]]
 === *Homepage cv entry*
 
 minmax::Homepage-cv-entry[]
 ****
-As a visitor of the Homepage +
-I should be able to see my cv  +
+As a visitor of the Homepage
+I should be able to see my cv 
 which gives an overview of my life
 ****
 
-==== Background
+==== Background icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
+=====
 I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
 And ::
+=====
 I select "cv" icon:thumbs-down[role="blue",title="Missing"]
+=====
 ****
 
-==== Scenario: CV view
+==== Scenario: CV view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 008ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 418ms)#
 
-IMPORTANT: Error: Step timed out after 5000 milliseconds
-    at Timer.listOnTimeout (timers.js:92:15)
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
+=====
 I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
+=====
 I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
+=====
 the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
+=====
 CV.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
+=====
 "cvwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: CV view
+==== Scenario: CV view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 480ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(738ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 160ms)#
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-CV.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 066ms)#
+=====
+CV.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-"cvwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(152ms)#
+=====
+"cvwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Timeline content
+==== Scenario: Timeline content icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 118ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(765ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 029ms)#
+=====
+Das habe should be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Timeline content
+==== Scenario: Timeline content icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 626ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(832ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-That is should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 373ms)#
+=====
+That is should be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 066ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(721ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 252ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 672ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(772ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 954ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 895ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(796ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 134ms)#
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 900ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(992ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 606ms)#
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 345ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(769ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(007ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 823ms)#
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 144ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(962ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 130ms)#
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 156ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(747ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 496ms)#
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 491ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(756ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 043ms)#
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 790ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(814ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 051ms)#
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Footer information
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 841ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(826ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 861ms)#
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Amount of experiences
+==== Scenario: Amount of experiences icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 808ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(707ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-"14" entries must be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 263ms)#
+=====
+"15" entries must be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Back navigation
+==== Scenario: Back navigation icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 669ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(705ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I click on the back button icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+I click on the back button icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 516ms)#
+=====
+Das habe should be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
 [[Homepage-disclaimer-entry, Homepage disclaimer entry]]
@@ -1060,205 +838,381 @@ Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Pa
 
 minmax::Homepage-disclaimer-entry[]
 ****
-As a visitor of the Homepage +
-I should be able to see my disclaimer  +
+As a visitor of the Homepage
+I should be able to see my disclaimer 
 which gives an overview of the legal stuff
 ****
 
-==== Background
+==== Background icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
+=====
 I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
 And ::
+=====
 I select "disclaimer" icon:thumbs-down[role="blue",title="Missing"]
+=====
 ****
 
-==== Scenario: Disclaimer view
+==== Scenario: Disclaimer view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 795ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(762ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(011ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(524ms)#
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 846ms)#
+=====
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(057ms)#
+=====
+"disclaimerwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Disclaimer view
+==== Scenario: Disclaimer view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 789ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(955ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(651ms)#
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 696ms)#
+=====
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(080ms)#
+=====
+"disclaimerwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 816ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(946ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 437ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 839ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(765ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 145ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 804ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(758ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 164ms)#
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 088ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(767ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 296ms)#
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 922ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(714ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 253ms)#
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 607ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(734ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 005ms)#
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 223ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(782ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 192ms)#
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 985ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(817ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 170ms)#
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 596ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 137ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 287ms)#
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Footer information
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 997ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(685ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 188ms)#
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Amount of paragraphs
+==== Scenario: Amount of paragraphs icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@DISCLAIMER#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 080ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(683ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "disclaimer" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-"6" entries must be visible in the disclaimer icon:thumbs-up[role="green",title="Passed"] [small right]#(482ms)#
+=====
+"6" entries must be visible in the disclaimer icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
 [[Homepage-education-entry, Homepage education entry]]
@@ -1266,471 +1220,439 @@ Then ::
 
 minmax::Homepage-education-entry[]
 ****
-As a visitor of the Homepage +
-I should be able to see my education  +
+As a visitor of the Homepage
+I should be able to see my education 
 which gives an overview of my education
 ****
 
-==== Background
+==== Background icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
+=====
 I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
 And ::
+=====
 I select "education" icon:thumbs-down[role="blue",title="Missing"]
+=====
 ****
 
-==== Scenario: Education view
+==== Scenario: Education view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 768ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(777ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(561ms)#
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 150ms)#
+=====
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(088ms)#
+=====
+"educationwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Education view
+==== Scenario: Education view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 496ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(856ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(673ms)#
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 562ms)#
+=====
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(046ms)#
+=====
+"educationwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Basic education elements
+==== Scenario: Basic education elements icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 880ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(766ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Ausbildung should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 536ms)#
+=====
+Ausbildung should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Basic education elements
+==== Scenario: Basic education elements icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 365ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(895ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Education should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 305ms)#
+=====
+Education should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 686ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(746ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 794ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 265ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(982ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 975ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 978ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 020ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 086ms)#
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 644ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(704ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 025ms)#
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 715ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(698ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 031ms)#
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 300ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(814ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 138ms)#
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 577ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(669ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 164ms)#
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 158ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(701ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 267ms)#
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 244ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(731ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 531ms)#
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Footer information
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 922ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(714ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 315ms)#
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Education is listed
+==== Scenario: Education is listed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 922ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 028ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 And ::
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+I select "education" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-FHDW must be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(597ms)#
-****
-
-[[Homepage-skill-entry, Homepage skill entry]]
-=== *Homepage skill entry*
-
-minmax::Homepage-skill-entry[]
-****
-As a visitor of the Homepage +
-I should be able to see my skills  +
-which gives a first impression
-****
-
-==== Background
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
-And ::
-I select "skill" icon:thumbs-down[role="blue",title="Missing"]
-****
-
-==== Scenario: Work view
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 933ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 272ms)#
-And ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-Then ::
-SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 002ms)#
-And ::
-"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(079ms)#
-****
-
-==== Scenario: Work view
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 100ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-When ::
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 735ms)#
-And ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-Then ::
-SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 912ms)#
-And ::
-"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(059ms)#
-****
-
-==== Scenario: Basic skill elements
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 124ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
-When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 198ms)#
-****
-
-==== Scenario: Basic skill elements
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 088ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 427ms)#
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 691ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 384ms)#
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 059ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 472ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 704ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
-Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 177ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 512ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 937ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 986ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
-Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 626ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 814ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 589ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 023ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 834ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 086ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 413ms)#
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 913ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 532ms)#
-****
-
-==== Scenario: Footer information
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 078ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 429ms)#
-****
-
-==== Scenario: Samples is listed
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 523ms)#
-And ::
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-Then ::
-10 skills must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(601ms)#
+=====
+FHDW must be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
 [[Homepage-main-entry, Homepage main entry]]
@@ -1738,192 +1660,1619 @@ Then ::
 
 minmax::Homepage-main-entry[]
 ****
-As a visitor of the Homepage +
-I should be able to see a welcome screen  +
+As a visitor of the Homepage
+I should be able to see a welcome screen 
 which gives a first impression
 ****
 
-==== Background
+==== Background icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
+=====
 I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
 ****
 
-==== Scenario: First View
+==== Scenario: First View icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 524ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(938ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(951ms)#
+=====
+the title should equal "Maximilian Wollnik" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-Entwickler should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(456ms)#
+=====
+Entwickler should be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: First View
+==== Scenario: First View icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 680ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(715ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(783ms)#
+=====
+the title should equal "Maximilian Wollnik" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 And ::
-Developer should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(233ms)#
+=====
+Developer should be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 882ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(875ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 When ::
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 775ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 456ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(865ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 When ::
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 613ms)#
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 297ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(722ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(557ms)#
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 034ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(733ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(582ms)#
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 914ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(730ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(651ms)#
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 200ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(767ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 430ms)#
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 806ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(963ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(593ms)#
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 383ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(707ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(608ms)#
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 896ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(745ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(581ms)#
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Footer information
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 789ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(791ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(587ms)#
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Mobile Version
+==== Scenario: Mobile Version icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 713ms)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(711ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
 Then ::
-the navigation should be changed into a toggle object icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 182ms)#
+=====
+the navigation should be changed into a toggle object icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
-==== Scenario: Unknown link
+==== Scenario: Unknown link icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@HOME,@ignore#
 
 
 ****
 Given ::
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 208ms)#
-When ::
-I navigate to "/a/b/c" icon:thumbs-down[role="red",title="Failed"] [small right]#(03s)#
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(721ms)#
 
 IMPORTANT: JavascriptError: angular is not defined
-    at new bot.Error (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/error.js:108:18)
-    at Object.bot.response.checkResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/lib/atoms/response.js:109:9)
-    at /var/jenkins_home/sharedspace/node_modules/protractor/node_mo...
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
 
+=====
+When ::
+=====
+I navigate to "/a/b/c" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 Then ::
+=====
 the title should equal "Maximilian Wollnik" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+[[Homepage-skill-entry, Homepage skill entry]]
+=== *Homepage skill entry*
+
+minmax::Homepage-skill-entry[]
+****
+As a visitor of the Homepage
+I should be able to see my skills 
+which gives a first impression
+****
+
+==== Background icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="blue",title="Missing"]
+=====
+****
+
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(819ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+"skillwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(699ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+"skillwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Basic skill elements icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 014ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Angular should be visible in the carousel icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Basic skill elements icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 489ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Angular should be visible in the carousel icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(775ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(820ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(743ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(796ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(741ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(704ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(740ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 093ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(793ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(688ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Samples is listed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(761ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "skill" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+10 skills must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+[[Homepage-social-block, Homepage social block]]
+=== *Homepage social block*
+
+minmax::Homepage-social-block[]
+****
+As a visitor of the Homepage
+I should be able to see my socials 
+which shows all plattforms
+****
+
+==== Background icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="blue",title="Missing"]
+=====
+****
+
+==== Scenario: Social block icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(949ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the envelope icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Schreiben Sie mir eine Mail should be visible in the mail form icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social block icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(713ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the envelope icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Send me a mail should be visible in the mail form icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Empty form icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(697ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the envelope icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the submit button icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+all form errors are shown icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Reset form icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(673ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+all form errors are resetted after reopening icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Wrong email icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(702ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the envelope icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I enter an invalid email address icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+only email error is shown icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(764ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(704ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(687ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(703ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(753ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(749ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(706ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+[[Homepage-work-entry, Homepage work entry]]
+=== *Homepage work entry*
+
+minmax::Homepage-work-entry[]
+****
+As a visitor of the Homepage
+I should be able to see my work 
+which gives an impression of some samples
+****
+
+==== Background icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="blue",title="Missing"]
+=====
+****
+
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(746ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+"workwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(759ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+"workwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Basic work elements icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 009ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Muster should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Basic work elements icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(691ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Samples should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(732ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(684ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(688ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(667ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(705ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to github should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(654ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(673ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(687ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(936ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(753ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a footer must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Samples is listed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(706ms)#
+
+IMPORTANT: JavascriptError: angular is not defined
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at JavascriptError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:180:10)
+    at Object.checkLegacyResponse (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/seleni...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+2 samples must be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
 ****
 
 
