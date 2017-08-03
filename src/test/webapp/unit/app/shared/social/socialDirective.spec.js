@@ -28,10 +28,11 @@ describe(
       }));
 
       describe('loads the social directive', function() {
-        it('and our social container must be available', function() {
+        it('and our social container must be available with multiple fa-elements', function() {
           var element = $compile("<social></social>")($rootScope);
           $rootScope.$digest();
           expect(element.html()).toContain("div class=\"container-fluid\"");
+		  expect(element.find(".fa").length).toBe(8);
         });
       });
     });

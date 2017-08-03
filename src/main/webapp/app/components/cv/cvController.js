@@ -6,6 +6,26 @@ angular.module('homepage.cv', [ 'angular-timeline' ])
   $scope.events = [ {
     badgeClass : 'info',
     badgeIconClass : 'glyphicon-edit',
+    title : 'CV.EVENTS.OCBC.TITLE',
+    role : 'CV.EVENTS.OCBC.CONTENT.ROLE',
+    activity : 'CV.EVENTS.OCBC.CONTENT.ACTIVITY',
+    task : 'CV.EVENTS.OCBC.CONTENT.TASK',
+    dev_env : 'CV.EVENTS.OCBC.CONTENT.DEV_ENV',
+    component : 'CV.EVENTS.OCBC.CONTENT.COMPONENT',
+    technology : 'CV.EVENTS.OCBC.CONTENT.TECHNOLOGY'
+  },{
+    badgeClass : 'info',
+    badgeIconClass : 'glyphicon-check',
+    title : 'CV.EVENTS.HSBC_2.TITLE',
+    role : 'CV.EVENTS.HSBC_2.CONTENT.ROLE',
+    activity : 'CV.EVENTS.HSBC_2.CONTENT.ACTIVITY',
+    task : 'CV.EVENTS.HSBC_2.CONTENT.TASK',
+    dev_env : 'CV.EVENTS.HSBC_2.CONTENT.DEV_ENV',
+    component : 'CV.EVENTS.HSBC_2.CONTENT.COMPONENT',
+    technology : 'CV.EVENTS.HSBC_2.CONTENT.TECHNOLOGY'
+  },{
+    badgeClass : 'info',
+    badgeIconClass : 'glyphicon-check',
     title : 'CV.EVENTS.CBA_2.TITLE',
     role : 'CV.EVENTS.CBA_2.CONTENT.ROLE',
     activity : 'CV.EVENTS.CBA_2.CONTENT.ACTIVITY',
@@ -46,13 +66,13 @@ angular.module('homepage.cv', [ 'angular-timeline' ])
   }, {
     badgeClass : 'info',
     badgeIconClass : 'glyphicon-check',
-    title : 'CV.EVENTS.HSBC.TITLE',
-    role : 'CV.EVENTS.HSBC.CONTENT.ROLE',
-    activity : 'CV.EVENTS.HSBC.CONTENT.ACTIVITY',
-    task : 'CV.EVENTS.HSBC.CONTENT.TASK',
-    dev_env : 'CV.EVENTS.HSBC.CONTENT.DEV_ENV',
-    component : 'CV.EVENTS.HSBC.CONTENT.COMPONENT',
-    technology : 'CV.EVENTS.HSBC.CONTENT.TECHNOLOGY'
+    title : 'CV.EVENTS.HSBC_1.TITLE',
+    role : 'CV.EVENTS.HSBC_1.CONTENT.ROLE',
+    activity : 'CV.EVENTS.HSBC_1.CONTENT.ACTIVITY',
+    task : 'CV.EVENTS.HSBC_1.CONTENT.TASK',
+    dev_env : 'CV.EVENTS.HSBC_1.CONTENT.DEV_ENV',
+    component : 'CV.EVENTS.HSBC_1.CONTENT.COMPONENT',
+    technology : 'CV.EVENTS.HSBC_1.CONTENT.TECHNOLOGY'
   }, {
     badgeClass : 'info',
     badgeIconClass : 'glyphicon-check',
@@ -74,7 +94,7 @@ angular.module('homepage.cv', [ 'angular-timeline' ])
     component : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.COMPONENT',
     technology : 'CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.TECHNOLOGY'
   }, {
-    badgeClass : 'primary',
+    badgeClass : 'success',
     badgeIconClass : 'glyphicon-check',
     title : 'CV.EVENTS.WINCOR_NIXDORF.TITLE',
     role : 'CV.EVENTS.WINCOR_NIXDORF.CONTENT.ROLE',

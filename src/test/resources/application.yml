@@ -21,9 +21,5 @@ security:
     name: user
     password: password
 
-eureka:
-  client:
-    enabled: false
-
 logging:
   file: /tmp/homepage.log

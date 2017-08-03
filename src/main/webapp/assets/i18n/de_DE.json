@@ -97,7 +97,7 @@
           "TECHNOLOGY":"C++, HTML, CSS, JQuery"
         }
       },
-      "HSBC":{
+      "HSBC_1":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
         "CONTENT":{
           "ROLE":"Softwareentwickler",
@@ -106,6 +106,17 @@
           "DEV_ENV":"Visual Studio 2005",
           "COMPONENT":"MKS",
           "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
+      },
+      "HSBC_2":{
+        "TITLE":"07/2016 - 02/2017: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
+        "CONTENT":{
+          "ROLE":"IT Berater/Architekt",
+          "ACTIVITY":"Softwareintegration",
+          "TASK":"Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Kartenlose Einzahlungen für Scheine, Münzen und Schecks",
+          "DEV_ENV":"Eclipse 4.6, Webstorm 11",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven",
+          "TECHNOLOGY":"JSE, JMockit"
         }
       },
       "BANKDATA":{
@@ -130,8 +141,8 @@
           "TECHNOLOGY":"JSE, C++, HTML, CSS, JQuery, Axis2"
         }
       },
-	    "CBA_2":{
-        "TITLE":"10/2015 - Heute: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+	  "CBA_2":{
+        "TITLE":"10/2015 - 06/2016: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
         "CONTENT":{
           "ROLE":"IT Berater/Architekt",
           "ACTIVITY":"Softwareintegration",
@@ -150,6 +161,17 @@
           "DEV_ENV":"Eclipse 4.3, Webstorm 10",
           "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven",
           "TECHNOLOGY":"JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"
+        }
+      },
+	  "OCBC":{
+        "TITLE":"02/2017 - Heute: <a href=\"https://www.ocbc.com\" target=\"_blank\">Oversea-Chinese Banking Corporation</a>",
+        "CONTENT":{
+          "ROLE":"IT Berater/Architekt",
+          "ACTIVITY":"Entwicklungsleiter",
+          "TASK":"Erstellung einer Kiosklösung für eine Filiale der Zukunft:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests",
+          "DEV_ENV":"Eclipse 4.6, Webstorm 11",
+          "COMPONENT":"Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence",
+          "TECHNOLOGY":"JSE, JMockit"
         }
       },
       "DIEBOLD_NIXDORF":{

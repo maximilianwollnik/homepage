@@ -10,7 +10,7 @@ angular.module('homepage.work', [])
   }, {
     "header" : "WORK.BODY.CBA.DEPOSIT.HEADER",
     "text" : "WORK.BODY.CBA.DEPOSIT.TEXT",
-    "src" : "https://www.youtube.com/embed/0yI9V7eJO6w"
+    "src" : "https://www.youtube.com/embed/e0YImevrT3k"
   } ];
   $scope.trustSrc = function(src) {
     return $sce.trustAsResourceUrl(src);

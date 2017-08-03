@@ -97,7 +97,7 @@
           "TECHNOLOGY":"C++, HTML, CSS, JQuery"
         }
       },
-      "HSBC":{
+      "HSBC_1":{
         "TITLE":"05/2008 - 12/2008: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
         "CONTENT":{
           "ROLE":"Developer",
@@ -106,6 +106,17 @@
           "DEV_ENV":"Visual Studio 2005",
           "COMPONENT":"MKS",
           "TECHNOLOGY":"C++, HTML, CSS, JQuery"
+        }
+      },
+      "HSBC_2":{
+        "TITLE":"05/2008 - 02/2017: <a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>",
+        "CONTENT":{
+          "ROLE":"IT Consultant/Architect",
+          "ACTIVITY":"Software integration",
+          "TASK":"Development of new components for an existing self service application:<br>- Cardless deposit for high amount of notes, coins and cheques",
+          "DEV_ENV":"Eclipse 4.6, Webstorm 11",
+          "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven, Docker",
+          "TECHNOLOGY":"JSE, JMockit"
         }
       },
       "BANKDATA":{
@@ -131,7 +142,7 @@
         }
       },
       "CBA_2":{
-        "TITLE":"10/2015 - Today: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
+        "TITLE":"10/2015 - 06/2016: <a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>",
         "CONTENT":{
           "ROLE":"IT Consultant/Architect",
           "ACTIVITY":"Software integration",
@@ -150,6 +161,17 @@
           "DEV_ENV":"Eclipse 4.3, Webstorm 10",
           "COMPONENT":"Jenkins, Git, Nexus, Sonarqube, Maven",
           "TECHNOLOGY":"JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"
+        }
+      },
+      "OCBC":{
+        "TITLE":"02/2017 - Today: <a href=\"https://www.ocbc.com\" target=\"_blank\">Oversea-Chinese Banking Corporation</a>",
+        "CONTENT":{
+          "ROLE":"IT Consultant/Architect",
+          "ACTIVITY":"Lead Development",
+          "TASK":"Development of a kiosk-terminal application for a branch of the future:<br>- Agile<br>- Scrum<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests",
+          "DEV_ENV":"Eclipse 4.6, Webstorm 11",
+          "COMPONENT":"Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence",
+          "TECHNOLOGY":"JSE, JMockit"
         }
       },
       "DIEBOLD_NIXDORF":{
