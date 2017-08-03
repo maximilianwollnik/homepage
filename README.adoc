@@ -16,26 +16,11 @@ All source files for my private homepage
 == *Version*
 === 1.15.0 - 03/08/2017
 
-==== NEW
-    ---------------------
-    chg: cv-update
-    - adding latest projects
-    - removing eureka
-
-
 ==== CHANGE
     ---------------------
     cv-update
     - adding latest projects
     - removing eureka
-
-
-==== FIX
-    ---------------------
-    chg: cv-update
-    - adding latest projects
-    - removing eureka
-
 
 === 1.14.0 - 14/09/2016
 
