@@ -14,13 +14,44 @@
 All source files for my private homepage
 
 == *Version*
-=== 1.15.0 - 03/08/2017
+=== 1.14.0 - 20/08/2017
+
+==== CHANGE
+    ---------------------
+    added projects to doc
+    - syncing doc with homepage
+
+
+==== FIX
+    ---------------------
+    history
+    
+    ---------------------
+    version
+
+
+=== 1.14.0 - 03/08/2017
+
+==== NEW
+    ---------------------
+    chg: cv-update
+    - adding latest projects
+    - removing eureka
+
 
 ==== CHANGE
     ---------------------
     cv-update
     - adding latest projects
     - removing eureka
+
+
+==== FIX
+    ---------------------
+    chg: cv-update
+    - adding latest projects
+    - removing eureka
+
 
 === 1.14.0 - 14/09/2016
 
@@ -266,17 +297,17 @@ All source files for my private homepage
 |Status
 
 12+^|*<<Homepage-cv-entry>>*
-|14
-|3
+|8
+|9
 |17
-|53
-|2
-|5
+|33
+|8
+|19
 |0
 |0
 |2
 |62
-|01m 26s 686ms
+|01m 31s 795ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-disclaimer-entry>>*
@@ -290,7 +321,7 @@ All source files for my private homepage
 |0
 |2
 |49
-|52s 710ms
+|01m 04s 612ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-education-entry>>*
@@ -304,7 +335,7 @@ All source files for my private homepage
 |0
 |2
 |57
-|01m 02s 705ms
+|01m 14s 035ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-main-entry>>*
@@ -318,7 +349,7 @@ All source files for my private homepage
 |0
 |1
 |36
-|54s 558ms
+|57s 627ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-skill-entry>>*
@@ -332,38 +363,38 @@ All source files for my private homepage
 |0
 |2
 |57
-|01m 07s 360ms
+|01m 19s 923ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-social-block>>*
-|12
-|1
+|8
+|5
 |13
-|54
-|0
-|0
+|39
+|4
+|11
 |0
 |0
 |2
 |56
-|48s 833ms
+|01m 05s 317ms
 |[red]#*failed*#
 
 12+^|*<<Homepage-work-entry>>*
-|14
-|2
+|3
+|13
 |16
-|54
-|1
-|0
+|18
+|12
+|25
 |0
 |0
 |2
 |57
-|01m 31s 748ms
+|01m 32s 591ms
 |[red]#*failed*#
 12+^|*Totals*
-|97|10|107|353|3|5|0|0|13|374 2+|07m 44s 603ms
+|76|31|107|282|24|55|0|0|13|374 2+|08m 45s 904ms
 |===
 
 == *Features*
@@ -427,126 +458,141 @@ And ::
 =====
 ****
 
-==== Scenario: CV view
+==== Scenario: CV view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 406ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 004ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 241ms)#
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-CV.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 625ms)#
+CV.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-"cvwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(098ms)#
+"cvwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Timeline content
+==== Scenario: Timeline content icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 228ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 003ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 724ms)#
+Das habe should be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Timeline content
+==== Scenario: Timeline content icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 393ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-That is should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 214ms)#
+That is should be visible in the timeline icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 110ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(04s 999ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "cv" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 736ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Dummy text removed
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 369ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 871ms)#
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(025ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 969ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 060ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 ****
 
@@ -557,15 +603,15 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 957ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 629ms)#
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(024ms)#
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(011ms)#
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 359ms)#
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 429ms)#
 =====
 ****
 
@@ -576,15 +622,15 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 441ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 996ms)#
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
 =====
 Then ::
 =====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 138ms)#
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 275ms)#
 =====
 ****
 
@@ -595,83 +641,7 @@ a link to facebook should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 067ms)#
-=====
-And ::
-=====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 767ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@CV#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 321ms)#
-=====
-And ::
-=====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 161ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@CV#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 438ms)#
-=====
-And ::
-=====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 342ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@CV#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 534ms)#
-=====
-And ::
-=====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 532ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@CV#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 702ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 392ms)#
 =====
 And ::
 =====
@@ -679,7 +649,83 @@ I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 510ms)#
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 923ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 210ms)#
+=====
+And ::
+=====
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 874ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 616ms)#
+=====
+And ::
+=====
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(030ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 585ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 145ms)#
+=====
+And ::
+=====
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 785ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@CV#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 095ms)#
+=====
+And ::
+=====
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 148ms)#
 =====
 ****
 
@@ -690,15 +736,15 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 230ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 583ms)#
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(030ms)#
 =====
 Then ::
 =====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 951ms)#
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 774ms)#
 =====
 ****
 
@@ -709,28 +755,28 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 704ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 967ms)#
 =====
 And ::
 =====
-I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(007ms)#
 =====
 Then ::
 =====
-"15" entries must be visible in the timeline icon:thumbs-down[role="red",title="Failed"] [small right]#(01s 670ms)#
+"15" entries must be visible in the timeline icon:thumbs-down[role="red",title="Failed"] [small right]#(03s 086ms)#
 
 IMPORTANT: AssertionError: expected 17 to equal 15
 =====
 ****
 
-==== Scenario: Back navigation
+==== Scenario: Back navigation icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@CV#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 906ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 175ms)#
 =====
 And ::
 =====
@@ -738,15 +784,18 @@ I select "cv" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 When ::
 =====
-I click on the back button icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I click on the back button icon:thumbs-up[role="green",title="Passed"] [small right]#(021ms)#
 =====
 Then ::
 =====
-Das habe should be visible in the timeline icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 745ms)#
+Das habe should be visible in the timeline icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 002ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 ****
 
@@ -782,7 +831,7 @@ I select "disclaimer" icon:thumbs-down[role="blue",title="Missing"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 419ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 636ms)#
 =====
 And ::
 =====
@@ -790,7 +839,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 066ms)#
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 262ms)#
 =====
 And ::
 =====
@@ -798,11 +847,11 @@ the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 Then ::
 =====
-DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 893ms)#
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 116ms)#
 =====
 And ::
 =====
-"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(091ms)#
+"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(374ms)#
 =====
 ****
 
@@ -813,15 +862,15 @@ And ::
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 629ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 562ms)#
 =====
 And ::
 =====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(007ms)#
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 087ms)#
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 755ms)#
 =====
 And ::
 =====
@@ -829,11 +878,11 @@ the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 Then ::
 =====
-DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 652ms)#
+DISCLAIMER.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 446ms)#
 =====
 And ::
 =====
-"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(122ms)#
+"disclaimerwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(340ms)#
 =====
 ****
 
@@ -844,19 +893,19 @@ And ::
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 929ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 263ms)#
 =====
 And ::
 =====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(017ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 357ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 170ms)#
 =====
 ****
 
@@ -867,19 +916,19 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 015ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 685ms)#
 =====
 And ::
 =====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(031ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 623ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 440ms)#
 =====
 ****
 
@@ -890,7 +939,7 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 202ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 927ms)#
 =====
 And ::
 =====
@@ -898,7 +947,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 463ms)#
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 499ms)#
 =====
 ****
 
@@ -909,45 +958,7 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 725ms)#
-=====
-And ::
-=====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 149ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@DISCLAIMER#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 315ms)#
-=====
-And ::
-=====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 415ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@DISCLAIMER#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 268ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 436ms)#
 =====
 And ::
 =====
@@ -955,7 +966,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 347ms)#
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 604ms)#
 =====
 ****
 
@@ -966,7 +977,7 @@ a link to stack-overflow should be available icon:thumbs-up[role="green",title="
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 181ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 379ms)#
 =====
 And ::
 =====
@@ -974,7 +985,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 073ms)#
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 793ms)#
 =====
 ****
 
@@ -985,7 +996,7 @@ a link to google-plus should be available icon:thumbs-up[role="green",title="Pas
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 571ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 193ms)#
 =====
 And ::
 =====
@@ -993,7 +1004,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 484ms)#
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 432ms)#
 =====
 ****
 
@@ -1004,7 +1015,7 @@ a link to linkedin should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 132ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 797ms)#
 =====
 And ::
 =====
@@ -1012,7 +1023,45 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 306ms)#
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 536ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 254ms)#
+=====
+And ::
+=====
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 647ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@DISCLAIMER#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 274ms)#
+=====
+And ::
+=====
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 312ms)#
 =====
 ****
 
@@ -1023,7 +1072,7 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 731ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 873ms)#
 =====
 And ::
 =====
@@ -1031,7 +1080,7 @@ I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#
 =====
 Then ::
 =====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 249ms)#
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 407ms)#
 =====
 ****
 
@@ -1042,15 +1091,15 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 503ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 914ms)#
 =====
 And ::
 =====
-I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "disclaimer" icon:thumbs-up[role="green",title="Passed"] [small right]#(011ms)#
 =====
 Then ::
 =====
-"6" entries must be visible in the disclaimer icon:thumbs-up[role="green",title="Passed"] [small right]#(660ms)#
+"6" entries must be visible in the disclaimer icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 183ms)#
 =====
 ****
 
@@ -1086,27 +1135,27 @@ I select "education" icon:thumbs-down[role="blue",title="Missing"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 320ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 182ms)#
 =====
 And ::
 =====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(023ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(869ms)#
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 715ms)#
 =====
 And ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(011ms)#
 =====
 Then ::
 =====
-EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 583ms)#
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 157ms)#
 =====
 And ::
 =====
-"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(078ms)#
+"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(327ms)#
 =====
 ****
 
@@ -1117,7 +1166,61 @@ And ::
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 438ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 601ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(016ms)#
+=====
+When ::
+=====
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 042ms)#
+=====
+And ::
+=====
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(008ms)#
+=====
+Then ::
+=====
+EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 538ms)#
+=====
+And ::
+=====
+"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(323ms)#
+=====
+****
+
+==== Scenario: Basic education elements
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 561ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(017ms)#
+=====
+Then ::
+=====
+Ausbildung should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 027ms)#
+=====
+****
+
+==== Scenario: Basic education elements
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 303ms)#
 =====
 And ::
 =====
@@ -1125,111 +1228,152 @@ I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(451ms)#
-=====
-And ::
-=====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-EDUCATION.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 443ms)#
-=====
-And ::
-=====
-"educationwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(082ms)#
+Education should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 315ms)#
 =====
 ****
 
-==== Scenario: Basic education elements
+==== Scenario: Dummy text removed
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 658ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 157ms)#
 =====
 And ::
 =====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
 =====
 Then ::
 =====
-Ausbildung should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 193ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 913ms)#
 =====
 ****
 
-==== Scenario: Basic education elements
+==== Scenario: Dummy text removed
 [small]#tags: @ALL,@EDUCATION#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 539ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 353ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 256ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 958ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 176ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 443ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 386ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 998ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 897ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 136ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(020ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 722ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 760ms)#
 =====
 And ::
 =====
 I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
 =====
-When ::
-=====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
 Then ::
 =====
-Education should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 575ms)#
-=====
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 912ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-=====
-When ::
-=====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 965ms)#
-=====
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 754ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-=====
-When ::
-=====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 912ms)#
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 654ms)#
 =====
 ****
 
@@ -1240,7 +1384,26 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 495ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 154ms)#
+=====
+And ::
+=====
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(017ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 759ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@EDUCATION#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 848ms)#
 =====
 And ::
 =====
@@ -1248,121 +1411,7 @@ I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 060ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 001ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(008ms)#
-=====
-Then ::
-=====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 525ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 715ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 108ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 395ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(994ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 181ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 084ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 332ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 175ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@EDUCATION#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 306ms)#
-=====
-And ::
-=====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 325ms)#
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 556ms)#
 =====
 ****
 
@@ -1373,7 +1422,7 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 966ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 300ms)#
 =====
 And ::
 =====
@@ -1381,7 +1430,7 @@ I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(
 =====
 Then ::
 =====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 113ms)#
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 737ms)#
 =====
 ****
 
@@ -1392,15 +1441,15 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 075ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 144ms)#
 =====
 And ::
 =====
-I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "education" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
 =====
 Then ::
 =====
-FHDW must be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 002ms)#
+FHDW must be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 478ms)#
 =====
 ****
 
@@ -1432,19 +1481,19 @@ I navigate to "/" icon:thumbs-down[role="blue",title="Missing"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 099ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 701ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
 =====
 Then ::
 =====
-the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(818ms)#
+the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 082ms)#
 =====
 And ::
 =====
-Entwickler should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(329ms)#
+Entwickler should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(708ms)#
 =====
 ****
 
@@ -1455,19 +1504,19 @@ Entwickler should be visible icon:thumbs-up[role="green",title="Passed"] [small 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 303ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 185ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(008ms)#
 =====
 Then ::
 =====
-the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 002ms)#
+the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 579ms)#
 =====
 And ::
 =====
-Developer should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(386ms)#
+Developer should be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(548ms)#
 =====
 ****
 
@@ -1478,7 +1527,7 @@ Developer should be visible icon:thumbs-up[role="green",title="Passed"] [small r
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 545ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 511ms)#
 =====
 When ::
 =====
@@ -1486,7 +1535,7 @@ the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 844ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 943ms)#
 =====
 ****
 
@@ -1497,15 +1546,15 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 572ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 110ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 339ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 257ms)#
 =====
 ****
 
@@ -1516,11 +1565,11 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 126ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 328ms)#
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(610ms)#
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(793ms)#
 =====
 ****
 
@@ -1531,11 +1580,11 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 331ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 977ms)#
 =====
 Then ::
 =====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(561ms)#
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(737ms)#
 =====
 ****
 
@@ -1546,11 +1595,11 @@ a link to facebook should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 964ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 625ms)#
 =====
 Then ::
 =====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(639ms)#
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(718ms)#
 =====
 ****
 
@@ -1561,11 +1610,11 @@ a link to github should be available icon:thumbs-up[role="green",title="Passed"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 965ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 418ms)#
 =====
 Then ::
 =====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(606ms)#
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(839ms)#
 =====
 ****
 
@@ -1576,11 +1625,11 @@ a link to stack-overflow should be available icon:thumbs-up[role="green",title="
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 960ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 679ms)#
 =====
 Then ::
 =====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(578ms)#
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(756ms)#
 =====
 ****
 
@@ -1591,11 +1640,11 @@ a link to google-plus should be available icon:thumbs-up[role="green",title="Pas
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 532ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 501ms)#
 =====
 Then ::
 =====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(784ms)#
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(696ms)#
 =====
 ****
 
@@ -1606,11 +1655,11 @@ a link to linkedin should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 835ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 938ms)#
 =====
 Then ::
 =====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(633ms)#
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(833ms)#
 =====
 ****
 
@@ -1621,11 +1670,11 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 367ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 576ms)#
 =====
 Then ::
 =====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(647ms)#
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(978ms)#
 =====
 ****
 
@@ -1636,11 +1685,11 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 489ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 817ms)#
 =====
 Then ::
 =====
-the navigation should be changed into a toggle object icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 537ms)#
+the navigation should be changed into a toggle object icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 602ms)#
 =====
 ****
 
@@ -1651,15 +1700,15 @@ the navigation should be changed into a toggle object icon:thumbs-up[role="green
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 972ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 553ms)#
 =====
 When ::
 =====
-I navigate to "/a/b/c" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 114ms)#
+I navigate to "/a/b/c" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 447ms)#
 =====
 Then ::
 =====
-the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(042ms)#
+the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="Passed"] [small right]#(158ms)#
 =====
 ****
 
@@ -1695,27 +1744,27 @@ I select "skill" icon:thumbs-down[role="blue",title="Missing"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 476ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 924ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 473ms)#
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 168ms)#
 =====
 And ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
 =====
 Then ::
 =====
-SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 739ms)#
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 837ms)#
 =====
 And ::
 =====
-"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(324ms)#
+"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(430ms)#
 =====
 ****
 
@@ -1726,27 +1775,27 @@ And ::
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 280ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 934ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 138ms)#
+I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 419ms)#
 =====
 And ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(013ms)#
 =====
 Then ::
 =====
-SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 121ms)#
+SKILL.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 124ms)#
 =====
 And ::
 =====
-"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(069ms)#
+"skillwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(191ms)#
 =====
 ****
 
@@ -1757,34 +1806,80 @@ And ::
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 170ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 728ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(007ms)#
+=====
+Then ::
+=====
+Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 293ms)#
+=====
+****
+
+==== Scenario: Basic skill elements
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 706ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+When ::
+=====
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 863ms)#
+=====
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 126ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(014ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 006ms)#
+=====
+****
+
+==== Scenario: Dummy text removed
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 994ms)#
 =====
 And ::
 =====
 I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
-=====
-Then ::
-=====
-Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 970ms)#
-=====
-****
-
-==== Scenario: Basic skill elements
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 814ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
 =====
 When ::
 =====
@@ -1792,53 +1887,7 @@ the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 Then ::
 =====
-Angular should be visible in the carousel icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 374ms)#
-=====
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 195ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 062ms)#
-=====
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 102ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
-=====
-Then ::
-=====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 841ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 551ms)#
 =====
 ****
 
@@ -1849,7 +1898,7 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 077ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 241ms)#
 =====
 And ::
 =====
@@ -1857,7 +1906,7 @@ I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001m
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 694ms)#
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 225ms)#
 =====
 ****
 
@@ -1868,64 +1917,7 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 811ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 437ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 166ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 367ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 375ms)#
-=====
-And ::
-=====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
-=====
-Then ::
-=====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 209ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SKILL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 141ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 251ms)#
 =====
 And ::
 =====
@@ -1933,7 +1925,7 @@ I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001m
 =====
 Then ::
 =====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 434ms)#
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 548ms)#
 =====
 ****
 
@@ -1944,7 +1936,7 @@ a link to google-plus should be available icon:thumbs-up[role="green",title="Pas
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 098ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 789ms)#
 =====
 And ::
 =====
@@ -1952,7 +1944,7 @@ I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001m
 =====
 Then ::
 =====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 192ms)#
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 371ms)#
 =====
 ****
 
@@ -1963,15 +1955,72 @@ a link to linkedin should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 858ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 565ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 115ms)#
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 461ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 643ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 881ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 047ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 608ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SKILL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 550ms)#
+=====
+And ::
+=====
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(014ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 032ms)#
 =====
 ****
 
@@ -1982,15 +2031,15 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 540ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 955ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(012ms)#
 =====
 Then ::
 =====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 316ms)#
+a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 598ms)#
 =====
 ****
 
@@ -2001,15 +2050,15 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 661ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 733ms)#
 =====
 And ::
 =====
-I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "skill" icon:thumbs-up[role="green",title="Passed"] [small right]#(009ms)#
 =====
 Then ::
 =====
-10 skills must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(645ms)#
+10 skills must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 011ms)#
 =====
 ****
 
@@ -2038,22 +2087,22 @@ I select "home" icon:thumbs-down[role="blue",title="Missing"]
 =====
 ****
 
-==== Scenario: Social block
+==== Scenario: Social block icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@SOCIAL#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 981ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 396ms)#
 =====
 And ::
 =====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(021ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(022ms)#
 =====
 And ::
 =====
@@ -2061,50 +2110,56 @@ I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 And ::
 =====
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 053ms)#
+I click on the envelope icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 068ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 Then ::
 =====
-Schreiben Sie mir eine Mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(135ms)#
+Schreiben Sie mir eine Mail should be visible in the mail form icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Social block
+==== Scenario: Social block icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@SOCIAL#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 277ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 933ms)#
 =====
 And ::
 =====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(008ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(004ms)#
 =====
 And ::
 =====
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 And ::
 =====
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 171ms)#
+I click on the envelope icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 001ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 Then ::
 =====
-Send me a mail should be visible in the mail form icon:thumbs-up[role="green",title="Passed"] [small right]#(092ms)#
+Send me a mail should be visible in the mail form icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
@@ -2115,73 +2170,11 @@ I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 305ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 757ms)#
 =====
 And ::
 =====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-And ::
-=====
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 265ms)#
-=====
-And ::
-=====
-I click on the submit button icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-all form errors are shown icon:thumbs-up[role="green",title="Passed"] [small right]#(971ms)#
-=====
-And ::
-=====
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-****
-
-==== Scenario: Reset form
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 220ms)#
-=====
-And ::
-=====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-all form errors are resetted after reopening icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 537ms)#
-=====
-And ::
-=====
-I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]#(012ms)#
-=====
-****
-
-==== Scenario: Wrong email
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 162ms)#
-=====
-And ::
-=====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
 =====
 When ::
 =====
@@ -2189,15 +2182,15 @@ I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 And ::
 =====
-I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 715ms)#
+I click on the envelope icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 442ms)#
 =====
 And ::
 =====
-I enter an invalid email address icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+I click on the submit button icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-only email error is shown icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 478ms)#
+all form errors are shown icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 665ms)#
 =====
 And ::
 =====
@@ -2205,6 +2198,78 @@ I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]
 =====
 ****
 
+==== Scenario: Reset form icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 128ms)#
+=====
+And ::
+=====
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+When ::
+=====
+I scroll to the bottom icon:thumbs-up[role="green",title="Passed"] [small right]#(490ms)#
+=====
+Then ::
+=====
+all form errors are resetted after reopening icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 001ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Wrong email icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(02s 732ms)#
+
+IMPORTANT: StaleElementReferenceError: stale element reference: element is not attached to the page document
+  (Session info: chrome=48.0.2564.82)
+  (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 3.13.0-67-generic x86_64)
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at StaleEl...
+
+=====
+And ::
+=====
+I select "home" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+I scroll to the bottom icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I click on the envelope icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I enter an invalid email address icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+only email error is shown icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+And ::
+=====
+I close the form again icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
 ==== Scenario: Social linking
 [small]#tags: @ALL,@SOCIAL#
 
@@ -2212,7 +2277,7 @@ I close the form again icon:thumbs-up[role="green",title="Passed"] [small right]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 327ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 881ms)#
 =====
 And ::
 =====
@@ -2220,7 +2285,7 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(952ms)#
+a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 325ms)#
 =====
 ****
 
@@ -2231,7 +2296,7 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 902ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 615ms)#
 =====
 And ::
 =====
@@ -2239,7 +2304,7 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(919ms)#
+a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 495ms)#
 =====
 ****
 
@@ -2250,7 +2315,7 @@ a link to facebook should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 805ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 233ms)#
 =====
 And ::
 =====
@@ -2258,7 +2323,7 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 056ms)#
+a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 136ms)#
 =====
 ****
 
@@ -2269,26 +2334,7 @@ a link to github should be available icon:thumbs-up[role="green",title="Passed"]
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 874ms)#
-=====
-And ::
-=====
-I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 154ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@SOCIAL#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 111ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 754ms)#
 =====
 And ::
 =====
@@ -2296,7 +2342,7 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 006ms)#
+a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 315ms)#
 =====
 ****
 
@@ -2307,7 +2353,7 @@ a link to google-plus should be available icon:thumbs-up[role="green",title="Pas
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 625ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 348ms)#
 =====
 And ::
 =====
@@ -2315,7 +2361,7 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(880ms)#
+a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 443ms)#
 =====
 ****
 
@@ -2326,7 +2372,7 @@ a link to linkedin should be available icon:thumbs-up[role="green",title="Passed
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 833ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 748ms)#
 =====
 And ::
 =====
@@ -2334,7 +2380,26 @@ I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(963ms)#
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 808ms)#
+=====
+****
+
+==== Scenario: Social linking
+[small]#tags: @ALL,@SOCIAL#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 066ms)#
+=====
+And ::
+=====
+I select "home" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+=====
+Then ::
+=====
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 443ms)#
 =====
 ****
 
@@ -2363,134 +2428,123 @@ I select "work" icon:thumbs-down[role="blue",title="Missing"]
 =====
 ****
 
-==== Scenario: Work view
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@WORK#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 782ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 574ms)#
 =====
 And ::
 =====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(660ms)#
+I scroll to the top icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 003ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 479ms)#
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(061ms)#
+"workwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Work view
+==== Scenario: Work view icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@WORK#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 826ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 001ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-I scroll to the top icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 971ms)#
+I scroll to the top icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-WORK.HEADLINE.PRE should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 914ms)#
+WORK.HEADLINE.PRE should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 And ::
 =====
-"workwrap" must be in the display area icon:thumbs-up[role="green",title="Passed"] [small right]#(064ms)#
+"workwrap" must be in the display area icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Basic work elements
+==== Scenario: Basic work elements icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@WORK#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 107ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 009ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(005ms)#
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-Muster should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 938ms)#
+Muster should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
-==== Scenario: Basic work elements
+==== Scenario: Basic work elements icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@WORK#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 669ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 004ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 And ::
 =====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(006ms)#
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(003ms)#
+the en flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 Then ::
 =====
-Samples should be visible in the upper part icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 035ms)#
-=====
-****
-
-==== Scenario: Dummy text removed
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 810ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-When ::
-=====
-the de flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(002ms)#
-=====
-Then ::
-=====
-Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 390ms)#
+Samples should be visible in the upper part icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
 =====
 ****
 
@@ -2501,7 +2555,33 @@ Lorem Ipsum should NOT be visible icon:thumbs-up[role="green",title="Passed"] [s
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 971ms)#
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+When ::
+=====
+the de flag is clicked icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Dummy text removed icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 761ms)#
 =====
 And ::
 =====
@@ -2509,17 +2589,131 @@ I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 When ::
 =====
-the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
+the en flag is clicked icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
 =====
 Then ::
 =====
-Lorem Ipsum should NOT be visible icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 001ms)#
+Lorem Ipsum should NOT be visible icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 002ms)#
 
 IMPORTANT: Error: Step timed out after 5000 milliseconds
     at Timer.listOnTimeout (timers.js:92:15)
 =====
 ****
 
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 010ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to xing should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(04s 913ms)#
+
+IMPORTANT: StaleElementReferenceError: stale element reference: element is not attached to the page document
+  (Session info: chrome=48.0.2564.82)
+  (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 3.13.0-67-generic x86_64)
+    at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
+    at StaleEl...
+
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to facebook should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 215ms)#
+=====
+And ::
+=====
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(010ms)#
+=====
+Then ::
+=====
+a link to github should be available icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 003ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 006ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to stack-overflow should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
+==== Scenario: Social linking icon:thumbs-down[role="red",title="Failed"]
+[small]#tags: @ALL,@WORK#
+
+
+****
+Given ::
+=====
+I navigate to "/" icon:thumbs-down[role="red",title="Failed"] [small right]#(05s 008ms)#
+
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
+=====
+And ::
+=====
+I select "work" icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+Then ::
+=====
+a link to google-plus should be available icon:thumbs-down[role="purple",title="Skipped"] [small right]#(000ms)#
+=====
+****
+
 ==== Scenario: Social linking
 [small]#tags: @ALL,@WORK#
 
@@ -2527,7 +2721,7 @@ IMPORTANT: Error: Step timed out after 5000 milliseconds
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 725ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 800ms)#
 =====
 And ::
 =====
@@ -2535,7 +2729,7 @@ I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 859ms)#
+a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 573ms)#
 =====
 ****
 
@@ -2546,7 +2740,7 @@ a link to xing should be available icon:thumbs-up[role="green",title="Passed"] [
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 708ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 141ms)#
 =====
 And ::
 =====
@@ -2554,121 +2748,29 @@ I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-a link to facebook should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 202ms)#
+a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 963ms)#
 =====
 ****
 
-==== Scenario: Social linking
+==== Scenario: Footer information icon:thumbs-down[role="red",title="Failed"]
 [small]#tags: @ALL,@WORK#
 
 
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 816ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 135ms)#
 =====
 And ::
 =====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
+I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(000ms)#
 =====
 Then ::
 =====
-a link to github should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 838ms)#
-=====
-****
+a footer must be available icon:thumbs-down[role="red",title="Failed"] [small right]#(05s)#
 
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 842ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to stack-overflow should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 861ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 641ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to google-plus should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 006ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 133ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to linkedin should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 330ms)#
-=====
-****
-
-==== Scenario: Social linking
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 824ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a link to envelope-square should be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 336ms)#
-=====
-****
-
-==== Scenario: Footer information
-[small]#tags: @ALL,@WORK#
-
-
-****
-Given ::
-=====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 608ms)#
-=====
-And ::
-=====
-I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms)#
-=====
-Then ::
-=====
-a footer must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(04s 454ms)#
+IMPORTANT: Error: Step timed out after 5000 milliseconds
+    at Timer.listOnTimeout (timers.js:92:15)
 =====
 ****
 
@@ -2679,7 +2781,7 @@ a footer must be available icon:thumbs-up[role="green",title="Passed"] [small ri
 ****
 Given ::
 =====
-I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 806ms)#
+I navigate to "/" icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 612ms)#
 =====
 And ::
 =====
@@ -2687,7 +2789,7 @@ I select "work" icon:thumbs-up[role="green",title="Passed"] [small right]#(001ms
 =====
 Then ::
 =====
-2 samples must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 022ms)#
+2 samples must be available icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 817ms)#
 =====
 ****
 
