@@ -2,7 +2,37 @@
 
 === Projekte
 
-[big]**10/2015 - Heute: Commonwealth Bank of Australia**
+[big]**02/2017 - Heute: Oversea-Chinese Banking Corporation**
+[frame="topbot"]
+|===
+|Rolle | IT Berater / Architekt
+|Tätigkeiten | Entwicklungsleiter
+2+|Erstellung einer Kiosklösung für eine Filiale der Zukunft: +
+- Agil +
+- Scrum +
+- Buildprozess +
+- Distribution +
+- Mocking +
+- Unit Tests +
+- End-2-End Tests
+|Entwicklungsumgebung | Eclipse 4.6, Webstorm 11
+|Systemkomponenten | Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence
+|Technologien | JSE, JMockit
+|===
+
+[big]**07/2016 - 02/2017: HSBC Mexiko**
+[frame="topbot"]
+|===
+|Rolle | IT Berater / Architekt
+|Tätigkeiten | Softwareintegration
+2+|Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten: +
+- Kartenlose Einzahlungen für Scheine, Münzen und Schecks
+|Entwicklungsumgebung | Eclipse 4.6, Webstorm 11
+|Systemkomponenten | Jenkins, Git, Nexus, Sonarqube, Maven
+|Technologien | JSE, JMockit
+|===
+
+[big]**10/2015 - 06/2016: Commonwealth Bank of Australia**
 [frame="topbot"]
 |===
 |Rolle | IT Berater / Architekt
