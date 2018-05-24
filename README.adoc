@@ -14,7 +14,16 @@
 All source files for my private homepage
 
 == *Version*
-=== 1.16.0 - 20/08/2017
+=== 1.14.0 - 24/05/2018
+
+==== CHANGE
+    ---------------------
+    disclaimer
+    - added new Privacy Policy
+    - disabled gulp tests
+
+
+=== 1.14.0 - 20/08/2017
 
 ==== CHANGE
     ---------------------
@@ -22,13 +31,36 @@ All source files for my private homepage
     - syncing doc with homepage
 
 
-=== 1.15.0 - 03/08/2017
+==== FIX
+    ---------------------
+    history
+    
+    ---------------------
+    version
+
+
+=== 1.14.0 - 03/08/2017
 
 ==== NEW
     ---------------------
     chg: cv-update
     - adding latest projects
     - removing eureka
+
+
+==== CHANGE
+    ---------------------
+    cv-update
+    - adding latest projects
+    - removing eureka
+
+
+==== FIX
+    ---------------------
+    chg: cv-update
+    - adding latest projects
+    - removing eureka
+
 
 === 1.14.0 - 14/09/2016
 
@@ -275,8 +307,8 @@ All source files for my private homepage
 
 12+^|*<<Homepage-cv-entry>>*
 |8
-|9
-|17
+|8
+|16
 |33
 |8
 |19
@@ -289,8 +321,8 @@ All source files for my private homepage
 
 12+^|*<<Homepage-disclaimer-entry>>*
 |13
-|1
-|14
+|0
+|13
 |47
 |0
 |0
@@ -299,12 +331,12 @@ All source files for my private homepage
 |2
 |49
 |01m 04s 612ms
-|[red]#*failed*#
+|[green]#*passed*#
 
 12+^|*<<Homepage-education-entry>>*
 |15
-|1
-|16
+|0
+|15
 |55
 |0
 |0
@@ -313,12 +345,12 @@ All source files for my private homepage
 |2
 |57
 |01m 14s 035ms
-|[red]#*failed*#
+|[green]#*passed*#
 
 12+^|*<<Homepage-main-entry>>*
 |14
-|1
-|15
+|0
+|14
 |35
 |0
 |0
@@ -327,12 +359,12 @@ All source files for my private homepage
 |1
 |36
 |57s 627ms
-|[red]#*failed*#
+|[green]#*passed*#
 
 12+^|*<<Homepage-skill-entry>>*
 |15
-|1
-|16
+|0
+|15
 |55
 |0
 |0
@@ -341,12 +373,12 @@ All source files for my private homepage
 |2
 |57
 |01m 19s 923ms
-|[red]#*failed*#
+|[green]#*passed*#
 
 12+^|*<<Homepage-social-block>>*
 |8
-|5
-|13
+|4
+|12
 |39
 |4
 |11
@@ -359,8 +391,8 @@ All source files for my private homepage
 
 12+^|*<<Homepage-work-entry>>*
 |3
-|13
-|16
+|12
+|15
 |18
 |12
 |25
@@ -371,7 +403,7 @@ All source files for my private homepage
 |01m 32s 591ms
 |[red]#*failed*#
 12+^|*Totals*
-|76|31|107|282|24|55|0|0|13|374 2+|08m 45s 904ms
+|76|24|100|282|24|55|0|0|13|374 2+|08m 45s 904ms
 |===
 
 == *Features*
@@ -379,7 +411,9 @@ All source files for my private homepage
 [[Homepage-cv-entry, Homepage cv entry]]
 === *Homepage cv entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-cv-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my cv 
@@ -779,7 +813,9 @@ IMPORTANT: Error: Step timed out after 5000 milliseconds
 [[Homepage-disclaimer-entry, Homepage disclaimer entry]]
 === *Homepage disclaimer entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-disclaimer-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my disclaimer 
@@ -1083,7 +1119,9 @@ Then ::
 [[Homepage-education-entry, Homepage education entry]]
 === *Homepage education entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-education-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my education 
@@ -1433,7 +1471,9 @@ FHDW must be visible icon:thumbs-up[role="green",title="Passed"] [small right]#(
 [[Homepage-main-entry, Homepage main entry]]
 === *Homepage main entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-main-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see a welcome screen 
@@ -1692,7 +1732,9 @@ the title should equal "Maximilian Wollnik" icon:thumbs-up[role="green",title="P
 [[Homepage-skill-entry, Homepage skill entry]]
 === *Homepage skill entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-skill-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my skills 
@@ -2042,7 +2084,9 @@ Then ::
 [[Homepage-social-block, Homepage social block]]
 === *Homepage social block*
 
+ifndef::backend-pdf[]
 minmax::Homepage-social-block[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my socials 
@@ -2218,7 +2262,7 @@ IMPORTANT: StaleElementReferenceError: stale element reference: element is not a
   (Session info: chrome=48.0.2564.82)
   (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 3.13.0-67-generic x86_64)
     at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
-    at StaleEl...
+    at StaleElementReferenceError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-web...
 
 =====
 And ::
@@ -2383,7 +2427,9 @@ a link to envelope-square should be available icon:thumbs-up[role="green",title=
 [[Homepage-work-entry, Homepage work entry]]
 === *Homepage work entry*
 
+ifndef::backend-pdf[]
 minmax::Homepage-work-entry[]
+endif::[]
 ****
 As a visitor of the Homepage
 I should be able to see my work 
@@ -2612,7 +2658,7 @@ IMPORTANT: StaleElementReferenceError: stale element reference: element is not a
   (Session info: chrome=48.0.2564.82)
   (Driver info: chromedriver=2.21.371461 (633e689b520b25f3e264a2ede6b74ccc23cb636a),platform=Linux 3.13.0-67-generic x86_64)
     at WebDriverError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-webdriver/error.js:27:10)
-    at StaleEl...
+    at StaleElementReferenceError (/var/jenkins_home/sharedspace/node_modules/protractor/node_modules/selenium-web...
 
 =====
 And ::
