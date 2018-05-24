@@ -205,5 +205,5 @@ gulp.task('testDist', ['builddist'], function() {
 });
 
 gulp.task('build', ['clean'], function() {
-  gulp.start('testDist');
+  gulp.start('builddist');
 });
