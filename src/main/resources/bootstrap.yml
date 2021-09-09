@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: homepage
-  cloud:
-    config:
-      uri: ${CONFIGPROTOCOL}://${CONFIGUSER}:${CONFIGPASSWORD}@${CONFIGURI}:${CONFIGPORT}

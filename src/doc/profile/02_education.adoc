@@ -1,9 +1,0 @@
-== Studium
-
-*Diplom Wirtschaftsinformatiker*
-
-_01/2004 - 12/2006_
-
-duales Studium der Wirtschaftsinformatik, Fachhochschule der Wirtschaft, Paderborn
-
-image:../../main/webapp/assets/img/fhdw.png[fhdw, 150]

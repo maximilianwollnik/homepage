@@ -1,0 +1,9 @@
+<div class="pt-2 pb-2 bg-light">
+  <div class="row justify-content-md-center">
+    <div *ngFor="let item of socialItems" class="col-md-auto">
+      <a class="link-secondary" href="{{item.url}}" target="_blank">
+        <fa-icon [icon]="['fab', 'xing']" class="fa-3x"></fa-icon>
+      </a>
+    </div>
+  </div>
+</div>
