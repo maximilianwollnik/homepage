@@ -2,7 +2,7 @@
   <div class="row justify-content-md-center">
     <div *ngFor="let item of socialItems" class="col-md-auto">
       <a class="link-secondary" href="{{item.url}}" target="_blank">
-        <fa-icon [icon]="['fab', 'xing']" class="fa-3x"></fa-icon>
+        <fa-icon [icon]=item.icon class="fa-3x ms-5"></fa-icon>
       </a>
     </div>
   </div>

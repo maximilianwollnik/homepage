@@ -1,2 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/scss/bootstrap";
+
+
+.link-secondary:hover, .link-secondary:focus {
+  color: #1abc9c;
+}
+/*
+$theme-colors: (
+  "secondary": #1abc9c
+);
+*/
