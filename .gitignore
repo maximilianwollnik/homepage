@@ -13,7 +13,8 @@ NEW_FILE
 /LOG_FILE_IS_UNDEFINE*
 /cucumber-result.json
 .DS_Store
-
+build
+.gradle
 
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
