@@ -38,11 +38,12 @@ public class HomepageApplication implements CommandLineRunner {
      */
     @Override
     public void run(String... args) throws Exception {
+        /*
         translationRepository.deleteAll();
         translationRepository.save(new Translation("AUTHOR", "Maximilian Wollnik", "Maximilian Wollnik"));
         translationRepository.save(new Translation("EMAIL", "maximilian@maximilianwollnik.de", "maximilian@maximilianwollnik.de"));
         translationRepository.save(new Translation("TITLE", "@:AUTHOR", "@:AUTHOR"));
-
+*/
         // fetch all customers
         System.out.println("Customers found with findAll():");
         System.out.println("-------------------------------");
