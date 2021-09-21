@@ -11,5 +11,5 @@
     "**/*.spec.js",
     "**/*.spec.jsx",
     "**/*.d.ts"
-, "../service/src/lib/translation-loader.service.spec.ts"  ]
+  ]
 }

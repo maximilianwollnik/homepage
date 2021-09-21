@@ -9,6 +9,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SocialComponent } from './shared/social/social.component';
 import { RouterModule, Route } from '@angular/router';
+import { ServiceModule } from '@frontend/service'
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +17,7 @@ export const uiRoutes: Route[] = [
 ];
 
 @NgModule({
-  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  imports: [CommonModule, FontAwesomeModule, RouterModule, ServiceModule],
   declarations: [
     HomeComponent,
     NavigationComponent,

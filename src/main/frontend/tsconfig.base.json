@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@frontend/data": ["libs/data/src/index.ts"],
+      "@frontend/service": ["libs/service/src/index.ts"],
       "@frontend/ui": ["libs/ui/src/index.ts"]
     }
   },

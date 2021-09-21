@@ -1,11 +1,10 @@
 package de.maximilianwollnik.homepage.web;
 
 import de.maximilianwollnik.homepage.service.TranslationService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -14,6 +13,8 @@ import java.util.Map;
  */
 @RestController
 public class TranslationController {
+    private static final Logger logger = LoggerFactory.getLogger(TranslationController.class);
+
     @Autowired
     private TranslationService translationService;
 
@@ -23,8 +24,13 @@ public class TranslationController {
      * @param language the language
      * @return the map
      */
-    @RequestMapping(value="/translation/{language}", method= RequestMethod.GET)
-    public Map<String, String> translations(@PathVariable String language) {
+    @CrossOrigin(origins = "http://localhost:4200")
+    @RequestMapping(value="/api/translation/{language}", method= RequestMethod.GET)
+    public Map<String, Object> translations(@PathVariable String language) {
+        logger.info(">> translations({})", language);
+        Map<String, Object> result = translationService.getTranslations(language);
+        logger.debug("* translations() - result='{}'", result);
+        logger.info("<< translations() returns");
         return translationService.getTranslations(language);
     }
 }
