@@ -81,7 +81,15 @@
             "polyfills": "apps/webapp/src/polyfills.ts",
             "tsConfig": "apps/webapp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/webapp/src/favicon.ico", "apps/webapp/src/assets"],
+            "assets": [
+              "apps/webapp/src/favicon.ico",
+              "apps/webapp/src/assets",
+              {
+                "input": "libs/ui/src/assets",
+                "glob": "**/*",
+                "output": "assets/ui"
+              }
+            ],
             "styles": ["apps/webapp/src/styles.scss"],
             "scripts": []
           },

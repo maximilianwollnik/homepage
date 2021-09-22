@@ -9,11 +9,13 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SocialComponent } from './shared/social/social.component';
 import { RouterModule, Route } from '@angular/router';
-import { ServiceModule } from '@frontend/service'
+import { ServiceModule } from '@frontend/service';
+import { TestComponent } from './component/test/test.component'
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent }
+  { path: 'home', component: HomeComponent },
+  { path: 'test', component: TestComponent }
 ];
 
 @NgModule({
@@ -22,13 +24,15 @@ export const uiRoutes: Route[] = [
     HomeComponent,
     NavigationComponent,
     FooterComponent,
-    SocialComponent
+    SocialComponent,
+    TestComponent
   ],
   exports: [
     HomeComponent,
     NavigationComponent,
     FooterComponent,
-    SocialComponent
+    SocialComponent,
+    TestComponent
   ],
 })
 export class UiModule {

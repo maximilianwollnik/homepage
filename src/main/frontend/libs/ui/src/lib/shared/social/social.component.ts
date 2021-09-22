@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SocialItem } from '@frontend/data'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faXing } from '@fortawesome/free-brands-svg-icons';
@@ -12,7 +12,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.scss']
 })
-export class SocialComponent implements OnInit {
+export class SocialComponent {
   socialItems : SocialItem[] = [];
 
   constructor() {
@@ -22,8 +22,5 @@ export class SocialComponent implements OnInit {
     this.socialItems.push({icon: faStackOverflow, url: "http://stackoverflow.com/users/5158269/maximilian-wollnik"});
     this.socialItems.push({icon: faLinkedin, url: "https://de.linkedin.com/pub/maximilian-wollnik/107/669/b20"});
     this.socialItems.push({icon: faTwitter, url: "https://twitter.com/MaxWollnik"});
-  }
-
-  ngOnInit(): void {
   }
 }

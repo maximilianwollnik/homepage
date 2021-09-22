@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'frontend-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
+export class NavigationComponent {
+  translate : TranslateService;
 
-  constructor() { }
+  constructor(translate: TranslateService) { 
+    this.translate = translate;
+  }
 
-  ngOnInit(): void {
+  changeLanguage(language: string) {
+    this.translate.use(language);
   }
 
 }
