@@ -26,7 +26,6 @@ export function createTranslateLoader(http: HttpClient) {
         useFactory: createTranslateLoader,
         deps: [HttpClient],
       },
-      compiler: { provide: TranslateCompiler, useClass: TranslationCompiler },
       defaultLanguage: 'de',
     }),
   ],

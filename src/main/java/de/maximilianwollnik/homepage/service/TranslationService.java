@@ -18,6 +18,9 @@ public class TranslationService {
     private static final Logger logger = LoggerFactory.getLogger(TranslationService.class);
     private final String DEFAULT_RESULT = "";
     private final TranslationRepository translationRepository;
+    private final String LINK_PRE = "{{ ";
+    private final String LINK_POST = " }}";
+    Map<String, Object> allTranslations;
 
     /**
      * Instantiates a new Translation service.
@@ -74,17 +77,43 @@ public class TranslationService {
     public Map<String, Object> getTranslations(String language) {
         logger.info(">> getTranslations({})", language);
 
-        Map<String, Object> result = new HashMap<>();
+        allTranslations = new HashMap<>();
 
         for (Translation translation : translationRepository.findAll()) {
             String key = translation.getKey();
             String value = returnFinalValue(language, translation);
-            generateNestedMap(result, key, value);
+            generateNestedMap(allTranslations, key, value);
         }
 
-        logger.debug("* getTranslations() - result='{}'", result);
+        resolveLinks(allTranslations);
+
+        logger.debug("* getTranslations() - result='{}'", allTranslations);
         logger.info("<< getTranslations() returns");
-        return result;
+        return allTranslations;
+    }
+
+    @SuppressWarnings("unchecked")
+    private void resolveLinks(Map<String, Object> map) {
+        logger.info(">> resolveLinks({})", map);
+
+        map.replaceAll((k,v) -> {
+            if (v instanceof String) {
+                String value = v.toString();
+                while (value.contains(LINK_PRE)) {
+                    String result = value.substring(0, value.indexOf(LINK_PRE));
+                    String key = value.substring(value.indexOf(LINK_PRE) + LINK_PRE.length(), value.indexOf(LINK_POST));
+                    result += allTranslations.get(key).toString();
+                    result += value.substring(value.indexOf(LINK_POST) + LINK_POST.length());
+                    value = result;
+                }
+                return value;
+            } else {
+                resolveLinks((Map<String, Object>)v);
+                return v;
+            }
+        });
+
+        logger.debug("<< resolveLinks() - returns '{}'", map);
     }
 
     @SuppressWarnings("unchecked")
