@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'frontend-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+  @ViewChild('preloader')
+  preloader!: ElementRef;
+
   title = 'Maximilian Wollnik';
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.preloader.nativeElement.style.opacity = '0';
+      this.preloader.nativeElement.style.display = 'none';
+    }, 1000);
+  }
 }
