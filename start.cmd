@@ -1,0 +1,7 @@
+SET CONFIGPASSWORD=CSMadmax1983!
+SET CONFIGPORT=32770
+SET CONFIGUSER=user
+SET CONFIGPROTOCOL=http
+SET CONFIGURI=maximilianwollnik.de
+
+java -jar build\libs\homepage-0.0.1-SNAPSHOT.jar

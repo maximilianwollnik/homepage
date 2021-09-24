@@ -24,7 +24,6 @@ public class TranslationController {
      * @param language the language
      * @return the map
      */
-    @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value="/api/translation/{language}", method= RequestMethod.GET)
     public Map<String, Object> translations(@PathVariable String language) {
         logger.info(">> translations({})", language);

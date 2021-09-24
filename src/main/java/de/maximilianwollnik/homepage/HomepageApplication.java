@@ -64,7 +64,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("FOOTER.LOCATION", "Lebe in Paderborn", "Living in Paderborn"));
         translationRepository.save(new Translation("FOOTER.CHALLENGE", "Bereit für die nächste Herausforderung", "Ready for the next challenge"));
         translationRepository.save(new Translation("FOOTER.VERSION", "Version: ", "Version: "));
-        translationRepository.save(new Translation("FOOTER.TIMESTAMP", "Copyright &copy;", "Copyright &copy;"));
+        translationRepository.save(new Translation("FOOTER.TIMESTAMP", "Copyright &copy; ", "Copyright &copy; "));
 
 
         // Home

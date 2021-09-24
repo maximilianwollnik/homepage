@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { uiRoutes, UiModule } from '@frontend/ui';
+import { NgwWowModule } from 'ngx-wow';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { uiRoutes, UiModule } from '@frontend/ui';
     BrowserModule,
     RouterModule.forRoot(uiRoutes, { initialNavigation: 'enabled' }),
     UiModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './component/home/home.component';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -10,29 +13,36 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SocialComponent } from './shared/social/social.component';
 import { RouterModule, Route } from '@angular/router';
 import { ServiceModule } from '@frontend/service';
-import { TestComponent } from './component/test/test.component'
+import { TestComponent } from './component/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'test', component: TestComponent }
+  { path: 'test', component: TestComponent },
 ];
 
 @NgModule({
-  imports: [CommonModule, FontAwesomeModule, RouterModule, ServiceModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    RouterModule,
+    ServiceModule,
+    HttpClientModule,
+  ],
   declarations: [
     HomeComponent,
     NavigationComponent,
     FooterComponent,
     SocialComponent,
-    TestComponent
+    TestComponent,
   ],
   exports: [
     HomeComponent,
     NavigationComponent,
     FooterComponent,
     SocialComponent,
-    TestComponent
+    TestComponent,
   ],
 })
 export class UiModule {
