@@ -12,22 +12,14 @@ import org.springframework.data.annotation.Id;
  */
 @Data
 public class Translation {
-    /**
-     * The Id.
-     */
+
     @Id
     private String id;
-    /**
-     * The Key.
-     */
+
     private String key;
-    /**
-     * The German.
-     */
+
     private String german;
-    /**
-     * The English.
-     */
+
     private String english;
 
     /**

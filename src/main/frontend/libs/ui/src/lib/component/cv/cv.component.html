@@ -1,0 +1,167 @@
+<section class="services section">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>{{ 'CV.HEADLINE' | translate }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <mzd-timeline [alternateSide]="true">
+      <mzd-timeline-content
+        [card]="true"
+        [border]="true"
+        [card]="true"
+        [border]="true"
+        *ngFor="let entry of cv; let i = index; let even = even; let odd = odd"
+        class="wow"
+        [ngClass]="{
+          'fadeInRight content-right': odd,
+          'fadeInLeft content-left': even
+        }"
+      >
+        <mzd-icon>
+          <fa-icon [icon]="faCheckSquare" class="project-finished" *ngIf="(entry.biographyState === allBiographyStates.PROJECT_FINISHED)"></fa-icon>
+          <fa-icon [icon]="faEdit" class="project-current" *ngIf="entry.biographyState === allBiographyStates.PROJECT_CURRENT"></fa-icon>
+          <fa-icon [icon]="faCheckSquare" class="job-finished" *ngIf="entry.biographyState === allBiographyStates.JOB_FINISHED"></fa-icon>
+          <fa-icon [icon]="faEdit" class="job-current" *ngIf="entry.biographyState === allBiographyStates.JOB_CURRENT"></fa-icon>
+        </mzd-icon>
+        <div style="padding: 16px">
+          <h1>
+            {{ entry.start | date: 'MM/YYYY' }} -
+            {{ entry.end | date: 'MM/YYYY' }}:
+            <span
+              [innerHTML]="'CV.EVENTS.' + entry.element + '.TITLE' | translate"
+            ></span>
+          </h1>
+          <hr />
+
+          <table class="table table-bordered">
+            <tr>
+              <td>{{ 'CV.EVENTS.ROLE' | translate }}</td>
+              <td
+                translate="{{ 'CV.EVENTS.' + entry.element + '.CONTENT.ROLE' }}"
+              ></td>
+            </tr>
+            <tr>
+              <td>{{ 'CV.EVENTS.ACTIVITY' | translate }}</td>
+              <td
+                translate="{{
+                  'CV.EVENTS.' + entry.element + '.CONTENT.ACTIVITY'
+                }}"
+              ></td>
+            </tr>
+            <tr>
+              <td>{{ 'CV.EVENTS.DEV_ENV' | translate }}</td>
+              <td
+                translate="{{
+                  'CV.EVENTS.' + entry.element + '.CONTENT.DEV_ENV'
+                }}"
+              ></td>
+            </tr>
+            <tr>
+              <td>{{ 'CV.EVENTS.COMPONENT' | translate }}</td>
+              <td
+                translate="{{
+                  'CV.EVENTS.' + entry.element + '.CONTENT.COMPONENT'
+                }}"
+              ></td>
+            </tr>
+            <tr>
+              <td>{{ 'CV.EVENTS.TECHNOLOGY' | translate }}</td>
+              <td
+                translate="{{
+                  'CV.EVENTS.' + entry.element + '.CONTENT.TECHNOLOGY'
+                }}"
+              ></td>
+            </tr>
+            <tr>
+              <td
+                colspan="2"
+                [innerHTML]="
+                  'CV.EVENTS.' + entry.element + '.CONTENT.TASK' | translate
+                "
+              ></td>
+            </tr>
+          </table>
+        </div>
+      </mzd-timeline-content>
+    </mzd-timeline>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>{{ 'CV.EXPLANATIONS.HEADLINE' | translate }}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <mzd-timeline [alternateSide]="true">
+      <mzd-timeline-content
+        [card]="true"
+        [border]="true"
+        [card]="true"
+        [border]="true"
+        class="wow fadeInLeft content-left"
+      >
+        <mzd-icon>
+          <fa-icon [icon]=faEdit class="project-current"></fa-icon>
+        </mzd-icon>
+        <div style="padding: 16px">
+          <h1>{{ 'CV.EXPLANATIONS.PROJECT_CURRENT' | translate }}</h1>
+          <hr />
+        </div>
+      </mzd-timeline-content>
+
+      <mzd-timeline-content
+        [card]="true"
+        [border]="true"
+        [card]="true"
+        [border]="true"
+        class="wow fadeInLeft content-left"
+      >
+        <mzd-icon>
+          <fa-icon [icon]=faCheckSquare class="project-finished"></fa-icon>
+        </mzd-icon>
+        <div style="padding: 16px">
+          <h1>{{ 'CV.EXPLANATIONS.PROJECT_FINISHED' | translate }}</h1>
+          <hr />
+        </div>
+      </mzd-timeline-content>
+
+      <mzd-timeline-content
+        [card]="true"
+        [border]="true"
+        [card]="true"
+        [border]="true"
+        class="wow fadeInLeft content-left"
+      >
+        <mzd-icon>
+          <fa-icon [icon]=faEdit class="job-current"></fa-icon>
+        </mzd-icon>
+        <div style="padding: 16px">
+          <h1>{{ 'CV.EXPLANATIONS.JOB_CURRENT' | translate }}</h1>
+          <hr />
+        </div>
+      </mzd-timeline-content>
+
+      <mzd-timeline-content
+        [card]="true"
+        [border]="true"
+        [card]="true"
+        [border]="true"
+        class="wow fadeInLeft content-left"
+      >
+        <mzd-icon>
+          <fa-icon [icon]=faCheckSquare class="job-finished"></fa-icon>
+        </mzd-icon>
+        <div style="padding: 16px">
+          <h1>{{ 'CV.EXPLANATIONS.JOB_FINISHED' | translate }}</h1>
+          <hr />
+        </div>
+      </mzd-timeline-content>
+    </mzd-timeline>
+  </div>
+</section>

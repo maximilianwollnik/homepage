@@ -17,5 +17,5 @@ public interface TranslationRepository extends MongoRepository<Translation, Stri
      * @param key the key
      * @return the translation
      */
-    public Translation findByKey(String key);
+    Translation findByKey(String key);
 }

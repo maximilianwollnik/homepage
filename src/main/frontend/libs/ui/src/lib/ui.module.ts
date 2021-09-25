@@ -15,10 +15,13 @@ import { RouterModule, Route } from '@angular/router';
 import { ServiceModule } from '@frontend/service';
 import { TestComponent } from './component/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CvComponent } from './component/cv/cv.component';
+import { MzdTimelineModule } from 'ngx-mzd-timeline';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'cv', component: CvComponent },
   { path: 'test', component: TestComponent },
 ];
 
@@ -29,6 +32,7 @@ export const uiRoutes: Route[] = [
     RouterModule,
     ServiceModule,
     HttpClientModule,
+    MzdTimelineModule 
   ],
   declarations: [
     HomeComponent,
@@ -36,6 +40,7 @@ export const uiRoutes: Route[] = [
     FooterComponent,
     SocialComponent,
     TestComponent,
+    CvComponent,
   ],
   exports: [
     HomeComponent,
@@ -43,6 +48,7 @@ export const uiRoutes: Route[] = [
     FooterComponent,
     SocialComponent,
     TestComponent,
+    CvComponent,
   ],
 })
 export class UiModule {

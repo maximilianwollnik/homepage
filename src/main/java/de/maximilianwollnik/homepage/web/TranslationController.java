@@ -14,9 +14,17 @@ import java.util.Map;
 @RestController
 public class TranslationController {
     private static final Logger logger = LoggerFactory.getLogger(TranslationController.class);
+    private final TranslationService translationService;
 
+    /**
+     * Instantiates a new Translation controller.
+     *
+     * @param translationService the translation service
+     */
     @Autowired
-    private TranslationService translationService;
+    public TranslationController(TranslationService translationService) {
+        this.translationService = translationService;
+    }
 
     /**
      * Translations map.
@@ -30,6 +38,6 @@ public class TranslationController {
         Map<String, Object> result = translationService.getTranslations(language);
         logger.debug("* translations() - result='{}'", result);
         logger.info("<< translations() returns");
-        return translationService.getTranslations(language);
+        return result;
     }
 }
