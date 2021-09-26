@@ -3,9 +3,17 @@ $icon-color-job-finished: #3f903f;
 $icon-color-project-current: #2695f7;
 $icon-color-project-finished: #3ef03e;
 
-mzd-icon {
-  top: 17px;
+.icon-right,
+.icon-left {
+  top: 18px;
+}
+
+.icon-right {
   right: -6px;
+}
+
+.icon-left {
+  right: -7px;
 }
 
 .job-current {

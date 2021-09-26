@@ -1,5 +1,5 @@
-import { Build } from "./build";
+import { Build } from './build';
 
 export interface Info {
-    build: Build;
-  }
+  build: Build;
+}

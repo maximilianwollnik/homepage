@@ -17,11 +17,13 @@ import { TestComponent } from './component/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CvComponent } from './component/cv/cv.component';
 import { MzdTimelineModule } from 'ngx-mzd-timeline';
+import { DisclaimerComponent } from './component/disclaimer/disclaimer.component';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'cv', component: CvComponent },
+  { path: 'disclaimer', component: DisclaimerComponent },
   { path: 'test', component: TestComponent },
 ];
 
@@ -41,6 +43,7 @@ export const uiRoutes: Route[] = [
     SocialComponent,
     TestComponent,
     CvComponent,
+    DisclaimerComponent,
   ],
   exports: [
     HomeComponent,
@@ -49,6 +52,7 @@ export const uiRoutes: Route[] = [
     SocialComponent,
     TestComponent,
     CvComponent,
+    DisclaimerComponent,
   ],
 })
 export class UiModule {

@@ -1,0 +1,20 @@
+<section class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>{{ 'DISCLAIMER.HEADLINE' | translate }}</h1>
+      </div>
+    </div>
+    <div class="row" *ngFor="let disclaimer of disclaimers">
+      <div class="col text-center">
+        <h4 [innerHTML]="disclaimer.title | translate"></h4>
+        <p [innerHTML]="disclaimer.text | translate"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <small [innerHTML]="'DISCLAIMER.BODY.SOURCE' | translate"></small>
+      </div>
+    </div>
+  </div>
+</section>

@@ -21,7 +21,11 @@
           'fadeInLeft content-left': even
         }"
       >
-        <mzd-icon>
+        <mzd-icon
+        [ngClass]="{
+          'icon-right': odd,
+          'icon-left': even
+        }">
           <fa-icon [icon]="faCheckSquare" class="project-finished" *ngIf="(entry.biographyState === allBiographyStates.PROJECT_FINISHED)"></fa-icon>
           <fa-icon [icon]="faEdit" class="project-current" *ngIf="entry.biographyState === allBiographyStates.PROJECT_CURRENT"></fa-icon>
           <fa-icon [icon]="faCheckSquare" class="job-finished" *ngIf="entry.biographyState === allBiographyStates.JOB_FINISHED"></fa-icon>
@@ -120,7 +124,7 @@
         [border]="true"
         [card]="true"
         [border]="true"
-        class="wow fadeInLeft content-left"
+        class="wow fadeInRight content-right"
       >
         <mzd-icon>
           <fa-icon [icon]=faCheckSquare class="project-finished"></fa-icon>
@@ -152,7 +156,7 @@
         [border]="true"
         [card]="true"
         [border]="true"
-        class="wow fadeInLeft content-left"
+        class="wow fadeInRight content-right"
       >
         <mzd-icon>
           <fa-icon [icon]=faCheckSquare class="job-finished"></fa-icon>

@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -34,6 +35,16 @@ public class BiographyService {
      * @return the biographies
      */
     public List<Biography> getBiographies() {
-        return biographyRepository.findAll();
+        logger.info(">> getBiographies()");
+        List<Biography> result = biographyRepository.findAll();
+        result.sort(new Comparator<Biography>() {
+            @Override
+            public int compare(Biography o1, Biography o2) {
+                return Long.valueOf(o1.getStart().getTime()).compareTo(Long.valueOf(o2.getStart().getTime()));
+            }
+        });
+        logger.debug("* getBiographies() - result='{}'", result);
+        logger.info("<< getBiographies() returns");
+        return result;
     }
 }
