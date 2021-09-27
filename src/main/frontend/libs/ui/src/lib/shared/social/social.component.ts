@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SocialItem } from '@frontend/data';
+import { Social } from '@frontend/data';
 import { SocialLoaderService } from '@frontend/service';
 
 @Component({
@@ -8,10 +8,10 @@ import { SocialLoaderService } from '@frontend/service';
   styleUrls: ['./social.component.scss']
 })
 export class SocialComponent {
-  socialItems : SocialItem[] = [];
+  socialItems : Social[] = [];
 
   constructor(private socialLoaderService : SocialLoaderService) {
-    socialLoaderService.getSocial().subscribe((social: SocialItem[]) => {
+    socialLoaderService.getSocial().subscribe((social: Social[]) => {
       this.socialItems = social;
     })
   }

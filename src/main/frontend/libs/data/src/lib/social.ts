@@ -1,6 +1,6 @@
 import { IconName } from '@fortawesome/fontawesome-svg-core';
 
-export interface SocialItem {
+export interface Social {
   icon: IconName;
   url: string;
 }

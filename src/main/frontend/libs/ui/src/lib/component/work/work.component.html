@@ -1,0 +1,65 @@
+<section class="intro-video-area overlay section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title white-text">
+          <h1 class="wow fadeInUp" data-wow-delay=".4s">
+            {{ 'WORK.HEADLINE' | translate }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngFor="let internalArray of workItems">
+    <div class="row align-items-center">
+      <div class="col" *ngFor="let work of internalArray">
+        <div class="row">
+          <div class="section-title white-text">
+            <h3
+              class="wow fadeInUp"
+              data-wow-delay=".6s"
+              [innerHTML]="'WORK.BODY.' + work.element + '.TITLE' | translate"
+            ></h3>
+            <p
+              class="wow fadeInUp"
+              data-wow-delay=".6s"
+              [innerHTML]="'WORK.BODY.' + work.element + '.TEXT' | translate"
+            ></p>
+          </div>
+        </div>
+        <div class="intro-video-play wow zoomIn">
+          <div class="play-thumb wow zoomIn">
+            <a
+              href="{{work.url}}"
+              (click)="open(work.url)"
+              class="glightbox video wow zoomIn"
+              ><i class="lni lni-play wow zoomIn"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+
+    <div class="col">
+        <div class="section-title white-text">
+          <p class="wow fadeInUp" data-wow-delay=".6s">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form.
+          </p>
+        </div>
+        <div class="intro-video-play">
+          <div class="play-thumb wow zoomIn" data-wow-delay=".2s">
+            <a
+              href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+              class="glightbox video"
+              ><i class="lni lni-play"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+-->
