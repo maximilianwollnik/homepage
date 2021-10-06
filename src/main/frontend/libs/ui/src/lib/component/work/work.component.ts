@@ -5,7 +5,7 @@ import {
   WorkLoaderService,
 } from '@frontend/service';
 import { TranslateService } from '@ngx-translate/core';
-import { Lightbox } from 'ngx-lightbox';
+import { Gallery } from 'ng-gallery';
 
 @Component({
   selector: 'frontend-work',
@@ -19,11 +19,15 @@ export class WorkComponent {
     private workLoaderService: WorkLoaderService,
     private translate: TranslateService,
     private translateConfiguration: TranslationConfigurationService,
-    private lightbox: Lightbox
+    private gallery: Gallery
   ) {
-    translateConfiguration.configureTranslation(translate);
+    this.translateConfiguration.configureTranslation(this.translate);
 
-    workLoaderService.getWork().subscribe((work: Work[]) => {
+    this.workLoaderService.getWork().subscribe((work: Work[]) => {
+      const lightboxRef = this.gallery.ref('lightbox', {
+        thumb: false
+      });
+
       let workArray: Work[] = [];
       let j = 0;
       for (let i = 0; i < work.length; i++) {
@@ -36,15 +40,11 @@ export class WorkComponent {
           workArray.push(work[i]);
         }
         j++;
+        lightboxRef.addYoutube({ src: work[i].url });
       }
       if (workArray.length > 0) {
         this.workItems.push(workArray);
       }
-      console.log(this.workItems);
     });
-  }
-
-  open(url: string): void {
-    this.lightbox.open([{ src: url, caption: '', thumb: '' }], 0);
   }
 }

@@ -93,8 +93,7 @@
             "styles": [
               "apps/webapp/src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/wowjs/css/libs/animate.css",
-              "./node_modules/ngx-lightbox/lightbox.css"
+              "node_modules/wowjs/css/libs/animate.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

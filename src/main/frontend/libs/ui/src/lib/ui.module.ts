@@ -19,7 +19,9 @@ import { CvComponent } from './component/cv/cv.component';
 import { MzdTimelineModule } from 'ngx-mzd-timeline';
 import { DisclaimerComponent } from './component/disclaimer/disclaimer.component';
 import { WorkComponent } from './component/work/work.component';
-import { LightboxModule } from 'ngx-lightbox';
+import { GalleryModule } from 'ng-gallery';
+import { LightboxModule } from  'ng-gallery/lightbox';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -38,6 +40,8 @@ export const uiRoutes: Route[] = [
     ServiceModule,
     HttpClientModule,
     MzdTimelineModule,
+    BrowserAnimationsModule,
+    GalleryModule,
     LightboxModule
   ],
   declarations: [

@@ -67,9 +67,9 @@ public class HomepageApplication implements CommandLineRunner {
     private void work() {
         workRepository.deleteAll();
 
-        workRepository.save(new Work("BSMX_ATM", "https://www.youtube.com/watch?v=wHtOiiBFM0A"));
-        workRepository.save(new Work("CBA_DEPOSIT", "https://www.youtube.com/watch?v=gaTLF4bOa-U"));
-        workRepository.save(new Work("OCBC_ATM", "https://www.youtube.com/watch?v=7JewlnbUodo"));
+        workRepository.save(new Work("BSMX_ATM", "wHtOiiBFM0A"));
+        workRepository.save(new Work("CBA_DEPOSIT", "gaTLF4bOa-U"));
+        workRepository.save(new Work("OCBC_ATM", "7JewlnbUodo"));
     }
 
     private void social() {

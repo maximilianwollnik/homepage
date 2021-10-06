@@ -30,6 +30,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^12.1.0",
+    "@angular/cdk": "^12.2.8",
     "@angular/common": "^12.1.0",
     "@angular/compiler": "^12.1.0",
     "@angular/core": "^12.1.0",
@@ -49,7 +50,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.0.2",
     "jquery": "^3.6.0",
-    "ngx-lightbox": "^2.4.1",
+    "ng-gallery": "^5.0.0",
     "ngx-mzd-timeline": "^1.0.3",
     "ngx-wow": "^2.0.1",
     "rxjs": "~6.6.0",

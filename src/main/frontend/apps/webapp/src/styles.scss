@@ -2,6 +2,7 @@
 @import "bootstrap/scss/bootstrap";
 @import "@morteza-jamali/lineicons/WebFont/scss/main";
 @import "tiny-slider/dist/tiny-slider";
+@import '~@angular/cdk/overlay-prebuilt.css';
 
 .navFlag {
   width: 30px;
@@ -2691,6 +2692,7 @@ ol {
 
 .intro-video-area .section-title {
   margin-bottom: 200px;
+  max-height: 115px;
 }
 
 .intro-video-area .intro-video-play {
