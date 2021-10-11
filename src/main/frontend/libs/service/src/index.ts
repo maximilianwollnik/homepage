@@ -4,3 +4,4 @@ export * from './lib/translation-configuration/translation-configuration.service
 export * from './lib/biography-loader/biography-loader.service';
 export * from './lib/social-loader/social-loader.service';
 export * from './lib/work-loader/work-loader.service';
+export * from './lib/skill-loader/skill-loader.service';

@@ -2,7 +2,6 @@ package de.maximilianwollnik.homepage.service;
 
 import de.maximilianwollnik.homepage.model.Biography;
 import de.maximilianwollnik.homepage.repository.BiographyRepository;
-import de.maximilianwollnik.homepage.repository.TranslationRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
 export interface Work {
-    element: string;
-    url: string;
-  }
+  element: string;
+  url: string;
+}

@@ -4,10 +4,7 @@
 package de.maximilianwollnik.homepage;
 
 import de.maximilianwollnik.homepage.model.*;
-import de.maximilianwollnik.homepage.repository.BiographyRepository;
-import de.maximilianwollnik.homepage.repository.SocialRepository;
-import de.maximilianwollnik.homepage.repository.TranslationRepository;
-import de.maximilianwollnik.homepage.repository.WorkRepository;
+import de.maximilianwollnik.homepage.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -24,6 +21,7 @@ public class HomepageApplication implements CommandLineRunner {
     private final BiographyRepository biographyRepository;
     private final SocialRepository socialRepository;
     private final WorkRepository workRepository;
+    private final SkillRepository skillRepository;
 
     /**
      * Instantiates a new Homepage application.
@@ -32,13 +30,15 @@ public class HomepageApplication implements CommandLineRunner {
      * @param biographyRepository   the biography repository
      * @param socialRepository      the social repository
      * @param workRepository        the work repository
+     * @param skillRepository       the skill repository
      */
     @Autowired
-    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository,WorkRepository workRepository) {
+    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository, WorkRepository workRepository, SkillRepository skillRepository) {
         this.translationRepository = translationRepository;
         this.biographyRepository = biographyRepository;
         this.socialRepository = socialRepository;
         this.workRepository = workRepository;
+        this.skillRepository = skillRepository;
     }
 
     /**
@@ -62,6 +62,22 @@ public class HomepageApplication implements CommandLineRunner {
         biography();
         social();
         work();
+        skill();
+    }
+
+    private void skill() {
+        skillRepository.deleteAll();
+
+        skillRepository.save(new Skill("JAVA"));
+        skillRepository.save(new Skill("ANGULAR"));
+        skillRepository.save(new Skill("SOA"));
+        skillRepository.save(new Skill("REST"));
+        skillRepository.save(new Skill("SPRING"));
+        skillRepository.save(new Skill("DOCKER"));
+        skillRepository.save(new Skill("VAGRANT"));
+        skillRepository.save(new Skill("CI"));
+        skillRepository.save(new Skill("AGILE"));
+        skillRepository.save(new Skill("WATERFALL"));
     }
 
     private void work() {
@@ -132,7 +148,7 @@ public class HomepageApplication implements CommandLineRunner {
 
 
         // Home
-        translationRepository.save(new Translation("HOME.HEADLINE", "Hallo, mein Name ist {{ AUTHOR }}!", "Hi, my name is {{ AUTHOR }}!"));
+        translationRepository.save(new Translation("HOME.HEADLINE", "Hallo, mein Name ist <br>{{ AUTHOR }}!", "Hi, my name is <br>{{ AUTHOR }}!"));
         translationRepository.save(new Translation("HOME.BODY", "Ich bin ein IT Berater und Software Entwickler aus Deutschland mit über neun Jahren Berufserfahrung. Derzeit arbeite ich für <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>Hier bin ich verantwortlich für die Software auf Geldautomaten und liefere projektspezifische Erweiterungen für Kunden weltweit. Je nach Anforderungen entwickele ich Java und Web-Komponenten, um eine herstellerunabhängige Anwendung zu erweitern. Die Kunden legen dabei einen großen Wert auf eine neue Generation von grafischen Oberflächen, Multikanalstrategie (mobil, Internet) und Konzepten für eine Filiale der Zukunft, wobei ich ihnen unterstützend zur Seite stehe.<br><br>Momentan lege ich meinen Fokus auf den Softwarelieferprozess rund um das Thema <b>kontinuierliche Integration</b>.Mein aktuelles Profil kann man auch <a href='../assets/doc/profile.pdf' target='_blank'>hier</a> herunterladen.", "I am an IT consultant and software developer from Germany with over nine years of professional experience. Currently I am working for <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>I am responsible for ATM application globally and I deliver project specific extensions for customers worldwide. Depending on the requirements I develop Java and web components to enhance a multi-vendor platform. The customers are very interested to create a next generation user interface, branch of the future and multi-channel (Mobile, Internet) capabilities.<br><br>Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>.My latest profile can be downloaded from <a href='../assets/doc/profile.pdf' target='_blank'>here</a>."));
 
         // CV
@@ -267,12 +283,25 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("DISCLAIMER.BODY.SOURCE", "<strong>Quelle</strong>: <a href=\"http://www.mustervorlage.net/homepage-kostenlos\" target=\"_blank\">Disclaimer und Websites erstellen</a>", "<strong>Source</strong>: <a href=\"http://www.mustervorlage.net/homepage-kostenlos\" target=\"_blank\">English Disclaimer on Mustervorlage.net</a>"));
 
         // Work
-        translationRepository.save(new Translation("WORK.HEADLINE", "Hier ist eine Auswahl von fertig gestellten Projekten", "Here you can find a collection of finished projects1"));
+        translationRepository.save(new Translation("WORK.HEADLINE", "Hier ist eine Auswahl von fertig gestellten Projekten", "Here you can find a collection of finished projects"));
         translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TITLE", "Banco Santander Mexiko - ATM", "Banco Santander Mexico - ATM"));
         translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TEXT", "Die alte Lösung wurde durch eine neue Anwendung ersetzt, die dem Kunden auch Einzahltransaktionen ermöglicht.", "The old solution was replaced by a new application, which offers deposit transaction to the customer."));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TITLE", "Commonwealth Bank of Australia - Einzahlung", "Commonwealth Bank of Australia - Deposit"));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TEXT", "Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gutgeschrieben.", "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him. He can deposit both cash and cheques without an envelope 24/7, and cash is credited to his account instantly."));
         translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking - ATM", "Oversea-Chinese Banking - ATM"));
         translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen wie z.B. Chequeeinzahlung implementiert.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented like cheque deposit."));
+
+        //Skill
+        translationRepository.save(new Translation("SKILL.HEADLINE", "Fähigkeiten", "Skills"));
+        translationRepository.save(new Translation("SKILL.BODY.JAVA.TEXT", "Java", "Java"));
+        translationRepository.save(new Translation("SKILL.BODY.ANGULAR.TEXT", "Angular", "Angular"));
+        translationRepository.save(new Translation("SKILL.BODY.SOA.TEXT", "SOA", "SOA"));
+        translationRepository.save(new Translation("SKILL.BODY.REST.TEXT", "Rest", "Rest"));
+        translationRepository.save(new Translation("SKILL.BODY.SPRING.TEXT", "Spring", "Spring"));
+        translationRepository.save(new Translation("SKILL.BODY.DOCKER.TEXT", "Docker", "Docker"));
+        translationRepository.save(new Translation("SKILL.BODY.VAGRANT.TEXT", "Vagrant", "Vagrant"));
+        translationRepository.save(new Translation("SKILL.BODY.CI.TEXT", "CI", "CI"));
+        translationRepository.save(new Translation("SKILL.BODY.AGILE.TEXT", "Agil", "Agile"));
+        translationRepository.save(new Translation("SKILL.BODY.WATERFALL.TEXT", "Wasserfall", "Waterfall"));
     }
 }

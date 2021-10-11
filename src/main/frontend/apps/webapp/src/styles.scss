@@ -3,6 +3,19 @@
 @import "@morteza-jamali/lineicons/WebFont/scss/main";
 @import "tiny-slider/dist/tiny-slider";
 @import '~@angular/cdk/overlay-prebuilt.css';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.green';
+
+.owl-carousel {
+  .owl-item {
+    border: 5px solid black;
+    border-radius: 100px;
+    margin-left: 10px;
+
+    line-height: 200px;
+    text-align: center;
+  }
+}
 
 .navFlag {
   width: 30px;
@@ -3693,6 +3706,10 @@ blockquote span {
 /*======================================
     Brand CSS
 ========================================*/
+.brand-area {
+  padding-top: 100px;
+}
+
 .brand-area .section-title {
   margin-bottom: 0 !important;
 }
