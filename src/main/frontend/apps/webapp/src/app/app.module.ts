@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { uiRoutes, UiModule } from '@frontend/ui';
 import { NgwWowModule } from 'ngx-wow';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(uiRoutes, { initialNavigation: 'enabled' }),
+    RouterModule.forRoot(uiRoutes, {
+      initialNavigation: 'enabled',
+      anchorScrolling: 'enabled'
+    }),
     UiModule,
-    NgwWowModule
+    NgwWowModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

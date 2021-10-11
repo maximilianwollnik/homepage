@@ -41,21 +41,54 @@
             >
               <ul id="nav" class="navbar-nav ms-auto flex-nowrap">
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/home" routerLinkActive="active">{{ 'BUTTON.MENU_HOME' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/home"
+                    fragment="top"
+                    [class.active]="isLinkActive('home#top')"
+                    >{{ 'BUTTON.MENU_HOME' | translate }}</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/cv" routerLinkActive="active">{{ 'BUTTON.MENU_CV' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/home"
+                    fragment="cv"
+                    [class.active]="isLinkActive('home#cv')"
+                    >{{ 'BUTTON.MENU_CV' | translate }}</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/disclaimer" routerLinkActive="active">{{ 'BUTTON.MENU_DISCLAIMER' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/home"
+                    fragment="work"
+                    [class.active]="isLinkActive('home#work')"
+                    >{{ 'BUTTON.MENU_WORK' | translate }}</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/work" routerLinkActive="active">{{ 'BUTTON.MENU_WORK' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/home"
+                    fragment="skill"
+                    [class.active]="isLinkActive('home#skill')"
+                    >{{ 'BUTTON.MENU_SKILL' | translate }}</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/skill" routerLinkActive="active">{{ 'BUTTON.MENU_SKILL' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/disclaimer"
+                    [class.active]="isLinkActive('disclaimer#top')"
+                    fragment="top"
+                    >{{ 'BUTTON.MENU_DISCLAIMER' | translate }}</a
+                  >
                 </li>
-                <li class="nav-item"><a href="#">{{ 'BUTTON.MENU_EDUCATION' | translate }}</a></li>
+
+                <li class="nav-item">
+                  <a href="#">{{ 'BUTTON.MENU_EDUCATION' | translate }}</a>
+                </li>
               </ul>
             </div>
           </nav>

@@ -20,18 +20,23 @@ import { MzdTimelineModule } from 'ngx-mzd-timeline';
 import { DisclaimerComponent } from './component/disclaimer/disclaimer.component';
 import { WorkComponent } from './component/work/work.component';
 import { GalleryModule } from 'ng-gallery';
-import { LightboxModule } from  'ng-gallery/lightbox';
+import { LightboxModule } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillComponent } from './component/skill/skill.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'cv', component: CvComponent },
+  {
+    path: 'home',
+    component: HomeComponent,
+    children: [
+      { path: '', component: CvComponent, outlet: 'cv' },
+      { path: '', component: WorkComponent, outlet: 'work' },
+      { path: '', component: SkillComponent, outlet: 'skill' },
+    ],
+  },
   { path: 'disclaimer', component: DisclaimerComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'skill', component: SkillComponent },
   { path: 'test', component: TestComponent },
 ];
 
@@ -46,7 +51,7 @@ export const uiRoutes: Route[] = [
     BrowserAnimationsModule,
     GalleryModule,
     LightboxModule,
-    CarouselModule
+    CarouselModule,
   ],
   declarations: [
     HomeComponent,
