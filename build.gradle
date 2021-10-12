@@ -48,7 +48,12 @@ test {
 task('installWebapp') {
     doLast {
         exec {
-            commandLine("npm", "--prefix", "src/main/frontend", "install")
+            workingDir 'src/main/frontend'
+            if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+                commandLine 'cmd', '/c', 'npm', 'install'
+            } else {
+                commandLine 'npm', 'install'
+            }
         }
     }
 }
@@ -56,7 +61,12 @@ task('installWebapp') {
 task('buildWebapp', dependsOn: 'installWebapp') {
     doLast {
         exec {
-            commandLine("npm", "--prefix", "src/main/frontend", "run", "build")
+            workingDir 'src/main/frontend'
+            if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+                commandLine 'cmd', '/c', 'npm', 'run', 'build'
+            } else {
+                commandLine 'npm', 'run', 'build'
+            }
         }
     }
 }
@@ -65,5 +75,5 @@ springBoot {
     buildInfo()
 }
 
-//bootJar.dependsOn buildWebapp
-//bootRun.dependsOn buildWebapp
+bootJar.dependsOn buildWebapp
+bootRun.dependsOn buildWebapp

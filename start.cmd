@@ -4,4 +4,4 @@ SET CONFIGUSER=user
 SET CONFIGPROTOCOL=http
 SET CONFIGURI=maximilianwollnik.de
 
-java -jar build\libs\homepage-0.0.1-SNAPSHOT.jar
+java -jar build\libs\homepage-2.0.0-SNAPSHOT.jar
