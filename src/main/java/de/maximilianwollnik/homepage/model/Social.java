@@ -1,18 +1,14 @@
 package de.maximilianwollnik.homepage.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-
-import java.util.Date;
+import lombok.EqualsAndHashCode;
 
 /**
  * The type Social.
  */
 @Data
-public class Social {
-    @Id
-    private String id;
-
+@EqualsAndHashCode(callSuper=false)
+public class Social extends Item {
     private String icon;
 
     private String url;
@@ -24,6 +20,7 @@ public class Social {
      * @param url  the url
      */
     public Social(String icon, String url) {
+        super(null);
         this.icon = icon;
         this.url = url;
     }

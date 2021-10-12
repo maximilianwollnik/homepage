@@ -43,8 +43,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    routerLink="/home"
-                    fragment="top"
+                    (click)="navigate('home', 'top')"
                     [class.active]="isLinkActive('home#top')"
                     >{{ 'BUTTON.MENU_HOME' | translate }}</a
                   >
@@ -52,8 +51,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    routerLink="/home"
-                    fragment="cv"
+                    (click)="navigate('home', 'cv')"
                     [class.active]="isLinkActive('home#cv')"
                     >{{ 'BUTTON.MENU_CV' | translate }}</a
                   >
@@ -61,8 +59,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    routerLink="/home"
-                    fragment="work"
+                    (click)="navigate('home', 'work')"
                     [class.active]="isLinkActive('home#work')"
                     >{{ 'BUTTON.MENU_WORK' | translate }}</a
                   >
@@ -70,8 +67,7 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    routerLink="/home"
-                    fragment="skill"
+                    (click)="navigate('home', 'skill')"
                     [class.active]="isLinkActive('home#skill')"
                     >{{ 'BUTTON.MENU_SKILL' | translate }}</a
                   >
@@ -79,15 +75,18 @@
                 <li class="nav-item">
                   <a
                     class="nav-link"
-                    routerLink="/disclaimer"
-                    [class.active]="isLinkActive('disclaimer#top')"
-                    fragment="top"
-                    >{{ 'BUTTON.MENU_DISCLAIMER' | translate }}</a
+                    (click)="navigate('home', 'education')"
+                    [class.active]="isLinkActive('home#education')"
+                    >{{ 'BUTTON.MENU_EDUCATION' | translate }}</a
                   >
                 </li>
-
                 <li class="nav-item">
-                  <a href="#">{{ 'BUTTON.MENU_EDUCATION' | translate }}</a>
+                  <a
+                    class="nav-link"
+                    (click)="navigate('disclaimer', 'top')"
+                    [class.active]="isLinkActive('disclaimer#top')"
+                    >{{ 'BUTTON.MENU_DISCLAIMER' | translate }}</a
+                  >
                 </li>
               </ul>
             </div>

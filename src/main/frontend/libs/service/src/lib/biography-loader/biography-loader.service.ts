@@ -13,4 +13,8 @@ export class BiographyLoaderService {
   getBiography(): Observable<Biography[]> {
     return this.http.get<Biography[]>("http://localhost:1234/api/biography");
   }
+
+  getEducation(): Observable<Biography[]> {
+    return this.http.get<Biography[]>("http://localhost:1234/api/education");
+  }
 }

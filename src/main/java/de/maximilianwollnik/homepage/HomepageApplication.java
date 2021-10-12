@@ -22,6 +22,7 @@ public class HomepageApplication implements CommandLineRunner {
     private final SocialRepository socialRepository;
     private final WorkRepository workRepository;
     private final SkillRepository skillRepository;
+    private final EducationRepository educationRepository;
 
     /**
      * Instantiates a new Homepage application.
@@ -33,12 +34,13 @@ public class HomepageApplication implements CommandLineRunner {
      * @param skillRepository       the skill repository
      */
     @Autowired
-    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository, WorkRepository workRepository, SkillRepository skillRepository) {
+    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository, WorkRepository workRepository, SkillRepository skillRepository, EducationRepository educationRepository) {
         this.translationRepository = translationRepository;
         this.biographyRepository = biographyRepository;
         this.socialRepository = socialRepository;
         this.workRepository = workRepository;
         this.skillRepository = skillRepository;
+        this.educationRepository = educationRepository;
     }
 
     /**
@@ -63,21 +65,29 @@ public class HomepageApplication implements CommandLineRunner {
         social();
         work();
         skill();
+        education();
+    }
+
+    private void education() throws ParseException {
+        educationRepository.deleteAll();
+
+        DateFormat dateFormat = new SimpleDateFormat("MM/yyyy");
+        educationRepository.save(new Education(dateFormat.parse("01/2004"), dateFormat.parse("12/2006"), "FHDW"));
     }
 
     private void skill() {
         skillRepository.deleteAll();
 
-        skillRepository.save(new Skill("JAVA"));
-        skillRepository.save(new Skill("ANGULAR"));
-        skillRepository.save(new Skill("SOA"));
-        skillRepository.save(new Skill("REST"));
-        skillRepository.save(new Skill("SPRING"));
-        skillRepository.save(new Skill("DOCKER"));
-        skillRepository.save(new Skill("VAGRANT"));
-        skillRepository.save(new Skill("CI"));
-        skillRepository.save(new Skill("AGILE"));
-        skillRepository.save(new Skill("WATERFALL"));
+        skillRepository.save(new Item("JAVA"));
+        skillRepository.save(new Item("ANGULAR"));
+        skillRepository.save(new Item("SOA"));
+        skillRepository.save(new Item("REST"));
+        skillRepository.save(new Item("SPRING"));
+        skillRepository.save(new Item("DOCKER"));
+        skillRepository.save(new Item("VAGRANT"));
+        skillRepository.save(new Item("CI"));
+        skillRepository.save(new Item("AGILE"));
+        skillRepository.save(new Item("WATERFALL"));
     }
 
     private void work() {
@@ -303,5 +313,12 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("SKILL.BODY.CI.TEXT", "CI", "CI"));
         translationRepository.save(new Translation("SKILL.BODY.AGILE.TEXT", "Agil", "Agile"));
         translationRepository.save(new Translation("SKILL.BODY.WATERFALL.TEXT", "Wasserfall", "Waterfall"));
+
+        //Education
+        //Skill
+        translationRepository.save(new Translation("EDUCATION.TITLE", "Meine Ausbildung", "My Education"));
+        translationRepository.save(new Translation("EDUCATION.INSTRUCTION", "Hier habe ich mir mein Wissen angeeignet", "Here I gained my knowledge"));
+        translationRepository.save(new Translation("EDUCATION.FHDW.TITLE", "Diplom Wirtschaftsinformatiker", "Diploma Business Informatics"));
+        translationRepository.save(new Translation("EDUCATION.FHDW.CONTENT", "duales Studium der Wirtschaftsinformatik, Fachhochschule der Wirtschaft, Paderborn", "Dual-mode degree course of business informatics, university of applied science, Paderborn"));
     }
 }

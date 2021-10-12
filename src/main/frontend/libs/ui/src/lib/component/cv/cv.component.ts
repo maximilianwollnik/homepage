@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { BiographyLoaderService, TranslationConfigurationService } from '@frontend/service';
-import { TranslateService } from '@ngx-translate/core';
+import { BiographyLoaderService } from '@frontend/service';
 import { Biography, BiographyState } from '@frontend/data';
 import  * as faSolid from '@fortawesome/free-solid-svg-icons';
 
@@ -16,13 +15,9 @@ export class CvComponent {
   allBiographyStates = BiographyState;
 
   constructor(
-    private translate: TranslateService,
-    private translateConfiguration: TranslationConfigurationService,
     private biographyLoaderService: BiographyLoaderService
   ) {
-    translateConfiguration.configureTranslation(translate);
- 
-    biographyLoaderService.getBiography().subscribe((biography: Biography[]) => {
+    this.biographyLoaderService.getBiography().subscribe((biography: Biography[]) => {
       this.cv = biography;
     })
   }

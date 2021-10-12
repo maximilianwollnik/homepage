@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { Skill } from '@frontend/data';
+import { Item } from '@frontend/data';
 import {
   SkillLoaderService,
-  TranslationConfigurationService,
 } from '@frontend/service';
-import { TranslateService } from '@ngx-translate/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -27,16 +25,12 @@ export class SkillComponent {
     nav: false,
     autoWidth: true,
   };
-  skills: Skill[] = [];
+  skills: Item[] = [];
 
   constructor(
-    private translate: TranslateService,
-    private translateConfiguration: TranslationConfigurationService,
     private skillLoaderService: SkillLoaderService
   ) {
-    this.translateConfiguration.configureTranslation(this.translate);
-
-    this.skillLoaderService.getSkills().subscribe((skill: Skill[]) => {
+    this.skillLoaderService.getSkills().subscribe((skill: Item[]) => {
       this.skills = skill;
     });
   }

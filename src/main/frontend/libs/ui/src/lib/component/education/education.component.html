@@ -1,0 +1,53 @@
+<div class="latest-news-area section" id="education">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2
+            class="wow fadeInUp"
+            data-wow-delay=".4s"
+            [innerHTML]="'EDUCATION.TITLE' | translate"
+          ></h2>
+          <p
+            class="wow fadeInUp"
+            data-wow-delay=".6s"
+            [innerHTML]="'EDUCATION.INSTRUCTION' | translate"
+          ></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-4"></div>
+      <div class="col-lg-4 col-md-4 col-4" *ngIf="education[0]">
+        <!-- Single News -->
+        <div class="single-news wow fadeInUp" data-wow-delay=".4s">
+          <div class="image">
+            <img class="thumb" src="assets/ui/fhdw.png" alt="#" />
+          </div>
+          <div class="content-body">
+            <h4 class="title">
+              <a
+                href="http://www.fhdw.de/standort-paderborn.aspx"
+                target="_blank"
+                >{{
+                  'EDUCATION.' + education[0].element + '.TITLE' | translate
+                }}</a
+              >
+            </h4>
+            <p>
+              {{ education[0].start | date: 'MM/YYYY' }} -
+              {{ education[0].end | date: 'MM/YYYY' }}
+            </p>
+            <p
+              [innerHTML]="
+                'EDUCATION.' + education[0].element + '.CONTENT' | translate
+              "
+            ></p>
+          </div>
+        </div>
+        <!-- End Single News -->
+      </div>
+      <div class="col-lg-4 col-md-4 col-4"></div>
+    </div>
+  </div>
+</div>

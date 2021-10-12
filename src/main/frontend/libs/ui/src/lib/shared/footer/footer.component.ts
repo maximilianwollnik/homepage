@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Info } from '@frontend/data';
-import { TranslationConfigurationService } from '@frontend/service';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'frontend-footer',
@@ -14,12 +12,8 @@ export class FooterComponent {
   time = '';
 
   constructor(
-    private translate: TranslateService,
-    private translateConfiguration: TranslationConfigurationService,
     private http: HttpClient
   ) {
-    translateConfiguration.configureTranslation(translate);
-
     http
       .get<Info>('http://localhost:1234/actuator/info')
       .subscribe((info: Info) => {

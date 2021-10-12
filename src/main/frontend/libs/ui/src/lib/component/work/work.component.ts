@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { Work } from '@frontend/data';
 import {
-  TranslationConfigurationService,
   WorkLoaderService,
 } from '@frontend/service';
-import { TranslateService } from '@ngx-translate/core';
 import { Gallery } from 'ng-gallery';
 
 @Component({
@@ -17,15 +15,11 @@ export class WorkComponent {
 
   constructor(
     private workLoaderService: WorkLoaderService,
-    private translate: TranslateService,
-    private translateConfiguration: TranslationConfigurationService,
     private gallery: Gallery
   ) {
-    this.translateConfiguration.configureTranslation(this.translate);
-
     this.workLoaderService.getWork().subscribe((work: Work[]) => {
       const lightboxRef = this.gallery.ref('lightbox', {
-        thumb: false
+        thumb: false,
       });
 
       let workArray: Work[] = [];

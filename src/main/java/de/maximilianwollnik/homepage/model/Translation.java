@@ -5,17 +5,14 @@
 package de.maximilianwollnik.homepage.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import lombok.EqualsAndHashCode;
 
 /**
  * The type Translation.
  */
 @Data
-public class Translation {
-
-    @Id
-    private String id;
-
+@EqualsAndHashCode(callSuper=false)
+public class Translation extends Item {
     private String key;
 
     private String german;
@@ -30,6 +27,7 @@ public class Translation {
      * @param english the english
      */
     public Translation(String key, String german, String english) {
+        super(null);
         this.key = key;
         this.german = german;
         this.english = english;

@@ -1,4 +1,5 @@
-export interface Work {
-  element: string;
+import { Item } from '..';
+
+export interface Work extends Item {
   url: string;
 }

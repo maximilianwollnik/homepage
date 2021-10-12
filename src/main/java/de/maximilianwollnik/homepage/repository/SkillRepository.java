@@ -1,12 +1,12 @@
 package de.maximilianwollnik.homepage.repository;
 
-import de.maximilianwollnik.homepage.model.Skill;
+import de.maximilianwollnik.homepage.model.Item;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  * The interface Skill repository.
  */
-public interface SkillRepository extends MongoRepository<Skill, String> {
+public interface SkillRepository extends MongoRepository<Item, String> {
 
     /**
      * Find by element skill.
@@ -14,5 +14,5 @@ public interface SkillRepository extends MongoRepository<Skill, String> {
      * @param element the element
      * @return the skill
      */
-    Skill findByElement(String element);
+    Item findByElement(String element);
 }

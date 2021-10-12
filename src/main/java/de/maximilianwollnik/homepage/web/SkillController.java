@@ -1,6 +1,6 @@
 package de.maximilianwollnik.homepage.web;
 
-import de.maximilianwollnik.homepage.model.Skill;
+import de.maximilianwollnik.homepage.model.Item;
 import de.maximilianwollnik.homepage.service.SkillService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,9 +35,9 @@ public class SkillController {
      * @return the list
      */
     @RequestMapping(value="/api/skill", method= RequestMethod.GET)
-    public List<Skill> skills() {
+    public List<Item> skills() {
         logger.info(">> skills()");
-        List<Skill> result = skillService.getSkills();
+        List<Item> result = skillService.getSkills();
         logger.debug("* skills() - result='{}'", result);
         logger.info("<< skills() returns");
         return result;

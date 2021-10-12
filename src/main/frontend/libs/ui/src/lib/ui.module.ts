@@ -13,7 +13,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SocialComponent } from './shared/social/social.component';
 import { RouterModule, Route } from '@angular/router';
 import { ServiceModule } from '@frontend/service';
-import { TestComponent } from './component/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CvComponent } from './component/cv/cv.component';
 import { MzdTimelineModule } from 'ngx-mzd-timeline';
@@ -24,6 +23,7 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillComponent } from './component/skill/skill.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { EducationComponent } from './component/education/education.component';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -34,10 +34,10 @@ export const uiRoutes: Route[] = [
       { path: '', component: CvComponent, outlet: 'cv' },
       { path: '', component: WorkComponent, outlet: 'work' },
       { path: '', component: SkillComponent, outlet: 'skill' },
+      { path: '', component: EducationComponent, outlet: 'education' },
     ],
   },
   { path: 'disclaimer', component: DisclaimerComponent },
-  { path: 'test', component: TestComponent },
 ];
 
 @NgModule({
@@ -58,22 +58,22 @@ export const uiRoutes: Route[] = [
     NavigationComponent,
     FooterComponent,
     SocialComponent,
-    TestComponent,
     CvComponent,
     DisclaimerComponent,
     WorkComponent,
     SkillComponent,
+    EducationComponent,
   ],
   exports: [
     HomeComponent,
     NavigationComponent,
     FooterComponent,
     SocialComponent,
-    TestComponent,
     CvComponent,
     DisclaimerComponent,
     WorkComponent,
     SkillComponent,
+    EducationComponent,
   ],
 })
 export class UiModule {

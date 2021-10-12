@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TranslationConfigurationService } from '@frontend/service';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'frontend-navigation',
@@ -22,6 +23,20 @@ export class NavigationComponent {
   }
 
   isLinkActive(link: string) {
-    return this.router.url.includes(link) || (this.router.url.indexOf('#') === -1 && link === 'home#top')
+    return (
+      this.router.url.includes(link) ||
+      (this.router.url.indexOf('#') === -1 && link === 'home#top')
+    );
+  }
+
+  navigate(link: string, fragment: string) {
+    this.router.navigateByUrl(link);
+    let sleep = timer(500);
+    if (this.router.url.indexOf(link) > -1) {
+      sleep = timer(0);
+    }
+    sleep.subscribe(() =>
+      this.router.navigateByUrl(link + '#' + fragment)
+    );
   }
 }

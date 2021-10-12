@@ -1,24 +1,26 @@
 package de.maximilianwollnik.homepage.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 
 /**
- * The type Skill.
+ * The type Item.
  */
 @Data
-public class Skill {
+@NoArgsConstructor
+public class Item {
     @Id
-    private String id;
+    protected String id;
 
-    private String element;
+    protected String element;
 
     /**
-     * Instantiates a new Skill.
+     * Instantiates a new Item.
      *
      * @param element the element
      */
-    public Skill(String element) {
+    public Item(String element) {
         this.element = element;
     }
 }

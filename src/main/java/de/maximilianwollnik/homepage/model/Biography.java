@@ -1,7 +1,7 @@
 package de.maximilianwollnik.homepage.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import lombok.EqualsAndHashCode;
 
 import java.util.Date;
 
@@ -9,16 +9,8 @@ import java.util.Date;
  * The type Biography.
  */
 @Data
-public class Biography {
-    @Id
-    private String id;
-
-    private Date start;
-
-    private Date end;
-
-    private String element;
-
+@EqualsAndHashCode(callSuper=false)
+public class Biography extends Education {
     private BiographyState biographyState;
 
     /**
@@ -30,9 +22,7 @@ public class Biography {
      * @param biographyState the biographyState
      */
     public Biography(Date start, Date end, String element, BiographyState biographyState) {
-        this.start = start;
-        this.end = end;
-        this.element = element;
+        super(start, end, element);
         this.biographyState = biographyState;
     }
 }

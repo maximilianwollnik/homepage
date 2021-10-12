@@ -4,4 +4,4 @@ export * from './lib/info';
 export * from './lib/biography';
 export * from './lib/disclaimer';
 export * from './lib/work';
-export * from './lib/skill';
+export * from './lib/item';

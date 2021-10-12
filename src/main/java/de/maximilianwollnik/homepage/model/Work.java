@@ -1,18 +1,14 @@
 package de.maximilianwollnik.homepage.model;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+import lombok.EqualsAndHashCode;
 
 /**
  * The type Work.
  */
 @Data
-public class Work {
-    @Id
-    private String id;
-
-    private String element;
-
+@EqualsAndHashCode(callSuper=false)
+public class Work extends Item {
     private String url;
 
     /**
@@ -22,7 +18,7 @@ public class Work {
      * @param url     the url
      */
     public Work(String element, String url) {
-        this.element = element;
+        super(element);
         this.url = url;
     }
 }

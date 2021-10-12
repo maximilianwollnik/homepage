@@ -1,6 +1,6 @@
 package de.maximilianwollnik.homepage.service;
 
-import de.maximilianwollnik.homepage.model.Skill;
+import de.maximilianwollnik.homepage.model.Item;
 import de.maximilianwollnik.homepage.repository.SkillRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,9 +32,9 @@ public class SkillService {
      *
      * @return the skills
      */
-    public List<Skill> getSkills() {
+    public List<Item> getSkills() {
         logger.info(">> getSkills()");
-        List<Skill> result = skillRepository.findAll();
+        List<Item> result = skillRepository.findAll();
         logger.debug("* getSkills() - result='{}'", result);
         logger.info("<< getSkills() returns");
         return result;
