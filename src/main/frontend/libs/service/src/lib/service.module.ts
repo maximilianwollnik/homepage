@@ -8,9 +8,10 @@ import {
   TranslateStore,
 } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { EnvironmentLoaderService } from './environment-loader/environment-loader.service';
 
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslationLoaderService(http);
+export function createTranslateLoader(http: HttpClient, environmentLoaderService: EnvironmentLoaderService) {
+  return new TranslationLoaderService(http, environmentLoaderService);
 }
 
 @NgModule({
@@ -22,12 +23,12 @@ export function createTranslateLoader(http: HttpClient) {
       loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
-        deps: [HttpClient],
+        deps: [HttpClient, EnvironmentLoaderService],
       },
       defaultLanguage: 'de',
     }),
   ],
-  providers: [TranslateStore],
+  providers: [TranslateStore, EnvironmentLoaderService],
   exports: [CommonModule, TranslateModule],
 })
 export class ServiceModule {}

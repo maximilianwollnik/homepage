@@ -2807,7 +2807,7 @@ ol {
     Blog CSS
 ========================================*/
 .latest-news-area {
-  background-color: #ddd8d8;
+  background-color: #f6f9fc;
 }
 
 .latest-news-area .single-news .image {
@@ -2865,8 +2865,9 @@ ol {
 }
 
 .latest-news-area .single-news:hover .image .thumb {
-  -webkit-transform: scale(1.1) rotate(1deg);
-  transform: scale(1.1) rotate(1deg);
+  -webkit-transform: scale(1.2) rotate(2deg);
+  transform: scale(1.2) rotate(2deg);
+  cursor: pointer;
 }
 
 .blog-list .single-news {

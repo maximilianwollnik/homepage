@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { uiRoutes, UiModule } from '@frontend/ui';
 import { NgwWowModule } from 'ngx-wow';
+import { APP_CONFIG } from '@frontend/service';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,12 +13,15 @@ import { NgwWowModule } from 'ngx-wow';
     BrowserModule,
     RouterModule.forRoot(uiRoutes, {
       initialNavigation: 'enabled',
-      anchorScrolling: 'enabled'
+      anchorScrolling: 'enabled',
+      useHash: true
     }),
-    UiModule,
+    UiModule ,
     NgwWowModule,
   ],
-  providers: [],
+  providers: [
+    { provide: APP_CONFIG, useValue: environment}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

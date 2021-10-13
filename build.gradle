@@ -58,7 +58,7 @@ task('installWebapp') {
     }
 }
 
-task('buildWebapp', dependsOn: 'installWebapp') {
+task('buildWebapp') {
     doLast {
         exec {
             workingDir 'src/main/frontend'

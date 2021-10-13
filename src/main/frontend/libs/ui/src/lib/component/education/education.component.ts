@@ -5,16 +5,20 @@ import { BiographyLoaderService } from '@frontend/service';
 @Component({
   selector: 'frontend-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss']
+  styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent {
   education: Biography[] = [];
 
-  constructor(
-    private biographyLoaderService: BiographyLoaderService
-  ) {
-    this.biographyLoaderService.getEducation().subscribe((education: Biography[]) => {
-      this.education = education;
-    })
+  constructor(private biographyLoaderService: BiographyLoaderService) {
+    this.biographyLoaderService
+      .getEducation()
+      .subscribe((education: Biography[]) => {
+        this.education = education;
+      });
+  }
+
+  goToLink(url: string) {
+    window.open(url, '_blank');
   }
 }

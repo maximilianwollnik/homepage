@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Info } from '@frontend/data';
+import { EnvironmentLoaderService } from '@frontend/service';
 
 @Component({
   selector: 'frontend-footer',
@@ -12,10 +13,11 @@ export class FooterComponent {
   time = '';
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private environmentLoaderService: EnvironmentLoaderService
   ) {
     http
-      .get<Info>('http://localhost:1234/actuator/info')
+      .get<Info>(this.environmentLoaderService.getApiHost() + 'actuator/info')
       .subscribe((info: Info) => {
         this.time = info.build.time;
         this.version = info.build.version;

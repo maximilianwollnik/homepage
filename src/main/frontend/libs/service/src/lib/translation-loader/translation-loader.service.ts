@@ -2,15 +2,20 @@ import { Injectable } from '@angular/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { EnvironmentLoaderService } from '../environment-loader/environment-loader.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslationLoaderService implements TranslateLoader {
-
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private environmentLoaderService: EnvironmentLoaderService
+  ) {}
 
   getTranslation(lang: string): Observable<unknown> {
-    return this.http.get("http://localhost:1234/api/translation/" + lang);
+    return this.http.get(
+      this.environmentLoaderService.getApiHost() + 'api/translation/' + lang
+    );
   }
 }
