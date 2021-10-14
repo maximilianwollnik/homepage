@@ -20,6 +20,6 @@ export class AppComponent implements AfterViewInit {
     setTimeout(() => {
       this.preloader.nativeElement.style.opacity = '0';
       this.preloader.nativeElement.style.display = 'none';
-    }, 100);
+    }, 1000);
   }
 }

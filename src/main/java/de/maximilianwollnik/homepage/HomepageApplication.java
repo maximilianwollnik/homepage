@@ -10,7 +10,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.text.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * The type Homepage application.
@@ -23,6 +25,8 @@ public class HomepageApplication implements CommandLineRunner {
     private final WorkRepository workRepository;
     private final SkillRepository skillRepository;
     private final EducationRepository educationRepository;
+    private final ProfileRepository profileRepository;
+    private final DateFormat dateFormat;
 
     /**
      * Instantiates a new Homepage application.
@@ -34,13 +38,15 @@ public class HomepageApplication implements CommandLineRunner {
      * @param skillRepository       the skill repository
      */
     @Autowired
-    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository, WorkRepository workRepository, SkillRepository skillRepository, EducationRepository educationRepository) {
+    public HomepageApplication(TranslationRepository translationRepository, BiographyRepository biographyRepository, SocialRepository socialRepository, WorkRepository workRepository, SkillRepository skillRepository, EducationRepository educationRepository, ProfileRepository profileRepository) {
         this.translationRepository = translationRepository;
         this.biographyRepository = biographyRepository;
         this.socialRepository = socialRepository;
         this.workRepository = workRepository;
         this.skillRepository = skillRepository;
         this.educationRepository = educationRepository;
+        this.profileRepository = profileRepository;
+        dateFormat = new SimpleDateFormat("MM/yyyy");
     }
 
     /**
@@ -66,12 +72,46 @@ public class HomepageApplication implements CommandLineRunner {
         work();
         skill();
         education();
+        profile();
+    }
+
+    private void profile() throws ParseException {
+        profileRepository.deleteAll();
+
+        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "JSE", "Java (JSE)", Ranking.EXCELLENT));
+        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "BOOT", "Java (Spring Boot, Spring Cloud)", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "C++", "C/C++", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "SCRIPT", "Skriptsprachen: Batch, Shell, Bash", Ranking.GOOD));
+
+        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "HTML", "HTML", Ranking.EXCELLENT));
+        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "JAVASCRIPT", "JavaScript", Ranking.EXCELLENT));
+        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "CSS", "CSS", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2010"), "JQUERY", "JQuery", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "REQUIREJS", "RequireJS", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "KO", "Knockout", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "DURANDAL", "Durandal", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "ANGULAR", "Angular", Ranking.GOOD));
+
+        profileRepository.save(new Profile(dateFormat.parse("01/2011"), "MYSQL", "MySQL", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2011"), "POSTGRES", "PostgreSQL", Ranking.OK));
+
+        profileRepository.save(new Profile(dateFormat.parse("01/2010"), "WATERFALL", "Wasserfall", Ranking.EXCELLENT));
+        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "SCRUM", "Scrum", Ranking.EXCELLENT));
+
+        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "GIT", "Git, SVN, MKS", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2013"), "DOCKER", "Docker", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "MAVEN", "Maven", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "NODE", "Nodejs", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "JENKINS", "Jenkins", Ranking.GOOD));
+        profileRepository.save(new Profile(dateFormat.parse("01/2015"), "SELENIUM", "Selenium", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "ECLIPSE", "Eclipse", Ranking.EXCELLENT));
+        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "VISUAL_STUDIO", "Visual Studio", Ranking.OK));
+        profileRepository.save(new Profile(dateFormat.parse("01/2015"), "ASCIIDOCTOR", "Asciidoctor", Ranking.OK));
     }
 
     private void education() throws ParseException {
         educationRepository.deleteAll();
 
-        DateFormat dateFormat = new SimpleDateFormat("MM/yyyy");
         educationRepository.save(new Education(dateFormat.parse("01/2004"), dateFormat.parse("12/2006"), "FHDW"));
     }
 
@@ -112,7 +152,6 @@ public class HomepageApplication implements CommandLineRunner {
     private void biography() throws ParseException {
         biographyRepository.deleteAll();
 
-        DateFormat dateFormat = new SimpleDateFormat("MM/yyyy");
         biographyRepository.save(new Biography(dateFormat.parse("04/2007"), dateFormat.parse("04/2008"), "WELLS_FARGO", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("05/2008"), dateFormat.parse("12/2008"), "HSBC_1", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("07/2016"), dateFormat.parse("02/2017"), "HSBC_2", BiographyState.PROJECT_FINISHED));
@@ -137,6 +176,51 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("TITLE", "{{ AUTHOR }}", "{{ AUTHOR }}"));
         translationRepository.save(new Translation("COMPANY_LINK", "http://www.dieboldnixdorf.com", "http://www.dieboldnixdorf.com"));
         translationRepository.save(new Translation("COMPANY_NAME", "Diebold Nixdorf", "Diebold Nixdorf"));
+        translationRepository.save(new Translation("SURNAME", "Wollnik", "Wollnik"));
+        translationRepository.save(new Translation("NAME", "Maximilian", "Maximilian"));
+        translationRepository.save(new Translation("NATIONALITY", "Deutsch", "German"));
+        translationRepository.save(new Translation("ADDRESS", "Kleine Penzlinger Str. 26, 33102 Paderborn", "Kleine Penzlinger Str. 26, 33102 Paderborn"));
+        translationRepository.save(new Translation("PHONE", "+49 (5251) 966 80 89", "+49 (5251) 966 80 89"));
+        translationRepository.save(new Translation("MOBILE", "+49 (173) 71 42 111", "+49 (173) 71 42 111"));
+        translationRepository.save(new Translation("BIRTHDAY", "07.02.1983", "07.02.1983"));
+        translationRepository.save(new Translation("POB", "Bad Neustadt a. d. Saale", "Bad Neustadt a. d. Saale"));
+        translationRepository.save(new Translation("MARITAL", "Ledig", "Single"));
+        translationRepository.save(new Translation("INTERESTS", "EDV, Fußball, Wirtschaft", "IT, Soccer, Economy"));
+        translationRepository.save(new Translation("LANGUAGES", "Englisch\\nVerhandlungssicher in Wort und Schrift", "English\\Fluently spoken and written"));
+
+        // Profile
+        translationRepository.save(new Translation("CV", "Curriculum Vitae", "Curriculum Vitae"));
+
+        // Profile-Introduction
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_TITLE", "Persönliche Daten", "Personal Data"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_SURNAME", "Nachname", "Surname"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_NAME", "Vorname", "First Name"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_NATIONALITY", "Nationalität", "Nationality"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_ADDRESS", "Anschrift", "Address"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_PHONE", "Telefon", "Phone"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_MOBILE", "Mobil", "Mobile Phone"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_MAIL", "E-Mail", "Mail"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_BIRTHDAY", "Geburtstag", "Birthday"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_POB", "Geburtsort", "Place of Birth"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_MARITAL", "Familienstand", "Marital Status"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_INTERESTS", "Interessen", "Interests"));
+        translationRepository.save(new Translation("PROFILE_INTRODUCTION_LANGUAGES", "Fremdsprachen", "Foreign Languages"));
+
+        // Profile-Education
+        translationRepository.save(new Translation("PROFILE_EDUCATION_TITLE", "Studium", "Education"));
+
+        // Profile-Work
+        translationRepository.save(new Translation("PROFILE_WORK_TITLE", "Berufliche Laufbahn", "Work"));
+        translationRepository.save(new Translation("PROFILE_WORK_TITLE_PROJECTS", "Projekte", "Projects"));
+        translationRepository.save(new Translation("PROFILE_WORK_TITLE_COMPANY", "Arbeitgeber", "Employer"));
+
+        // Profile-Technical Qualities
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE", "Technisches Qualifikationsprofil", "Technical Qualification"));
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE_PROGRAMMING", "Programmierung", "Programming"));
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE_WEB", "Web Technologien", "Web Technologies"));
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE_DB", "Datenbanken", "Databases"));
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE_METHODS", "Methodik", "Methodology"));
+        translationRepository.save(new Translation("PROFILE_TQ_TITLE_DIVERSE", "Sonstiges", "Miscellaneous"));
 
 
         // Button
@@ -159,7 +243,7 @@ public class HomepageApplication implements CommandLineRunner {
 
         // Home
         translationRepository.save(new Translation("HOME.HEADLINE", "Hallo, mein Name ist <br>{{ AUTHOR }}!", "Hi, my name is <br>{{ AUTHOR }}!"));
-        translationRepository.save(new Translation("HOME.BODY", "Ich bin ein IT Berater und Software Entwickler aus Deutschland mit über neun Jahren Berufserfahrung. Derzeit arbeite ich für <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>Hier bin ich verantwortlich für die Software auf Geldautomaten und liefere projektspezifische Erweiterungen für Kunden weltweit. Je nach Anforderungen entwickele ich Java und Web-Komponenten, um eine herstellerunabhängige Anwendung zu erweitern. Die Kunden legen dabei einen großen Wert auf eine neue Generation von grafischen Oberflächen, Multikanalstrategie (mobil, Internet) und Konzepten für eine Filiale der Zukunft, wobei ich ihnen unterstützend zur Seite stehe.<br><br>Momentan lege ich meinen Fokus auf den Softwarelieferprozess rund um das Thema <b>kontinuierliche Integration</b>.Mein aktuelles Profil kann man auch <a href='../assets/doc/profile.pdf' target='_blank'>hier</a> herunterladen.", "I am an IT consultant and software developer from Germany with over nine years of professional experience. Currently I am working for <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>I am responsible for ATM application globally and I deliver project specific extensions for customers worldwide. Depending on the requirements I develop Java and web components to enhance a multi-vendor platform. The customers are very interested to create a next generation user interface, branch of the future and multi-channel (Mobile, Internet) capabilities.<br><br>Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>.My latest profile can be downloaded from <a href='../assets/doc/profile.pdf' target='_blank'>here</a>."));
+        translationRepository.save(new Translation("HOME.BODY", "Ich bin ein IT Berater und Software Entwickler aus Deutschland mit über neun Jahren Berufserfahrung. Derzeit arbeite ich für <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>Hier bin ich verantwortlich für die Software auf Geldautomaten und liefere projektspezifische Erweiterungen für Kunden weltweit. Je nach Anforderungen entwickele ich Java und Web-Komponenten, um eine herstellerunabhängige Anwendung zu erweitern. Die Kunden legen dabei einen großen Wert auf eine neue Generation von grafischen Oberflächen, Multikanalstrategie (mobil, Internet) und Konzepten für eine Filiale der Zukunft, wobei ich ihnen unterstützend zur Seite stehe.<br><br>Momentan lege ich meinen Fokus auf den Softwarelieferprozess rund um das Thema <b>kontinuierliche Integration</b>.Mein aktuelles Profil kann man auch <a href='./api/profile' target='_blank'>hier</a> herunterladen.", "I am an IT consultant and software developer from Germany with over nine years of professional experience. Currently I am working for <a href='{{ COMPANY_LINK }}' target='_blank'>{{ COMPANY_NAME }}</a>.<br><br>I am responsible for ATM application globally and I deliver project specific extensions for customers worldwide. Depending on the requirements I develop Java and web components to enhance a multi-vendor platform. The customers are very interested to create a next generation user interface, branch of the future and multi-channel (Mobile, Internet) capabilities.<br><br>Currently my main focus is to improve the delivery process based on the software engineering approach <b>Continious Delivery</b>.My latest profile can be downloaded from <a href='./api/profile' target='_blank'>here</a>."));
 
         // CV
         translationRepository.save(new Translation("CV.HEADLINE", "Das habe ich bisher gemacht", "That is what I've done so far"));

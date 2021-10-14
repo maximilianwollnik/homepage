@@ -14,18 +14,16 @@
   <div class="container" *ngFor="let internalArray of workItems; let i = index">
     <div class="row align-items-center">
       <div class="col" *ngFor="let work of internalArray; let j = index">
-        <div class="row wow fadeInUp">
-          <div class="section-title white-text">
+        <div class="row">
+          <div class="section-title white-text wow fadeInDown">
             <h3
-              data-wow-delay=".6s"
               [innerHTML]="'WORK.BODY.' + work.element + '.TITLE' | translate"
             ></h3>
             <p
-              data-wow-delay=".6s"
               [innerHTML]="'WORK.BODY.' + work.element + '.TEXT' | translate"
             ></p>
           </div>
-          <div class="intro-video-play">
+          <div class="intro-video-play wow fadeInDown">
             <div class="play-thumb">
               <a
                 [lightbox]="i + j"

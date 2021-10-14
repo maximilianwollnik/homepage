@@ -94,7 +94,7 @@ public class TranslationService {
 
     @SuppressWarnings("unchecked")
     private void resolveLinks(Map<String, Object> map) {
-        logger.info(">> resolveLinks({})", map);
+        logger.debug(">> resolveLinks({})", map);
 
         map.replaceAll((k,v) -> {
             if (v instanceof String) {
