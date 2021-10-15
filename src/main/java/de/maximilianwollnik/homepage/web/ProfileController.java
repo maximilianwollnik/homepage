@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 /**
  * The type Profile controller.
@@ -33,7 +34,7 @@ public class ProfileController {
      */
     @RequestMapping(value="/api/profile", method= RequestMethod.GET, produces = MediaType.APPLICATION_PDF_VALUE)
     public @ResponseBody
-    byte[] profile() throws IOException {
+    byte[] profile() throws IOException, URISyntaxException {
         logger.info(">> profile()");
         byte[] result = profileService.getProfile();
         logger.info("<< profile() returns");

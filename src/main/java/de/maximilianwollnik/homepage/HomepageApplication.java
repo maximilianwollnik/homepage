@@ -159,7 +159,7 @@ public class HomepageApplication implements CommandLineRunner {
         biographyRepository.save(new Biography(dateFormat.parse("03/2011"), dateFormat.parse("12/2014"), "CBA_1", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("10/2015"), dateFormat.parse("06/2016"), "CBA_2", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("01/2015"), dateFormat.parse("09/2015"), "ABN", BiographyState.PROJECT_FINISHED));
-        biographyRepository.save(new Biography(dateFormat.parse("02/2017"), dateFormat.parse("02/2017"), "ABN", BiographyState.PROJECT_CURRENT));
+        biographyRepository.save(new Biography(dateFormat.parse("02/2017"), dateFormat.parse("02/2017"), "OCBC", BiographyState.PROJECT_CURRENT));
 
         biographyRepository.save(new Biography(dateFormat.parse("09/2016"), dateFormat.parse("09/2016"), "DIEBOLD_NIXDORF", BiographyState.JOB_CURRENT));
         biographyRepository.save(new Biography(dateFormat.parse("10/2005"), dateFormat.parse("08/2016"), "WINCOR_NIXDORF", BiographyState.JOB_FINISHED));
@@ -173,6 +173,7 @@ public class HomepageApplication implements CommandLineRunner {
         // General
         translationRepository.save(new Translation("AUTHOR", "Maximilian Wollnik", "Maximilian Wollnik"));
         translationRepository.save(new Translation("EMAIL", "maximilian@maximilianwollnik.de", "maximilian@maximilianwollnik.de"));
+        translationRepository.save(new Translation("MAIL", "{{ EMAIL }}", "{{ EMAIL }}"));
         translationRepository.save(new Translation("TITLE", "{{ AUTHOR }}", "{{ AUTHOR }}"));
         translationRepository.save(new Translation("COMPANY_LINK", "http://www.dieboldnixdorf.com", "http://www.dieboldnixdorf.com"));
         translationRepository.save(new Translation("COMPANY_NAME", "Diebold Nixdorf", "Diebold Nixdorf"));
@@ -186,10 +187,13 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("POB", "Bad Neustadt a. d. Saale", "Bad Neustadt a. d. Saale"));
         translationRepository.save(new Translation("MARITAL", "Ledig", "Single"));
         translationRepository.save(new Translation("INTERESTS", "EDV, Fußball, Wirtschaft", "IT, Soccer, Economy"));
-        translationRepository.save(new Translation("LANGUAGES", "Englisch\\nVerhandlungssicher in Wort und Schrift", "English\\Fluently spoken and written"));
+        translationRepository.save(new Translation("LANGUAGES",
+                "Englisch - Verhandlungssicher in Wort und Schrift",
+                "English - Fluently spoken and written"));
+        translationRepository.save(new Translation("PRESENT", "Heute", "Present"));
 
         // Profile
-        translationRepository.save(new Translation("CV", "Curriculum Vitae", "Curriculum Vitae"));
+        translationRepository.save(new Translation("PROFILE_CV", "Curriculum Vitae", "Curriculum Vitae"));
 
         // Profile-Introduction
         translationRepository.save(new Translation("PROFILE_INTRODUCTION_TITLE", "Persönliche Daten", "Personal Data"));

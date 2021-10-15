@@ -18,6 +18,9 @@ repositories {
 
 ext {
     set('springCloudVersion', "2020.0.3")
+    set('asciidoctorjVersion', "2.5.2")
+    set('asciidoctorjPdfVersion', "1.6.0")
+    set('commonsioVersion', "2.11.0")
 }
 
 dependencyManagement {
@@ -33,12 +36,16 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.security:spring-security-test'
+    implementation "commons-io:commons-io:${commonsioVersion}"
+
+    implementation "org.asciidoctor:asciidoctorj:${asciidoctorjVersion}"
+    implementation "org.asciidoctor:asciidoctorj-pdf:${asciidoctorjPdfVersion}"
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {

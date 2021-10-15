@@ -1,0 +1,126 @@
+== Technisches Qualifikationsprofil
+
+=== Programmierung
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Java (JSE)
+|seit 2006
+|\+++
+
+|Java (Spring Boot, Spring Cloud)
+|seit 2004
+|+
+
+|C/C++
+|seit 2006
+|+
+
+|Skriptsprachen: Batch, Shell, Bash
+|seit 2008
+|++
+|===
+
+=== Web Technologien
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|HTML
+|seit 2006
+|\+++
+
+|Java Script
+|seit 2006
+|\+++
+
+|CSS
+|seit 2008
+|++
+
+|JQuery
+|seit 2010
+|++
+
+|RequireJS
+|seit 2012
+|++
+
+|Knockout
+|seit 20012
+|++
+
+|Durandal
+|seit 20014
+|+
+
+|Angular
+|seit 2014
+|++
+|===
+
+=== Datenbanken
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|MySQL
+|seit 2011
+|+
+
+|PostgreSQL
+|seit 2011
+|+
+|===
+
+=== Methodik
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Wasserfall
+|seit 2010
+|\+++
+
+|Scrum
+|seit 2014
+|++
+|===
+
+=== Sonstiges
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===
+|Git, SVN, MKS
+|seit 2008
+|++
+
+|Docker
+|seit 2013
+|+
+
+|Maven
+|seit 2012
+|++
+
+|Nodejs
+|seit 2012
+|++
+
+|Jenkins
+|seit 2012
+|++
+
+|Selenium
+|seit 2015
+|+
+
+|Eclipse
+|seit 2006
+|\+++
+
+|Visual Studio
+|seit 2008
+|+
+
+|Asciidoctor
+|seit 2015
+|+
+|===

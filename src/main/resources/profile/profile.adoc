@@ -1,0 +1,17 @@
+= Curriculum Vitae
+Maximilian Wollnik
+:doctype: book
+:pdf-theme: profile
+:pdf-themesdir: {docdir}/themes
+
+<<<
+include::01_introduction.adoc[]
+
+<<<
+include::02_education.adoc[]
+
+<<<
+include::03_experience.adoc[]
+
+<<<
+include::04_skill.adoc[]

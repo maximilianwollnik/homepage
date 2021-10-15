@@ -1,0 +1,190 @@
+extends: basic
+
+font:
+  catalog:
+    Noto Serif:
+      normal: notoserif-regular-subset.ttf
+      bold: notoserif-bold-subset.ttf
+      italic: notoserif-italic-subset.ttf
+      bold_italic: notoserif-bold_italic-subset.ttf
+    M+ 1mn:
+      normal: mplus1mn-regular-ascii-conums.ttf
+      bold: mplus1mn-bold-ascii.ttf
+      italic: mplus1mn-italic-ascii.ttf
+      bold_italic: mplus1mn-bold_italic-ascii.ttf
+    M+ 1p Fallback:
+      normal: mplus1p-regular-fallback.ttf
+      bold: mplus1p-regular-fallback.ttf
+      italic: mplus1p-regular-fallback.ttf
+      bold_italic: mplus1p-regular-fallback.ttf
+  fallbacks:
+    - M+ 1p Fallback
+page:
+  background-color: $basic-color-background
+  layout: $basic-page-layout
+  margin: [0.5in, 0.67in, 0.67in, 0.67in]
+  size: A4
+base:
+  align: justify
+  font-color: $basic-color-font
+  font-family: Noto Serif
+  font-size: 10.5
+  line-height-length: 12
+  line-height: $basic-size-line-height-length / $basic-size-font
+  font-size-large: round($basic-size-font * 1.25)
+  font-size-small: round($basic-size-font * 0.85)
+  font-size-min: $basic-size-font * 0.75
+  font-style: normal
+  border-color: $basic-color-border
+  border-radius: 4
+  border-width: 0.5
+horizontal:
+  rhythm: $basic-size-line-height-length
+vertical:
+  rhythm: $basic-size-line-height-length
+  spacing: $basic-size-line-height-length
+link:
+  font-color: $basic-color-link
+literal:
+  font-color: $basic-color-font
+  font-family: M+ 1mn
+heading:
+  font-color: $basic-color-font
+  font-family: Noto Serif
+  font-style: bold
+  h1-font-size: floor($base-font-size * 2.6)
+  h2-font-size: floor($base-font-size * 2.15)
+  h3-font-size: round($base-font-size * 1.7)
+  h4-font-size: $base-font-size-large
+  h5-font-size: $base-font-size
+  h6-font-size: $base-font-size-small
+  line-height: 1
+  margin-top: $vertical-rhythm * 0.4
+  margin-bottom: $vertical-rhythm * 0.9
+title-page:
+  align: right
+  logo:
+    top: 10%
+  title:
+    top: 55%
+    font-size: $heading-h1-font-size
+    font-color: $basic-color-title
+    line-height: 0.9
+  subtitle:
+    font-size: $heading-h3-font-size
+    font-style: bold_italic
+    line-height: 1
+  authors:
+    margin-top: $base-font-size * 1.25
+    font-size: $base-font-size-large
+    font-color: $basic-color-authors
+  revision:
+    margin-top: $base-font-size * 1.25
+block:
+  margin-top: 0
+  margin-bottom: $vertical-rhythm
+caption:
+  align: left
+  font-style: italic
+  margin-inside: $vertical-rhythm / 3
+  margin-outside: 0
+lead:
+  font-size: $base-font-size-large
+  line-height: 1.4
+abstract:
+  font-color: $basic-color-abstract
+  font-size: $basic-size-lead-font
+  line-height: $basic-size-lead-line-height
+  font-style: italic
+  first-line-font-style: bold
+admonition:
+  border-color: $basic-color-border
+  border-width: $basic-size-border-width
+  padding: [0, $horizontal-rhythm, 0, $horizontal-rhythm]
+blockquote:
+  font-color: $base-font-color
+  font-size: $base-font-size-large
+  border-color: $base-border-color
+  border-width: 5
+  padding: [$vertical-rhythm / 2, $horizontal-rhythm, $vertical-rhythm / -2, $horizontal-rhythm + $basic-size-blockquote-border-width / 2]
+  cite:
+    font-size: $base-font-size-small
+    font-color: $basic-color-title
+code:
+  font-color: $base-font-color
+  font-family: $literal-font-family
+  font-size: ceil($base-font-size)
+  padding: $code-font-size
+  line-height: 1.25
+  background-color: $basic-color-code
+  border-color: $basic-color-border
+  border-width: 0.75
+conum:
+  font-family: M+ 1mn
+  font-color: $literal-font-color
+  font-size: $base-font-size
+  line-height: 4 / 3
+example:
+  border-color: $base-border-color
+  border-radius: $base-border-radius
+  border-width: 0.75
+  background-color: transparent
+  padding: [$vertical-rhythm, $horizontal-rhythm, 0, $horizontal-rhythm]
+image:
+  align: left
+prose:
+  margin-top: 0
+  margin-bottom: $vertical-rhythm
+sidebar:
+  border-color: $page-background-color
+  border-radius: $base-border-radius
+  border-width: $base-border-width
+  background-color: eeeeee
+  padding: [$vertical-rhythm, $vertical-rhythm * 1.25, 0, $vertical-rhythm * 1.25]
+  title:
+    align: center
+    font-color: $heading-font-color
+    font-family: $heading-font-family
+    font-size: $heading-h4-font-size
+    font-style: $heading-font-style
+thematic-break:
+  border-color: $base-border-color
+  border-style: solid
+  border-width: $base-border-width
+  margin-top: $vertical-rhythm * 0.5
+  margin-bottom: $vertical-rhythm * 1.5
+description-list:
+  term-font-style: italic
+  term-spacing: $vertical-rhythm / 4
+  description-indent: $horizontal-rhythm * 1.25
+outline-list:
+  indent: $horizontal-rhythm * 1.5
+  item-spacing: $vertical-rhythm / 2
+table:
+  background-color: $basic-color-background
+  head:
+    font-style: bold
+  body:
+    stripe-background-color: $basic-color-table-even
+  foot:
+    background-color: $basic-color-table-foot
+  border-color: $basic-color-table-border
+  border-width: $base-border-width
+  cell-padding: [3, 3, 6, 3]
+toc:
+  dot-leader-color: dddddd
+  indent: $horizontal-rhythm
+  line-height: 1.4
+footer:
+  font-size: $base-font-size-small
+  font-color: $base-font-color
+  border-color: dddddd
+  border-width: 0.25
+  height: $base-line-height-length * 2.5
+  line-height: 1
+  padding: [$base-line-height-length / 2, 1, 0, 1]
+  vertical-align: top
+  recto-content:
+    right: '{page-number}'
+  verso-content:
+    left: '{page-number}'

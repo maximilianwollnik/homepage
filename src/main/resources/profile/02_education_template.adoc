@@ -1,0 +1,7 @@
+*{educationTitleREPLACE_ME}*
+
+_{educationStartDateREPLACE_ME} - {educationEndDateREPLACE_ME}_
+
+{educationContentREPLACE_ME}
+
+image:images/{educationPicREPLACE_ME}.png[{educationPicREPLACE_ME}, 150]
