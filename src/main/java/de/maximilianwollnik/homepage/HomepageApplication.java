@@ -13,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The type Homepage application.
@@ -77,36 +79,46 @@ public class HomepageApplication implements CommandLineRunner {
 
     private void profile() throws ParseException {
         profileRepository.deleteAll();
+        List<Technology> technologies = new ArrayList<>();
 
-        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "JSE", "Java (JSE)", Ranking.EXCELLENT));
-        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "BOOT", "Java (Spring Boot, Spring Cloud)", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "C++", "C/C++", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "SCRIPT", "Skriptsprachen: Batch, Shell, Bash", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2006"), "JSE", "Java (JSE)", Ranking.EXCELLENT));
+        technologies.add(new Technology(dateFormat.parse("01/2014"), "BOOT", "Java (Spring Boot, Spring Cloud)", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2006"), "CPLUSPLUS", "C/C++", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2008"), "SCRIPT", "Skriptsprachen: Batch, Shell, Bash", Ranking.GOOD));
+        profileRepository.save(new Profile("PROGRAMMING", technologies));
 
-        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "HTML", "HTML", Ranking.EXCELLENT));
-        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "JAVASCRIPT", "JavaScript", Ranking.EXCELLENT));
-        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "CSS", "CSS", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2010"), "JQUERY", "JQuery", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "REQUIREJS", "RequireJS", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "KO", "Knockout", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "DURANDAL", "Durandal", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "ANGULAR", "Angular", Ranking.GOOD));
+        technologies = new ArrayList<>();
+        technologies.add(new Technology(dateFormat.parse("01/2006"), "HTML", "HTML", Ranking.EXCELLENT));
+        technologies.add(new Technology(dateFormat.parse("01/2006"), "JAVASCRIPT", "JavaScript", Ranking.EXCELLENT));
+        technologies.add(new Technology(dateFormat.parse("01/2008"), "CSS", "CSS", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2010"), "JQUERY", "JQuery", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2012"), "REQUIREJS", "RequireJS", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2012"), "KO", "Knockout", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2014"), "DURANDAL", "Durandal", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2014"), "ANGULAR", "Angular", Ranking.GOOD));
+        profileRepository.save(new Profile("WEB", technologies));
 
-        profileRepository.save(new Profile(dateFormat.parse("01/2011"), "MYSQL", "MySQL", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2011"), "POSTGRES", "PostgreSQL", Ranking.OK));
+        technologies = new ArrayList<>();
+        technologies.add(new Technology(dateFormat.parse("01/2011"), "MYSQL", "MySQL", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2011"), "POSTGRES", "PostgreSQL", Ranking.OK));
+        profileRepository.save(new Profile("DB", technologies));
 
-        profileRepository.save(new Profile(dateFormat.parse("01/2010"), "WATERFALL", "Wasserfall", Ranking.EXCELLENT));
-        profileRepository.save(new Profile(dateFormat.parse("01/2014"), "SCRUM", "Scrum", Ranking.EXCELLENT));
+        technologies = new ArrayList<>();
+        technologies.add(new Technology(dateFormat.parse("01/2010"), "WATERFALL", "Wasserfall", Ranking.EXCELLENT));
+        technologies.add(new Technology(dateFormat.parse("01/2014"), "SCRUM", "Scrum", Ranking.EXCELLENT));
+        profileRepository.save(new Profile("METHODS", technologies));
 
-        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "GIT", "Git, SVN, MKS", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2013"), "DOCKER", "Docker", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "MAVEN", "Maven", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "NODE", "Nodejs", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2012"), "JENKINS", "Jenkins", Ranking.GOOD));
-        profileRepository.save(new Profile(dateFormat.parse("01/2015"), "SELENIUM", "Selenium", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2006"), "ECLIPSE", "Eclipse", Ranking.EXCELLENT));
-        profileRepository.save(new Profile(dateFormat.parse("01/2008"), "VISUAL_STUDIO", "Visual Studio", Ranking.OK));
-        profileRepository.save(new Profile(dateFormat.parse("01/2015"), "ASCIIDOCTOR", "Asciidoctor", Ranking.OK));
+        technologies = new ArrayList<>();
+        technologies.add(new Technology(dateFormat.parse("01/2008"), "GIT", "Git, SVN, MKS", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2013"), "DOCKER", "Docker", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2012"), "MAVEN", "Maven", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2012"), "NODE", "Nodejs", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2012"), "JENKINS", "Jenkins", Ranking.GOOD));
+        technologies.add(new Technology(dateFormat.parse("01/2015"), "SELENIUM", "Selenium", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2006"), "ECLIPSE", "Eclipse", Ranking.EXCELLENT));
+        technologies.add(new Technology(dateFormat.parse("01/2008"), "VISUAL_STUDIO", "Visual Studio", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2015"), "ASCIIDOCTOR", "Asciidoctor", Ranking.OK));
+        profileRepository.save(new Profile("DIVERSE", technologies));
     }
 
     private void education() throws ParseException {
@@ -191,6 +203,7 @@ public class HomepageApplication implements CommandLineRunner {
                 "Englisch - Verhandlungssicher in Wort und Schrift",
                 "English - Fluently spoken and written"));
         translationRepository.save(new Translation("PRESENT", "Heute", "Present"));
+        translationRepository.save(new Translation("SINCE", "seit", "since"));
 
         // Profile
         translationRepository.save(new Translation("PROFILE_CV", "Curriculum Vitae", "Curriculum Vitae"));

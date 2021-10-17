@@ -1,8 +1,7 @@
 package de.maximilianwollnik.homepage.service;
 
-import de.maximilianwollnik.homepage.model.Biography;
-import de.maximilianwollnik.homepage.model.BiographyState;
-import de.maximilianwollnik.homepage.model.Education;
+import de.maximilianwollnik.homepage.model.*;
+import de.maximilianwollnik.homepage.repository.ProfileRepository;
 import org.apache.commons.io.FileUtils;
 import org.asciidoctor.Asciidoctor;
 import org.asciidoctor.Attributes;
@@ -23,6 +22,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static org.asciidoctor.Asciidoctor.Factory.create;
@@ -35,9 +35,11 @@ public class ProfileService {
     private static final Logger logger = LoggerFactory.getLogger(ProfileService.class);
     private static final String FILE_NAME_PDF = "profile.pdf";
     private final DateFormat dateFormat;
+    private final DateFormat dateFormatSkill;
     private final TranslationService translationService;
     private final EducationService educationService;
     private final BiographyService biographyService;
+    private final ProfileRepository profileRepository;
     private final Asciidoctor asciidoctor;
     private Attributes attributes;
     private Map<String, Object> translations;
@@ -45,6 +47,7 @@ public class ProfileService {
     private String docDir;
     private List<Education> educations;
     private List<Biography> biographies;
+    private List<Profile> profiles;
 
     /**
      * Instantiates a new Profile service.
@@ -52,12 +55,15 @@ public class ProfileService {
      * @param translationService the translation service
      */
     @Autowired
-    public ProfileService(TranslationService translationService, EducationService educationService, BiographyService biographyService) {
+    public ProfileService(TranslationService translationService, EducationService educationService,
+                          BiographyService biographyService, ProfileRepository profileRepository) {
         asciidoctor = create();
         this.translationService = translationService;
         this.educationService = educationService;
         this.biographyService = biographyService;
+        this.profileRepository = profileRepository;
         dateFormat = new SimpleDateFormat("MM/yyyy");
+        dateFormatSkill = new SimpleDateFormat("yyyy");
     }
 
     private <T> T getNestedValue(Map map, String... keys) {
@@ -83,7 +89,7 @@ public class ProfileService {
                 """;
         input = input.replace("$name", translations.get("NAME").toString())
                 .replace("$surname", translations.get("SURNAME").toString());
-        logger.debug("<< prepareRootPage({}) returns");
+        logger.debug("<< prepareRootPage() returns");
     }
 
     private void fillIntroductionData(String section, String key) {
@@ -132,6 +138,14 @@ public class ProfileService {
         logger.debug("<< prepareEducationAttributes() returns");
     }
 
+    private void prepareSkillAttributes() {
+        logger.debug(">> prepareSkillAttributes()");
+
+        attributes.setAttribute("skillTitle", translations.get("PROFILE_TQ_TITLE"));
+
+        logger.debug("<< prepareSkillAttributes() returns");
+    }
+
     private void prepareWorkAttributes() {
         logger.debug(">> prepareWorkAttributes()");
 
@@ -169,9 +183,7 @@ public class ProfileService {
         try (BufferedReader br =
                      new BufferedReader(new FileReader(String.format("%s/%s", docDir, file)))) {
             String line;
-            while ((line = br.readLine()) != null) {
-                input += line + System.lineSeparator();
-            }
+            while ((line = br.readLine()) != null) input += line + System.lineSeparator();
         }
         input += System.lineSeparator();
     }
@@ -180,10 +192,11 @@ public class ProfileService {
         logger.debug(">> init()");
         educations = educationService.getEducations();
         biographies = biographyService.getBiographies();
+        profiles = profileRepository.findAll();
 
         translations = translationService.getTranslations("de");
         attributes = Attributes.builder().build();
-        docDir = new File(getClass().getResource("/profile").toURI()).getAbsolutePath();
+        docDir = new File(Objects.requireNonNull(getClass().getResource("/profile")).toURI()).getAbsolutePath();
         attributes.setAttribute("docdir", docDir);
         logger.debug("<< init() returns");
     }
@@ -291,7 +304,7 @@ public class ProfileService {
                 biographies.stream().filter(biography -> BiographyState.JOB_CURRENT.equals(biography.getBiographyState())).collect(Collectors.toList());
 
         fillContentFromFile("03_work_title.adoc", false);
-        fillContentFromFile("03_work_title_project.adoc");
+        fillContentFromFile("03_work_title_project.adoc", false);
         createWorkContentSingle(projectFinished);
         createWorkContentSingle(projectCurrent);
         fillContentFromFile("03_work_title_company.adoc");
@@ -299,6 +312,44 @@ public class ProfileService {
         createWorkContentSingle(jobCurrent);
 
         logger.debug("<< createWorkContent() returns");
+    }
+
+    private void createSkillContent() throws IOException {
+        logger.debug(">> createSkillContent()");
+
+        fillContentFromFile("04_skill_title.adoc");
+        for (Profile profile : profiles) {
+            fillContentFromFile("04_skill_template_start.adoc", false);
+
+            String title = translations.get(String.format("PROFILE_TQ_TITLE_%s", profile.getElement())).toString();
+            logger.debug("* createSkillContent() - title = '{}'", title);
+            attributes.setAttribute(String.format("skillSectionTitle%s", profile.getElement()), title);
+            input = input.replace("REPLACE_ME", profile.getElement());
+
+            for (Technology technology : profile.getTechnologies()) {
+                fillContentFromFile("04_skill_template_item.adoc", false);
+
+                String elementTitle = technology.getName();
+                String elementDate = String.format("%s %s", translations.get("SINCE").toString(), dateFormatSkill.format(technology.getStart()));
+                String elementRanking = switch (technology.getRanking()) {
+                    case OK -> "+";
+                    case GOOD -> "++";
+                    case EXCELLENT -> "+++";
+                };
+                logger.debug("* createSkillContent() - elementTitle = '{}'", elementTitle);
+                logger.debug("* createSkillContent() - elementDate = '{}'", elementDate);
+                logger.debug("* createSkillContent() - elementRanking = '{}'", elementRanking);
+                attributes.setAttribute(String.format("skillSectionElementTitle%s", technology.getElement()), elementTitle);
+                attributes.setAttribute(String.format("skillSectionElementDate%s", technology.getElement()), elementDate);
+                attributes.setAttribute(String.format("skillSectionElementRanking%s", technology.getElement()), elementRanking);
+
+                input = input.replace("REPLACE_ME", technology.getElement());
+            }
+
+            fillContentFromFile("04_skill_template_end.adoc", false);
+        }
+
+        logger.debug("<< createSkillContent() returns");
     }
 
     /**
@@ -315,11 +366,13 @@ public class ProfileService {
         prepareIntroductionAttributes();
         prepareEducationAttributes();
         prepareWorkAttributes();
+        prepareSkillAttributes();
         prepareRootPage();
 
         fillContentFromFile("01_introduction.adoc");
         createEducationContent();
         createWorkContent();
+        createSkillContent();
 
         byte[] result = createPdf(input);
 

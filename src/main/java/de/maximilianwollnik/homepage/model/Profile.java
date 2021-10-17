@@ -4,40 +4,25 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.util.List;
 
 /**
  * The type Profile.
  */
 @Data
 @NoArgsConstructor
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 public class Profile extends Item {
-    /**
-     * The Start.
-     */
-    protected Date start;
-    /**
-     * The Name.
-     */
-    protected String name;
-    /**
-     * The Ranking.
-     */
-    protected Ranking ranking;
+    private List<Technology> technologies;
 
     /**
      * Instantiates a new Profile.
      *
-     * @param start   the start
-     * @param element the element
-     * @param name    the name
-     * @param ranking the ranking
+     * @param element      the element
+     * @param technologies the technologies
      */
-    public Profile(Date start, String element, String name, Ranking ranking) {
+    public Profile(String element, List<Technology> technologies) {
         super(element);
-        this.start = start;
-        this.name = name;
-        this.ranking = ranking;
+        this.technologies = technologies;
     }
 }
