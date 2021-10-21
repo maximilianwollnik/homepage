@@ -171,7 +171,14 @@ public class HomepageApplication implements CommandLineRunner {
         biographyRepository.save(new Biography(dateFormat.parse("03/2011"), dateFormat.parse("12/2014"), "CBA_1", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("10/2015"), dateFormat.parse("06/2016"), "CBA_2", BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("01/2015"), dateFormat.parse("09/2015"), "ABN", BiographyState.PROJECT_FINISHED));
-        biographyRepository.save(new Biography(dateFormat.parse("02/2017"), dateFormat.parse("02/2017"), "OCBC", BiographyState.PROJECT_CURRENT));
+        biographyRepository.save(new Biography(dateFormat.parse("02/2017"), dateFormat.parse("05/2018"), "OCBC",
+                BiographyState.PROJECT_FINISHED));
+        biographyRepository.save(new Biography(dateFormat.parse("06/2018"), dateFormat.parse("04/2021"), "BSM",
+                BiographyState.PROJECT_FINISHED));
+        biographyRepository.save(new Biography(dateFormat.parse("05/2021"), dateFormat.parse("10/2021"), "LATAM",
+                BiographyState.PROJECT_FINISHED));
+        biographyRepository.save(new Biography(dateFormat.parse("11/2021"), dateFormat.parse("11/2021"), "GLOBALTD",
+                BiographyState.PROJECT_CURRENT));
 
         biographyRepository.save(new Biography(dateFormat.parse("09/2016"), dateFormat.parse("09/2016"), "DIEBOLD_NIXDORF", BiographyState.JOB_CURRENT));
         biographyRepository.save(new Biography(dateFormat.parse("10/2005"), dateFormat.parse("08/2016"), "WINCOR_NIXDORF", BiographyState.JOB_FINISHED));
@@ -340,6 +347,79 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.DEV_ENV", "Eclipse 4.6, Webstorm 11", "Eclipse 4.6, Webstorm 11"));
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
+
+        translationRepository.save(new Translation("CV.EVENTS.BSM.TITLE",
+                "<a href=\"https://www.santander.com.mx\" target=\"_blank\">Banco Santander Mexico</a>",
+                "<a href=\"https://www.santander.com.mx\" target=\"_blank\">Banco Santander Mexico</a>"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.TASK",
+                "Kompletter Austausch einer bestehenden Selbstbedienungsanwendung:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- " +
+                        "Distribution<br>- Mocking<br>-Unit Tests<br>- End-2-End Tests",
+                "Complete replacement of an existing self service application:<br>- Agile<br>- Scrum<br>- Setup of a continious integration " +
+                        "development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.DEV_ENV",
+                "Eclipse 4.19, Webstorm 2021.1",
+                "Eclipse 4.19, Webstorm 2021.1"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.TECHNOLOGY",
+                "JSE, JMockit, Ansible", "JSE, JMockit, Ansible"));
+
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.TITLE",
+                "Latein Amerika Terminal Driving Blueprint",
+                "Latin America Terminal Driving Blueprint"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TASK",
+                "Erstellung eines Blueprints für den Latein Amerikanischen Markt:<br>- Leistungsbeschreibung " +
+                        "aller markttauglichen Transaktionen<br>-" +
+                        " " +
+                        "Scrum<br>-" +
+                        " " +
+                        "Buildprozess<br>-" +
+                        " " +
+                        "Distribution<br>-" +
+                        " " +
+                        "Mocking<br>-" +
+                        " " +
+                        "Unit" +
+                        " " +
+                        "Tests<br>- End-2-End Tests",
+                "Development of a blueprint for the Latin American Market:<br>- Statement of work of all needed " +
+                        "transactions<br>-" +
+                        " " +
+                        "Scrum<br>-" +
+                        " " +
+                        "Setup" +
+                        " " +
+                        "of" +
+                        " " +
+                        "a" +
+                        " " +
+                        "continious" +
+                        " " +
+                        "integration" +
+                        " " +
+                        "development" +
+                        " " +
+                        "process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.DEV_ENV",
+                "IntelliJ IDEA 2021.1, Visual Studio Code 1.57",
+                "IntelliJ IDEA 2021.1, Visual Studio Code 1.57"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
+
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.TITLE",
+                "Globaler Terminal Driving Blueprint",
+                "Global Terminal Driving Blueprint"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TASK", "Erstellung einer Kiosklösung für eine Filiale der Zukunft:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests", "Development of a kiosk-terminal application for a branch of the future:<br>- Agile<br>- Scrum<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.DEV_ENV",
+                "IntelliJ IDEA 2021.2, Visual Studio Code 1.61",
+                "IntelliJ IDEA 2021.2, Visual Studio Code 1.61"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
 
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.TITLE", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE", "Softwareenwickler/Architekt/IT Berater", "Developer/Architect/IT Consultant"));
