@@ -118,6 +118,7 @@ public class HomepageApplication implements CommandLineRunner {
         technologies.add(new Technology(dateFormat.parse("01/2006"), "ECLIPSE", "Eclipse", Ranking.EXCELLENT));
         technologies.add(new Technology(dateFormat.parse("01/2008"), "VISUAL_STUDIO", "Visual Studio", Ranking.OK));
         technologies.add(new Technology(dateFormat.parse("01/2015"), "ASCIIDOCTOR", "Asciidoctor", Ranking.OK));
+        technologies.add(new Technology(dateFormat.parse("01/2018"), "CUCUMBER", "Cucumber", Ranking.GOOD));
         profileRepository.save(new Profile("DIVERSE", technologies));
     }
 
@@ -147,7 +148,8 @@ public class HomepageApplication implements CommandLineRunner {
 
         workRepository.save(new Work("BSMX_ATM", "wHtOiiBFM0A"));
         workRepository.save(new Work("CBA_DEPOSIT", "gaTLF4bOa-U"));
-        workRepository.save(new Work("OCBC_ATM", "7JewlnbUodo"));
+        workRepository.save(new Work("OCBC_IDM", "7JewlnbUodo"));
+        workRepository.save(new Work("OCBC_ATM", "EV5gZbEISoc"));
     }
 
     private void social() {
@@ -371,55 +373,63 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TASK",
-                "Erstellung eines Blueprints für den Latein Amerikanischen Markt:<br>- Leistungsbeschreibung " +
-                        "aller markttauglichen Transaktionen<br>-" +
-                        " " +
-                        "Scrum<br>-" +
-                        " " +
-                        "Buildprozess<br>-" +
-                        " " +
-                        "Distribution<br>-" +
-                        " " +
-                        "Mocking<br>-" +
-                        " " +
-                        "Unit" +
-                        " " +
-                        "Tests<br>- End-2-End Tests",
-                "Development of a blueprint for the Latin American Market:<br>- Statement of work of all needed " +
-                        "transactions<br>-" +
-                        " " +
-                        "Scrum<br>-" +
-                        " " +
-                        "Setup" +
-                        " " +
-                        "of" +
-                        " " +
-                        "a" +
-                        " " +
-                        "continious" +
-                        " " +
-                        "integration" +
-                        " " +
-                        "development" +
-                        " " +
-                        "process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+                "Erstellung eines Blueprints für den Latein Amerikanischen Markt:<br>" +
+                        "- Leistungsbeschreibung aller markttauglichen Transaktionen<br>" +
+                        "- Scrum<br>" +
+                        "- Buildprozess<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests",
+                "Development of a blueprint for the Latin American Market:<br>" +
+                        "- Statement of work of all needed transactions<br>" +
+                        "- Scrum<br>" +
+                        "- Setup of a continious integration development process<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.DEV_ENV",
                 "IntelliJ IDEA 2021.1, Visual Studio Code 1.57",
                 "IntelliJ IDEA 2021.1, Visual Studio Code 1.57"));
-        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
-        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.COMPONENT",
+                "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence",
+                "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TECHNOLOGY",
+                "Angular, Cucumber",
+                "Angular, Cucumber"));
 
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.TITLE",
                 "Globaler Terminal Driving Blueprint",
                 "Global Terminal Driving Blueprint"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
-        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TASK", "Erstellung einer Kiosklösung für eine Filiale der Zukunft:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests", "Development of a kiosk-terminal application for a branch of the future:<br>- Agile<br>- Scrum<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TASK",
+                "Erstellung eines Blueprints für den globalen Markt:<br>" +
+                        "- Leistungsbeschreibung aller markttauglichen Transaktionen<br>" +
+                        "- Scrum<br>" +
+                        "- Buildprozess<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests",
+                "Development of a blueprint for the global Market<br>" +
+                        "- Statement of work of all needed transactions<br>" +
+                        "- Scrum<br>" +
+                        "- Setup of a continious integration development process<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.DEV_ENV",
                 "IntelliJ IDEA 2021.2, Visual Studio Code 1.61",
                 "IntelliJ IDEA 2021.2, Visual Studio Code 1.61"));
-        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
-        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.COMPONENT",
+                "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence",
+                "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TECHNOLOGY",
+                "JSE, JMockit",
+                "JSE, JMockit"));
 
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.TITLE", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE", "Softwareenwickler/Architekt/IT Berater", "Developer/Architect/IT Consultant"));
@@ -479,8 +489,11 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TEXT", "Die alte Lösung wurde durch eine neue Anwendung ersetzt, die dem Kunden auch Einzahltransaktionen ermöglicht.", "The old solution was replaced by a new application, which offers deposit transaction to the customer."));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TITLE", "Commonwealth Bank of Australia - Einzahlung", "Commonwealth Bank of Australia - Deposit"));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TEXT", "Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gutgeschrieben.", "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him. He can deposit both cash and cheques without an envelope 24/7, and cash is credited to his account instantly."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_IDM.TITLE", "Oversea-Chinese Banking - IDM", "Oversea-Chinese Banking - IDM"));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_IDM.TEXT", "Kunden können am Automaten Cheques einzahlen, welche vom Mitarbeiter direkt validiert und freigegeben werden können.", "Customers can deposit cheques, which are directly validated and released by the staff."));
         translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking - ATM", "Oversea-Chinese Banking - ATM"));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen wie z.B. Chequeeinzahlung implementiert.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented like cheque deposit."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented."));
+
 
         //Skill
         translationRepository.save(new Translation("SKILL.HEADLINE", "Fähigkeiten", "Skills"));

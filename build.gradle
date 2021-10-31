@@ -52,7 +52,7 @@ test {
     useJUnitPlatform()
 }
 
-task('installWebapp') {
+task('installWebapp', group: 'build setup') {
     doLast {
         exec {
             workingDir 'src/main/frontend'
@@ -65,7 +65,7 @@ task('installWebapp') {
     }
 }
 
-task('buildWebapp') {
+task('buildWebapp', group: 'build') {
     doLast {
         exec {
             workingDir 'src/main/frontend'
@@ -83,4 +83,4 @@ springBoot {
 }
 
 bootJar.dependsOn buildWebapp
-bootRun.dependsOn buildWebapp
+//bootRun.dependsOn buildWebapp

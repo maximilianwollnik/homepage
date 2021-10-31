@@ -12,6 +12,7 @@ import { Gallery } from 'ng-gallery';
 })
 export class WorkComponent {
   workItems: Work[][] = [];
+  maxItemsPerRow = 2;
 
   constructor(
     private workLoaderService: WorkLoaderService,
@@ -25,7 +26,8 @@ export class WorkComponent {
       let workArray: Work[] = [];
       let j = 0;
       for (let i = 0; i < work.length; i++) {
-        if (j !== 3) {
+        work[i].id = i;
+        if (j !== this.maxItemsPerRow) {
           workArray.push(work[i]);
         } else {
           this.workItems.push(workArray);
