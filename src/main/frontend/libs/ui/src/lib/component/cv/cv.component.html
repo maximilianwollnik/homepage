@@ -32,7 +32,8 @@
         <div style="padding: 16px">
           <h1>
             {{ entry.start | date: 'MM/YYYY' }} -
-            {{ entry.end | date: 'MM/YYYY' }}:
+            <span *ngIf="entry.start !== entry.end">{{ entry.end | date: 'MM/YYYY' }} </span>
+            <span *ngIf="entry.start === entry.end" [innerHTML]="'PRESENT' | translate"></span>:
             <span
               [innerHTML]="'CV.EVENTS.' + entry.element + '.TITLE' | translate"
             ></span>
