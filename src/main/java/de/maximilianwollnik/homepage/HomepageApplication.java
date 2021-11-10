@@ -148,6 +148,7 @@ public class HomepageApplication implements CommandLineRunner {
         workRepository.save(new Work("BSMX_ATM", "wHtOiiBFM0A"));
         workRepository.save(new Work("CBA_DEPOSIT", "gaTLF4bOa-U"));
         workRepository.save(new Work("OCBC_ATM", "7JewlnbUodo"));
+        workRepository.save(new Work("OCBC_ATM_KIOSK", "EV5gZbEISoc"));
     }
 
     private void social() {
@@ -301,7 +302,8 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.HSBC_1.CONTENT.TECHNOLOGY", "C++, HTML, CSS, JQuery", "C++, HTML, CSS, JQuery"));
 
         translationRepository.save(new Translation("CV.EVENTS.HSBC_2.TITLE", "<a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>", "<a href=\"https://www.hsbc.com.mx\" target=\"_blank\">HSBC Mexiko</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.HSBC_2.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.HSBC_2.CONTENT.ROLE",
+                "IT Berater / Architekt", "IT Consultant / Architect"));
         translationRepository.save(new Translation("CV.EVENTS.HSBC_2.CONTENT.ACTIVITY", "Softwareintegration", "Software integration"));
         translationRepository.save(new Translation("CV.EVENTS.HSBC_2.CONTENT.TASK", "Entwicklung einer neuen Komponente für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Kartenlose Einzahlungen für Scheine, Münzen und Schecks", "Development of new components for an existing self service application:<br>- Cardless deposit for high amount of notes, coins and cheques"));
         translationRepository.save(new Translation("CV.EVENTS.HSBC_2.CONTENT.DEV_ENV", "Eclipse 4.6, Webstorm 11", "Eclipse 4.6, Webstorm 11"));
@@ -317,7 +319,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.BANKDATA.CONTENT.TECHNOLOGY", "JSE, C++, HTML, CSS, Axis", "JSE, C++, HTML, CSS, Axis"));
 
         translationRepository.save(new Translation("CV.EVENTS.CBA_1.TITLE", "<a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>", "<a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.ROLE", "Softwareentwickler/Architekt", "Developer/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.ROLE", "Softwareentwickler", "Developer"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.ACTIVITY", "Softwareentwicklung", "Software development"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.TASK", "Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Neue grafische Oberfläche<br>- Erweiterungen einer bestehenden Hostkommunikation<br>- Kartenlose Transaktion und Einzahlung auf ein Fremdkonto als neue Transaktion", "Development of new components and customzing of an existing self service application:<br>- Development of a new UI<br>- Extension of the host communication<br>- Cardless withdrawal<br>- 3rd party deposit"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.DEV_ENV", "Eclipse 3.6, Visual Studio 2010", "Eclipse 3.6, Visual Studio 2010"));
@@ -325,7 +327,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.CBA_1.CONTENT.TECHNOLOGY", "JSE, C++, HTML, CSS, JQuery, Axis2", "JSE, C++, HTML, CSS, JQuery, Axis2"));
 
         translationRepository.save(new Translation("CV.EVENTS.CBA_2.TITLE", "<a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>", "<a href=\"https://www.commbank.com.au\" target=\"_blank\">Commonwealth Bank of Australia</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.ROLE", "IT Berater", "IT Consultant"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.ACTIVITY", "Softwareintegration", "Software integration"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.TASK", "Erstellung eines kompletten automatisierten Entwicklungsprozesses mit den Schwerpunkten:<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests", "Development of an automated buildprocess with the following topics:<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.DEV_ENV", "Eclipse 4.3, Webstorm 11", "Eclipse 4.3, Webstorm 11"));
@@ -333,7 +335,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.CBA_2.CONTENT.TECHNOLOGY", "JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO", "JSE, JMockit, Nodejs, Selenium, Jasmine, WebdriverIO"));
 
         translationRepository.save(new Translation("CV.EVENTS.ABN.TITLE", "<a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>", "<a href=\"https://www.abnamro.nl\" target=\"_blank\">ABN Amnro</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.ROLE", "Developer/Architect", "Developer/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.ROLE", "Softwareentwickler", "Developer "));
         translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.ACTIVITY", "Software development", "Software development"));
         translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.TASK", "Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Ablaufanpassungen von Transaktionen<br>- Neue Hostkommunikation<br>- Neue grafische Oberfläche<br>- Automatisierter Entwicklungsprozess", "Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of a new host communication<br>- Development of a new UI<br>- Setup of a continious integration development process"));
         translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.DEV_ENV", "Eclipse 4.3, Webstorm 10", "Eclipse 4.3, Webstorm 10"));
@@ -341,7 +343,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.ABN.CONTENT.TECHNOLOGY", "JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype", "JSE, JMockit, HTML5, CSS3, Knockout, Durandal, Prototype"));
 
         translationRepository.save(new Translation("CV.EVENTS.OCBC.TITLE", "<a href=\"https://www.ocbc.com\" target=\"_blank\">Oversea-Chinese Banking Corporation</a>", "<a href=\"https://www.ocbc.com\" target=\"_blank\">Oversea-Chinese Banking Corporation</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.ROLE", "IT Berater", "IT Consultant"));
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.TASK", "Erstellung einer Kiosklösung für eine Filiale der Zukunft:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests", "Development of a kiosk-terminal application for a branch of the future:<br>- Agile<br>- Scrum<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.OCBC.CONTENT.DEV_ENV", "Eclipse 4.6, Webstorm 11", "Eclipse 4.6, Webstorm 11"));
@@ -351,7 +353,7 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.BSM.TITLE",
                 "<a href=\"https://www.santander.com.mx\" target=\"_blank\">Banco Santander Mexico</a>",
                 "<a href=\"https://www.santander.com.mx\" target=\"_blank\">Banco Santander Mexico</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.ROLE", "Architekt", "Architect"));
         translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
         translationRepository.save(new Translation("CV.EVENTS.BSM.CONTENT.TASK",
                 "Kompletter Austausch einer bestehenden Selbstbedienungsanwendung:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- " +
@@ -368,41 +370,25 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.LATAM.TITLE",
                 "Latein Amerika Terminal Driving Blueprint",
                 "Latin America Terminal Driving Blueprint"));
-        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ROLE", "Architekt", "Architect"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.TASK",
-                "Erstellung eines Blueprints für den Latein Amerikanischen Markt:<br>- Leistungsbeschreibung " +
-                        "aller markttauglichen Transaktionen<br>-" +
-                        " " +
-                        "Scrum<br>-" +
-                        " " +
-                        "Buildprozess<br>-" +
-                        " " +
-                        "Distribution<br>-" +
-                        " " +
-                        "Mocking<br>-" +
-                        " " +
-                        "Unit" +
-                        " " +
-                        "Tests<br>- End-2-End Tests",
-                "Development of a blueprint for the Latin American Market:<br>- Statement of work of all needed " +
-                        "transactions<br>-" +
-                        " " +
-                        "Scrum<br>-" +
-                        " " +
-                        "Setup" +
-                        " " +
-                        "of" +
-                        " " +
-                        "a" +
-                        " " +
-                        "continious" +
-                        " " +
-                        "integration" +
-                        " " +
-                        "development" +
-                        " " +
-                        "process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+                "Erstellung eines Blueprints für den Latein Amerikanischen Markt:<br>" +
+                        "- Leistungsbeschreibung aller markttauglichen Transaktionen<br>" +
+                        "- Scrum<br>" +
+                        "- Buildprozess<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests",
+                "Development of a blueprint for the Latin American Market:<br>" +
+                        "- Statement of work of all needed transactions<br>" +
+                        "- Scrum<br>" +
+                        "- Setup of a continious integration development process<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.LATAM.CONTENT.DEV_ENV",
                 "IntelliJ IDEA 2021.1, Visual Studio Code 1.57",
                 "IntelliJ IDEA 2021.1, Visual Studio Code 1.57"));
@@ -412,9 +398,25 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.TITLE",
                 "Globaler Terminal Driving Blueprint",
                 "Global Terminal Driving Blueprint"));
-        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ROLE", "IT Berater/Architekt", "IT Consultant/Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ROLE", "Architekt", "Architect"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
-        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TASK", "Erstellung einer Kiosklösung für eine Filiale der Zukunft:<br>- Agil<br>- Scrum<br>- Buildprozess<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests", "Development of a kiosk-terminal application for a branch of the future:<br>- Agile<br>- Scrum<br>- Setup of a continious integration development process<br>- Distribution<br>- Mocking<br>- Unit Tests<br>- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TASK",
+                "Erstellung eines Blueprints für den globalen Markt:<br>" +
+                        "- Leistungsbeschreibung aller markttauglichen Transaktionen<br>" +
+                        "- Scrum<br>" +
+                        "- Buildprozess<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests",
+                "Development of a blueprint for the global Market:<br>" +
+                        "- Statement of work of all needed transactions<br>" +
+                        "- Scrum<br>" +
+                        "- Setup of a continious integration development process<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.DEV_ENV",
                 "IntelliJ IDEA 2021.2, Visual Studio Code 1.61",
                 "IntelliJ IDEA 2021.2, Visual Studio Code 1.61"));
@@ -422,7 +424,9 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
 
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.TITLE", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE", "Softwareenwickler/Architekt/IT Berater", "Developer/Architect/IT Consultant"));
+        translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE",
+                "Softwareenwickler / Architekt / IT Berater",
+                "Developer / Architect / IT Consultant"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ACTIVITY", "Softwareentwicklung, Softwareintegration, Entwicklungsleiter", "Software development, Software integration, Lead Development"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.TASK", "Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Ablaufanpassungen von Transaktionen<br>- Neuentwicklung von Transaktionen<br>- Neue grafische Oberfläche<br>- Automatisierter Entwicklungsprozess<br>- Beratung<br>- Wartung<br>- Schulung", "Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of new transactions<br>- Development of new UIs<br>- Continous integration<br>- Consultant<br>- Maintenance<br>- Training"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.DEV_ENV", "Eclipse, Webstorm, Visual Studio", "Eclipse, Webstorm, Visual Studio"));
@@ -430,7 +434,9 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.TECHNOLOGY", "JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO", "JSE, C++, JMockit, HTML, HTML5, CSS, CSS3, Knockout, Durandal, Prototype, Nodejs, Selenium, Jasmine, WebdriverIO"));
 
         translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.TITLE", "<a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>", "<a href=\"http://www.wincor-nixdorf.com\" target=\"_blank\">Wincor Nixdorf International GmbH</a>"));
-        translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.CONTENT.ROLE", "Softwareenwickler/Architekt/IT Berater", "Developer/Architect/IT Consultant"));
+        translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.CONTENT.ROLE",
+                "Softwareenwickler / Architekt / IT Berater",
+                "Developer / Architect / IT Consultant"));
         translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.CONTENT.ACTIVITY", "Softwareentwicklung, Softwareintegration", "Software development, Software integration"));
         translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.CONTENT.TASK", "Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>- Ablaufanpassungen von Transaktionen<br>- Neuentwicklung von Transaktionen<br>- Neue grafische Oberfläche<br>- Automatisierter Entwicklungsprozess<br>- Beratung<br>- Wartung<br>- Schulung", "Development of new components and customzing of an existing self service application:<br>- Customizing of existing transactions<br>- Development of new transactions<br>- Development of new UIs<br>- Continous integration<br>- Consultant<br>- Maintenance<br>- Training"));
         translationRepository.save(new Translation("CV.EVENTS.WINCOR_NIXDORF.CONTENT.DEV_ENV", "Eclipse, Webstorm, Visual Studio", "Eclipse, Webstorm, Visual Studio"));
@@ -479,8 +485,10 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TEXT", "Die alte Lösung wurde durch eine neue Anwendung ersetzt, die dem Kunden auch Einzahltransaktionen ermöglicht.", "The old solution was replaced by a new application, which offers deposit transaction to the customer."));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TITLE", "Commonwealth Bank of Australia - Einzahlung", "Commonwealth Bank of Australia - Deposit"));
         translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TEXT", "Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gutgeschrieben.", "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him. He can deposit both cash and cheques without an envelope 24/7, and cash is credited to his account instantly."));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking - ATM", "Oversea-Chinese Banking - ATM"));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen wie z.B. Chequeeinzahlung implementiert.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented like cheque deposit."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking - Einzahlung", "Oversea-Chinese Banking - Deposit"));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Cheques werden während der Einzahlung direkt vom Mitarbeiter kontrolliert und freigegeben.", "Cheques get validated and approved by the staff during runtime."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TITLE", "Oversea-Chinese Banking - ATM", "Oversea-Chinese Banking - ATM"));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen implementiert.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented."));
 
         //Skill
         translationRepository.save(new Translation("SKILL.HEADLINE", "Fähigkeiten", "Skills"));

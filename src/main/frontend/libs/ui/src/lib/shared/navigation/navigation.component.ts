@@ -10,6 +10,8 @@ import { timer } from 'rxjs';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
+  public isCollapsed = true;
+
   constructor(
     private translate: TranslateService,
     private translateConfiguration: TranslationConfigurationService,

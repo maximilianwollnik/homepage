@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillComponent } from './component/skill/skill.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { EducationComponent } from './component/education/education.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const uiRoutes: Route[] = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -52,6 +53,7 @@ export const uiRoutes: Route[] = [
     GalleryModule,
     LightboxModule,
     CarouselModule,
+    NgbModule
   ],
   declarations: [
     HomeComponent,

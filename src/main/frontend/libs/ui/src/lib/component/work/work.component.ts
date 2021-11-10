@@ -25,7 +25,7 @@ export class WorkComponent {
       let workArray: Work[] = [];
       let j = 0;
       for (let i = 0; i < work.length; i++) {
-        if (j !== 3) {
+        if (j !== 2) {
           workArray.push(work[i]);
         } else {
           this.workItems.push(workArray);

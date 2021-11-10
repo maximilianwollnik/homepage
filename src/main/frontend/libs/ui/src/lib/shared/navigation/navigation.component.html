@@ -15,14 +15,13 @@
               (click)="changeLanguage('en')"
               class="navbar-brand abs navFlag"
             />
+
             <button
               class="navbar-toggler ms-auto"
               type="button"
-              data-toggle="collapse"
-              data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              (click)="collapse.toggle()"
+              [attr.aria-expanded]="!isCollapsed"
+              aria-controls="collapseExample"
             >
               <span class="toggler-icon"></span>
               <span class="toggler-icon"></span>
@@ -37,7 +36,7 @@
                 flex-grow-1
                 text-right
               "
-              id="navbarSupportedContent"
+              #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed"
             >
               <ul id="nav" class="navbar-nav ms-auto flex-nowrap">
                 <li class="nav-item">
