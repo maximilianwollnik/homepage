@@ -1,7 +1,7 @@
 <section class="intro-video-area overlay section mt-5">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 topmost">
         <div class="section-title white-text">
           <h1 class="wow fadeInUp" data-wow-delay=".4s">
             {{ 'WORK.HEADLINE' | translate }}
@@ -11,18 +11,18 @@
     </div>
   </div>
 
-  <div class="container" *ngFor="let internalArray of workItems; let i = index">
-    <div class="row align-items-center">
-      <div class="col" *ngFor="let work of internalArray; let j = index">
-        <div class="row">
-          <div class="section-title white-text wow fadeInDown">
-            <h3
-              [innerHTML]="'WORK.BODY.' + work.element + '.TITLE' | translate"
-            ></h3>
-            <p
-              [innerHTML]="'WORK.BODY.' + work.element + '.TEXT' | translate"
-            ></p>
-          </div>
+  <div class="container px-4 py-5" id="featured-3">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2" *ngFor="let internalArray of workItems; let i = index">
+      <div class="feature col topmost" *ngFor="let work of internalArray; let j = index">
+        <div class="section-title white-text wow fadeInDown">
+          <h3
+            [innerHTML]="'WORK.BODY.' + work.element + '.TITLE' | translate"
+          ></h3>
+          <p
+            [innerHTML]="'WORK.BODY.' + work.element + '.TEXT' | translate"
+          ></p>
+        </div>
+        <div>
           <div class="intro-video-play wow fadeInDown">
             <div class="play-thumb">
               <a
@@ -34,7 +34,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
+
   </div>
 </section>

@@ -25,6 +25,7 @@ export class WorkComponent {
       let workArray: Work[] = [];
       let j = 0;
       for (let i = 0; i < work.length; i++) {
+        work[i].id = i
         if (j !== 2) {
           workArray.push(work[i]);
         } else {

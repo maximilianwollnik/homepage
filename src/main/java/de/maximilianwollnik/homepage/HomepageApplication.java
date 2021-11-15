@@ -481,14 +481,14 @@ public class HomepageApplication implements CommandLineRunner {
 
         // Work
         translationRepository.save(new Translation("WORK.HEADLINE", "Hier ist eine Auswahl von fertig gestellten Projekten", "Here you can find a collection of finished projects"));
-        translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TITLE", "Banco Santander Mexiko - ATM", "Banco Santander Mexico - ATM"));
+        translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TITLE", "Banco Santander Mexiko", "Banco Santander Mexico"));
         translationRepository.save(new Translation("WORK.BODY.BSMX_ATM.TEXT", "Die alte Lösung wurde durch eine neue Anwendung ersetzt, die dem Kunden auch Einzahltransaktionen ermöglicht.", "The old solution was replaced by a new application, which offers deposit transaction to the customer."));
-        translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TITLE", "Commonwealth Bank of Australia - Einzahlung", "Commonwealth Bank of Australia - Deposit"));
-        translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TEXT", "Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden. Das Guthaben wird dabei sofort dem Kunden gutgeschrieben.", "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him. He can deposit both cash and cheques without an envelope 24/7, and cash is credited to his account instantly."));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking - Einzahlung", "Oversea-Chinese Banking - Deposit"));
+        translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TITLE", "Commonwealth Bank of Australia", "Commonwealth Bank of Australia"));
+        translationRepository.save(new Translation("WORK.BODY.CBA_DEPOSIT.TEXT", "Geld oder Checks können einzeln oder gleichzeitig zu einer beliebigen Tageszeit eingezahlt werden.", "The new cash & cheque in ATMs* allow a customer to do his banking at a time that's convenient for him."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TITLE", "Oversea-Chinese Banking", "Oversea-Chinese Banking"));
         translationRepository.save(new Translation("WORK.BODY.OCBC_ATM.TEXT", "Cheques werden während der Einzahlung direkt vom Mitarbeiter kontrolliert und freigegeben.", "Cheques get validated and approved by the staff during runtime."));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TITLE", "Oversea-Chinese Banking - ATM", "Oversea-Chinese Banking - ATM"));
-        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TEXT", "Es wurde ein neues Userinterface entwickelt. Zusätzlich wurden zahlreiche Kiosktransaktionen und Standardtransaktionen implementiert.", "A new user interface has been generated. Additionally many kiosk and standard transactions have been implemented."));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TITLE", "Oversea-Chinese Banking", "Oversea-Chinese Banking"));
+        translationRepository.save(new Translation("WORK.BODY.OCBC_ATM_KIOSK.TEXT", "Es wurde ein neues Userinterface entwickelt. ", "A new user interface has been generated. "));
 
         //Skill
         translationRepository.save(new Translation("SKILL.HEADLINE", "Fähigkeiten", "Skills"));

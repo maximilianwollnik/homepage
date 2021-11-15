@@ -968,39 +968,31 @@ ol {
 }
 
 /* Section Title */
+.topmost {
+  z-index: 5;
+}
+
 .section-title {
   text-align: center;
-  margin-bottom: 80px;
-  padding: 0 300px;
-  position: relative;
-  z-index: 5;
 }
 
 .section-title span {
   text-transform: uppercase;
   color: #3763eb;
   display: inline-block;
-  margin-bottom: 10px;
   font-size: 14px;
 }
 
 .section-title h2 {
   font-size: 33px;
-  margin-bottom: 18px;
   line-height: 50px;
   text-transform: capitalize;
-  position: relative;
   font-weight: 700;
   padding-bottom: 14px;
 }
 
 .section-title h2:before {
-  position: absolute;
-  left: 50%;
   margin-left: -25px;
-  bottom: -1px;
-  height: 2px;
-  width: 50px;
   background: #3763eb;
   content: '';
 }
@@ -2699,7 +2691,6 @@ ol {
 }
 
 .intro-video-area .section-title {
-  margin-bottom: 150px;
   max-height: 90px;
 }
 
@@ -2710,7 +2701,7 @@ ol {
 }
 
 .intro-video-area .intro-video-play .play-thumb a {
-  position: absolute;
+  position: relative;
   left: 50%;
   bottom: 0;
   height: 110px;
