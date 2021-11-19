@@ -280,9 +280,10 @@ public class HomepageApplication implements CommandLineRunner {
 
         translationRepository.save(new Translation("CV.EVENTS.ROLE", "Rolle:", "Role:"));
         translationRepository.save(new Translation("CV.EVENTS.ACTIVITY", "Tätigkeiten:", "Activities:"));
-        translationRepository.save(new Translation("CV.EVENTS.DEV_ENV", "Entwicklungsumgebung:", "Development Environment:"));
-        translationRepository.save(new Translation("CV.EVENTS.COMPONENT", "Systemkomponenten:", "Components:"));
+        translationRepository.save(new Translation("CV.EVENTS.DEV_ENV", "IDE:", "IDE:"));
+        translationRepository.save(new Translation("CV.EVENTS.COMPONENT", "Komponenten:", "Components:"));
         translationRepository.save(new Translation("CV.EVENTS.TECHNOLOGY", "Technologien:", "Technologies:"));
+        translationRepository.save(new Translation("CV.EVENTS.TASK", "Aufgaben:", "Tasks:"));
 
 
         translationRepository.save(new Translation("CV.EVENTS.WELLS_FARGO.TITLE", "<a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>", "<a href=\"https://wellsfargo.com\" target=\"_blank\">Wells Fargo</a>"));
@@ -447,8 +448,8 @@ public class HomepageApplication implements CommandLineRunner {
         translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.ROLE", "Dozent", "Instructor"));
         translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.ACTIVITY", "Schulung", "Training"));
         translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.TASK", "Dozententätigkeit im Bereich Internetanwendungen:<br>- Erste Schritte<br>- E-Mail<br>- Sicherheit", "Instructor of Internet Application:<br>- First steps<br>- E-Mail<br>- Security"));
-        translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.DEV_ENV", "", ""));
-        translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.COMPONENT", "", ""));
+        translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.DEV_ENV", "Keine", "None"));
+        translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.COMPONENT", "Keine", "None"));
         translationRepository.save(new Translation("CV.EVENTS.PIGAL.CONTENT.TECHNOLOGY", "HTML", "HTML"));
 
         translationRepository.save(new Translation("CV.EVENTS.ZIKON.TITLE", "ZIKON - Konzepte und Entwicklung", "ZIKON - Konzepte und Entwicklung"));

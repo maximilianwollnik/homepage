@@ -20,74 +20,66 @@
         }"
       >
         <mzd-icon
-        [ngClass]="{
-          'icon-right': odd,
-          'icon-left': even
-        }">
-          <fa-icon [icon]="faCheckSquare" class="project-finished" *ngIf="(entry.biographyState === allBiographyStates.PROJECT_FINISHED)"></fa-icon>
-          <fa-icon [icon]="faEdit" class="project-current" *ngIf="entry.biographyState === allBiographyStates.PROJECT_CURRENT"></fa-icon>
-          <fa-icon [icon]="faCheckSquare" class="job-finished" *ngIf="entry.biographyState === allBiographyStates.JOB_FINISHED"></fa-icon>
-          <fa-icon [icon]="faEdit" class="job-current" *ngIf="entry.biographyState === allBiographyStates.JOB_CURRENT"></fa-icon>
+          [ngClass]="{
+            'icon-right': odd,
+            'icon-left': even
+          }"
+        >
+          <fa-icon
+            [icon]="faCheckSquare"
+            class="project-finished"
+            *ngIf="entry.biographyState === allBiographyStates.PROJECT_FINISHED"
+          ></fa-icon>
+          <fa-icon
+            [icon]="faEdit"
+            class="project-current"
+            *ngIf="entry.biographyState === allBiographyStates.PROJECT_CURRENT"
+          ></fa-icon>
+          <fa-icon
+            [icon]="faCheckSquare"
+            class="job-finished"
+            *ngIf="entry.biographyState === allBiographyStates.JOB_FINISHED"
+          ></fa-icon>
+          <fa-icon
+            [icon]="faEdit"
+            class="job-current"
+            *ngIf="entry.biographyState === allBiographyStates.JOB_CURRENT"
+          ></fa-icon>
         </mzd-icon>
         <div style="padding: 16px">
-          <h1>
+          <h2>
             {{ entry.start | date: 'MM/YYYY' }} -
-            <span *ngIf="entry.start !== entry.end">{{ entry.end | date: 'MM/YYYY' }} </span>
-            <span *ngIf="entry.start === entry.end" [innerHTML]="'PRESENT' | translate"></span>:
+            <span *ngIf="entry.start !== entry.end"
+              >{{ entry.end | date: 'MM/YYYY' }}
+            </span>
+            <span
+              *ngIf="entry.start === entry.end"
+              [innerHTML]="'PRESENT' | translate"
+            ></span
+            >:
             <span
               [innerHTML]="'CV.EVENTS.' + entry.element + '.TITLE' | translate"
             ></span>
-          </h1>
+          </h2>
           <hr />
 
-          <table class="table table-bordered">
-            <tr>
-              <td>{{ 'CV.EVENTS.ROLE' | translate }}</td>
-              <td
-                translate="{{ 'CV.EVENTS.' + entry.element + '.CONTENT.ROLE' }}"
-              ></td>
-            </tr>
-            <tr>
-              <td>{{ 'CV.EVENTS.ACTIVITY' | translate }}</td>
-              <td
-                translate="{{
-                  'CV.EVENTS.' + entry.element + '.CONTENT.ACTIVITY'
-                }}"
-              ></td>
-            </tr>
-            <tr>
-              <td>{{ 'CV.EVENTS.DEV_ENV' | translate }}</td>
-              <td
-                translate="{{
-                  'CV.EVENTS.' + entry.element + '.CONTENT.DEV_ENV'
-                }}"
-              ></td>
-            </tr>
-            <tr>
-              <td>{{ 'CV.EVENTS.COMPONENT' | translate }}</td>
-              <td
-                translate="{{
-                  'CV.EVENTS.' + entry.element + '.CONTENT.COMPONENT'
-                }}"
-              ></td>
-            </tr>
-            <tr>
-              <td>{{ 'CV.EVENTS.TECHNOLOGY' | translate }}</td>
-              <td
-                translate="{{
-                  'CV.EVENTS.' + entry.element + '.CONTENT.TECHNOLOGY'
-                }}"
-              ></td>
-            </tr>
-            <tr>
-              <td
-                colspan="2"
-                [innerHTML]="
-                  'CV.EVENTS.' + entry.element + '.CONTENT.TASK' | translate
-                "
-              ></td>
-            </tr>
-          </table>
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.ROLE' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.ROLE' | translate"></span><br><br>
+
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.ACTIVITY' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.ACTIVITY' | translate"></span><br><br>
+
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.DEV_ENV' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.DEV_ENV' | translate"></span><br><br>
+          
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.COMPONENT' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.COMPONENT' | translate"></span><br><br>
+
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.TECHNOLOGY' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.TECHNOLOGY' | translate"></span><br><br>
+
+          <span class="fs-6 text-decoration-underline" [innerHTML]="'CV.EVENTS.TASK' | translate"></span><br>
+          <span [innerHTML]="'CV.EVENTS.' + entry.element + '.CONTENT.TASK' | translate"></span><br><br>
         </div>
       </mzd-timeline-content>
     </mzd-timeline>
@@ -108,7 +100,7 @@
         class="wow fadeInLeft content-left"
       >
         <mzd-icon>
-          <fa-icon [icon]=faEdit class="project-current"></fa-icon>
+          <fa-icon [icon]="faEdit" class="project-current"></fa-icon>
         </mzd-icon>
         <div style="padding: 16px">
           <h1>{{ 'CV.EXPLANATIONS.PROJECT_CURRENT' | translate }}</h1>
@@ -122,7 +114,7 @@
         class="wow fadeInRight content-right"
       >
         <mzd-icon>
-          <fa-icon [icon]=faCheckSquare class="project-finished"></fa-icon>
+          <fa-icon [icon]="faCheckSquare" class="project-finished"></fa-icon>
         </mzd-icon>
         <div style="padding: 16px">
           <h1>{{ 'CV.EXPLANATIONS.PROJECT_FINISHED' | translate }}</h1>
@@ -136,7 +128,7 @@
         class="wow fadeInLeft content-left"
       >
         <mzd-icon>
-          <fa-icon [icon]=faEdit class="job-current"></fa-icon>
+          <fa-icon [icon]="faEdit" class="job-current"></fa-icon>
         </mzd-icon>
         <div style="padding: 16px">
           <h1>{{ 'CV.EXPLANATIONS.JOB_CURRENT' | translate }}</h1>
@@ -150,7 +142,7 @@
         class="wow fadeInRight content-right"
       >
         <mzd-icon>
-          <fa-icon [icon]=faCheckSquare class="job-finished"></fa-icon>
+          <fa-icon [icon]="faCheckSquare" class="job-finished"></fa-icon>
         </mzd-icon>
         <div style="padding: 16px">
           <h1>{{ 'CV.EXPLANATIONS.JOB_FINISHED' | translate }}</h1>
