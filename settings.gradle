@@ -1,0 +1,5 @@
+/*
+ * Copyright (c) 2021, Maximilian Wollnik, All rights reserved.
+ */
+
+rootProject.name = 'homepage'

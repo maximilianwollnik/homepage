@@ -1,0 +1,36 @@
+<section class="brand-area mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title white-text">
+          <h1 class="wow fadeInUp" data-wow-delay=".4s">
+            {{ 'SKILL.HEADLINE' | translate }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 wow fadeInUp">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-8">
+        <div>
+          <owl-carousel-o [options]="customOptions">
+            <ng-template
+              carouselSlide
+              [width]="200"
+              [id]="skill.element"
+              *ngFor="let skill of skills"
+              ><span
+                [innerHTML]="
+                  'SKILL.BODY.' + skill.element + '.TEXT' | translate
+                "
+              ></span>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+</section>

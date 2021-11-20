@@ -1,0 +1,102 @@
+<!-- Start Header Area -->
+<header class="header">
+  <div class="navbar-area sticky">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+            <img
+              src="assets/ui/de.png"
+              (click)="changeLanguage('de')"
+              class="navbar-brand abs navFlag"
+            />
+            <img
+              src="assets/ui/en.png"
+              (click)="changeLanguage('en')"
+              class="navbar-brand abs navFlag"
+            />
+
+            <button
+              class="navbar-toggler ms-auto"
+              type="button"
+              (click)="collapse.toggle()"
+              [attr.aria-expanded]="!isCollapsed"
+              aria-controls="collapseExample"
+            >
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button>
+
+            <div
+              class="
+                collapse
+                navbar-collapse
+                sub-menu-bar
+                flex-grow-1
+                text-right
+              "
+              #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed"
+            >
+              <ul id="nav" class="navbar-nav ms-auto flex-nowrap">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('home', 'top')"
+                    [class.active]="isLinkActive('home#top')"
+                    >{{ 'BUTTON.MENU_HOME' | translate }}</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('home', 'cv')"
+                    [class.active]="isLinkActive('home#cv')"
+                    >{{ 'BUTTON.MENU_CV' | translate }}</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('home', 'work')"
+                    [class.active]="isLinkActive('home#work')"
+                    >{{ 'BUTTON.MENU_WORK' | translate }}</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('home', 'skill')"
+                    [class.active]="isLinkActive('home#skill')"
+                    >{{ 'BUTTON.MENU_SKILL' | translate }}</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('home', 'education')"
+                    [class.active]="isLinkActive('home#education')"
+                    >{{ 'BUTTON.MENU_EDUCATION' | translate }}</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    (click)="navigate('disclaimer', 'top')"
+                    [class.active]="isLinkActive('disclaimer#top')"
+                    >{{ 'BUTTON.MENU_DISCLAIMER' | translate }}</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <!-- navbar -->
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </div>
+  <!-- navbar area -->
+</header>
+<!-- End Header Area -->

@@ -1,0 +1,9 @@
+<div class="pt-2 pb-2 ">
+  <div class="row justify-content-md-center">
+    <div *ngFor="let item of socialItems" class="col-md-auto">
+      <a class="link-secondary wow fadeInRightBig" href="{{item.url}}" target="_blank" data-wow-delay=".3">
+        <fa-icon [icon]="['fab', item.icon]" class="fa-3x ms-5 " ></fa-icon>
+      </a>
+    </div>
+  </div>
+</div>
