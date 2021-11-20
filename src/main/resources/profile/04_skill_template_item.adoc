@@ -1,0 +1,4 @@
+|{skillSectionElementTitleREPLACE_ME}
+|{skillSectionElementDateREPLACE_ME}
+|{skillSectionElementRankingREPLACE_ME}
+

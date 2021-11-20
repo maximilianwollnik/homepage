@@ -1,0 +1,23 @@
+<div class="pt-5 pb-5 bg-dark wow fadeInUpBig">
+  <div class="row centered">
+    <div class="col-lg-4">
+      <p class="text-center text-light">{{ 'FOOTER.JOB_TITLE' | translate }}</p>
+    </div>
+
+    <div class="col-lg-4">
+      <p class="text-center text-light">{{ 'FOOTER.LOCATION' | translate }}</p>
+    </div>
+
+    <div class="col-lg-4">
+      <p class="text-center text-light">{{ 'FOOTER.CHALLENGE' | translate }}</p>
+    </div>
+  </div>
+  <div class="row centered">
+    <p class="text-center text-light small">
+      {{ 'FOOTER.VERSION' | translate }} <b>{{ version }}</b><br />
+      <span [innerHTML]="'FOOTER.TIMESTAMP' | translate"></span>
+      <b> {{ time | date : 'yyyy-MM-dd'}}</b>
+      {{ 'AUTHOR' | translate }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+$icon-color-job-current: #2e6da4;
+$icon-color-job-finished: #3f903f;
+$icon-color-project-current: #2695f7;
+$icon-color-project-finished: #3ef03e;
+
+.icon-right,
+.icon-left {
+  top: 18px;
+}
+
+.icon-right {
+  right: -6px;
+}
+
+.icon-left {
+  right: -7px;
+}
+
+.job-current {
+  color: $icon-color-job-current;
+}
+
+.job-finished {
+  color: $icon-color-job-finished;
+}
+
+.project-current {
+  color: $icon-color-project-current;
+}
+
+.project-finished {
+  color: $icon-color-project-finished;
+}

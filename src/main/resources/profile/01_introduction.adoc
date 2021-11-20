@@ -1,0 +1,42 @@
+== {introductionTitle}
+
+[grid="none", cols="2,4", frame="none", options="", stripes=even]
+|===
+|{surnameKey}
+|{surnameValue}
+
+|{nameKey}
+|{nameValue}
+
+|{nationalityKey}
+|{nationalityValue}
+
+|{addressKey}
+|{addressValue}
+
+|{phoneKey}
+|{phoneValue}
+
+|{mobileKey}
+|{mobileValue}
+
+|{mailKey}
+|{mailValue}
+
+|{birthdayKey}
+|{birthdayValue}
+
+|{pobKey}
+|{pobValue}
+
+|{maritalKey}
+|{maritalValue}
+
+|{interestsKey}
+|{interestsValue}
+
+|{languagesKey}
+|{languagesValue}
+
+|===
+image:images/about.jpg[about, 500]

@@ -1,0 +1,23 @@
+<section class="about-us section mt-5" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="wow fadeInUp">{{ 'DISCLAIMER.HEADLINE' | translate }}</h1>
+      </div>
+    </div>
+    <div class="row" *ngFor="let disclaimer of disclaimers; let even = even; let odd = odd">
+      <div class="col text-center wow" [ngClass]="{
+        'fadeInLeft': odd,
+        'fadeInRight': even
+      }">
+        <h4 [innerHTML]="disclaimer.title | translate"></h4>
+        <p [innerHTML]="disclaimer.text | translate"></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <small [innerHTML]="'DISCLAIMER.BODY.SOURCE' | translate"></small>
+      </div>
+    </div>
+  </div>
+</section>

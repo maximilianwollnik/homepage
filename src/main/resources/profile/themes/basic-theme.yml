@@ -1,0 +1,30 @@
+basic:
+  color:
+    background: 'FFFFFF'
+    font: '333333'
+    border: 'eeeeee'
+    link: '333333'
+    title: '999999'
+    authors: '181818'
+    abstract: '5c6266'
+    code: 'f9f9f9'
+    table:
+      even: 'f9f9f9'
+      foot: 'f0f0f0'
+      border: 'dddddd'
+  size:
+    line:
+      height:
+        length: 13.8
+    font: 12
+    lead:
+      font: 13.5
+      line:
+        height: 1.4
+    border:
+      width: 0.5
+    blockquote:
+      border:
+        width: 4
+  page:
+    layout: portrait

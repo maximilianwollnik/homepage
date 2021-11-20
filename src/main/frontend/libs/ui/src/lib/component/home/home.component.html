@@ -1,0 +1,25 @@
+<!-- Start Hero Area -->
+<section class="hero-area" id="top">
+    <!-- Single Slider -->
+    <div class="hero-inner">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 co-12">
+                    <div class="home-slider">
+                        <div class="hero-text">
+                            <h1 class="wow fadeInUp" data-wow-delay=".3" [innerHTML]="'HOME.HEADLINE' | translate"></h1>
+                            <p class="wow fadeInUp" data-wow-delay=".5s" [innerHTML]="'HOME.BODY' | translate"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Single Slider -->
+</section>
+<!--/ End Hero Area -->
+
+<router-outlet name="cv"></router-outlet>
+<router-outlet name="work"></router-outlet>
+<router-outlet name="skill"></router-outlet>
+<router-outlet name="education"></router-outlet>

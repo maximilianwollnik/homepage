@@ -1,0 +1,4 @@
+=== {skillSectionTitleREPLACE_ME}
+
+[grid="none",cols="3,1,<4",frame="none", options="", style="monospaced"]
+|===

@@ -1,0 +1,11 @@
+[big]**{workStartDateREPLACE_ME} - {workEndDateREPLACE_ME}: {workTitleREPLACE_ME}**
+[frame="ends", stripes=even]
+|===
+|{workRoleKeyREPLACE_ME} | {workRoleValueREPLACE_ME}
+|{workActivityKeyREPLACE_ME} | {workActivityValueREPLACE_ME}
+2+|{workTaskValueREPLACE_ME}
+|{workDevEnvKeyREPLACE_ME} | {workDevEnvValueREPLACE_ME}
+|{workComponentKeyREPLACE_ME} | {workComponentValueREPLACE_ME}
+|{workTechnologyKeyREPLACE_ME} | {workTechnologyValueREPLACE_ME}
+|===
+
