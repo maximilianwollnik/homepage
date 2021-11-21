@@ -64,7 +64,7 @@ task('installWebapp', group: 'build setup') {
     }
 }
 
-task('buildWebapp', group: 'build') {
+task('buildWebapp', group: 'build', dependsOn: 'installWebapp') {
     doLast {
         exec {
             workingDir 'src/main/frontend'
@@ -82,4 +82,4 @@ springBoot {
 }
 
 bootJar.dependsOn buildWebapp
-bootRun.dependsOn buildWebapp
+//bootRun.dependsOn buildWebapp
