@@ -1,24 +1,24 @@
 /*
- * Copyright (c) 2021, Maximilian Wollnik, All rights reserved.
+ * Copyright (c) 2023, Maximilian Wollnik, All rights reserved.
  */
 
 plugins {
-    id 'org.springframework.boot' version '2.5.4'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
 }
 
 group = 'de.maximilianwollnik'
-sourceCompatibility = '16'
+sourceCompatibility = "19"
 
 repositories {
     mavenCentral()
 }
 
 ext {
-    set('springCloudVersion', "2020.0.3")
-    set('asciidoctorjVersion', "2.5.2")
-    set('asciidoctorjPdfVersion', "1.6.0")
+    set('springCloudVersion', "2022.0.1")
+    set('asciidoctorjVersion', "2.5.7")
+    set('asciidoctorjPdfVersion', "2.3.4")
     set('commonsioVersion', "2.11.0")
 }
 
@@ -75,6 +75,11 @@ task('buildWebapp', group: 'build', dependsOn: 'installWebapp') {
             }
         }
     }
+}
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+    options.deprecation = true
 }
 
 springBoot {

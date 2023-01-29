@@ -178,7 +178,9 @@ public class HomepageApplication implements CommandLineRunner {
                 BiographyState.PROJECT_FINISHED));
         biographyRepository.save(new Biography(dateFormat.parse("05/2021"), dateFormat.parse("10/2021"), "LATAM",
                 BiographyState.PROJECT_FINISHED));
-        biographyRepository.save(new Biography(dateFormat.parse("11/2021"), dateFormat.parse("11/2021"), "GLOBALTD",
+        biographyRepository.save(new Biography(dateFormat.parse("11/2021"), dateFormat.parse("09/2022"), "GLOBALTD",
+                BiographyState.PROJECT_FINISHED));
+        biographyRepository.save(new Biography(dateFormat.parse("10/2022"), dateFormat.parse("10/2022"), "OCTAGON",
                 BiographyState.PROJECT_CURRENT));
 
         biographyRepository.save(new Biography(dateFormat.parse("09/2016"), dateFormat.parse("09/2016"), "DIEBOLD_NIXDORF", BiographyState.JOB_CURRENT));
@@ -423,6 +425,37 @@ public class HomepageApplication implements CommandLineRunner {
                 "IntelliJ IDEA 2021.2, Visual Studio Code 1.61"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
         translationRepository.save(new Translation("CV.EVENTS.GLOBALTD.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
+
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.TITLE",
+                "Octagon",
+                "Octagon"));
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.ROLE", "Architekt", "Architect"));
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.ACTIVITY", "Entwicklungsleiter", "Lead Development"));
+
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.TASK",
+                "Entwicklung neuer und Anpassung bestehender Komponenten für eine existierende Selbstbedienungsanwendung auf Geldautomaten:<br>" +
+                        "- Neue grafische Oberfläche<br>" +
+                        "- Erweiterungen einer bestehenden Hostkommunikation<br>" +
+                        "- Scrum<br>" +
+                        "- Buildprozess<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests",
+                "Development of new components and customzing of an existing self service application:<br>" +
+                        "- Development of a new UI<br>" +
+                        "- Extension of the host communication<br>" +
+                        "- Scrum<br>" +
+                        "- Setup of a continious integration development process<br>" +
+                        "- Distribution<br>" +
+                        "- Mocking<br>" +
+                        "- Unit Tests<br>" +
+                        "- End-2-End Tests"));
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.DEV_ENV",
+                "IntelliJ IDEA 2022.1.4, Visual Studio Code 1.72.2",
+                "IntelliJ IDEA 2022.1.4, Visual Studio Code 1.72.2"));
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.COMPONENT", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence", "Jenkins, Bitbucket, Nexus, Sonarqube, Gradle, Docker, Vagrant, Jira, Confluence"));
+        translationRepository.save(new Translation("CV.EVENTS.OCTAGON.CONTENT.TECHNOLOGY", "JSE, JMockit", "JSE, JMockit"));
 
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.TITLE", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>", "<a href=\"http://www.dieboldnixdorf.com\" target=\"_blank\">Diebold Nixdorf</a>"));
         translationRepository.save(new Translation("CV.EVENTS.DIEBOLD_NIXDORF.CONTENT.ROLE",
