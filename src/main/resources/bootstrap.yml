@@ -1,6 +1,6 @@
 spring:
   application:
-    name: homepage_v2
+    name: homepage_v3
   cloud:
     config:
       uri: ${CONFIGPROTOCOL}://${CONFIGUSER}:${CONFIGPASSWORD}@${CONFIGURI}:${CONFIGPORT}

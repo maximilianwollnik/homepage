@@ -8,16 +8,16 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2022",
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@frontend/data": ["libs/data/src/index.ts"],
-      "@frontend/service": ["libs/service/src/index.ts"],
-      "@frontend/ui": ["libs/ui/src/index.ts"]
+      "@frontend/data": ["data/src/index.ts"],
+      "@frontend/service": ["service/src/index.ts"],
+      "@frontend/ui": ["ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

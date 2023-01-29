@@ -1,47 +1,81 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "frontend",
   "affected": {
     "defaultBase": "master"
   },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    ".eslintrc.json": "*"
-  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "accessToken": "ODAxYTJkNzUtZTg4Yi00NTY0LTkyYjItN2EyZTczZmIyN2VkfHJlYWQtd3JpdGU="
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "projects": {
-    "data": {
-      "tags": []
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
     },
-    "service": {
-      "tags": []
+    "test": {
+      "inputs": [
+        "default",
+        "^production",
+        "{workspaceRoot}/jest.preset.js"
+      ]
     },
-    "ui": {
-      "tags": []
+    "e2e": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
     },
-    "webapp": {
-      "tags": []
-    },
-    "webapp-e2e": {
-      "tags": [],
-      "implicitDependencies": ["webapp"]
+    "lint": {
+      "inputs": [
+        "default",
+        "{workspaceRoot}/.eslintrc.json"
+      ]
     }
-  }
+  },
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/.eslintrc.json"
+    ],
+    "sharedGlobals": []
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  },
+  "defaultProject": "frontend"
 }

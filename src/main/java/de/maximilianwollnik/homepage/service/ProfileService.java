@@ -43,7 +43,7 @@ public class ProfileService {
     private final Asciidoctor asciidoctor;
     private Attributes attributes;
     private Map<String, Object> translations;
-    private String input;
+    private StringBuilder input;
     private String docDir;
     private List<Education> educations;
     private List<Biography> biographies;
@@ -66,6 +66,7 @@ public class ProfileService {
         dateFormatSkill = new SimpleDateFormat("yyyy");
     }
 
+    @SuppressWarnings("unchecked")
     private <T> T getNestedValue(Map map, String... keys) {
         Object value = map;
 
@@ -76,33 +77,34 @@ public class ProfileService {
         return (T) value;
     }
 
-    private void prepareRootPage() throws IOException {
+    private void prepareRootPage() {
         logger.debug(">> prepareRootPage()");
 
-        input = """
+        input.append("""
                 = Curriculum Vitae
                 $name $surname
                 :doctype: book
                 :pdf-theme: profile
                 :pdf-themesdir: {docdir}/themes
                                       
-                """;
-        input = input.replace("$name", translations.get("NAME").toString())
-                .replace("$surname", translations.get("SURNAME").toString());
+                """);
+
+        input = new StringBuilder(input.toString().replace("$name", translations.get("NAME").toString())
+                .replace("$surname", translations.get("SURNAME").toString()));
         logger.debug("<< prepareRootPage() returns");
     }
 
-    private void fillIntroductionData(String section, String key) {
-        logger.debug(">> fillIntroductionData('{}','{}')", section, key);
+    private void fillIntroductionData(String key) {
+        logger.debug(">> fillIntroductionData('{}')", key);
 
         String stringKey = String.format("%sKey", key.toLowerCase());
-        String stringValue = translations.get(String.format("PROFILE_%s_%s", section.toUpperCase(),
+        String stringValue = translations.get(String.format("PROFILE_%s_%s", "INTRODUCTION",
                 key.toUpperCase())).toString();
         logger.debug("* fillIntroductionData() - '{}' = '{}'", stringKey, stringValue);
         attributes.setAttribute(stringKey, stringValue);
 
         stringKey = String.format("%sValue", key.toLowerCase());
-        //TODO need to add a '+' for new line
+
         stringValue = translations.get(String.format("%s", key.toUpperCase())).toString();
         logger.debug("* fillIntroductionData() - '{}' = '{}'", stringKey, stringValue);
         attributes.setAttribute(stringKey, stringValue);
@@ -114,18 +116,18 @@ public class ProfileService {
         logger.debug(">> prepareIntroductionAttributes()");
 
         attributes.setAttribute("introductionTitle", translations.get("PROFILE_INTRODUCTION_TITLE"));
-        fillIntroductionData("INTRODUCTION", "SURNAME");
-        fillIntroductionData("INTRODUCTION", "NAME");
-        fillIntroductionData("INTRODUCTION", "NATIONALITY");
-        fillIntroductionData("INTRODUCTION", "ADDRESS");
-        fillIntroductionData("INTRODUCTION", "PHONE");
-        fillIntroductionData("INTRODUCTION", "MOBILE");
-        fillIntroductionData("INTRODUCTION", "MAIL");
-        fillIntroductionData("INTRODUCTION", "BIRTHDAY");
-        fillIntroductionData("INTRODUCTION", "POB");
-        fillIntroductionData("INTRODUCTION", "MARITAL");
-        fillIntroductionData("INTRODUCTION", "INTERESTS");
-        fillIntroductionData("INTRODUCTION", "LANGUAGES");
+        fillIntroductionData("SURNAME");
+        fillIntroductionData("NAME");
+        fillIntroductionData("NATIONALITY");
+        fillIntroductionData("ADDRESS");
+        fillIntroductionData("PHONE");
+        fillIntroductionData("MOBILE");
+        fillIntroductionData("MAIL");
+        fillIntroductionData("BIRTHDAY");
+        fillIntroductionData("POB");
+        fillIntroductionData("MARITAL");
+        fillIntroductionData("INTERESTS");
+        fillIntroductionData("LANGUAGES");
 
         logger.debug("<< prepareIntroductionAttributes() returns");
     }
@@ -178,14 +180,18 @@ public class ProfileService {
 
     private void fillContentFromFile(String file, boolean... newSection) throws IOException {
         if (newSection.length <= 0 || newSection[0]) {
-            input += "<<<" + System.lineSeparator();
+            input.append("<<<");
+            input.append(System.lineSeparator());
         }
         try (BufferedReader br =
                      new BufferedReader(new FileReader(String.format("%s/%s", docDir, file)))) {
             String line;
-            while ((line = br.readLine()) != null) input += line + System.lineSeparator();
+            while ((line = br.readLine()) != null) {
+                input.append(line);
+                input.append(System.lineSeparator());
+            }
         }
-        input += System.lineSeparator();
+        input.append(System.lineSeparator());
     }
 
     private void init() throws URISyntaxException {
@@ -198,6 +204,7 @@ public class ProfileService {
         attributes = Attributes.builder().build();
         docDir = new File(Objects.requireNonNull(getClass().getResource("/profile")).toURI()).getAbsolutePath();
         attributes.setAttribute("docdir", docDir);
+        input = new StringBuilder();
         logger.debug("<< init() returns");
     }
 
@@ -226,7 +233,7 @@ public class ProfileService {
             attributes.setAttribute(String.format("educationEndDate%s", education.getElement()), endDate);
             attributes.setAttribute(String.format("educationContent%s", education.getElement()), content);
             attributes.setAttribute(String.format("educationPic%s", education.getElement()), pic);
-            input = input.replace("REPLACE_ME", education.getElement());
+            input = new StringBuilder(input.toString().replace("REPLACE_ME", education.getElement()));
         }
 
         logger.debug("<< createEducationContent() returns");
@@ -286,7 +293,7 @@ public class ProfileService {
             attributes.setAttribute(String.format("workComponentValue%s", biography.getElement()), contentComponentValue);
             attributes.setAttribute(String.format("workTechnologyKey%s", biography.getElement()), contentTechnologyKey);
             attributes.setAttribute(String.format("workTechnologyValue%s", biography.getElement()), contentTechnologyValue);
-            input = input.replace("REPLACE_ME", biography.getElement());
+            input = new StringBuilder(input.toString().replace("REPLACE_ME", biography.getElement()));
         }
 
         logger.debug("<< createWorkContentSingle() returns");
@@ -324,7 +331,7 @@ public class ProfileService {
             String title = translations.get(String.format("PROFILE_TQ_TITLE_%s", profile.getElement())).toString();
             logger.debug("* createSkillContent() - title = '{}'", title);
             attributes.setAttribute(String.format("skillSectionTitle%s", profile.getElement()), title);
-            input = input.replace("REPLACE_ME", profile.getElement());
+            input = new StringBuilder(input.toString().replace("REPLACE_ME", profile.getElement()));
 
             for (Technology technology : profile.getTechnologies()) {
                 fillContentFromFile("04_skill_template_item.adoc", false);
@@ -343,7 +350,7 @@ public class ProfileService {
                 attributes.setAttribute(String.format("skillSectionElementDate%s", technology.getElement()), elementDate);
                 attributes.setAttribute(String.format("skillSectionElementRanking%s", technology.getElement()), elementRanking);
 
-                input = input.replace("REPLACE_ME", technology.getElement());
+                input = new StringBuilder(input.toString().replace("REPLACE_ME", technology.getElement()));
             }
 
             fillContentFromFile("04_skill_template_end.adoc", false);
@@ -374,7 +381,7 @@ public class ProfileService {
         createWorkContent();
         createSkillContent();
 
-        byte[] result = createPdf(input);
+        byte[] result = createPdf(input.toString());
 
         logger.info("<< getProfile() returns");
 
